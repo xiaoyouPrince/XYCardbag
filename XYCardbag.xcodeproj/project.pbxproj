@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89FAF2681FD1060C008C9655 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF2671FD1060C008C9655 /* main.m */; };
-		89FAF26B1FD1060C008C9655 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF26A1FD1060C008C9655 /* AppDelegate.m */; };
-		89FAF26E1FD1060C008C9655 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF26D1FD1060C008C9655 /* ViewController.m */; };
-		89FAF2711FD1060C008C9655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FAF26F1FD1060C008C9655 /* Main.storyboard */; };
-		89FAF2731FD1060C008C9655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FAF2721FD1060C008C9655 /* Assets.xcassets */; };
-		89FAF2761FD1060C008C9655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FAF2741FD1060C008C9655 /* LaunchScreen.storyboard */; };
 		89FAF2811FD1060C008C9655 /* XYCardbagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF2801FD1060C008C9655 /* XYCardbagTests.m */; };
 		89FAF28C1FD1060C008C9655 /* XYCardbagUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF28B1FD1060C008C9655 /* XYCardbagUITests.m */; };
+		89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */; };
+		89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */; };
+		89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5EA01FE7C2B7002AE67C /* Main.storyboard */; };
+		89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EA31FE7C2B7002AE67C /* main.m */; };
+		89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EA51FE7C2B7002AE67C /* ViewController.m */; };
+		89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5EAD1FE7C2E9002AE67C /* Info.plist */; };
+		89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */; };
+		89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECE1FE7C85D002AE67C /* XYIdentitiesController.m */; };
+		89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED11FE7C870002AE67C /* XYBankCardController.m */; };
+		89FB5ED51FE7C87A002AE67C /* XYContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED41FE7C87A002AE67C /* XYContactsController.m */; };
+		89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */; };
+		89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EE11FE7C908002AE67C /* XYTabBar.m */; };
+		89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */; };
+		89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF21FE8EB19002AE67C /* XYCommon.m */; };
+		89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */; };
+		89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */; };
+		89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */; };
+		89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */; };
+		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,23 +47,63 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		89FAF29B1FD14FCB008C9655 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		89FAF2631FD1060C008C9655 /* XYCardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYCardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		89FAF2671FD1060C008C9655 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		89FAF2691FD1060C008C9655 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		89FAF26A1FD1060C008C9655 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		89FAF26C1FD1060C008C9655 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		89FAF26D1FD1060C008C9655 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		89FAF2701FD1060C008C9655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		89FAF2721FD1060C008C9655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		89FAF2751FD1060C008C9655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89FAF2771FD1060C008C9655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FAF27C1FD1060C008C9655 /* XYCardbagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYCardbagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FAF2801FD1060C008C9655 /* XYCardbagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardbagTests.m; sourceTree = "<group>"; };
 		89FAF2821FD1060C008C9655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FAF2871FD1060C008C9655 /* XYCardbagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYCardbagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FAF28B1FD1060C008C9655 /* XYCardbagUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardbagUITests.m; sourceTree = "<group>"; };
 		89FAF28D1FD1060C008C9655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89FAF29D1FD14FCB008C9655 /* libnen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnen.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		89FB5E9B1FE7C2B7002AE67C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89FB5E9F1FE7C2B7002AE67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89FB5EA11FE7C2B7002AE67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89FB5EA31FE7C2B7002AE67C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89FB5EA41FE7C2B7002AE67C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		89FB5EA51FE7C2B7002AE67C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		89FB5EAD1FE7C2E9002AE67C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = XYCardbag/Info.plist; sourceTree = "<group>"; };
+		89FB5ECA1FE7C840002AE67C /* XYNetAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNetAccountController.h; sourceTree = "<group>"; };
+		89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNetAccountController.m; sourceTree = "<group>"; };
+		89FB5ECD1FE7C85D002AE67C /* XYIdentitiesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIdentitiesController.h; sourceTree = "<group>"; };
+		89FB5ECE1FE7C85D002AE67C /* XYIdentitiesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIdentitiesController.m; sourceTree = "<group>"; };
+		89FB5ED01FE7C870002AE67C /* XYBankCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBankCardController.h; sourceTree = "<group>"; };
+		89FB5ED11FE7C870002AE67C /* XYBankCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBankCardController.m; sourceTree = "<group>"; };
+		89FB5ED31FE7C87A002AE67C /* XYContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYContactsController.h; sourceTree = "<group>"; };
+		89FB5ED41FE7C87A002AE67C /* XYContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYContactsController.m; sourceTree = "<group>"; };
+		89FB5EDC1FE7C8E6002AE67C /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
+		89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
+		89FB5EE01FE7C908002AE67C /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
+		89FB5EE11FE7C908002AE67C /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
+		89FB5EEB1FE8BAF1002AE67C /* XYCardbag.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardbag.pch; sourceTree = "<group>"; };
+		89FB5EEC1FE8CF9E002AE67C /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
+		89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
+		89FB5EF11FE8EB19002AE67C /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
+		89FB5EF21FE8EB19002AE67C /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
+		89FB5EF31FE8EB19002AE67C /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		89FB5EF51FE8EB19002AE67C /* UIBarButtonItem+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYAdd.h"; sourceTree = "<group>"; };
+		89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYAdd.m"; sourceTree = "<group>"; };
+		89FB5EF71FE8EB19002AE67C /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
+		89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
+		89FB5EF91FE8EB19002AE67C /* UITextField+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XYAdd.h"; sourceTree = "<group>"; };
+		89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XYAdd.m"; sourceTree = "<group>"; };
+		89FB5EFB1FE8EB19002AE67C /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
+		89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
+		89FB5EFD1FE8EB19002AE67C /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
+		89FB5F031FE8EB64002AE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +128,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89FAF29A1FD14FCB008C9655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				89FAF2651FD1060C008C9655 /* XYCardbag */,
+				89FB5EAD1FE7C2E9002AE67C /* Info.plist */,
 				89FAF27F1FD1060C008C9655 /* XYCardbagTests */,
 				89FAF28A1FD1060C008C9655 /* XYCardbagUITests */,
 				89FAF2641FD1060C008C9655 /* Products */,
@@ -94,6 +155,7 @@
 				89FAF2631FD1060C008C9655 /* XYCardbag.app */,
 				89FAF27C1FD1060C008C9655 /* XYCardbagTests.xctest */,
 				89FAF2871FD1060C008C9655 /* XYCardbagUITests.xctest */,
+				89FAF29D1FD14FCB008C9655 /* libnen.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,25 +163,11 @@
 		89FAF2651FD1060C008C9655 /* XYCardbag */ = {
 			isa = PBXGroup;
 			children = (
-				89FAF2691FD1060C008C9655 /* AppDelegate.h */,
-				89FAF26A1FD1060C008C9655 /* AppDelegate.m */,
-				89FAF26C1FD1060C008C9655 /* ViewController.h */,
-				89FAF26D1FD1060C008C9655 /* ViewController.m */,
-				89FAF26F1FD1060C008C9655 /* Main.storyboard */,
-				89FAF2721FD1060C008C9655 /* Assets.xcassets */,
-				89FAF2741FD1060C008C9655 /* LaunchScreen.storyboard */,
-				89FAF2771FD1060C008C9655 /* Info.plist */,
-				89FAF2661FD1060C008C9655 /* Supporting Files */,
+				89FB5E981FE7C2B7002AE67C /* Classes */,
+				89FB5E991FE7C2B7002AE67C /* Other */,
+				89FB5E9A1FE7C2B7002AE67C /* SupportFiles */,
 			);
 			path = XYCardbag;
-			sourceTree = "<group>";
-		};
-		89FAF2661FD1060C008C9655 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				89FAF2671FD1060C008C9655 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		89FAF27F1FD1060C008C9655 /* XYCardbagTests */ = {
@@ -138,6 +186,238 @@
 				89FAF28D1FD1060C008C9655 /* Info.plist */,
 			);
 			path = XYCardbagUITests;
+			sourceTree = "<group>";
+		};
+		89FB5E981FE7C2B7002AE67C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EAF1FE7C339002AE67C /* Main */,
+				89FB5EBB1FE7C76C002AE67C /* Contacts */,
+				89FB5EC31FE7C76C002AE67C /* NetAccount */,
+				89FB5EBF1FE7C76C002AE67C /* Identities */,
+				89FB5EB71FE7C76C002AE67C /* BankCard */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		89FB5E991FE7C2B7002AE67C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EEF1FE8EB19002AE67C /* XYKit */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		89FB5E9A1FE7C2B7002AE67C /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5E9B1FE7C2B7002AE67C /* AppDelegate.h */,
+				89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */,
+				89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */,
+				89FB5EA01FE7C2B7002AE67C /* Main.storyboard */,
+				89FB5F031FE8EB64002AE67C /* Assets.xcassets */,
+				89FB5EA31FE7C2B7002AE67C /* main.m */,
+				89FB5EA41FE7C2B7002AE67C /* ViewController.h */,
+				89FB5EA51FE7C2B7002AE67C /* ViewController.m */,
+				89FB5EEB1FE8BAF1002AE67C /* XYCardbag.pch */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		89FB5EAF1FE7C339002AE67C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EDB1FE7C8E6002AE67C /* Controller */,
+				89FB5EDE1FE7C8E6002AE67C /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		89FB5EB71FE7C76C002AE67C /* BankCard */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EB81FE7C76C002AE67C /* Controller */,
+				89FB5EB91FE7C76C002AE67C /* Model */,
+				89FB5EBA1FE7C76C002AE67C /* View */,
+			);
+			path = BankCard;
+			sourceTree = "<group>";
+		};
+		89FB5EB81FE7C76C002AE67C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
+				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89FB5EB91FE7C76C002AE67C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89FB5EBA1FE7C76C002AE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89FB5EBB1FE7C76C002AE67C /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EBC1FE7C76C002AE67C /* Controller */,
+				89FB5EBD1FE7C76C002AE67C /* Model */,
+				89FB5EBE1FE7C76C002AE67C /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		89FB5EBC1FE7C76C002AE67C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5ED31FE7C87A002AE67C /* XYContactsController.h */,
+				89FB5ED41FE7C87A002AE67C /* XYContactsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89FB5EBD1FE7C76C002AE67C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89FB5EBE1FE7C76C002AE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89FB5EBF1FE7C76C002AE67C /* Identities */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EC01FE7C76C002AE67C /* Controller */,
+				89FB5EC11FE7C76C002AE67C /* Model */,
+				89FB5EC21FE7C76C002AE67C /* View */,
+			);
+			path = Identities;
+			sourceTree = "<group>";
+		};
+		89FB5EC01FE7C76C002AE67C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5ECD1FE7C85D002AE67C /* XYIdentitiesController.h */,
+				89FB5ECE1FE7C85D002AE67C /* XYIdentitiesController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89FB5EC11FE7C76C002AE67C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89FB5EC21FE7C76C002AE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89FB5EC31FE7C76C002AE67C /* NetAccount */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EC41FE7C76C002AE67C /* Controller */,
+				89FB5EC51FE7C76C002AE67C /* Model */,
+				89FB5EC61FE7C76C002AE67C /* View */,
+			);
+			path = NetAccount;
+			sourceTree = "<group>";
+		};
+		89FB5EC41FE7C76C002AE67C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5ECA1FE7C840002AE67C /* XYNetAccountController.h */,
+				89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89FB5EC51FE7C76C002AE67C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89FB5EC61FE7C76C002AE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89FB5EDB1FE7C8E6002AE67C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EDC1FE7C8E6002AE67C /* XYTabBarController.h */,
+				89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */,
+				89FB5EEC1FE8CF9E002AE67C /* XYNavigationController.h */,
+				89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89FB5EDE1FE7C8E6002AE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EE01FE7C908002AE67C /* XYTabBar.h */,
+				89FB5EE11FE7C908002AE67C /* XYTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89FB5EEF1FE8EB19002AE67C /* XYKit */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EF01FE8EB19002AE67C /* Base */,
+				89FB5EF41FE8EB19002AE67C /* UIKit */,
+				89FB5EFD1FE8EB19002AE67C /* XYKit.h */,
+			);
+			path = XYKit;
+			sourceTree = "<group>";
+		};
+		89FB5EF01FE8EB19002AE67C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EF11FE8EB19002AE67C /* XYCommon.h */,
+				89FB5EF21FE8EB19002AE67C /* XYCommon.m */,
+				89FB5EF31FE8EB19002AE67C /* XYKitMacro.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		89FB5EF41FE8EB19002AE67C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5EF51FE8EB19002AE67C /* UIBarButtonItem+XYAdd.h */,
+				89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */,
+				89FB5EF71FE8EB19002AE67C /* UIImage+XYAdd.h */,
+				89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */,
+				89FB5EF91FE8EB19002AE67C /* UITextField+XYAdd.h */,
+				89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */,
+				89FB5EFB1FE8EB19002AE67C /* UIView+XYAdd.h */,
+				89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,12 +476,30 @@
 			productReference = 89FAF2871FD1060C008C9655 /* XYCardbagUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		89FAF29C1FD14FCB008C9655 /* nen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89FAF2A31FD14FCB008C9655 /* Build configuration list for PBXNativeTarget "nen" */;
+			buildPhases = (
+				89FAF2991FD14FCB008C9655 /* Sources */,
+				89FAF29A1FD14FCB008C9655 /* Frameworks */,
+				89FAF29B1FD14FCB008C9655 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nen;
+			productName = nen;
+			productReference = 89FAF29D1FD14FCB008C9655 /* libnen.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		89FAF25B1FD1060B008C9655 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XY;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = xiaoyou;
 				TargetAttributes = {
@@ -218,6 +516,10 @@
 						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 89FAF2621FD1060B008C9655;
+					};
+					89FAF29C1FD14FCB008C9655 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -237,6 +539,7 @@
 				89FAF2621FD1060B008C9655 /* XYCardbag */,
 				89FAF27B1FD1060C008C9655 /* XYCardbagTests */,
 				89FAF2861FD1060C008C9655 /* XYCardbagUITests */,
+				89FAF29C1FD14FCB008C9655 /* nen */,
 			);
 		};
 /* End PBXProject section */
@@ -246,9 +549,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89FAF2761FD1060C008C9655 /* LaunchScreen.storyboard in Resources */,
-				89FAF2731FD1060C008C9655 /* Assets.xcassets in Resources */,
-				89FAF2711FD1060C008C9655 /* Main.storyboard in Resources */,
+				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
+				89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */,
+				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
+				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +577,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89FAF26E1FD1060C008C9655 /* ViewController.m in Sources */,
-				89FAF26B1FD1060C008C9655 /* AppDelegate.m in Sources */,
-				89FAF2681FD1060C008C9655 /* main.m in Sources */,
+				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
+				89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */,
+				89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */,
+				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
+				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
+				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
+				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,
+				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
+				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
+				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
+				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
+				89FB5ED51FE7C87A002AE67C /* XYContactsController.m in Sources */,
+				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
+				89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */,
+				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +611,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89FAF2991FD14FCB008C9655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -311,20 +634,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		89FAF26F1FD1060C008C9655 /* Main.storyboard */ = {
+		89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				89FAF2701FD1060C008C9655 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		89FAF2741FD1060C008C9655 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				89FAF2751FD1060C008C9655 /* Base */,
+				89FB5E9F1FE7C2B7002AE67C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		89FB5EA01FE7C2B7002AE67C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89FB5EA11FE7C2B7002AE67C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,7 +749,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyou.XYCardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,7 +763,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyou.XYCardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -490,6 +819,24 @@
 			};
 			name = Release;
 		};
+		89FAF2A41FD14FCB008C9655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		89FAF2A51FD14FCB008C9655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -509,6 +856,7 @@
 				89FAF2921FD1060C008C9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89FAF2931FD1060C008C9655 /* Build configuration list for PBXNativeTarget "XYCardbagTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +865,7 @@
 				89FAF2951FD1060C008C9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89FAF2961FD1060C008C9655 /* Build configuration list for PBXNativeTarget "XYCardbagUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +874,16 @@
 				89FAF2981FD1060C008C9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89FAF2A31FD14FCB008C9655 /* Build configuration list for PBXNativeTarget "nen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89FAF2A41FD14FCB008C9655 /* Debug */,
+				89FAF2A51FD14FCB008C9655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
