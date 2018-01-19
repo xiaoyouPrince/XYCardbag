@@ -18,7 +18,7 @@
 		89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */; };
 		89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECE1FE7C85D002AE67C /* XYIdentitiesController.m */; };
 		89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED11FE7C870002AE67C /* XYBankCardController.m */; };
-		89FB5ED51FE7C87A002AE67C /* XYContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED41FE7C87A002AE67C /* XYContactsController.m */; };
+		89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED41FE7C87A002AE67C /* XYContactsListController.m */; };
 		89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */; };
 		89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EE11FE7C908002AE67C /* XYTabBar.m */; };
 		89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */; };
@@ -28,6 +28,19 @@
 		89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */; };
 		89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */; };
 		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
+		B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */; };
+		B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */; };
+		B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF932010434C00B3D0D3 /* FMDatabase.m */; };
+		B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF972010434C00B3D0D3 /* FMDatabasePool.m */; };
+		B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF982010434C00B3D0D3 /* FMResultSet.m */; };
+		B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B458EF992010434C00B3D0D3 /* Info.plist */; };
+		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
+		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
+		B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B458EFA52010864000B3D0D3 /* XYContactsDetailController.xib */; };
+		B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA92010876300B3D0D3 /* XYContactDetailCell.m */; };
+		B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B458EFAA2010876300B3D0D3 /* XYContactDetailCell.xib */; };
+		B45B1895201194B200359427 /* XYAddNewContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B1894201194B200359427 /* XYAddNewContactController.m */; };
+		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +95,8 @@
 		89FB5ECE1FE7C85D002AE67C /* XYIdentitiesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIdentitiesController.m; sourceTree = "<group>"; };
 		89FB5ED01FE7C870002AE67C /* XYBankCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBankCardController.h; sourceTree = "<group>"; };
 		89FB5ED11FE7C870002AE67C /* XYBankCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBankCardController.m; sourceTree = "<group>"; };
-		89FB5ED31FE7C87A002AE67C /* XYContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYContactsController.h; sourceTree = "<group>"; };
-		89FB5ED41FE7C87A002AE67C /* XYContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYContactsController.m; sourceTree = "<group>"; };
+		89FB5ED31FE7C87A002AE67C /* XYContactsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYContactsListController.h; sourceTree = "<group>"; };
+		89FB5ED41FE7C87A002AE67C /* XYContactsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYContactsListController.m; sourceTree = "<group>"; };
 		89FB5EDC1FE7C8E6002AE67C /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		89FB5EE01FE7C908002AE67C /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
@@ -104,6 +117,30 @@
 		89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		89FB5EFD1FE8EB19002AE67C /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
 		89FB5F031FE8EB64002AE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B458EF8E2010434C00B3D0D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B458EF902010434C00B3D0D3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		B458EF912010434C00B3D0D3 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B458EF932010434C00B3D0D3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		B458EF942010434C00B3D0D3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B458EF952010434C00B3D0D3 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		B458EF962010434C00B3D0D3 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B458EF972010434C00B3D0D3 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		B458EF982010434C00B3D0D3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		B458EF992010434C00B3D0D3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDBTool.h; sourceTree = "<group>"; };
+		B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContactsDBTool.m; sourceTree = "<group>"; };
+		B458EFA32010864000B3D0D3 /* XYContactsDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDetailController.h; sourceTree = "<group>"; };
+		B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContactsDetailController.m; sourceTree = "<group>"; };
+		B458EFA52010864000B3D0D3 /* XYContactsDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYContactsDetailController.xib; sourceTree = "<group>"; };
+		B458EFA82010876300B3D0D3 /* XYContactDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactDetailCell.h; sourceTree = "<group>"; };
+		B458EFA92010876300B3D0D3 /* XYContactDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContactDetailCell.m; sourceTree = "<group>"; };
+		B458EFAA2010876300B3D0D3 /* XYContactDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYContactDetailCell.xib; sourceTree = "<group>"; };
+		B45B1893201194B200359427 /* XYAddNewContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddNewContactController.h; sourceTree = "<group>"; };
+		B45B1894201194B200359427 /* XYAddNewContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddNewContactController.m; sourceTree = "<group>"; };
+		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
+		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +240,7 @@
 		89FB5E991FE7C2B7002AE67C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B458EF8C2010434C00B3D0D3 /* Venders */,
 				89FB5EEF1FE8EB19002AE67C /* XYKit */,
 			);
 			path = Other;
@@ -279,8 +317,13 @@
 		89FB5EBC1FE7C76C002AE67C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				89FB5ED31FE7C87A002AE67C /* XYContactsController.h */,
-				89FB5ED41FE7C87A002AE67C /* XYContactsController.m */,
+				89FB5ED31FE7C87A002AE67C /* XYContactsListController.h */,
+				89FB5ED41FE7C87A002AE67C /* XYContactsListController.m */,
+				B458EFA32010864000B3D0D3 /* XYContactsDetailController.h */,
+				B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */,
+				B458EFA52010864000B3D0D3 /* XYContactsDetailController.xib */,
+				B45B1893201194B200359427 /* XYAddNewContactController.h */,
+				B45B1894201194B200359427 /* XYAddNewContactController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +331,10 @@
 		89FB5EBD1FE7C76C002AE67C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4990F09200EEAFA009F3BB0 /* XYContacts.h */,
+				B4990F0A200EEAFA009F3BB0 /* XYContacts.m */,
+				B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */,
+				B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +342,9 @@
 		89FB5EBE1FE7C76C002AE67C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B458EFA82010876300B3D0D3 /* XYContactDetailCell.h */,
+				B458EFA92010876300B3D0D3 /* XYContactDetailCell.m */,
+				B458EFAA2010876300B3D0D3 /* XYContactDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -420,6 +470,33 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		B458EF8C2010434C00B3D0D3 /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+				B458EF8D2010434C00B3D0D3 /* fmdb */,
+			);
+			path = Venders;
+			sourceTree = "<group>";
+		};
+		B458EF8D2010434C00B3D0D3 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				B458EF8E2010434C00B3D0D3 /* FMDatabase.h */,
+				B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */,
+				B458EF902010434C00B3D0D3 /* FMResultSet.h */,
+				B458EF912010434C00B3D0D3 /* FMDatabasePool.h */,
+				B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */,
+				B458EF932010434C00B3D0D3 /* FMDatabase.m */,
+				B458EF942010434C00B3D0D3 /* FMDatabaseQueue.h */,
+				B458EF952010434C00B3D0D3 /* FMDB.h */,
+				B458EF962010434C00B3D0D3 /* FMDatabaseAdditions.h */,
+				B458EF972010434C00B3D0D3 /* FMDatabasePool.m */,
+				B458EF982010434C00B3D0D3 /* FMResultSet.m */,
+				B458EF992010434C00B3D0D3 /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -505,6 +582,7 @@
 				TargetAttributes = {
 					89FAF2621FD1060B008C9655 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = H76H9B7E2M;
 						ProvisioningStyle = Automatic;
 					};
 					89FAF27B1FD1060C008C9655 = {
@@ -549,10 +627,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
 				89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */,
+				B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
+				B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,21 +658,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
 				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
 				89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */,
 				89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */,
+				B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */,
+				B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
 				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
+				B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */,
+				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
 				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,
 				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
 				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
+				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
+				B45B1895201194B200359427 /* XYAddNewContactController.m in Sources */,
+				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
-				89FB5ED51FE7C87A002AE67C /* XYContactsController.m in Sources */,
+				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
 				89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */,
+				B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
+				B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +840,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H76H9B7E2M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/Info.plist;
@@ -756,6 +850,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyou.XYCardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -763,6 +858,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H76H9B7E2M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/Info.plist;
@@ -770,6 +868,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyou.XYCardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

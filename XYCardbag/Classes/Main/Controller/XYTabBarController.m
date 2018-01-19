@@ -7,7 +7,7 @@
 //
 
 #import "XYTabBarController.h"
-#import "XYContactsController.h"
+#import "XYContactsListController.h"
 #import "XYNetAccountController.h"
 #import "XYIdentitiesController.h"
 #import "XYBankCardController.h"
@@ -67,7 +67,7 @@
 - (void)setupChildViewControllers
 {
     // 加载自控制器
-    XYContactsController *contactVc = [[XYContactsController alloc] init];
+    XYContactsListController *contactVc = [[XYContactsListController alloc] init];
     [self setupChildVC:contactVc title:@"联系人" imageName:@"tabBar_essence_icon" selectedImageName:@"tabBar_essence_click_icon"];
     
     XYNetAccountController *netAccountVc = [[XYNetAccountController alloc] init];

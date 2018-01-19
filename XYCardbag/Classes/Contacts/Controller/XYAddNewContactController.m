@@ -1,64 +1,56 @@
 //
-//  XYContactsController.m
+//  XYAddNewContactController.m
 //  XYCardbag
 //
-//  Created by xiaoyou on 2017/12/18.
-//  Copyright © 2017年 xiaoyou. All rights reserved.
+//  Created by 渠晓友 on 2018/1/19.
+//  Copyright © 2018年 xiaoyou. All rights reserved.
 //
 
-#import "XYContactsController.h"
+#import "XYAddNewContactController.h"
 
-@interface XYContactsController ()
+@interface XYAddNewContactController ()
 
 @end
 
-static NSString *cellID = @"CellID";
-
-@implementation XYContactsController
-
+@implementation XYAddNewContactController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     self.clearsSelectionOnViewWillAppear = NO;
+    /// navbar
+    [self setupNavBar];
     
-     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupNavBar
+{
+//    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    self.navigationItem.rightBarButtonItem = [self test];
+//    self.navigationItem.rightBarButtonItems = @[self.editButtonItem , [self test]];
 }
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
+    // Configure the cell...
     
     return cell;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UIViewController *vc = [UIViewController new];
-    vc.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -91,6 +83,16 @@ static NSString *cellID = @"CellID";
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
 */
 

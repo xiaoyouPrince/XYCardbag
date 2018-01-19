@@ -1,5 +1,5 @@
 //
-//  XYContactsController.h
+//  XYContactsListController.h
 //  XYCardbag
 //
 //  Created by xiaoyou on 2017/12/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYContactsController : UITableViewController
+@interface XYContactsListController : UITableViewController
 
 @end
