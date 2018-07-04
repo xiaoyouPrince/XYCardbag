@@ -10,6 +10,7 @@
 #import "XYContactsDBTool.h"
 #import "XYContactsDetailController.h"
 #import "XYAddNewContactController.h"
+#import "XYNavigationController.h"
 
 
 @interface XYContactsListController ()
@@ -46,36 +47,38 @@ static NSString *cellID = @"CellID";
     /// setup tableView
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     [self.tableView reloadData];
+    
+    [kNotificationCenter addObserver:self selector:@selector(refreshListViewControllor) name:@"refreshListViewControllor" object:nil];
+}
+
+- (void)refreshListViewControllor
+{
+    XYFunc
+    [self.tableView reloadData];
+    
 }
 
 - (void)setupNavBar
 {
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.rightBarButtonItem = [self test];
-    self.navigationItem.rightBarButtonItems = @[self.editButtonItem , [self test]];
+    self.navigationItem.rightBarButtonItem = [self addItem];
+    self.navigationItem.rightBarButtonItems = @[self.editButtonItem , [self addItem]];
 }
 
 
-- (UIBarButtonItem *)test{
+- (UIBarButtonItem *)addItem{
     
     UIBarButtonItem *item = [UIBarButtonItem backItemWithimage:nil highImage:nil target:self action:@selector(addContact) title:@"Add"];
     return item;
 }
 
-
+/// 点击添加新的联系人
 - (void)addContact{
     XYFunc
     
-//    NSString *new = [NSString stringWithFormat:@"%ld",self.dataArray.count + 1];
-//    [self.dataArray addObject:new];
-//    [[self tableView] reloadData];
-    
-    /// 进入对应的列表页面
     XYAddNewContactController *addNew = [XYAddNewContactController new];
-    [self presentViewController:addNew animated:YES completion:^{
-        // 重新刷新数据
-        [[self tableView] reloadData];
-    }];
+    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:addNew];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 
@@ -103,6 +106,7 @@ static NSString *cellID = @"CellID";
 {
     XYContactsDetailController *vc = [XYContactsDetailController new];
     vc.conName = self.dataArray[indexPath.row];
+//    UITableViewController *vc = [UITableViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -161,5 +165,8 @@ static NSString *cellID = @"CellID";
     [self.tableView reloadData];
 }
 
-
+- (void)dealloc
+{
+    [kNotificationCenter removeObserver:self];
+}
 @end

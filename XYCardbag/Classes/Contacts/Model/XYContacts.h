@@ -10,8 +10,11 @@
 
 @interface XYContacts : NSObject
 
+/// 名字
 @property(nonatomic , copy) NSString *name;
+/// 电话号码
 @property(nonatomic , copy) NSString *phoneNum;
+/// 邮箱地址
 @property(nonatomic , copy) NSString *email;
 
 @end

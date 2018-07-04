@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="XYNewContactInfoCell" rowHeight="132" id="KGk-i7-Jjw" customClass="XYNewContactInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationButtonReturnClick" translatesAutoresizingMaskIntoConstraints="NO" id="pTP-U3-u5D">
+                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="RPA-9N-Al8"/>
+                            <constraint firstAttribute="height" constant="50" id="STa-6Z-J7D"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFd-tj-4D5">
+                        <rect key="frame" x="88" y="15" width="201" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="2Iz-lW-KYe"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ka-au-zWX">
+                        <rect key="frame" x="88" y="53" width="201" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="P8M-Tv-a29"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="公司" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVR-ql-yqf">
+                        <rect key="frame" x="88" y="91" width="201" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="N22-Ma-rit"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tVR-ql-yqf" firstAttribute="height" secondItem="fFd-tj-4D5" secondAttribute="height" id="155-zV-l0j"/>
+                    <constraint firstItem="pTP-U3-u5D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="4IH-hz-95O"/>
+                    <constraint firstItem="tVR-ql-yqf" firstAttribute="leading" secondItem="fFd-tj-4D5" secondAttribute="leading" id="7f6-2I-sho"/>
+                    <constraint firstItem="tVR-ql-yqf" firstAttribute="top" secondItem="8ka-au-zWX" secondAttribute="bottom" constant="8" id="DhG-tj-gPU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fFd-tj-4D5" secondAttribute="trailing" constant="15" id="H6z-J8-RCM"/>
+                    <constraint firstItem="fFd-tj-4D5" firstAttribute="leading" secondItem="pTP-U3-u5D" secondAttribute="trailing" constant="23" id="IGJ-Mw-2b8"/>
+                    <constraint firstItem="8ka-au-zWX" firstAttribute="height" secondItem="fFd-tj-4D5" secondAttribute="height" id="NO6-u6-7js"/>
+                    <constraint firstItem="tVR-ql-yqf" firstAttribute="width" secondItem="fFd-tj-4D5" secondAttribute="width" id="S3v-b2-vDF"/>
+                    <constraint firstItem="pTP-U3-u5D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bFZ-dc-8Hc"/>
+                    <constraint firstItem="8ka-au-zWX" firstAttribute="top" secondItem="fFd-tj-4D5" secondAttribute="bottom" constant="8" id="cxJ-n8-kYT"/>
+                    <constraint firstItem="fFd-tj-4D5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ffo-a8-2TE"/>
+                    <constraint firstItem="8ka-au-zWX" firstAttribute="width" secondItem="fFd-tj-4D5" secondAttribute="width" id="qiM-9I-5ps"/>
+                    <constraint firstItem="8ka-au-zWX" firstAttribute="leading" secondItem="fFd-tj-4D5" secondAttribute="leading" id="xIL-bN-6LI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="companyTF" destination="tVR-ql-yqf" id="87O-yK-yvK"/>
+                <outlet property="firstNameTF" destination="fFd-tj-4D5" id="aeR-Sf-lEd"/>
+                <outlet property="iconImage" destination="pTP-U3-u5D" id="5pg-1A-bAn"/>
+                <outlet property="lastNameTF" destination="8ka-au-zWX" id="cQw-YC-RIn"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="132"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="navigationButtonReturnClick" width="15" height="21"/>
+    </resources>
+</document>

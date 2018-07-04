@@ -44,8 +44,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
     self.interactivePopGestureRecognizer.enabled = NO;
     
     UIPanGestureRecognizer *edgePan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:) ];

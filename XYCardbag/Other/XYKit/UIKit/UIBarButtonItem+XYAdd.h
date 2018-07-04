@@ -19,4 +19,7 @@
 /// 快速创建返回按钮
 + (UIBarButtonItem *)backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title;
 
+/// 快速创建返回按钮,可以设置默认状态
++ (UIBarButtonItem *)backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title enable:(BOOL)enable;
+
 @end

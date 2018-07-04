@@ -11,6 +11,9 @@
 
 @interface XYContactsDetailController : UITableViewController
 
+/// 是否是新添加
+@property(nonatomic , assign) BOOL isAddNew;
+
 /// 联系人姓名
 @property(nonatomic , copy) NSString *conName;
 /// 联系人信息

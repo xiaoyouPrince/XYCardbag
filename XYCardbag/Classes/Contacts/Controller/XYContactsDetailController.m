@@ -7,6 +7,7 @@
 //
 
 #import "XYContactsDetailController.h"
+#import "XYAddNewContactController.h"
 
 @interface XYContactsDetailController ()
 
@@ -19,6 +20,31 @@
     
     self.title = self.conName;
     self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem backItemWithimage:nil highImage:nil target:self action:@selector(changeViewToEidt) title:@"Edit"];
+    
+    
+    if (self.isAddNew) {
+        /// 进入对应的列表页面
+        XYAddNewContactController *addNew = [XYAddNewContactController new];
+        [self.navigationController pushViewController:addNew animated:NO];
+//        [self presentViewController:addNew animated:YES completion:nil];
+    }
+    
+    /// 注册通知
+    [kNotificationCenter addObserver:self selector:@selector(refreshDetailView) name:@"refreshDetailViewControllor" object:nil];
+}
+
+- (void)changeViewToEidt
+{
+    DLog(@" ----- 进入编辑页面 -----");
+    /// 进入对应的列表页面
+    XYAddNewContactController *addNew = [XYAddNewContactController new];
+    [self.navigationController pushViewController:addNew animated:NO];
+}
+
+- (void)refreshDetailView
+{
+    DLog(@" ----- 刷新本页面 -----");
 }
 
 
@@ -43,30 +69,11 @@
     return cell;
 }
 
-
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Create the next view controller.
-    UITableViewController *detailViewController = [[UITableViewController alloc] init];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    detailViewController.editing = YES;
-    
-    
-    // Push the view controller.
-//    [self.navigationController pushViewController:detailViewController animated:YES];
-    [self presentViewController:detailViewController animated:YES completion:nil];
+    // 目前不做任何操作
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

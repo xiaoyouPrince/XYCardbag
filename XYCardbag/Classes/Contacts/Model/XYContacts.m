@@ -10,4 +10,6 @@
 
 @implementation XYContacts
 
+MJCodingImplementation
+
 @end
