@@ -31,24 +31,25 @@
 {
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
-        for (int i = 0; i < 10; i++) {
-            // 从数据库中加载对应的数据、
-            [_dataArray arrayByAddingObject:[NSObject new]];
-        }
+        
+        [_dataArray addObject:@"所有卡片"];
+        [_dataArray addObject:@"我的最爱"];
+        [_dataArray addObject:@"交通"];
+        [_dataArray addObject:@"人情"];
+        [_dataArray addObject:@"新欢"];
+        [_dataArray addObject:@"旧爱"];
+        [_dataArray addObject:@"喝酒"];
+        [_dataArray addObject:@"上学"];
+        
     }
     return _dataArray;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     
     [self buildUI];
-    
-    
-    
-    
 
 }
 
@@ -80,11 +81,17 @@
             self.tableView.editing = YES;
             // 3. 其他部分隐藏并且只有自己的View有用户效果
             UIView *toolBarContentView = toolBar.subviews.lastObject.subviews.firstObject;
+            NSMutableArray <UIView *>*arrayM = [NSMutableArray array];
             for (int i = 0; i < toolBarContentView.subviews.count; i ++) {
-                if (i != toolBarContentView.subviews.count/2) {
-                    toolBarContentView.subviews[i].hidden = YES;
+                // 内部itemView
+                UIView *midItem = toolBarContentView.subviews[i];
+                if ([midItem isKindOfClass:NSClassFromString(@"_UIButtonBarButton")]) {
+                    [arrayM addObject:midItem];
                 }
             }
+            arrayM.firstObject.hidden = YES;
+            arrayM.lastObject.hidden = YES;
+            
             
             // 4. 通过delegate发消息传出去外界不可操作现在，只能等编辑完成才可以滑动回来。
             if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
@@ -103,9 +110,7 @@
             // 3. 其他部分隐藏并且只有自己的View有用户效果
             UIView *toolBarContentView = toolBar.subviews.lastObject.subviews.firstObject;
             for (int i = 0; i < toolBarContentView.subviews.count; i ++) {
-                if (i != toolBarContentView.subviews.count/2) {
-                    toolBarContentView.subviews[i].hidden = NO;
-                }
+                [toolBarContentView.subviews[i] setHidden:NO];
             }
             
             // 4.通过delegate发消息传出去外界可操作现在，已经编辑完成回归原来状态。
@@ -162,7 +167,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 
 
@@ -178,8 +183,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
+//    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
+    cell.textLabel.text = self.dataArray[indexPath.row];
     cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
     
     return cell;
@@ -193,11 +198,27 @@
     // 返回主页并刷新最新数据
     // 可以用自己的delegate去做这件事
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:didChooseSectionName:)]) {
+        [self.delegate backgroundView:self.tableView didChooseSectionName:self.dataArray[indexPath.row]];
+    }
+    
 }
 
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
+    
+    if (indexPath.row > 1) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row > 1) {
+        return YES;
+    }
+    return NO;
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -235,19 +256,25 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     
-    // 移动数据源
-    NSString *from = [self.dataArray objectAtIndex:fromIndexPath.row];
-    NSString *to = [self.dataArray objectAtIndex:toIndexPath.row];
-    
-    if (fromIndexPath.row < toIndexPath.row) { //从上到下
-        [self.dataArray insertObject:from atIndex:toIndexPath.row + 1]; // 需要 + 1
-        [self.dataArray removeObjectAtIndex:fromIndexPath.row];
+    // 不允许移动前两个
+    if (toIndexPath.row <= 1) {
+        [self.tableView reloadData];
     }else
-    { // 从下到上
-        [self.dataArray removeObjectAtIndex:fromIndexPath.row];
-        [self.dataArray insertObject:from atIndex:toIndexPath.row];
+    {
+        // 移动数据源
+        NSString *from = [self.dataArray objectAtIndex:fromIndexPath.row];
+        NSString *to = [self.dataArray objectAtIndex:toIndexPath.row];
+        
+        if (fromIndexPath.row < toIndexPath.row) { //从上到下
+            [self.dataArray insertObject:from atIndex:toIndexPath.row + 1]; // 需要 + 1
+            [self.dataArray removeObjectAtIndex:fromIndexPath.row];
+        }else
+        { // 从下到上
+            [self.dataArray removeObjectAtIndex:fromIndexPath.row];
+            [self.dataArray insertObject:from atIndex:toIndexPath.row];
+        }
+        [self.tableView reloadData];
     }
-    [self.tableView reloadData];
 }
 
 

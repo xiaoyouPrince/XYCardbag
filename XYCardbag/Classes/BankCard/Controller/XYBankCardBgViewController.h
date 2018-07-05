@@ -13,6 +13,7 @@
 @protocol BankCardBgVCDelegate<NSObject>
 @optional
 - (void)backgroundView:(UIView *)bgView isEditing:(BOOL)isEdit;
+- (void)backgroundView:(UIView *)bgView didChooseSectionName:(NSString *)sectionName;
 
 @end
 

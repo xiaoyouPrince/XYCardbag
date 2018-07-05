@@ -35,13 +35,15 @@
         
         UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:imageLeft style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
         
-        UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        UIBarButtonItem *flexLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         
         UIBarButtonItem *midItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
         
+        UIBarButtonItem *flexRight = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:imageRight style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
         
-        self.items = @[leftItem,flex,midItem,flex,rightItem];
+        self.items = @[leftItem,flexLeft,midItem,flexRight,rightItem];
         
         self.handler = handler;
     }
