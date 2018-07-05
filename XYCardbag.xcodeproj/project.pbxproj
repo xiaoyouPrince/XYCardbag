@@ -28,6 +28,8 @@
 		89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */; };
 		89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */; };
 		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
+		B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B431CFC920EDB2CC008CD732 /* carIcon.png */; };
+		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
 		B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */; };
 		B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */; };
 		B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF932010434C00B3D0D3 /* FMDatabase.m */; };
@@ -142,6 +144,9 @@
 		89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		89FB5EFD1FE8EB19002AE67C /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
 		89FB5F031FE8EB64002AE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B431CFC920EDB2CC008CD732 /* carIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon.png; sourceTree = "<group>"; };
+		B431CFCB20EDBD80008CD732 /* XYToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolBar.h; sourceTree = "<group>"; };
+		B431CFCC20EDBD80008CD732 /* XYToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYToolBar.m; sourceTree = "<group>"; };
 		B458EF8E2010434C00B3D0D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		B458EF902010434C00B3D0D3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
@@ -353,6 +358,7 @@
 		89FB5EB71FE7C76C002AE67C /* BankCard */ = {
 			isa = PBXGroup;
 			children = (
+				B431CFC920EDB2CC008CD732 /* carIcon.png */,
 				89FB5EB81FE7C76C002AE67C /* Controller */,
 				89FB5EB91FE7C76C002AE67C /* Model */,
 				89FB5EBA1FE7C76C002AE67C /* View */,
@@ -381,6 +387,8 @@
 		89FB5EBA1FE7C76C002AE67C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B431CFCB20EDBD80008CD732 /* XYToolBar.h */,
+				B431CFCC20EDBD80008CD732 /* XYToolBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -813,6 +821,7 @@
 				89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */,
 				B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
+				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
@@ -862,6 +871,7 @@
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
 				B4ABDE6620ED2BED00E74941 /* NSArray+MASAdditions.m in Sources */,
 				B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */,
+				B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */,
 				B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */,
 				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
 				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,

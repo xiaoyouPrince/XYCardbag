@@ -15,15 +15,29 @@
 
 #import "XYBankCardBgViewController.h"
 #import "Masonry.h"
+#import "XYToolBar.h"
 
 @interface XYBankCardBgViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,weak) UITableView *tableView;
-@property(nonatomic , strong) UIToolbar  *toolBar;
+@property(nonatomic , strong) XYToolBar  *toolBar;
+@property(nonatomic , strong) NSMutableArray  *dataArray;
 
 @end
 
 @implementation XYBankCardBgViewController
+
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+        for (int i = 0; i < 10; i++) {
+            // 从数据库中加载对应的数据、
+            [_dataArray arrayByAddingObject:[NSObject new]];
+        }
+    }
+    return _dataArray;
+}
 
 
 - (void)viewDidLoad {
@@ -41,6 +55,8 @@
 
 - (void)buildUI{
     
+    static CGFloat toolBarH = 30;
+    
     UITableView *tableView = [[UITableView alloc] init];
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -50,24 +66,69 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tableView];
     
-    UIToolbar *topView = UIToolbar.new;
-    topView.backgroundColor = UIColor.brownColor;
-    topView.layer.borderColor = UIColor.blackColor.CGColor;
-    topView.layer.borderWidth = 2;
-    [self.view addSubview:topView];
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"设置" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
+        NSLog(@"item = %@",item);
+        
+        UIColor *tintColor = item.tintColor;
+        
+        if ([item.title isEqualToString:@"设置"]) {
+            // 1.自己状态改变
+            item.tintColor = tintColor;
+            item.title = @"完成";
+            item.style = UIBarButtonItemStyleDone;
+            // 2，tableView变成可编辑状态
+            self.tableView.editing = YES;
+            // 3. 其他部分隐藏并且只有自己的View有用户效果
+            UIView *toolBarContentView = toolBar.subviews.lastObject.subviews.firstObject;
+            for (int i = 0; i < toolBarContentView.subviews.count; i ++) {
+                if (i != toolBarContentView.subviews.count/2) {
+                    toolBarContentView.subviews[i].hidden = YES;
+                }
+            }
+            
+            // 4. 通过delegate发消息传出去外界不可操作现在，只能等编辑完成才可以滑动回来。
+            if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
+                [self.delegate backgroundView:self.tableView isEditing:YES];
+            }
+        }else if ([item.title isEqualToString:@"完成"]) {
+            
+            // 1.自己状态改变
+            item.tintColor = tintColor;
+            item.title = @"设置";
+            item.style = UIBarButtonItemStylePlain;
+            
+            // 2，tableView变成可编辑状态
+            self.tableView.editing = NO;
+            
+            // 3. 其他部分隐藏并且只有自己的View有用户效果
+            UIView *toolBarContentView = toolBar.subviews.lastObject.subviews.firstObject;
+            for (int i = 0; i < toolBarContentView.subviews.count; i ++) {
+                if (i != toolBarContentView.subviews.count/2) {
+                    toolBarContentView.subviews[i].hidden = NO;
+                }
+            }
+            
+            // 4.通过delegate发消息传出去外界可操作现在，已经编辑完成回归原来状态。
+            if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
+                [self.delegate backgroundView:self.tableView isEditing:NO];
+            }
+        }
+    }];
+    [self.view addSubview:toolBar];
+    self.toolBar = toolBar;
     
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view);
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
-        make.height.equalTo(self.view).offset(-44);
+        make.height.equalTo(self.view).offset(-(toolBarH));
     }];
     
-    [topView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
         make.bottom.equalTo(self.view);
-        make.height.equalTo(@44);
+        make.height.equalTo(@(toolBarH));
     }];
     
     
@@ -87,6 +148,10 @@
 //    }];
 }
 
+- (void)itemClick:(UIBarButtonItem *)item{
+    NSLog(@"item = %@",item);
+}
+
 
 
 
@@ -100,10 +165,6 @@
     return 10;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 30;
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -124,6 +185,70 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    // 点击对应的卡组处理
+    // 返回主页并刷新最新数据
+    // 可以用自己的delegate去做这件事
+    
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        
+        UIAlertController *al = [UIAlertController alertControllerWithTitle:@"提示" message:@"删除后无法恢复，是否确认删除" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            
+            // Delete the row from the data source
+            [self.dataArray removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView reloadData];
+            
+        }];
+        [al addAction:action1];
+        [self presentViewController:al animated:YES completion:nil];
+        
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        
+        NSString *new = [NSString stringWithFormat:@"%ld",self.dataArray.count + 1];
+        [self.dataArray addObject:new];
+        [[self tableView] reloadData];
+    }
+}
+
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    
+    // 移动数据源
+    NSString *from = [self.dataArray objectAtIndex:fromIndexPath.row];
+    NSString *to = [self.dataArray objectAtIndex:toIndexPath.row];
+    
+    if (fromIndexPath.row < toIndexPath.row) { //从上到下
+        [self.dataArray insertObject:from atIndex:toIndexPath.row + 1]; // 需要 + 1
+        [self.dataArray removeObjectAtIndex:fromIndexPath.row];
+    }else
+    { // 从下到上
+        [self.dataArray removeObjectAtIndex:fromIndexPath.row];
+        [self.dataArray insertObject:from atIndex:toIndexPath.row];
+    }
+    [self.tableView reloadData];
+}
 
 
 @end

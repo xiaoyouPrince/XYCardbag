@@ -10,6 +10,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYBankCardBgViewController : UIViewController//UITableViewController 
+@protocol BankCardBgVCDelegate<NSObject>
+@optional
+- (void)backgroundView:(UIView *)bgView isEditing:(BOOL)isEdit;
 
+@end
+
+@interface XYBankCardBgViewController : UIViewController//UITableViewController
+
+@property(nonatomic,weak) id<BankCardBgVCDelegate> delegate;
 @end

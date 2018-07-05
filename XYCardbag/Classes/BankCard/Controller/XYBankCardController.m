@@ -15,7 +15,7 @@
 #import "XYBankCardBgViewController.h"
 #import "Masonry.h"
 
-@interface XYBankCardController ()
+@interface XYBankCardController ()<BankCardBgVCDelegate>
 
 @property(nonatomic,weak) UIView *frontView;
 @property(nonatomic,weak) UIView *backView;
@@ -75,6 +75,7 @@
 - (void)buildUI{
     
     XYBankCardBgViewController *bgVC = [XYBankCardBgViewController new];
+    bgVC.delegate = self;
     [self addChildViewController:bgVC];
     UIView *backView = bgVC.view;
     backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
@@ -97,6 +98,20 @@
 //{
 //    NSLog(@"keyPath = %@",keyPath);
 //}
+
+#pragma BankCardBgVCDelegate
+- (void)backgroundView:(UIView *)bgView isEditing:(BOOL)isEdit
+{
+    // 根据背静的View是否是edit状态来调整frontView的可用状态
+    if (isEdit) {
+        self.navigationItem.leftBarButtonItem.enabled = NO;
+        self.frontView.userInteractionEnabled = NO;
+    }else
+    {
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+        self.frontView.userInteractionEnabled = YES;
+    }
+}
 
 
 
