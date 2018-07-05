@@ -58,7 +58,17 @@ static FMDatabaseQueue *_queue;
  */
 + (void)saveNewCardSection:(XYBankCardSection *)section{
     
-    NSString *sql = @"";
+    //NSString *sql = @"";
+    
+    [_queue inDatabase:^(FMDatabase *db) {
+        // 1.获得需要存储的数据
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:section];  // 这里的意思是Status必须实现Coding协议
+        // 2.存储数据
+        BOOL isSuccess = [db executeUpdate:@"insert into t_section (name, icon,section) values(?, ? ,?)", section.title, section.icon ,data];
+        if (isSuccess) {
+            DLog(@"保存成功");
+        }
+    }];
 }
 
 /**
@@ -76,6 +86,16 @@ static FMDatabaseQueue *_queue;
  */
 + (void)deleteCardSection:(XYBankCardSection *)section{
     
+    [_queue inDatabase:^(FMDatabase *db) {
+        
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:section];  // 这里的意思是Status必须实现Coding协议
+        
+        // 2.存储数据
+        BOOL isSuccess = [db executeUpdate:@"delete from t_section where section = ?", data];
+        if (isSuccess) {
+            DLog(@"移除成功");
+        }
+    }];
 }
 
 /**
@@ -101,7 +121,7 @@ static FMDatabaseQueue *_queue;
  查询所有卡片分组
  */
 + (NSMutableArray <XYBankCardSection *>*)getAllCardSections{
-    
+
     NSMutableArray *arrayM = [NSMutableArray array];
     
     // 内部默认【全部】【我的最爱】两个分组
@@ -115,6 +135,29 @@ static FMDatabaseQueue *_queue;
     
     [arrayM addObject:all];
     [arrayM addObject:favorite];
+    
+    
+    
+    // 1.定义resutlArray
+    NSMutableArray *resultArrayM = @[].mutableCopy;
+    
+    // 2.使用数据库
+    [_queue inDatabase:^(FMDatabase *db) {
+        // 创建数组
+        FMResultSet *rs = nil;
+        
+        rs = [db executeQuery:@"select * from t_section"];
+        
+        while (rs.next) {
+            NSData *data = [rs dataForColumn:@"section"];
+            XYBankCardSection *section = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            [resultArrayM addObject:section];
+        }
+    }];
+    
+    
+    // 3. 拼接查询结果中的section
+    [arrayM addObjectsFromArray:resultArrayM];
     
     return arrayM;
 }

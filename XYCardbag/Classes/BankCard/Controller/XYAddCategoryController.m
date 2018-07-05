@@ -138,7 +138,9 @@
     [XYBankCardCache saveNewCardSection:section];
     
     //2. 退出
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)chooseCategoryImageWithBtn:(UIButton *)btn{

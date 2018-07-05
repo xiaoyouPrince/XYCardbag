@@ -58,6 +58,14 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.dataArray = [XYBankCardCache getAllCardSections];
+    [self.tableView reloadData];
+}
+
 
 - (void)buildUI{
     
@@ -206,6 +214,7 @@
     XYBankCardSection *section = self.dataArray[indexPath.row];
     cell.textLabel.text = section.title;
     cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
+    cell.imageView.image = [UIImage imageNamed:section.icon];
     
     return cell;
 }
@@ -255,6 +264,7 @@
         UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             
             // Delete the row from the data source
+            [XYBankCardCache deleteCardSection:self.dataArray[indexPath.row]];
             [self.dataArray removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView reloadData];
