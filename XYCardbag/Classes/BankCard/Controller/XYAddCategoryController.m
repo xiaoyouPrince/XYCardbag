@@ -82,15 +82,17 @@
     CGFloat WH = (ScreenW - 2*margin)/ clums;
     
     
-    for(int i = 0; i < 36 ; i++){
+    for(int i = 0; i < 38 ; i++){
         // 第x行,第y列
         int x = i / clums;
         int y = i % clums;
         
         UIButton *btn = [UIButton new];
-        [btn setImage:[UIImage imageWithColor:UIColor.greenColor] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageWithColor:UIColor.redColor] forState:UIControlStateSelected];
-        [btn setBackgroundImage:[UIImage imageNamed:@"carIcon"] forState:UIControlStateNormal];
+        btn.tag = i;
+        NSString *imageName = [NSString stringWithFormat:@"category_icon_%02d",i];
+        
+        [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [btn setImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
         [btn addTarget:self action:@selector(chooseCategoryImageWithBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -130,7 +132,7 @@
     
     //1. 保存信息
 //    UIImage *icon = [self.selectBtn imageForState:UIControlStateNormal];
-    NSString *icon = @"carIcon";
+    NSString *icon = [NSString stringWithFormat:@"category_icon_%02zd",self.selectBtn.tag];
     NSString *title = self.nameTF.text;
     XYBankCardSection *section = [XYBankCardSection new];
     section.icon = icon;

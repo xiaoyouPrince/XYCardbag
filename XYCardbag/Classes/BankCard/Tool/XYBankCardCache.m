@@ -126,12 +126,12 @@ static FMDatabaseQueue *_queue;
     
     // 内部默认【全部】【我的最爱】两个分组
     XYBankCardSection *all = [XYBankCardSection new];
-    all.title = @"全部";
-    all.icon = @"all";
+    all.title = @"全部卡片";
+    all.icon = @"category_icon_all";
     
     XYBankCardSection *favorite = [XYBankCardSection new];
     favorite.title = @"我最喜欢";
-    favorite.icon = @"favorite";
+    favorite.icon = @"category_icon_17";
     
     [arrayM addObject:all];
     [arrayM addObject:favorite];

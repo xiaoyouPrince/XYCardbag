@@ -66,6 +66,14 @@
     [self.tableView reloadData];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // 主动选中一下所有卡片
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+}
 
 - (void)buildUI{
     
@@ -213,7 +221,7 @@
 //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
     XYBankCardSection *section = self.dataArray[indexPath.row];
     cell.textLabel.text = section.title;
-    cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
+    cell.backgroundColor = UIColor.clearColor;//indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
     cell.imageView.image = [UIImage imageNamed:section.icon];
     
     return cell;
