@@ -17,6 +17,8 @@
 #import "Masonry.h"
 #import "XYToolBar.h"
 #import "XYBankCardCache.h"
+#import "XYNavigationController.h"
+#import "XYAddCategoryController.h"
 
 @interface XYBankCardBgViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -77,6 +79,7 @@
         
         if (item.tag == XYToolbarItemPositionLeft) {
             NSLog(@"左边item = 新添加");
+            [self addNewCardSection];
         }
         
         if (item.tag == XYToolbarItemPositiondRight) {
@@ -167,6 +170,10 @@
 - (void)addNewCardSection{
     
     // 弹出一个添加新卡组的页面
+    /// 进入对应的列表页面
+    XYAddCategoryController *listVC = [XYAddCategoryController new];
+    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 

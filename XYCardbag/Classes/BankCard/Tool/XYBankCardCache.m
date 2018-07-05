@@ -58,6 +58,7 @@ static FMDatabaseQueue *_queue;
  */
 + (void)saveNewCardSection:(XYBankCardSection *)section{
     
+    NSString *sql = @"";
 }
 
 /**
