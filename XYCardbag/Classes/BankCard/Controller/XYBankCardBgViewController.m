@@ -16,12 +16,13 @@
 #import "XYBankCardBgViewController.h"
 #import "Masonry.h"
 #import "XYToolBar.h"
+#import "XYBankCardCache.h"
 
 @interface XYBankCardBgViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,weak) UITableView *tableView;
 @property(nonatomic , strong) XYToolBar  *toolBar;
-@property(nonatomic , strong) NSMutableArray  *dataArray;
+@property(nonatomic , strong) NSMutableArray  <XYBankCardSection *>*dataArray;
 
 @end
 
@@ -40,6 +41,8 @@
         [_dataArray addObject:@"旧爱"];
         [_dataArray addObject:@"喝酒"];
         [_dataArray addObject:@"上学"];
+        
+        _dataArray = [XYBankCardCache getAllCardSections];
         
     }
     return _dataArray;
@@ -184,7 +187,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
 //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    XYBankCardSection *section = self.dataArray[indexPath.row];
+    cell.textLabel.text = section.title;
     cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
     
     return cell;
@@ -199,7 +203,7 @@
     // 可以用自己的delegate去做这件事
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:didChooseSectionName:)]) {
-        [self.delegate backgroundView:self.tableView didChooseSectionName:self.dataArray[indexPath.row]];
+        [self.delegate backgroundView:self.tableView didChooseSectionName:self.dataArray[indexPath.row].title];
     }
     
 }

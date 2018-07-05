@@ -30,6 +30,8 @@
 		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
 		B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B431CFC920EDB2CC008CD732 /* carIcon.png */; };
 		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
+		B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */; };
+		B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */; };
 		B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */; };
 		B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */; };
 		B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF932010434C00B3D0D3 /* FMDatabase.m */; };
@@ -147,6 +149,10 @@
 		B431CFC920EDB2CC008CD732 /* carIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon.png; sourceTree = "<group>"; };
 		B431CFCB20EDBD80008CD732 /* XYToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolBar.h; sourceTree = "<group>"; };
 		B431CFCC20EDBD80008CD732 /* XYToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYToolBar.m; sourceTree = "<group>"; };
+		B431CFCE20EE1E34008CD732 /* XYBankCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardModel.h; sourceTree = "<group>"; };
+		B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardModel.m; sourceTree = "<group>"; };
+		B431CFD220EE1FAA008CD732 /* XYBankCardCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardCache.h; sourceTree = "<group>"; };
+		B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardCache.m; sourceTree = "<group>"; };
 		B458EF8E2010434C00B3D0D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		B458EF902010434C00B3D0D3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
@@ -358,6 +364,7 @@
 		89FB5EB71FE7C76C002AE67C /* BankCard */ = {
 			isa = PBXGroup;
 			children = (
+				B431CFD120EE1F88008CD732 /* Tool */,
 				B431CFC920EDB2CC008CD732 /* carIcon.png */,
 				89FB5EB81FE7C76C002AE67C /* Controller */,
 				89FB5EB91FE7C76C002AE67C /* Model */,
@@ -380,6 +387,8 @@
 		89FB5EB91FE7C76C002AE67C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B431CFCE20EE1E34008CD732 /* XYBankCardModel.h */,
+				B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -556,6 +565,15 @@
 				89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B431CFD120EE1F88008CD732 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B431CFD220EE1FAA008CD732 /* XYBankCardCache.h */,
+				B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		B458EF8C2010434C00B3D0D3 /* Venders */ = {
@@ -852,6 +870,7 @@
 			files = (
 				B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */,
 				B4614096201835D000BE5A24 /* MJMember.m in Sources */,
+				B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */,
 				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
 				B4ABDE6320ED2BED00E74941 /* MASCompositeConstraint.m in Sources */,
 				B461409C201835D000BE5A24 /* MJMethod.m in Sources */,
@@ -866,6 +885,7 @@
 				B4614098201835D000BE5A24 /* MJIvar.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
 				B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */,
+				B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */,
 				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
 				B461409D201835D000BE5A24 /* MJArgument.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
@@ -1067,6 +1087,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders";
 			};
 			name = Debug;
 		};
@@ -1085,6 +1106,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders";
 			};
 			name = Release;
 		};
