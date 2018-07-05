@@ -71,9 +71,17 @@
     [self.view addSubview:tableView];
     
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"设置" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
-        NSLog(@"item = %@",item);
+//        NSLog(@"item = %@",item);
         
         UIColor *tintColor = item.tintColor;
+        
+        if (item.tag == XYToolbarItemPositionLeft) {
+            NSLog(@"左边item = 新添加");
+        }
+        
+        if (item.tag == XYToolbarItemPositiondRight) {
+            NSLog(@"右边item = 设置");
+        }
         
         if ([item.title isEqualToString:@"设置"]) {
             // 1.自己状态改变
@@ -156,8 +164,9 @@
 //    }];
 }
 
-- (void)itemClick:(UIBarButtonItem *)item{
-    NSLog(@"item = %@",item);
+- (void)addNewCardSection{
+    
+    // 弹出一个添加新卡组的页面
 }
 
 

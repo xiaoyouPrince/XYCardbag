@@ -70,6 +70,7 @@
 		B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5D20ED2BED00E74941 /* MASConstraint.m */; };
 		B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */; };
 		B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */; };
+		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,8 @@
 		B4ABDE5E20ED2BED00E74941 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
+		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +383,8 @@
 				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
 				B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */,
 				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
+				B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */,
+				B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -904,6 +909,7 @@
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
 				B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */,
+				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,

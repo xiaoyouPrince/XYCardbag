@@ -34,14 +34,17 @@
         UIImage *imageRight = [[UIImage imageNamed:rightImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:imageLeft style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
+        leftItem.tag = XYToolbarItemPositionLeft;
         
         UIBarButtonItem *flexLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         
         UIBarButtonItem *midItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
+        midItem.tag = XYToolbarItemPositionMiddle;
         
         UIBarButtonItem *flexRight = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:imageRight style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
+        rightItem.tag = XYToolbarItemPositiondRight;
         
         self.items = @[leftItem,flexLeft,midItem,flexRight,rightItem];
         

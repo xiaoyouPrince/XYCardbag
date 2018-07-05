@@ -22,6 +22,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    XYToolbarItemPositionLeft = 0x01,
+    XYToolbarItemPositionMiddle,
+    XYToolbarItemPositiondRight
+} XYToolbarItemPosition;
+
 typedef void(^CallbackHandler)(UIBarButtonItem *item);
 
 @interface XYToolBar : UIToolbar
