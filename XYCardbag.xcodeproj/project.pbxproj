@@ -55,6 +55,17 @@
 		B461409D201835D000BE5A24 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = B461408F201835D000BE5A24 /* MJArgument.m */; };
 		B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614095201835D000BE5A24 /* NSObject+MJMember.m */; };
 		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
+		B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */; };
+		B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE4920ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5220ED2BED00E74941 /* ViewController+MASAdditions.m */; };
+		B4ABDE6320ED2BED00E74941 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5620ED2BED00E74941 /* MASCompositeConstraint.m */; };
+		B4ABDE6420ED2BED00E74941 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5720ED2BED00E74941 /* MASConstraintMaker.m */; };
+		B4ABDE6520ED2BED00E74941 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5820ED2BED00E74941 /* MASLayoutConstraint.m */; };
+		B4ABDE6620ED2BED00E74941 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5920ED2BED00E74941 /* NSArray+MASAdditions.m */; };
+		B4ABDE6720ED2BED00E74941 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5A20ED2BED00E74941 /* View+MASAdditions.m */; };
+		B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5D20ED2BED00E74941 /* MASConstraint.m */; };
+		B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */; };
+		B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +193,33 @@
 		B4614095201835D000BE5A24 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
 		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
+		B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardBgViewController.h; sourceTree = "<group>"; };
+		B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardBgViewController.m; sourceTree = "<group>"; };
+		B4ABDE4820ED2BED00E74941 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		B4ABDE4920ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		B4ABDE4A20ED2BED00E74941 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		B4ABDE4B20ED2BED00E74941 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		B4ABDE4C20ED2BED00E74941 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		B4ABDE4D20ED2BED00E74941 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		B4ABDE4E20ED2BED00E74941 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		B4ABDE4F20ED2BED00E74941 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		B4ABDE5020ED2BED00E74941 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		B4ABDE5120ED2BED00E74941 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		B4ABDE5220ED2BED00E74941 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		B4ABDE5320ED2BED00E74941 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		B4ABDE5420ED2BED00E74941 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		B4ABDE5520ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		B4ABDE5620ED2BED00E74941 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		B4ABDE5720ED2BED00E74941 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		B4ABDE5820ED2BED00E74941 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		B4ABDE5920ED2BED00E74941 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		B4ABDE5A20ED2BED00E74941 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		B4ABDE5B20ED2BED00E74941 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		B4ABDE5C20ED2BED00E74941 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		B4ABDE5D20ED2BED00E74941 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		B4ABDE5E20ED2BED00E74941 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +365,8 @@
 			children = (
 				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
 				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
+				B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */,
+				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -513,6 +553,7 @@
 		B458EF8C2010434C00B3D0D3 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				B4ABDE4720ED2BED00E74941 /* Masonry */,
 				B4614082201835D000BE5A24 /* MJExtension */,
 				B458EF8D2010434C00B3D0D3 /* fmdb */,
 			);
@@ -603,6 +644,38 @@
 				B4614095201835D000BE5A24 /* NSObject+MJMember.m */,
 			);
 			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		B4ABDE4720ED2BED00E74941 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				B4ABDE4820ED2BED00E74941 /* MASCompositeConstraint.h */,
+				B4ABDE4920ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				B4ABDE4A20ED2BED00E74941 /* MASConstraint+Private.h */,
+				B4ABDE4B20ED2BED00E74941 /* MASLayoutConstraint.h */,
+				B4ABDE4C20ED2BED00E74941 /* NSArray+MASShorthandAdditions.h */,
+				B4ABDE4D20ED2BED00E74941 /* MASConstraintMaker.h */,
+				B4ABDE4E20ED2BED00E74941 /* View+MASAdditions.h */,
+				B4ABDE4F20ED2BED00E74941 /* NSArray+MASAdditions.h */,
+				B4ABDE5020ED2BED00E74941 /* MASUtilities.h */,
+				B4ABDE5120ED2BED00E74941 /* MASViewAttribute.h */,
+				B4ABDE5220ED2BED00E74941 /* ViewController+MASAdditions.m */,
+				B4ABDE5320ED2BED00E74941 /* MASViewConstraint.h */,
+				B4ABDE5420ED2BED00E74941 /* MASConstraint.h */,
+				B4ABDE5520ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				B4ABDE5620ED2BED00E74941 /* MASCompositeConstraint.m */,
+				B4ABDE5720ED2BED00E74941 /* MASConstraintMaker.m */,
+				B4ABDE5820ED2BED00E74941 /* MASLayoutConstraint.m */,
+				B4ABDE5920ED2BED00E74941 /* NSArray+MASAdditions.m */,
+				B4ABDE5A20ED2BED00E74941 /* View+MASAdditions.m */,
+				B4ABDE5B20ED2BED00E74941 /* View+MASShorthandAdditions.h */,
+				B4ABDE5C20ED2BED00E74941 /* Masonry.h */,
+				B4ABDE5D20ED2BED00E74941 /* MASConstraint.m */,
+				B4ABDE5E20ED2BED00E74941 /* ViewController+MASAdditions.h */,
+				B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */,
+				B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */,
+			);
+			path = Masonry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,18 +844,23 @@
 				B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */,
 				B4614096201835D000BE5A24 /* MJMember.m in Sources */,
 				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
+				B4ABDE6320ED2BED00E74941 /* MASCompositeConstraint.m in Sources */,
 				B461409C201835D000BE5A24 /* MJMethod.m in Sources */,
 				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
+				B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */,
 				89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */,
 				89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */,
+				B4ABDE6720ED2BED00E74941 /* View+MASAdditions.m in Sources */,
 				B45B18A02011D92900359427 /* XYNewContactInfoCell.m in Sources */,
 				B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */,
 				B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */,
 				B4614098201835D000BE5A24 /* MJIvar.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
+				B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */,
 				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
 				B461409D201835D000BE5A24 /* MJArgument.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
+				B4ABDE6620ED2BED00E74941 /* NSArray+MASAdditions.m in Sources */,
 				B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */,
 				B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */,
 				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
@@ -790,15 +868,21 @@
 				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
 				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
+				B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */,
 				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
+				B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */,
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
+				B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */,
+				B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
 				89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */,
 				B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */,
 				B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */,
+				B4ABDE6420ED2BED00E74941 /* MASConstraintMaker.m in Sources */,
+				B4ABDE6520ED2BED00E74941 /* MASLayoutConstraint.m in Sources */,
 				B4614099201835D000BE5A24 /* MJType.m in Sources */,
 				B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,

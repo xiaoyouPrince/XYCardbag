@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYBankCardController : UITableViewController
+@interface XYBankCardController : UIViewController// UITableViewController
 
 @end

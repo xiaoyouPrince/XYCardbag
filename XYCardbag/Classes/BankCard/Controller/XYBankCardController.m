@@ -5,10 +5,20 @@
 //  Created by xiaoyou on 2017/12/18.
 //  Copyright © 2017年 xiaoyou. All rights reserved.
 //
+//
+
+#define slipeWidth 200
+
+
 
 #import "XYBankCardController.h"
+#import "XYBankCardBgViewController.h"
+#import "Masonry.h"
 
 @interface XYBankCardController ()
+
+@property(nonatomic,weak) UIView *frontView;
+@property(nonatomic,weak) UIView *backView;
 
 @end
 
@@ -17,82 +27,77 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.view.backgroundColor = [UIColor blackColor];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self buildUI];
+    
+    UIBarButtonItem *leftFuncItem = [[UIBarButtonItem alloc] initWithTitle:@"功能" style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
+    self.navigationItem.leftBarButtonItem = leftFuncItem;
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (void)leftItemClick{
     
-    // Configure the cell...
+    NSLog(@"左边被点击，弹出功能菜单");
     
-    return cell;
+    if (self.frontView.transform.tx) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.navigationController.navigationBar.transform = CGAffineTransformIdentity;
+            self.frontView.transform = CGAffineTransformIdentity;
+            self.backView.transform = CGAffineTransformIdentity;
+//            self.backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
+        }];
+    }else
+    {
+        
+        CGFloat backOffset = slipeWidth - ScreenW/2;  // 背景移动缩放过程中偏移量
+        CGFloat backSlip = -(slipeWidth - backOffset);  // 真实的背景移动距离
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            self.navigationController.navigationBar.transform = CGAffineTransformTranslate(self.navigationController.navigationBar.transform, slipeWidth, 0);
+            self.frontView.transform = CGAffineTransformTranslate(self.frontView.transform, slipeWidth, 0);
+            self.backView.transform = CGAffineTransformTranslate(self.backView.transform, backSlip, 0);
+            self.backView.transform = CGAffineTransformScale(self.backView.transform, slipeWidth/(ScreenW - slipeWidth), ScreenH/(ScreenH - 2 * 100));
+        }];
+    }
+    
+    
+    
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (void)buildUI{
+    
+    XYBankCardBgViewController *bgVC = [XYBankCardBgViewController new];
+    [self addChildViewController:bgVC];
+    UIView *backView = bgVC.view;
+    backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
+//    backView.frame = CGRectMake(slipeWidth, 0 , slipeWidth, ScreenH);
+    backView.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.5];
+    [self.view addSubview:backView];
+    self.backView = backView;
+    
+    UIView *frontView = [UIView new];
+    frontView.frame = self.view.bounds;
+    frontView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:frontView];
+    self.frontView = frontView;
+    
+    // 监听滑动的过程中back 的frame
+//    [self.backView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+//{
+//    NSLog(@"keyPath = %@",keyPath);
+//}
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
