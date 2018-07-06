@@ -9,8 +9,6 @@
 
 #define slipeWidth 200
 
-
-
 #import "XYBankCardController.h"
 #import "XYBankCardBgViewController.h"
 #import "Masonry.h"
@@ -109,7 +107,29 @@
     [self.frontView addSubview:tableView];
     
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"+ 添加新卡片" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
-        NSLog(@"item = %@",item);
+//        NSLog(@"item = %@",item);
+        switch (item.tag) {
+            case XYToolbarItemPositionLeft:
+                {
+                    [self gotoHelpPage];
+                }
+                break;
+                
+            case XYToolbarItemPositionMiddle:
+            {
+                [self gotoAddNewCardPage];
+            }
+                break;
+                
+            case XYToolbarItemPositiondRight:
+            {
+                [self gotoSearchCard];
+            }
+                break;
+                
+            default:
+                break;
+        }
     }];
     [self.frontView addSubview:toolBar];
     self.toolBar = toolBar;
@@ -159,6 +179,8 @@
     
     // 2.修改主页面的UI数据<加载对应页面的卡信息>
     self.title = sectionName;
+    
+    [self reloadPagedatasWithSectionName:sectionName];
 }
 
 
@@ -171,10 +193,38 @@
         sectionName = @"所有卡片";
     }
     
-//    self.dataArray
-//    XYBankCardCache 
+    XYBankCardSection *section = [XYBankCardSection new];
+    section.title = sectionName;
+    self.dataArray = [XYBankCardCache getAllCardModelsForSection:section];
+    
+    [self.tableView reloadData];
+    
+    NSLog(@"%@",self.dataArray);
 
 }
+
+/**
+ ToolBar 左侧按钮点击进入help
+ */
+- (void)gotoHelpPage{
+    [XYAlertView showAlertTitle:@"亲爱的" message:@"有事打电话" Ok:nil];
+}
+
+/**
+ ToolBar 添加按钮点击进入添加新卡页面
+ */
+- (void)gotoAddNewCardPage{
+    
+}
+
+/**
+ ToolBar 右侧按钮点击查询卡片
+ */
+- (void)gotoSearchCard{
+    
+}
+
+
 
 
 #pragma mark - Table view data source

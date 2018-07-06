@@ -71,6 +71,8 @@
 		B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */; };
 		B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
+		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
+		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,10 @@
 		B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
+		B4E4D6C020EF159000A2922D /* XYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAlertView.m; sourceTree = "<group>"; };
+		B4E4D6C120EF159000A2922D /* XYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAlertView.h; sourceTree = "<group>"; };
+		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
+		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +391,8 @@
 				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
 				B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */,
 				B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */,
+				B4E4D6C320EF175500A2922D /* XYAddCardController.h */,
+				B4E4D6C420EF175500A2922D /* XYAddCardController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -540,6 +548,7 @@
 		89FB5EEF1FE8EB19002AE67C /* XYKit */ = {
 			isa = PBXGroup;
 			children = (
+				B4E4D6BF20EF159000A2922D /* XYAlertView */,
 				89FB5EF01FE8EB19002AE67C /* Base */,
 				89FB5EF41FE8EB19002AE67C /* UIKit */,
 				89FB5EFD1FE8EB19002AE67C /* XYKit.h */,
@@ -709,6 +718,15 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		B4E4D6BF20EF159000A2922D /* XYAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B4E4D6C020EF159000A2922D /* XYAlertView.m */,
+				B4E4D6C120EF159000A2922D /* XYAlertView.h */,
+			);
+			path = XYAlertView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -875,9 +893,11 @@
 			files = (
 				B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */,
 				B4614096201835D000BE5A24 /* MJMember.m in Sources */,
+				B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */,
 				B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */,
 				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
 				B4ABDE6320ED2BED00E74941 /* MASCompositeConstraint.m in Sources */,
+				B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */,
 				B461409C201835D000BE5A24 /* MJMethod.m in Sources */,
 				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
 				B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */,
@@ -1093,7 +1113,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders";
+				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders/Masonry";
 			};
 			name = Debug;
 		};
@@ -1112,7 +1132,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders";
+				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders/Masonry";
 			};
 			name = Release;
 		};
