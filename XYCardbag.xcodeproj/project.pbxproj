@@ -70,6 +70,7 @@
 		B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5D20ED2BED00E74941 /* MASConstraint.m */; };
 		B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */; };
 		B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */; };
+		B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
@@ -233,6 +234,8 @@
 		B4ABDE5E20ED2BED00E74941 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardNormalCell.h; sourceTree = "<group>"; };
+		B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardNormalCell.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
 		B4E4D6C020EF159000A2922D /* XYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAlertView.m; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 			children = (
 				B431CFCB20EDBD80008CD732 /* XYToolBar.h */,
 				B431CFCC20EDBD80008CD732 /* XYToolBar.m */,
+				B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */,
+				B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -941,6 +946,7 @@
 				B4ABDE6520ED2BED00E74941 /* MASLayoutConstraint.m in Sources */,
 				B4614099201835D000BE5A24 /* MJType.m in Sources */,
 				B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */,
+				B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
 				B4614097201835D000BE5A24 /* NSObject+MJKeyValue.m in Sources */,
 				B461409A201835D000BE5A24 /* MJTypeEncoding.m in Sources */,

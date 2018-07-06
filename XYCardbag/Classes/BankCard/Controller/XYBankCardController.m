@@ -14,6 +14,7 @@
 #import "Masonry.h"
 #import "XYToolBar.h"
 #import "XYBankCardCache.h"
+#import "XYCardNormalCell.h"
 
 @interface XYBankCardController ()<BankCardBgVCDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -282,20 +283,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 30;
+    return 230;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellID = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
-    //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
+//    static NSString *cellID = @"cellID";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+//    }
+//    //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
+//    XYBankCardModel *card = self.dataArray[indexPath.row];
+//    cell.textLabel.text = card.name;
+//    cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
+    
+    XYCardNormalCell *cell = [XYCardNormalCell cellWithTableView:tableView];
+    
     XYBankCardModel *card = self.dataArray[indexPath.row];
-    cell.textLabel.text = card.name;
-    cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
+    cell.model = card;
     
     return cell;
 }
