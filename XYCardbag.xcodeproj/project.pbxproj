@@ -138,7 +138,6 @@
 		89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
 		89FB5EF11FE8EB19002AE67C /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
 		89FB5EF21FE8EB19002AE67C /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
-		89FB5EF31FE8EB19002AE67C /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
 		89FB5EF51FE8EB19002AE67C /* UIBarButtonItem+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYAdd.h"; sourceTree = "<group>"; };
 		89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYAdd.m"; sourceTree = "<group>"; };
 		89FB5EF71FE8EB19002AE67C /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
@@ -240,6 +239,7 @@
 		B4E4D6C120EF159000A2922D /* XYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAlertView.h; sourceTree = "<group>"; };
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
 		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
+		B4E4D6C620EF6D0800A2922D /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYKitMacro.h; path = ../../../../../Shebao/Shebao/Classes/Third/XYKit/Base/XYKitMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,7 +561,7 @@
 			children = (
 				89FB5EF11FE8EB19002AE67C /* XYCommon.h */,
 				89FB5EF21FE8EB19002AE67C /* XYCommon.m */,
-				89FB5EF31FE8EB19002AE67C /* XYKitMacro.h */,
+				B4E4D6C620EF6D0800A2922D /* XYKitMacro.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";

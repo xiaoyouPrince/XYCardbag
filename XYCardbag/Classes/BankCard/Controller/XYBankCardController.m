@@ -27,6 +27,16 @@
 
 @implementation XYBankCardController
 
+- (NSMutableArray *)dataArray
+{
+    if (_dataArray == nil) {
+        XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
+        _dataArray = [XYBankCardCache getAllCardModelsForSection:section];
+    }
+    return _dataArray;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,6 +48,15 @@
     self.navigationItem.leftBarButtonItem = leftFuncItem;
 
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self reloadPageDataAndRefresh];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -95,15 +114,15 @@
     self.frontView = frontView;
     
     // tableview And toolbar
-    static CGFloat toolBarH = 44;
+    CGFloat toolBarH = (iPhoneX) ? 88 : 44;
     
     UITableView *tableView = [[UITableView alloc] init];
     tableView.dataSource = self;
     tableView.delegate = self;
     tableView.backgroundColor = UIColor.clearColor;
     self.tableView = tableView;
-    self.tableView.contentInset = UIEdgeInsetsMake(-44, 0, 0, 0);
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.frontView addSubview:tableView];
     
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"+ 添加新卡片" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
@@ -135,10 +154,10 @@
     self.toolBar = toolBar;
     
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.frontView);
+        make.top.equalTo(self.frontView).offset(kNavHeight);
         make.left.equalTo(self.frontView);
         make.right.equalTo(self.frontView);
-        make.height.equalTo(self.frontView).offset(-(toolBarH));
+        make.bottom.equalTo(self.frontView).offset(-(toolBarH));
     }];
     
     [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -193,11 +212,8 @@
         sectionName = @"所有卡片";
     }
     
-    XYBankCardSection *section = [XYBankCardSection new];
-    section.title = sectionName;
-    self.dataArray = [XYBankCardCache getAllCardModelsForSection:section];
-    
-    [self.tableView reloadData];
+    // 刷新数据
+    [self reloadPageDataAndRefresh];
     
     NSLog(@"%@",self.dataArray);
 
@@ -215,6 +231,20 @@
  */
 - (void)gotoAddNewCardPage{
     
+    // 直接添加一张先走流程
+    XYBankCardModel *card = [XYBankCardModel new];
+    card.frontIcon = @"frontImage";
+    card.rearIcon = @"rearImage";
+    card.name = @"万事达";
+    card.cardNumber = @"62220412012338445";
+    card.desc = @"我就是一张普通卡片";
+    
+    // 这里也是根据自己title来找到对应的section
+    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
+    [XYBankCardCache saveNewCard:card forSection:section];
+    
+    // 刷新页面数据
+    [self reloadPageDataAndRefresh];
 }
 
 /**
@@ -222,6 +252,18 @@
  */
 - (void)gotoSearchCard{
     
+}
+
+
+/**
+ 刷新数据和列表，默认根据自己title所代表的组
+ */
+- (void)reloadPageDataAndRefresh{
+    
+    // 刷新数据和列表
+    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
+    self.dataArray = [XYBankCardCache getAllCardModelsForSection:section];
+    [self.tableView reloadData];
 }
 
 
@@ -251,7 +293,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    XYBankCardModel *card = self.dataArray[indexPath.row];
+    cell.textLabel.text = card.name;
     cell.backgroundColor = indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
     
     return cell;

@@ -12,6 +12,14 @@
 
 @implementation XYBankCardSection
 MJCodingImplementation;
+
++ (instancetype)instanceWithTitle:(NSString *)title
+{
+    XYBankCardSection *section = [XYBankCardSection new];
+    section.title = title;
+    return section;
+}
+
 @end
 
 

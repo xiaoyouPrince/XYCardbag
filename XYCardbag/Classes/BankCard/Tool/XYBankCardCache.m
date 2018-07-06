@@ -76,6 +76,30 @@ static FMDatabaseQueue *_queue;
  */
 + (void)saveNewCard:(XYBankCardModel *)card forSection:(XYBankCardSection *)section{
     
+    
+//    // 1.获得需要存储的数据
+//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];  // 必须实现Coding协议
+//    NSString *insertSql = [NSString stringWithFormat:@"insert into t_card ( \"sid\", \"name\",card) values ( (SELECT t_section.id FROM t_section  WHERE t_section.name = \"%@\"), '%@',%@)",section.title,card.name,data];
+//
+//    [_queue inDatabase:^(FMDatabase *db) {
+//
+//        // 2.存储数据
+//        BOOL isSuccess = [db executeUpdate:insertSql];
+//        if (isSuccess) {
+//            DLog(@"保存成功");
+//        }
+//    }];
+    
+    [_queue inDatabase:^(FMDatabase *db) {
+        // 1.获得需要存储的数据
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];  // 必须实现Coding协议
+        // 2.存储数据
+        BOOL isSuccess = [db executeUpdate:@"insert into t_card ( sid, name ,card) values ( (SELECT t_section.id FROM t_section WHERE t_section.name = ?), ?, ?)", section.title, card.name ,data];
+        if (isSuccess) {
+            DLog(@"保存成功");
+        }
+    }];
+    
 }
 
 
@@ -171,7 +195,7 @@ static FMDatabaseQueue *_queue;
     NSMutableArray * resultArrayM = [NSMutableArray array];
     
     // 1.创建语句
-    NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.sid = (SELECT t_section.id FROM t_section WHERE t_section.name = %@)",section.title];
+    NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.sid = (SELECT t_section.id FROM t_section WHERE t_section.name = \"%@\")",section.title];
     
     // 2.使用数据库
     [_queue inDatabase:^(FMDatabase *db) {
@@ -183,7 +207,12 @@ static FMDatabaseQueue *_queue;
         while (rs.next) {
             NSData *data = [rs dataForColumn:@"card"];
             XYBankCardModel *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-            [resultArrayM addObject:card];
+            
+            if (card == nil) { // 早期版本存储的时候没有此数据，这里做一下加固，防止奔溃
+                
+            }else{
+                [resultArrayM addObject:card];
+            }
         }
     }];
     

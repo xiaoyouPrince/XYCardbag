@@ -15,6 +15,11 @@
 @property(nonatomic , copy) NSString *title;
 @property(nonatomic , copy) NSString *icon;
 
+/**
+ 根据title 快速创建一个对象
+ */
++ (instancetype)instanceWithTitle:(NSString *)title;
+
 @end
 
 @interface XYBankCardModel : NSObject
