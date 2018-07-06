@@ -33,17 +33,7 @@
 - (NSMutableArray *)dataArray
 {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
-        
-        [_dataArray addObject:@"所有卡片"];
-        [_dataArray addObject:@"我的最爱"];
-        [_dataArray addObject:@"交通"];
-        [_dataArray addObject:@"人情"];
-        [_dataArray addObject:@"新欢"];
-        [_dataArray addObject:@"旧爱"];
-        [_dataArray addObject:@"喝酒"];
-        [_dataArray addObject:@"上学"];
-        
+        // _dataArray = [NSMutableArray array];
         _dataArray = [XYBankCardCache getAllCardSections];
         
     }
@@ -284,9 +274,10 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         
-        NSString *new = [NSString stringWithFormat:@"%ld",self.dataArray.count + 1];
-        [self.dataArray addObject:new];
-        [[self tableView] reloadData];
+        // 添加功能在底部toolBar上
+//        NSString *new = [NSString stringWithFormat:@"%ld",self.dataArray.count + 1];
+//        [self.dataArray addObject:new];
+//        [[self tableView] reloadData];
     }
 }
 
@@ -300,8 +291,8 @@
     }else
     {
         // 移动数据源
-        NSString *from = [self.dataArray objectAtIndex:fromIndexPath.row];
-        NSString *to = [self.dataArray objectAtIndex:toIndexPath.row];
+        id from = [self.dataArray objectAtIndex:fromIndexPath.row];
+        // id to = [self.dataArray objectAtIndex:toIndexPath.row];
         
         if (fromIndexPath.row < toIndexPath.row) { //从上到下
             [self.dataArray insertObject:from atIndex:toIndexPath.row + 1]; // 需要 + 1
