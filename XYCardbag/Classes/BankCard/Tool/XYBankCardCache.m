@@ -166,7 +166,28 @@ static FMDatabaseQueue *_queue;
  查询某组下面所有卡片
  */
 + (NSMutableArray <XYBankCardModel *>*)getAllCardModelsForSection:(XYBankCardSection *)section{
-    return [NSMutableArray array];
+    
+    
+    NSMutableArray * resultArrayM = [NSMutableArray array];
+    
+    // 1.创建语句
+    NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.sid = (SELECT t_section.id FROM t_section WHERE t_section.name = ?)",section.title];
+    
+    // 2.使用数据库
+    [_queue inDatabase:^(FMDatabase *db) {
+        // 创建数组
+        FMResultSet *rs = nil;
+        
+        rs = [db executeQuery:querySql];
+        
+        while (rs.next) {
+            NSData *data = [rs dataForColumn:@"card"];
+            XYBankCardModel *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            [resultArrayM addObject:card];
+        }
+    }];
+    
+    return resultArrayM;
 }
 
 

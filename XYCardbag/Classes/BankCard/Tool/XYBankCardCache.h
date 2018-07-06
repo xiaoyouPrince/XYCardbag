@@ -56,7 +56,7 @@
 + (NSMutableArray <XYBankCardSection *>*)getAllCardSections;
 
 /**
- 查询某组下面所有卡片
+ 查询某组下面所有卡片,参数为有title的section即可，内部依据title查询
  */
 + (NSMutableArray <XYBankCardModel *>*)getAllCardModelsForSection:(XYBankCardSection *)section;
 

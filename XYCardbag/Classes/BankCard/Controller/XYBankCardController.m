@@ -15,6 +15,7 @@
 #import "XYBankCardBgViewController.h"
 #import "Masonry.h"
 #import "XYToolBar.h"
+#import "XYBankCardCache.h"
 
 @interface XYBankCardController ()<BankCardBgVCDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -77,7 +78,7 @@
 
 
 - (void)buildUI{
-    
+
     // 背景View
     XYBankCardBgViewController *bgVC = [XYBankCardBgViewController new];
     bgVC.delegate = self;
@@ -158,6 +159,21 @@
     
     // 2.修改主页面的UI数据<加载对应页面的卡信息>
     self.title = sectionName;
+}
+
+
+/**
+ 根据sectionName刷新主页数据
+ */
+- (void)reloadPagedatasWithSectionName:(NSString *)sectionName
+{
+    if (sectionName == nil) {
+        sectionName = @"所有卡片";
+    }
+    
+//    self.dataArray
+//    XYBankCardCache 
+
 }
 
 
