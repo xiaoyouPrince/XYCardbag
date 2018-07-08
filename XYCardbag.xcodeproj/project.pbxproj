@@ -70,6 +70,7 @@
 		B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5D20ED2BED00E74941 /* MASConstraint.m */; };
 		B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */; };
 		B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */; };
+		B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */; };
 		B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
@@ -121,7 +122,7 @@
 		89FB5EA31FE7C2B7002AE67C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89FB5EA41FE7C2B7002AE67C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		89FB5EA51FE7C2B7002AE67C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		89FB5EAD1FE7C2E9002AE67C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = XYCardbag/Info.plist; sourceTree = "<group>"; };
+		89FB5EAD1FE7C2E9002AE67C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FB5ECA1FE7C840002AE67C /* XYNetAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNetAccountController.h; sourceTree = "<group>"; };
 		89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNetAccountController.m; sourceTree = "<group>"; };
 		89FB5ECD1FE7C85D002AE67C /* XYIdentitiesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIdentitiesController.h; sourceTree = "<group>"; };
@@ -234,6 +235,7 @@
 		B4ABDE5E20ED2BED00E74941 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCardController.xib; sourceTree = "<group>"; };
 		B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardNormalCell.h; sourceTree = "<group>"; };
 		B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardNormalCell.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
@@ -281,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				89FAF2651FD1060C008C9655 /* XYCardbag */,
-				89FB5EAD1FE7C2E9002AE67C /* Info.plist */,
 				89FAF27F1FD1060C008C9655 /* XYCardbagTests */,
 				89FAF28A1FD1060C008C9655 /* XYCardbagUITests */,
 				89FAF2641FD1060C008C9655 /* Products */,
@@ -360,6 +361,7 @@
 				89FB5EA41FE7C2B7002AE67C /* ViewController.h */,
 				89FB5EA51FE7C2B7002AE67C /* ViewController.m */,
 				89FB5EEB1FE8BAF1002AE67C /* XYCardbag.pch */,
+				89FB5EAD1FE7C2E9002AE67C /* Info.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -388,14 +390,13 @@
 		89FB5EB81FE7C76C002AE67C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4B1D5BB20F1F48100321105 /* AddCardVC */,
 				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
 				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
 				B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */,
 				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
 				B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */,
 				B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */,
-				B4E4D6C320EF175500A2922D /* XYAddCardController.h */,
-				B4E4D6C420EF175500A2922D /* XYAddCardController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -723,6 +724,16 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		B4B1D5BB20F1F48100321105 /* AddCardVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4E4D6C320EF175500A2922D /* XYAddCardController.h */,
+				B4E4D6C420EF175500A2922D /* XYAddCardController.m */,
+				B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */,
+			);
+			path = AddCardVC;
+			sourceTree = "<group>";
+		};
 		B4E4D6BF20EF159000A2922D /* XYAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +877,7 @@
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
 				89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */,
+				B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */,
 				B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
 				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
@@ -1115,8 +1127,8 @@
 				DEVELOPMENT_TEAM = SLUU2646N5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
-				INFOPLIST_FILE = XYCardbag/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1138,8 +1150,8 @@
 				DEVELOPMENT_TEAM = SLUU2646N5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
-				INFOPLIST_FILE = XYCardbag/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";

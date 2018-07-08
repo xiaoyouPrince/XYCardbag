@@ -15,6 +15,7 @@
 #import "XYToolBar.h"
 #import "XYBankCardCache.h"
 #import "XYCardNormalCell.h"
+#import "XYAddCardController.h"
 
 @interface XYBankCardController ()<BankCardBgVCDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -232,20 +233,25 @@
  */
 - (void)gotoAddNewCardPage{
     
-    // 直接添加一张先走流程
-    XYBankCardModel *card = [XYBankCardModel new];
-    card.frontIcon = @"carIcon";
-    card.rearIcon = @"carIcon";
-    card.name = @"万事达";
-    card.cardNumber = @"62220412012338445";
-    card.desc = @"我就是一张普通卡片";
+//    // 直接添加一张先走流程
+//    XYBankCardModel *card = [XYBankCardModel new];
+//    card.frontIcon = @"carIcon";
+//    card.rearIcon = @"carIcon";
+//    card.name = @"万事达";
+//    card.cardNumber = @"62220412012338445";
+//    card.desc = @"我就是一张普通卡片";
+//
+//    // 这里也是根据自己title来找到对应的section
+//    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
+//    [XYBankCardCache saveNewCard:card forSection:section];
+//
+//    // 刷新页面数据
+//    [self reloadPageDataAndRefresh];
     
-    // 这里也是根据自己title来找到对应的section
-    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
-    [XYBankCardCache saveNewCard:card forSection:section];
-    
-    // 刷新页面数据
-    [self reloadPageDataAndRefresh];
+    /// 进入对应的列表页面
+    XYAddCardController *listVC = [XYAddCardController new];
+    [self.navigationController pushViewController:listVC animated:YES];
+
 }
 
 /**

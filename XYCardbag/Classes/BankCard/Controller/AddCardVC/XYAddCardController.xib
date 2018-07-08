@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYAddCardController">
+            <connections>
+                <outlet property="scrollView" destination="hPy-uD-SaU" id="ia5-SR-THo"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fGQ-XQ-uEo"/>
+                <outlet property="viewBottomCons" destination="J5G-Qa-2X2" id="2hW-pd-tbi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPy-uD-SaU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQR-wG-kG5">
+                            <rect key="frame" x="0.0" y="30" width="374" height="150"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dD9-aL-oEB" userLabel="cellView">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbm-aU-bEt" userLabel="line">
+                                            <rect key="frame" x="80" y="49.5" width="294" height="0.5"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="ZpC-Z2-hyI"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="普通卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flc-Xd-spb">
+                                            <rect key="frame" x="80" y="15" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wizard_normalcard" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-NT-Pbm">
+                                            <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_arrow_gray" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JfT-2d-1nn">
+                                            <rect key="frame" x="334" y="15" width="20" height="20"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ogO-NT-Pbm" secondAttribute="bottom" constant="5" id="3pE-rB-hYQ"/>
+                                        <constraint firstItem="flc-Xd-spb" firstAttribute="leading" secondItem="Xbm-aU-bEt" secondAttribute="leading" id="7ds-67-2m7"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xbm-aU-bEt" secondAttribute="bottom" id="9Xa-mr-Sby"/>
+                                        <constraint firstAttribute="trailing" secondItem="JfT-2d-1nn" secondAttribute="trailing" constant="20" id="GBt-OT-nQq"/>
+                                        <constraint firstItem="ogO-NT-Pbm" firstAttribute="leading" secondItem="dD9-aL-oEB" secondAttribute="leading" constant="20" id="RBN-AM-JBA"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xbm-aU-bEt" secondAttribute="trailing" id="TBi-d2-Fcp"/>
+                                        <constraint firstItem="JfT-2d-1nn" firstAttribute="centerY" secondItem="dD9-aL-oEB" secondAttribute="centerY" id="VxA-Bg-AIs"/>
+                                        <constraint firstItem="flc-Xd-spb" firstAttribute="centerY" secondItem="dD9-aL-oEB" secondAttribute="centerY" id="hlk-oM-fdt"/>
+                                        <constraint firstItem="Xbm-aU-bEt" firstAttribute="leading" secondItem="dD9-aL-oEB" secondAttribute="leading" constant="80" id="p5H-2P-hnb"/>
+                                        <constraint firstItem="ogO-NT-Pbm" firstAttribute="top" secondItem="dD9-aL-oEB" secondAttribute="top" constant="5" id="rY8-gQ-t3g"/>
+                                        <constraint firstItem="flc-Xd-spb" firstAttribute="leading" secondItem="ogO-NT-Pbm" secondAttribute="trailing" constant="20" id="s4u-WQ-lMl"/>
+                                        <constraint firstAttribute="height" constant="50" id="wq0-eO-Iw8"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="r43-2g-D2j" appends="YES" id="bwZ-aX-YPi"/>
+                                    </connections>
+                                </view>
+                                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-yd-Mst" userLabel="cellView">
+                                    <rect key="frame" x="0.0" y="50" width="374" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-gr-fkf" userLabel="line">
+                                            <rect key="frame" x="80" y="49.5" width="294" height="0.5"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="vG6-q4-IbY"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信用卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-UO-Qyx">
+                                            <rect key="frame" x="80" y="15" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wizard_creditcard" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-tj-yYi">
+                                            <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_arrow_gray" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsn-tM-Gr5">
+                                            <rect key="frame" x="334" y="15" width="20" height="20"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="Hff-gr-fkf" firstAttribute="leading" secondItem="r5c-yd-Mst" secondAttribute="leading" constant="80" id="1S9-1t-jUa"/>
+                                        <constraint firstItem="a4k-UO-Qyx" firstAttribute="leading" secondItem="UGT-tj-yYi" secondAttribute="trailing" constant="20" id="3kf-qn-7J6"/>
+                                        <constraint firstItem="UGT-tj-yYi" firstAttribute="leading" secondItem="r5c-yd-Mst" secondAttribute="leading" constant="20" id="3qg-3G-e8a"/>
+                                        <constraint firstItem="a4k-UO-Qyx" firstAttribute="centerY" secondItem="r5c-yd-Mst" secondAttribute="centerY" id="GIS-XP-oph"/>
+                                        <constraint firstAttribute="height" constant="50" id="N2c-UX-toI"/>
+                                        <constraint firstItem="zsn-tM-Gr5" firstAttribute="centerY" secondItem="r5c-yd-Mst" secondAttribute="centerY" id="PGl-x9-EjA"/>
+                                        <constraint firstItem="a4k-UO-Qyx" firstAttribute="leading" secondItem="Hff-gr-fkf" secondAttribute="leading" id="YQr-c4-U7E"/>
+                                        <constraint firstAttribute="bottom" secondItem="UGT-tj-yYi" secondAttribute="bottom" constant="5" id="bjf-ag-QPS"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hff-gr-fkf" secondAttribute="trailing" id="dy5-8z-nKa"/>
+                                        <constraint firstAttribute="bottom" secondItem="Hff-gr-fkf" secondAttribute="bottom" id="iBo-PT-uld"/>
+                                        <constraint firstAttribute="trailing" secondItem="zsn-tM-Gr5" secondAttribute="trailing" constant="20" id="igo-w1-uTz"/>
+                                        <constraint firstItem="UGT-tj-yYi" firstAttribute="top" secondItem="r5c-yd-Mst" secondAttribute="top" constant="5" id="rCF-R7-EZN"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="aWJ-vE-lDr" appends="YES" id="5lb-Ea-Bnh"/>
+                                    </connections>
+                                </view>
+                                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-d8-gZD" userLabel="cellView">
+                                    <rect key="frame" x="0.0" y="100" width="374" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9in-jE-TtU" userLabel="line">
+                                            <rect key="frame" x="80" y="49.5" width="294" height="0.5"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="1Uw-Wm-tTj"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购物卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opH-lJ-J0y">
+                                            <rect key="frame" x="80" y="15" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wizard_storecard" translatesAutoresizingMaskIntoConstraints="NO" id="guW-mg-hwS">
+                                            <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_arrow_gray" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCM-Vp-eUd">
+                                            <rect key="frame" x="334" y="15" width="20" height="20"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="9in-jE-TtU" secondAttribute="trailing" id="8AS-QD-Ww1"/>
+                                        <constraint firstAttribute="bottom" secondItem="guW-mg-hwS" secondAttribute="bottom" constant="5" id="J6Z-pa-cl9"/>
+                                        <constraint firstItem="opH-lJ-J0y" firstAttribute="centerY" secondItem="oi1-d8-gZD" secondAttribute="centerY" id="L1s-tO-o8g"/>
+                                        <constraint firstAttribute="height" constant="50" id="Mww-7R-TVi"/>
+                                        <constraint firstAttribute="bottom" secondItem="9in-jE-TtU" secondAttribute="bottom" id="PRc-Se-TAg"/>
+                                        <constraint firstAttribute="trailing" secondItem="sCM-Vp-eUd" secondAttribute="trailing" constant="20" id="VgS-Rq-Xee"/>
+                                        <constraint firstItem="opH-lJ-J0y" firstAttribute="leading" secondItem="guW-mg-hwS" secondAttribute="trailing" constant="20" id="gjy-bu-TtW"/>
+                                        <constraint firstItem="guW-mg-hwS" firstAttribute="leading" secondItem="oi1-d8-gZD" secondAttribute="leading" constant="20" id="h7Q-W0-B02"/>
+                                        <constraint firstItem="sCM-Vp-eUd" firstAttribute="centerY" secondItem="oi1-d8-gZD" secondAttribute="centerY" id="iYa-d8-daU"/>
+                                        <constraint firstItem="opH-lJ-J0y" firstAttribute="leading" secondItem="9in-jE-TtU" secondAttribute="leading" id="jcJ-s8-Isn"/>
+                                        <constraint firstItem="9in-jE-TtU" firstAttribute="leading" secondItem="oi1-d8-gZD" secondAttribute="leading" constant="80" id="pGY-Nm-il4"/>
+                                        <constraint firstItem="guW-mg-hwS" firstAttribute="top" secondItem="oi1-d8-gZD" secondAttribute="top" constant="5" id="vLq-D7-MuB"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="Jbc-x6-qgK" appends="YES" id="UEU-nD-5CT"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="oi1-d8-gZD" firstAttribute="top" secondItem="dD9-aL-oEB" secondAttribute="bottom" constant="50" id="5If-32-hZ3"/>
+                                <constraint firstItem="dD9-aL-oEB" firstAttribute="top" secondItem="DQR-wG-kG5" secondAttribute="top" id="Itb-Ot-h0a"/>
+                                <constraint firstAttribute="trailing" secondItem="r5c-yd-Mst" secondAttribute="trailing" id="JKe-j8-ttn"/>
+                                <constraint firstItem="r5c-yd-Mst" firstAttribute="top" secondItem="dD9-aL-oEB" secondAttribute="bottom" id="K9j-ZA-FMD"/>
+                                <constraint firstItem="r5c-yd-Mst" firstAttribute="leading" secondItem="DQR-wG-kG5" secondAttribute="leading" id="Ry2-GE-qvf"/>
+                                <constraint firstAttribute="trailing" secondItem="oi1-d8-gZD" secondAttribute="trailing" id="ct5-dg-Hvo"/>
+                                <constraint firstAttribute="height" constant="150" id="dEH-Sb-QD0"/>
+                                <constraint firstItem="oi1-d8-gZD" firstAttribute="leading" secondItem="DQR-wG-kG5" secondAttribute="leading" id="gOl-Wn-mis"/>
+                                <constraint firstAttribute="trailing" secondItem="dD9-aL-oEB" secondAttribute="trailing" id="l65-y8-CrV"/>
+                                <constraint firstItem="dD9-aL-oEB" firstAttribute="leading" secondItem="DQR-wG-kG5" secondAttribute="leading" id="mS2-Ra-pET"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="DQR-wG-kG5" firstAttribute="leading" secondItem="hPy-uD-SaU" secondAttribute="leading" id="EXT-pW-cy1"/>
+                        <constraint firstAttribute="bottom" secondItem="DQR-wG-kG5" secondAttribute="bottom" constant="467" id="J5G-Qa-2X2"/>
+                        <constraint firstItem="DQR-wG-kG5" firstAttribute="centerX" secondItem="hPy-uD-SaU" secondAttribute="centerX" id="Pgl-Yt-0GE"/>
+                        <constraint firstAttribute="trailing" secondItem="DQR-wG-kG5" secondAttribute="trailing" id="ukZ-5h-S4N"/>
+                        <constraint firstItem="DQR-wG-kG5" firstAttribute="top" secondItem="hPy-uD-SaU" secondAttribute="top" constant="30" id="wrT-tO-CNN"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hPy-uD-SaU" secondAttribute="bottom" id="FXC-Gu-G0g"/>
+                <constraint firstAttribute="trailing" secondItem="hPy-uD-SaU" secondAttribute="trailing" id="RZp-hq-dog"/>
+                <constraint firstItem="hPy-uD-SaU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ecf-a2-1ED"/>
+                <constraint firstItem="hPy-uD-SaU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kGX-Gq-6ia"/>
+                <constraint firstItem="hPy-uD-SaU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tWP-Ll-M7i"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="85.5"/>
+        </view>
+        <tapGestureRecognizer id="r43-2g-D2j">
+            <connections>
+                <action selector="cellTapBegin:" destination="-1" id="hqb-Gk-y2t"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="aWJ-vE-lDr">
+            <connections>
+                <action selector="cellTapBegin:" destination="-1" id="ech-8h-uPv"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="Jbc-x6-qgK">
+            <connections>
+                <action selector="cellTapBegin:" destination="-1" id="sQp-od-PWY"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="list_arrow_gray" width="20" height="20"/>
+        <image name="wizard_creditcard" width="48" height="48"/>
+        <image name="wizard_normalcard" width="48" height="48"/>
+        <image name="wizard_storecard" width="48" height="48"/>
+    </resources>
+</document>
