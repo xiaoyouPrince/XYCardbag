@@ -71,6 +71,7 @@
 		B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */; };
 		B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */; };
 		B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */; };
+		B4B1D5C120F2761000321105 /* XYAddCardDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B1D5BF20F2761000321105 /* XYAddCardDetailController.m */; };
 		B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
@@ -236,6 +237,8 @@
 		B4ABDE5F20ED2BED00E74941 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		B4ABDE6020ED2BED00E74941 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCardController.xib; sourceTree = "<group>"; };
+		B4B1D5BE20F2761000321105 /* XYAddCardDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardDetailController.h; sourceTree = "<group>"; };
+		B4B1D5BF20F2761000321105 /* XYAddCardDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardDetailController.m; sourceTree = "<group>"; };
 		B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardNormalCell.h; sourceTree = "<group>"; };
 		B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardNormalCell.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
@@ -730,6 +733,8 @@
 				B4E4D6C320EF175500A2922D /* XYAddCardController.h */,
 				B4E4D6C420EF175500A2922D /* XYAddCardController.m */,
 				B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */,
+				B4B1D5BE20F2761000321105 /* XYAddCardDetailController.h */,
+				B4B1D5BF20F2761000321105 /* XYAddCardDetailController.m */,
 			);
 			path = AddCardVC;
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */,
 				B461409C201835D000BE5A24 /* MJMethod.m in Sources */,
 				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
+				B4B1D5C120F2761000321105 /* XYAddCardDetailController.m in Sources */,
 				B4ABDE6820ED2BED00E74941 /* MASConstraint.m in Sources */,
 				89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */,
 				89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */,

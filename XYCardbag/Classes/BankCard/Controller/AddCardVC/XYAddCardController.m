@@ -10,6 +10,7 @@
 //  添加新卡页面
 
 #import "XYAddCardController.h"
+#import "XYAddCardDetailController.h"
 
 @interface XYAddCardController ()
 
@@ -36,6 +37,9 @@
         case 0:
         {
             NSLog(@"点击普通卡");
+            /// 进入对应的列表页面
+            XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+            [self.navigationController pushViewController:listVC animated:YES];
         }
             break;
         case 1:
