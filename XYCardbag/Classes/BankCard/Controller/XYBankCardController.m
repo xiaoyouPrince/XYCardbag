@@ -234,8 +234,8 @@
     
     // 直接添加一张先走流程
     XYBankCardModel *card = [XYBankCardModel new];
-    card.frontIcon = @"frontImage";
-    card.rearIcon = @"rearImage";
+    card.frontIcon = @"carIcon";
+    card.rearIcon = @"carIcon";
     card.name = @"万事达";
     card.cardNumber = @"62220412012338445";
     card.desc = @"我就是一张普通卡片";
@@ -313,6 +313,8 @@
     // 点击对应的卡组处理
     // 返回主页并刷新最新数据
     // 可以用自己的delegate去做这件事
+    
+    [XYAlertView showAlertTitle:@"提示" message:@"进入卡信息页面" Ok:nil];
     
 }
 

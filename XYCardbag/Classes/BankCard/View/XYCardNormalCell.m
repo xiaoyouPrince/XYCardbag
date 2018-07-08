@@ -94,7 +94,7 @@
     UIView *funcView = [UIView new];
     [self.contentView addSubview:funcView];
     self.funcView = funcView;
-    funcView.backgroundColor = UIColor.greenColor;
+    //funcView.backgroundColor = UIColor.greenColor;
     [funcView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.right.equalTo(self.contentView).offset(-k_funcBtn_right_margin);
@@ -105,7 +105,19 @@
     
     for (int i = 0; i < 4; i++) {
         UIButton *btn = [UIButton new];
-        [btn setBackgroundImage:[UIImage imageWithColor:XYRandomColor] forState:UIControlStateNormal];
+        //[btn setBackgroundImage:[UIImage imageWithColor:XYRandomColor] forState:UIControlStateNormal];
+        if (i == 0) {
+            [btn setImage:[UIImage imageNamed:@"tool_edit"] forState:UIControlStateNormal];
+        }
+        if (i == 1) {
+            [btn setImage:[UIImage imageNamed:@"tool_non_favorite"] forState:UIControlStateNormal];
+        }
+        if (i == 2) {
+            [btn setImage:[UIImage imageNamed:@"tool_del"] forState:UIControlStateNormal];
+        }
+        if (i == 3) {
+            [btn setImage:[UIImage imageNamed:@"tool_action"] forState:UIControlStateNormal];
+        }
         btn.tag = i;
         [btn addTarget:self action:@selector(funcBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [funcView addSubview:btn];
@@ -258,17 +270,40 @@
 {
     _model = model;
     
+    whiteImage = [UIImage imageNamed:model.frontIcon];
+    greenImage = [UIImage imageNamed:model.rearIcon];
+    self.cardImageView.image = whiteImage;
+    
     
 }
 
 
+// 这个方法是系统自动调用的，适合做一些初始化内容，真正的点击需要在VC中做
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    DLog(@"用户点击当前卡片，进入详情信息");
+//    DLog(@"用户点击当前卡片，进入详情信息");
+    
+    //
+//    if (@available(iOS 11.0, *)) {
+//        UIColor * color = XYRandomColor;
+//        self.backgroundColor = color;
+//        CGFloat red , blue , green , alpha;
+//        if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
+//            NSLog(@"r:%f , g:%f , b:%f , a=%f",red*255,green*255,blue*255,alpha);
+//        }    } else {
+//        // Fallback on earlier versions
+//    }
+    
+    
     
 }
 
 @end
+
+
+
+
+
