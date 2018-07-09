@@ -24,5 +24,11 @@ MJCodingImplementation;
 
 
 @implementation XYBankCardModel
+- (instancetype)init{
+    if(self == [super init]){
+        _tags = [NSMutableArray array];
+    }
+    return self;
+}
 MJCodingImplementation;
 @end
