@@ -164,7 +164,6 @@
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied)
         {
-            //            [MyMBProgHUD showInfo:@"请打开相机权限，否则无法拍照!"];
             [XYAlertView showAlertTitle:@"提示" message:@"请打开相机权限，否则无法选取照片!" Ok:nil];
             return;
         }
@@ -206,9 +205,11 @@
     // 3.图片简单处理
     if (_takeImageForFront) {
         [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
+        self.model.frontIconData = UIImagePNGRepresentation(image);
     }
     if (_takeImageForRear) {
         [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
+        self.model.rearIconData = UIImagePNGRepresentation(image);
     }
     
 }
@@ -219,10 +220,18 @@
  */
 - (IBAction)changeFrontRearImage:(id)sender {
     
+    // UI前后图片切换，model中也要前后图片进行切换
     UIImage *frontImage = [self.frontIcon_btn imageForState:UIControlStateNormal];
     UIImage *rearImage = [self.rearIcon_btn imageForState:UIControlStateNormal];
     [self.frontIcon_btn setImage:rearImage forState:UIControlStateNormal];
     [self.rearIcon_btn setImage:frontImage forState:UIControlStateNormal];
+    
+    // model 中切换
+//    NSData *frontIconData = UIImagePNGRepresentation(frontImage);
+//    NSData *rearIconData = UIImagePNGRepresentation(rearImage);
+    NSData *temp = self.model.frontIconData;
+    self.model.frontIconData = self.model.rearIconData;
+    self.model.rearIconData = temp;
 }
 
 
