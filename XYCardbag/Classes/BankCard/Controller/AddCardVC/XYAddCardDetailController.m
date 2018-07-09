@@ -23,6 +23,7 @@
 
 #import "XYAddCardDetailController.h"
 #import "XYCardInfoCell.h"
+#import "XYAddNewCardTagController.h"
 
 @interface XYAddCardDetailController ()
 
@@ -95,7 +96,8 @@
     descInfo.tagType = TagTypeBaseDesc;
     
     self.dataArray = [NSMutableArray array];
-    [self.dataArray addObjectsFromArray:@[@[imageInfo],@[nameInfo,numberInfo,descInfo]]];
+    NSMutableArray *sectionTwo = [NSMutableArray arrayWithObjects:nameInfo,numberInfo,descInfo, nil];
+    [self.dataArray addObjectsFromArray:@[@[imageInfo],sectionTwo]];
     
 }
 
@@ -212,9 +214,22 @@
     if (indexPath.row == infoSection.count) {
         
         // 最后一个cell点击进入，选择添加类别的页面,通过block回传添加的tag并放到自己打data中。 -- 当本页显示的时候再刷新
-        
+        /// 进入对应的列表页面
+        XYAddNewCardTagController *listVC = [XYAddNewCardTagController new];
+        [self.navigationController pushViewController:listVC animated:YES];
+        listVC.addTagBlock = ^(XYCardInfoModel *model) {
+            // 拿到添加的tag的modle . 添加到self.dataArray 中的第二组(最后一组)
+
+            NSMutableArray *sectionTwo = self.dataArray[self.dataArray.count - 1];
+            [sectionTwo addObject:model];
+            
+            [self.tableView reloadData];
+            
+#warning mark -- 这里可以进行性能优化，只刷新最后一行
+//            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:sectionTwo.count inSection:1];
+//            [self.tableView reloadRowsAtIndexPaths:indexPath withRowAnimation:UITableViewRowAnimationFade];
+        };
     }
-    
 }
 
 

@@ -29,6 +29,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    // 测试添加一个model
+    XYCardInfoModel *model = [XYCardInfoModel new];
+    if (self.addTagBlock) {
+        self.addTagBlock(model);
+    }
+}
+
+
+
 
 
 @end
