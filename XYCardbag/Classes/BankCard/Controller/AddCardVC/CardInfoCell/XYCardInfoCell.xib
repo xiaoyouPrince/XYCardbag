@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" userLabel="Card Info Cell image" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgX-nX-scx">
+                        <rect key="frame" x="123" y="116.5" width="74" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <state key="normal" title="需要一些小技巧？"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrZ-DC-lzj">
+                        <rect key="frame" x="138" y="33" width="45" height="45"/>
+                        <state key="normal" image="SwitchIcon"/>
+                        <connections>
+                            <action selector="changeFrontRearImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WnG-l5-xDl"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FG-aj-Gsh">
+                        <rect key="frame" x="43.5" y="31" width="73" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="3FG-aj-Gsh" secondAttribute="height" multiplier="73:50" id="0OQ-bD-BoK"/>
+                            <constraint firstAttribute="width" constant="73" id="fU0-Tf-fmq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" backgroundImage="cardPlacehold_front">
+                            <color key="titleColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="takeCardImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="r5U-eA-zYx"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-TZ-msv">
+                        <rect key="frame" x="203.5" y="30.5" width="73" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="73" id="7bg-dz-Lb5"/>
+                            <constraint firstAttribute="width" secondItem="zr9-TZ-msv" secondAttribute="height" multiplier="73:50" id="TAm-BQ-c2D"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="cardPlacehold_rear"/>
+                        <connections>
+                            <action selector="takeCardImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kvk-UL-UmT"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PT-zT-NdW">
+                        <rect key="frame" x="64.5" y="88.5" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="反面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k1-mW-SNk">
+                        <rect key="frame" x="224.5" y="88.5" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3FG-aj-Gsh" firstAttribute="centerY" secondItem="TrZ-DC-lzj" secondAttribute="centerY" id="3QT-wk-A2T"/>
+                    <constraint firstItem="4k1-mW-SNk" firstAttribute="centerX" secondItem="zr9-TZ-msv" secondAttribute="centerX" id="6VL-z7-haG"/>
+                    <constraint firstItem="3PT-zT-NdW" firstAttribute="top" secondItem="3FG-aj-Gsh" secondAttribute="bottom" constant="8" id="Cae-ii-9wg"/>
+                    <constraint firstItem="zr9-TZ-msv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.5" id="LBJ-hV-Pxk"/>
+                    <constraint firstItem="3PT-zT-NdW" firstAttribute="centerX" secondItem="3FG-aj-Gsh" secondAttribute="centerX" id="NRP-fa-Pag"/>
+                    <constraint firstItem="4k1-mW-SNk" firstAttribute="top" secondItem="zr9-TZ-msv" secondAttribute="bottom" constant="8" id="RCU-1F-Yxk"/>
+                    <constraint firstAttribute="bottom" secondItem="SgX-nX-scx" secondAttribute="bottom" constant="10" id="TKf-At-kqu"/>
+                    <constraint firstItem="3FG-aj-Gsh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.5" id="Ub9-Uk-9OH"/>
+                    <constraint firstItem="TrZ-DC-lzj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kgv-yp-eC6"/>
+                    <constraint firstItem="SgX-nX-scx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wPD-dd-w3G"/>
+                    <constraint firstItem="zr9-TZ-msv" firstAttribute="centerY" secondItem="TrZ-DC-lzj" secondAttribute="centerY" id="xjK-M0-roR"/>
+                    <constraint firstItem="TrZ-DC-lzj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-20" id="y7z-zg-RCf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="frontIcon_btn" destination="3FG-aj-Gsh" id="wID-GQ-93R"/>
+                <outlet property="rearIcon_btn" destination="zr9-TZ-msv" id="1od-jA-ULz"/>
+            </connections>
+            <point key="canvasLocation" x="-73" y="-158"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o2u-3d-CW2" userLabel="Card Info Cell name" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o2u-3d-CW2" id="5na-ZH-KNl">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-ta-VJE">
+                        <rect key="frame" x="16" y="16.5" width="80.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-CX-C4h" userLabel="lineView">
+                        <rect key="frame" x="116.5" y="5" width="0.5" height="39.5"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="VFL-LI-tCy"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入卡片名称..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-jY-pKd">
+                        <rect key="frame" x="127" y="15.5" width="177" height="17"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="GLc-jY-pKd" secondAttribute="trailing" id="27w-uM-a0L"/>
+                    <constraint firstItem="GLc-jY-pKd" firstAttribute="centerY" secondItem="5na-ZH-KNl" secondAttribute="centerY" id="4kW-mk-QCK"/>
+                    <constraint firstItem="ljx-ta-VJE" firstAttribute="leading" secondItem="5na-ZH-KNl" secondAttribute="leadingMargin" id="AGI-TN-N5v"/>
+                    <constraint firstItem="ljx-ta-VJE" firstAttribute="centerY" secondItem="5na-ZH-KNl" secondAttribute="centerY" id="LdE-qV-Tte"/>
+                    <constraint firstItem="RVn-CX-C4h" firstAttribute="top" secondItem="5na-ZH-KNl" secondAttribute="top" constant="5" id="OQK-3T-e9f"/>
+                    <constraint firstAttribute="bottom" secondItem="RVn-CX-C4h" secondAttribute="bottom" constant="5" id="Tlf-gH-nfv"/>
+                    <constraint firstItem="GLc-jY-pKd" firstAttribute="leading" secondItem="RVn-CX-C4h" secondAttribute="trailing" constant="10" id="YsZ-3h-h1U"/>
+                    <constraint firstItem="RVn-CX-C4h" firstAttribute="centerX" secondItem="5na-ZH-KNl" secondAttribute="centerX" multiplier="0.73" id="at3-2O-PUN"/>
+                    <constraint firstItem="RVn-CX-C4h" firstAttribute="leading" secondItem="ljx-ta-VJE" secondAttribute="trailing" constant="20" id="qeT-te-53w"/>
+                    <constraint firstItem="RVn-CX-C4h" firstAttribute="centerY" secondItem="5na-ZH-KNl" secondAttribute="centerY" id="uap-JX-5zb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="G9g-RQ-IIf"/>
+            <point key="canvasLocation" x="-73" y="15"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o7Z-ua-wlM" userLabel="Card Info Cell number" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o7Z-ua-wlM" id="1fo-GY-kJK">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYz-tA-yTw">
+                        <rect key="frame" x="16" y="16.5" width="80.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5I-sN-jfW" userLabel="lineView">
+                        <rect key="frame" x="116.5" y="5" width="0.5" height="39.5"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="cXo-wv-NvB"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入卡号..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-HV-1aW">
+                        <rect key="frame" x="127" y="16" width="142" height="17"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VN-Ry-QWY">
+                        <rect key="frame" x="270" y="9.5" width="30" height="30"/>
+                        <state key="normal" image="add_scan"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S5I-sN-jfW" firstAttribute="leading" secondItem="lYz-tA-yTw" secondAttribute="trailing" constant="20" id="2gQ-Yd-nWb"/>
+                    <constraint firstItem="9VN-Ry-QWY" firstAttribute="centerY" secondItem="DVe-HV-1aW" secondAttribute="centerY" id="3fV-EJ-SBg"/>
+                    <constraint firstAttribute="bottom" secondItem="S5I-sN-jfW" secondAttribute="bottom" constant="5" id="7To-FU-f8d"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DVe-HV-1aW" secondAttribute="trailing" constant="35" id="Hha-Tz-fZ4"/>
+                    <constraint firstItem="lYz-tA-yTw" firstAttribute="centerY" secondItem="1fo-GY-kJK" secondAttribute="centerY" id="Koj-lM-fMS"/>
+                    <constraint firstItem="S5I-sN-jfW" firstAttribute="top" secondItem="1fo-GY-kJK" secondAttribute="top" constant="5" id="PoH-ND-cTs"/>
+                    <constraint firstItem="DVe-HV-1aW" firstAttribute="centerY" secondItem="1fo-GY-kJK" secondAttribute="centerY" id="UZ6-BZ-Avf"/>
+                    <constraint firstAttribute="trailing" secondItem="9VN-Ry-QWY" secondAttribute="trailing" constant="20" id="axe-tr-aFu"/>
+                    <constraint firstItem="S5I-sN-jfW" firstAttribute="centerX" secondItem="1fo-GY-kJK" secondAttribute="centerX" multiplier="0.73" id="eAR-Dd-dFy"/>
+                    <constraint firstItem="S5I-sN-jfW" firstAttribute="centerY" secondItem="1fo-GY-kJK" secondAttribute="centerY" id="j6e-HI-ksm"/>
+                    <constraint firstItem="DVe-HV-1aW" firstAttribute="leading" secondItem="S5I-sN-jfW" secondAttribute="trailing" constant="10" id="loT-iB-73B"/>
+                    <constraint firstItem="lYz-tA-yTw" firstAttribute="leading" secondItem="1fo-GY-kJK" secondAttribute="leadingMargin" id="sw4-bV-cJm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="yeu-fH-p3u"/>
+            <point key="canvasLocation" x="-73" y="137"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="k6i-Yz-a2V" userLabel="Card Info Cell desc" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k6i-Yz-a2V" id="xcv-Be-JoP">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDa-Nf-qHc">
+                        <rect key="frame" x="16" y="41.5" width="80.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ex-QV-Y1C" userLabel="lineView">
+                        <rect key="frame" x="116.5" y="5" width="0.5" height="89.5"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="EeC-9j-JI3"/>
+                        </constraints>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="卡片备注及其他信息..." translatesAutoresizingMaskIntoConstraints="NO" id="5gf-ML-Fhb">
+                        <rect key="frame" x="127" y="10" width="183" height="79.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5gf-ML-Fhb" secondAttribute="bottom" constant="10" id="3fV-Mp-Fqs"/>
+                    <constraint firstItem="0ex-QV-Y1C" firstAttribute="centerX" secondItem="xcv-Be-JoP" secondAttribute="centerX" multiplier="0.73" id="E5q-GQ-I3P"/>
+                    <constraint firstItem="0ex-QV-Y1C" firstAttribute="centerY" secondItem="xcv-Be-JoP" secondAttribute="centerY" id="Fxc-ll-p2r"/>
+                    <constraint firstItem="0ex-QV-Y1C" firstAttribute="leading" secondItem="qDa-Nf-qHc" secondAttribute="trailing" constant="20" id="H0R-ea-Prc"/>
+                    <constraint firstItem="qDa-Nf-qHc" firstAttribute="centerY" secondItem="xcv-Be-JoP" secondAttribute="centerY" id="IcK-wR-tl5"/>
+                    <constraint firstAttribute="bottom" secondItem="0ex-QV-Y1C" secondAttribute="bottom" constant="5" id="Scj-vQ-EIQ"/>
+                    <constraint firstItem="5gf-ML-Fhb" firstAttribute="top" secondItem="xcv-Be-JoP" secondAttribute="top" constant="10" id="WK5-m1-ceA"/>
+                    <constraint firstItem="0ex-QV-Y1C" firstAttribute="top" secondItem="xcv-Be-JoP" secondAttribute="top" constant="5" id="c8R-nS-FiJ"/>
+                    <constraint firstItem="qDa-Nf-qHc" firstAttribute="leading" secondItem="xcv-Be-JoP" secondAttribute="leadingMargin" id="g2I-a4-BMf"/>
+                    <constraint firstItem="5gf-ML-Fhb" firstAttribute="leading" secondItem="0ex-QV-Y1C" secondAttribute="trailing" constant="10" id="rLp-Ma-y6S"/>
+                    <constraint firstAttribute="trailing" secondItem="5gf-ML-Fhb" secondAttribute="trailing" constant="10" id="vx1-Bw-5hD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="5RG-8F-exX"/>
+            <point key="canvasLocation" x="-73" y="281"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addNewCell" id="tZm-wW-YQk" userLabel="Card Info Cell addnew" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tZm-wW-YQk" id="rEa-aE-in4">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+添加更多卡片信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-CW-Fhv">
+                        <rect key="frame" x="16" y="11" width="288" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="a2x-CW-Fhv" secondAttribute="bottom" id="4Ya-VL-CzQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="a2x-CW-Fhv" secondAttribute="trailing" id="5li-hJ-rwl"/>
+                    <constraint firstItem="a2x-CW-Fhv" firstAttribute="top" secondItem="rEa-aE-in4" secondAttribute="topMargin" id="FPr-p6-oLP"/>
+                    <constraint firstItem="a2x-CW-Fhv" firstAttribute="leading" secondItem="rEa-aE-in4" secondAttribute="leadingMargin" id="xIb-4x-kfg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="SA6-qp-e26"/>
+            <point key="canvasLocation" x="-73" y="437"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SwitchIcon" width="45" height="45"/>
+        <image name="add_scan" width="30" height="30"/>
+        <image name="cardPlacehold_front" width="73" height="50"/>
+        <image name="cardPlacehold_rear" width="73" height="50"/>
+    </resources>
+</document>

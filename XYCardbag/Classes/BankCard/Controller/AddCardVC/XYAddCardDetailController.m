@@ -22,16 +22,80 @@
  */
 
 #import "XYAddCardDetailController.h"
+#import "XYCardInfoCell.h"
 
 @interface XYAddCardDetailController ()
+
+// 包含所有本页面中cardInfoModel
+@property(nonatomic , strong) NSMutableArray  *dataArray;
+@property(nonatomic , strong) UIView  *headerOne;
+@property(nonatomic , strong) UIView  *headerTwo;
+
 
 @end
 
 @implementation XYAddCardDetailController
 
+- (UIView *)headerOne
+{
+    if (_headerOne == nil) {
+        _headerOne = [UIView new];
+        UILabel *label = [UILabel new];
+        label.font = [UIFont boldSystemFontOfSize:15];
+        label.text = @"卡片图片";
+        label.textColor = [UIColor cyanColor];
+        [_headerOne addSubview:label];
+        label.frame = CGRectMake(0, 0, ScreenW, 30);
+        label.xy_x += 20;
+        
+        UIView *line = [UIView new];
+        line.backgroundColor = [UIColor lightGrayColor];
+        line.frame = CGRectMake(0, 29.5, ScreenW, 0.5);
+        [_headerOne addSubview:line];
+        _headerOne.backgroundColor = UIColor.whiteColor;
+    }
+    return _headerOne;
+}
+- (UIView *)headerTwo
+{
+    if (_headerTwo == nil) {
+        _headerTwo = [UIView new];
+        UILabel *label = [UILabel new];
+        label.font = [UIFont boldSystemFontOfSize:15];
+        label.text = @"卡片信息";
+        label.textColor = [UIColor cyanColor];
+        [_headerTwo addSubview:label];
+        label.frame = CGRectMake(0, 0, ScreenW, 30);
+        label.xy_x += 20;
+        
+        UIView *line = [UIView new];
+        line.backgroundColor = [UIColor lightGrayColor];
+        line.frame = CGRectMake(0, 29.5, ScreenW, 0.5);
+        [_headerTwo addSubview:line];
+        _headerTwo.backgroundColor = UIColor.whiteColor;
+    }
+    return _headerTwo;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 创建对应的data数据
+    XYCardInfoModel *imageInfo = [XYCardInfoModel new];
+    imageInfo.tagType = TagTypeBaseImage;
+    
+    XYCardInfoModel *nameInfo = [XYCardInfoModel new];
+    nameInfo.tagType = TagTypeBaseName;
+    
+    XYCardInfoModel *numberInfo = [XYCardInfoModel new];
+    numberInfo.tagType = TagTypeBaseNumber;
+    
+    XYCardInfoModel *descInfo = [XYCardInfoModel new];
+    descInfo.tagType = TagTypeBaseDesc;
+    
+    self.dataArray = [NSMutableArray array];
+    [self.dataArray addObjectsFromArray:@[@[imageInfo],@[nameInfo,numberInfo,descInfo]]];
     
 }
 
@@ -43,24 +107,116 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (section == 0) {
+        return 1;
+    }
+    
+    NSArray *infoSection = self.dataArray[section];
+    return infoSection.count + 1;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 150;
+    }
+    else //if (indexPath.section == 1)
+    {
+        if (indexPath.row == 2) { // 第三个cell。描述信息的cell
+            return 100;
+        }
+        
+        return 50; // 正常cell都是50
+    }
+    
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if (section == 0) {
+        
+        return self.headerOne;
+        
+    }else //if (section == 1)
+    {
+        return self.headerTwo;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSArray *sectionArr = self.dataArray[indexPath.section];
+    XYCardInfoModel *cardInfo;
+    if (indexPath.row != sectionArr.count){
+        cardInfo = sectionArr[indexPath.row];
+    }
     
+    if (indexPath.section == 0) {
+        XYCardInfoCell *cell = [XYCardInfoCell cellForCardImagesWithTableView:tableView];
+        cell.model = cardInfo;
+        return cell;
+    }
+    
+    if (indexPath.section == 1) {
+        
+        if (indexPath.row == 0) {   // name
+            XYCardInfoCell *cell = [XYCardInfoCell cellForCardNameWithTableView:tableView];
+            cell.model = cardInfo;
+            return cell;
+        }
+        
+        if (indexPath.row == 1) {   // number
+            XYCardInfoCell *cell = [XYCardInfoCell cellForCardNumberWithTableView:tableView];
+            cell.model = cardInfo;
+            return cell;
+        }
+        
+        if (indexPath.row == 2) {   // desc
+            XYCardInfoCell *cell = [XYCardInfoCell cellForCardDescWithTableView:tableView];
+            cell.model = cardInfo;
+            return cell;
+        }
+        
+        NSArray *infoSection = self.dataArray[indexPath.section];
+        if (indexPath.row == infoSection.count) {  // 添加新类别的cell
+            XYCardInfoCell *cell = [XYCardInfoCell cellForAddNewWithTableView:tableView];
+            cell.model = cardInfo;
+            return cell;
+        }
+    }
+    
+    // 其余的都是用户可以自己添加的
+    XYCardInfoCell *cell = [XYCardInfoCell cellForCardImagesWithTableView:tableView];
+    cell.model = cardInfo;
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray *infoSection = self.dataArray[indexPath.section];
+    if (indexPath.row == infoSection.count) {
+        
+        // 最后一个cell点击进入，选择添加类别的页面,通过block回传添加的tag并放到自己打data中。 -- 当本页显示的时候再刷新
+        
+    }
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

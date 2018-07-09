@@ -59,6 +59,11 @@
 		B461409D201835D000BE5A24 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = B461408F201835D000BE5A24 /* MJArgument.m */; };
 		B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614095201835D000BE5A24 /* NSObject+MJMember.m */; };
 		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
+		B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */; };
+		B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */; };
+		B4A14D9620F302EF0086CCBB /* XYCardInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9520F302EF0086CCBB /* XYCardInfoModel.m */; };
+		B4A14D9B20F35F6A0086CCBB /* XYAddNewCardTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9A20F35F6A0086CCBB /* XYAddNewCardTagController.m */; };
+		B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9C20F3601A0086CCBB /* XYAddNewCardTagController.xib */; };
 		B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */; };
 		B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE4920ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5220ED2BED00E74941 /* ViewController+MASAdditions.m */; };
@@ -209,6 +214,14 @@
 		B4614095201835D000BE5A24 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
 		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
+		B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoCell.h; sourceTree = "<group>"; };
+		B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoCell.m; sourceTree = "<group>"; };
+		B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYCardInfoCell.xib; sourceTree = "<group>"; };
+		B4A14D9420F302EF0086CCBB /* XYCardInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoModel.h; sourceTree = "<group>"; };
+		B4A14D9520F302EF0086CCBB /* XYCardInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoModel.m; sourceTree = "<group>"; };
+		B4A14D9920F35F6A0086CCBB /* XYAddNewCardTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddNewCardTagController.h; sourceTree = "<group>"; };
+		B4A14D9A20F35F6A0086CCBB /* XYAddNewCardTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddNewCardTagController.m; sourceTree = "<group>"; };
+		B4A14D9C20F3601A0086CCBB /* XYAddNewCardTagController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddNewCardTagController.xib; sourceTree = "<group>"; };
 		B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardBgViewController.h; sourceTree = "<group>"; };
 		B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardBgViewController.m; sourceTree = "<group>"; };
 		B4ABDE4820ED2BED00E74941 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -695,6 +708,25 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		B4A14D8D20F2FD7B0086CCBB /* CardInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */,
+				B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */,
+				B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */,
+			);
+			path = CardInfoCell;
+			sourceTree = "<group>";
+		};
+		B4A14D8E20F300C80086CCBB /* CardInfoCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4A14D9420F302EF0086CCBB /* XYCardInfoModel.h */,
+				B4A14D9520F302EF0086CCBB /* XYCardInfoModel.m */,
+			);
+			path = CardInfoCellModel;
+			sourceTree = "<group>";
+		};
 		B4ABDE4720ED2BED00E74941 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,11 +762,16 @@
 		B4B1D5BB20F1F48100321105 /* AddCardVC */ = {
 			isa = PBXGroup;
 			children = (
+				B4A14D8E20F300C80086CCBB /* CardInfoCellModel */,
+				B4A14D8D20F2FD7B0086CCBB /* CardInfoCell */,
 				B4E4D6C320EF175500A2922D /* XYAddCardController.h */,
 				B4E4D6C420EF175500A2922D /* XYAddCardController.m */,
 				B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */,
 				B4B1D5BE20F2761000321105 /* XYAddCardDetailController.h */,
 				B4B1D5BF20F2761000321105 /* XYAddCardDetailController.m */,
+				B4A14D9920F35F6A0086CCBB /* XYAddNewCardTagController.h */,
+				B4A14D9A20F35F6A0086CCBB /* XYAddNewCardTagController.m */,
+				B4A14D9C20F3601A0086CCBB /* XYAddNewCardTagController.xib */,
 			);
 			path = AddCardVC;
 			sourceTree = "<group>";
@@ -885,7 +922,9 @@
 				B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */,
 				B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
+				B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */,
 				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
+				B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
@@ -942,6 +981,7 @@
 				B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */,
 				B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */,
 				B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */,
+				B4A14D9620F302EF0086CCBB /* XYCardInfoModel.m in Sources */,
 				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
 				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,
 				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
@@ -955,6 +995,7 @@
 				B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */,
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
@@ -968,6 +1009,7 @@
 				B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
 				B4614097201835D000BE5A24 /* NSObject+MJKeyValue.m in Sources */,
+				B4A14D9B20F35F6A0086CCBB /* XYAddNewCardTagController.m in Sources */,
 				B461409A201835D000BE5A24 /* MJTypeEncoding.m in Sources */,
 				B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */,
 			);
