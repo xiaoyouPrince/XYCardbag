@@ -40,6 +40,14 @@
     
 }
 
+- (void)setEdgePopGestureEnable:(BOOL)enable
+{
+    _edgePan.enabled = enable;
+}
+
+
+static UIPanGestureRecognizer *_edgePan;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -49,6 +57,7 @@
     UIPanGestureRecognizer *edgePan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:) ];
     edgePan.delegate = self;
     [self.view addGestureRecognizer:edgePan];
+    _edgePan = edgePan;
     
 }
 
