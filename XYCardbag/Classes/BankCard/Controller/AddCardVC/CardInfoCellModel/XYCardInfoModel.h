@@ -47,7 +47,7 @@ typedef enum : NSUInteger {
 
 // tag 类型的一些属性
 @property(nonatomic , assign) TagType tagType;
-// 默认自定义，tagString根据tagType决定
+// 自定义类型中的tagSting。tagString根据tagType决定【日期  电话  邮件  网址  其他】共5种
 @property(nonatomic , copy , readonly) NSString *tagString;
 
 // 当前的标签的title
