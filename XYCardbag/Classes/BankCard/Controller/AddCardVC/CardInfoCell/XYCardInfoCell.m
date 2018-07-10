@@ -11,19 +11,115 @@
 #import "XYCardInfoCell.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
-@interface XYCardInfoCell ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+#import "Masonry.h"
+
+@protocol XYTextViewDelegate <UITextViewDelegate>
+// 这里直接使用父类协议的协议方法
+@end
+@interface XYTextView : UITextView
+@property(nonatomic,weak) id<XYTextViewDelegate> xy_delegate;
+@property (nonatomic, copy) NSString *placeholder;
+@property (nonatomic, strong) UIColor *placeholderColor;
+@end
+@interface XYTextView ()<UITextViewDelegate>
+@property (nonatomic,strong) UILabel *placeholderLabel;
+@end
+
+@implementation XYTextView
+
+#warning TODO -- 研究一下为什么这里不用懒加载不行？?
+
+- (UILabel *)placeholderLabel
+{
+    if (_placeholderLabel == nil) {
+        _placeholderLabel = [UILabel new];
+        
+        _placeholderLabel.textColor = [UIColor lightGrayColor];
+        _placeholderLabel.font = [UIFont systemFontOfSize:14];
+        [self addSubview:_placeholderLabel];
+        _placeholderLabel.backgroundColor = [UIColor clearColor];
+        _placeholderLabel.numberOfLines = 0;
+        [_placeholderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(5);
+            make.top.equalTo(self).offset(7);
+            make.right.bottom.equalTo(self).offset(-10);
+        }];
+    }
+    return _placeholderLabel;
+}
+
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self setupContent];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self == [super initWithFrame:frame]) {
+        [self setupContent];
+    }
+    return self;
+}
+
+- (void)setupContent{
+    // 1. 创建placeholderLabel
+    self.delegate = self;
+}
+
+
+- (void)textViewDidChange:(UITextView *)textView{
+    DLog(@"TV.text = %@",self.text);
+    if(![self.text isEqualToString:@""])
+    {
+        self.placeholderLabel.hidden = YES;
+    }else
+    {
+        self.placeholderLabel.hidden = NO;
+    }
+    
+    if (self.xy_delegate && [self.xy_delegate respondsToSelector:@selector(textViewDidEndEditing:)]) {
+        [self.xy_delegate textViewDidEndEditing:self];
+    }
+}
+
+- (void)setPlaceholder:(NSString *)placeholder
+{
+    self.placeholderLabel.text = placeholder;
+    DLog(@"self.placeholderLabel = %@",self.placeholderLabel);
+}
+
+- (void)setPlaceholderColor:(UIColor *)placeholderColor
+{
+    self.placeholderLabel.textColor = placeholderColor;
+}
+
+@end
+
+
+@interface XYCardInfoCell ()< XYTextViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *frontIcon_btn;
 @property (weak, nonatomic) IBOutlet UIButton *rearIcon_btn;
+@property (strong, nonatomic) IBOutlet UITextField *cardNameTF;
+@property (weak, nonatomic) IBOutlet UITextField *cardNumberTF;
+@property (weak, nonatomic) IBOutlet XYTextView *cardDescTV;
 
 @end
 
 @implementation XYCardInfoCell
 {
+    // 判断给正面还是背面设置图片
     BOOL _takeImageForFront;
     BOOL _takeImageForRear;
+    
+    // 记录卡名称的TF。因为上面的属性只是针对某一个cell的，但是页面创建出来会有好多cell,上面的属性在创建之后用一次，就会再创建新的cell的过程中废掉了，因为在新的cell中没有对应的属性。这里用成员变量也是同样的问题
+    // 名称TF,用两个__ 和属性生成的成员变量进行区分一下。。。
+    UITextField *__carNameTF;
 }
 
+// 使用全局变量也是同样的问题。因为每次awakeFromNib之后都会给全局变量赋值，其保存的值也不稳定
+static UITextField *cardTFName;
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -36,6 +132,16 @@
     self.frontIcon_btn.clipsToBounds = YES;
     self.rearIcon_btn.clipsToBounds = YES;
     
+    
+#warning TODO 用通知的方法肯定不行了，每个通知注册的名称都一样，只是每次传的object不同，导致最后传的object肯定有问题
+    
+    // name
+//    [kNotificationCenter addObserver:self selector:@selector(getNotification:) name:UITextFieldTextDidChangeNotification object:self.cardNameTF];
+    
+    
+    // desc
+    self.cardDescTV.xy_delegate = self;
+    self.cardDescTV.placeholder = @"卡片备注及其他信息..";
     
     // addNew
     
@@ -52,6 +158,18 @@
     }
 }
 
+#pragma mark --  Notification
+
+//- (void)getNotification:(NSNotification *)noti{
+//
+//    if (noti.object == self.cardNameTF) {
+//        NSLog(@"71行中 self.cardNameTF = %@",self.cardNameTF);
+//
+//    }else{
+//
+//    }
+//
+//}
 
 
 
@@ -114,7 +232,6 @@
 
 
 #pragma mark -- actions
-
 
 /**
  设置卡片的图片
@@ -185,12 +302,10 @@
 
     
     
-    NSLog(@"当前图片 %@",[sender imageForState:UIControlStateNormal]);
-    
+//    NSLog(@"当前图片 %@",[sender imageForState:UIControlStateNormal]);
 //    [sender setImage:[UIImage imageWithColor:UIColor.redColor] forState:UIControlStateNormal];
 //    [sender setImage:[UIImage imagena:@"love.jpg"] forState:UIControlStateNormal];
-    
-    NSLog(@"当前图片 %@",[sender imageForState:UIControlStateNormal]);
+//    NSLog(@"当前图片 %@",[sender imageForState:UIControlStateNormal]);
 }
 
 #pragma mark - 图片选择控制器的代理
@@ -235,6 +350,28 @@
 }
 
 
+// ----------------------NAME-------------------
+
+- (IBAction)nameTFhasEndEditing:(UITextField *)sender {
+    self.model.title = @"名称";
+    self.model.detail = sender.text;
+}
+
+// ----------------------CardNumber-------------------
+- (IBAction)cardNumberTFhasEndEdting:(UITextField *)sender {
+    self.model.title = @"卡号";
+    self.model.detail = sender.text;
+}
+
+
+// ----------------------CardDesc TVDelegate-------------------
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    self.model.title = @"备注";
+    self.model.detail = textView.text;
+}
+
+// ----------------------Tags 这里需要单独使用-------------------
 
 
 #pragma mark -- public -- 创建方法

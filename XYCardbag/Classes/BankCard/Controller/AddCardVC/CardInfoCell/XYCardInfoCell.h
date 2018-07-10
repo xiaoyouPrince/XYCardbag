@@ -7,6 +7,10 @@
 //
 //  Copyright © 2018年 xiaoyouPrince. All rights reserved.
 //
+//  这个Cell就是创建各个 CardInfoCell 具体类别的积基类
+//  由于每个Cell中都会填写一些Card对应的信息。。
+//  每个内部包含textTF的，需要长期持有其cell内部控件以获得对应行信息的,均需子类化本类
+//  本类只提供创建一次性使用的cell，无需长期持有内部tf控件。如 imageCell、addNewCell 这两个
 
 #import <UIKit/UIKit.h>
 #import "XYCardInfoModel.h"

@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" userLabel="Card Info Cell image" customClass="XYCardInfoCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardImageCell" id="KGk-i7-Jjw" userLabel="Card Info Cell image" customClass="XYCardInfoCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -94,7 +94,7 @@
             </connections>
             <point key="canvasLocation" x="-73" y="-158"/>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o2u-3d-CW2" userLabel="Card Info Cell name" customClass="XYCardInfoCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardNameCell" id="o2u-3d-CW2" userLabel="Card Info Cell name" customClass="XYCardInfoCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o2u-3d-CW2" id="5na-ZH-KNl">
@@ -119,6 +119,9 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="nameTFhasEndEditing:" destination="o2u-3d-CW2" eventType="editingDidEnd" id="4q3-eW-avS"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
@@ -135,9 +138,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="G9g-RQ-IIf"/>
+            <connections>
+                <outlet property="cardNameTF" destination="GLc-jY-pKd" id="ZZs-AB-Nde"/>
+            </connections>
             <point key="canvasLocation" x="-73" y="15"/>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o7Z-ua-wlM" userLabel="Card Info Cell number" customClass="XYCardInfoCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardNumberCell" id="o7Z-ua-wlM" userLabel="Card Info Cell number" customClass="XYCardInfoCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o7Z-ua-wlM" id="1fo-GY-kJK">
@@ -162,6 +168,9 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="cardNumberTFhasEndEdting:" destination="o7Z-ua-wlM" eventType="editingDidEnd" id="a3j-bG-D6m"/>
+                        </connections>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VN-Ry-QWY">
                         <rect key="frame" x="270" y="9.5" width="30" height="30"/>
@@ -184,9 +193,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="yeu-fH-p3u"/>
+            <connections>
+                <outlet property="cardNumberTF" destination="DVe-HV-1aW" id="RCZ-9Y-cxC"/>
+            </connections>
             <point key="canvasLocation" x="-73" y="137"/>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="k6i-Yz-a2V" userLabel="Card Info Cell desc" customClass="XYCardInfoCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardDescCell" rowHeight="97" id="k6i-Yz-a2V" userLabel="Card Info Cell desc" customClass="XYCardInfoCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k6i-Yz-a2V" id="xcv-Be-JoP">
@@ -206,7 +218,7 @@
                             <constraint firstAttribute="width" constant="0.5" id="EeC-9j-JI3"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="卡片备注及其他信息..." translatesAutoresizingMaskIntoConstraints="NO" id="5gf-ML-Fhb">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gf-ML-Fhb" customClass="XYTextView">
                         <rect key="frame" x="127" y="10" width="183" height="79.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -228,6 +240,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="5RG-8F-exX"/>
+            <connections>
+                <outlet property="cardDescTV" destination="5gf-ML-Fhb" id="fn1-sg-nha"/>
+            </connections>
             <point key="canvasLocation" x="-73" y="281"/>
         </tableViewCell>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addNewCell" id="tZm-wW-YQk" userLabel="Card Info Cell addnew" customClass="XYCardInfoCell">
