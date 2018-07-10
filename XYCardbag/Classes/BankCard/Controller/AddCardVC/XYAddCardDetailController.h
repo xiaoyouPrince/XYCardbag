@@ -23,5 +23,9 @@ typedef enum {
  添加卡的类型,内部根据卡片类型进行不同UI的渲染
  */
 @property(nonatomic , assign) CardType cardType;
+/**
+ 要保存卡片的section。对应的那个大类
+ */
+@property(nonatomic , copy) NSString *sectionTitle;
 
 @end

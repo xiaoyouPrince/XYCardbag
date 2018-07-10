@@ -24,6 +24,9 @@
 #import "XYAddCardDetailController.h"
 #import "XYCardInfoCell.h"
 #import "XYAddNewCardTagController.h"
+#import "XYBankCardModel.h"
+#import "XYNavigationController.h"
+#import "XYBankCardCache.h"
 
 @interface XYAddCardDetailController ()
 
@@ -82,6 +85,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"添加卡片";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
+    
+    
     // 创建对应的data数据
     XYCardInfoModel *imageInfo = [XYCardInfoModel new];
     imageInfo.tagType = TagTypeBaseImage;
@@ -100,6 +108,99 @@
     [self.dataArray addObjectsFromArray:@[@[imageInfo],sectionTwo]];
     
 }
+
+static XYNavigationController *selfNav;
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // 禁用返回手势
+    selfNav = (XYNavigationController *)self.navigationController;
+    [selfNav setEdgePopGestureEnable:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    // 开启返回手势
+    [selfNav setEdgePopGestureEnable:YES];
+    
+    [super viewWillDisappear:animated];
+}
+
+- (void)leftItemClick:(UIBarButtonItem *)item{
+    // 直接返回到rootVC即可
+    
+    [self.view endEditing:YES];
+    
+#warning TODO - 这里需要根据用户有没有填写数据，如果写了数据，提示用户是否确认返回，否则直接返回
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)rightItemClick:(UIBarButtonItem *)item{
+    
+    [self.view endEditing:YES];
+#warning TODO - 这里需要根据用户有没有填写完整数据，数据完整就保存，不完整提示用户未填项目
+    
+    
+    // 0. 创建XYBankCardModel
+    XYBankCardModel *cardModel = [XYBankCardModel new];
+    
+    // 1. 拿到所有用户填写过的数据.<dataArray中>
+    NSArray *sectionOne = self.dataArray.firstObject;
+    NSArray *sectionTwo = self.dataArray.lastObject;
+    
+    XYCardInfoModel *imageInfo = sectionOne.firstObject;
+    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconData,imageInfo.rearIconData);
+    
+    cardModel.frontIconData = imageInfo.frontIconData;
+    cardModel.rearIconData = imageInfo.rearIconData;
+    
+    for (XYCardInfoModel *cardInfo in sectionTwo) {
+        
+        switch (cardInfo.tagType) {
+            case TagTypeBaseName:
+            {
+                cardModel.name = cardInfo.detail;
+            }
+                break;
+            case TagTypeBaseNumber:
+            {
+                cardModel.cardNumber = cardInfo.detail;
+            }
+                break;
+            case TagTypeBaseDesc:
+            {
+                cardModel.desc = cardInfo.detail;
+            }
+                break;
+            case TagTypeDate:
+            case TagTypePhoneNumber:
+            case TagTypeMail:
+            case TagTypeNetAddress:
+            case TagTypeCustom:
+            {
+                // 这几种就是属于自定义tag类型的了，直接放到 cardModel.tags 的数组中。解析的时候再用
+                [[NSMutableArray array] addObject:cardInfo];
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
+    // 打印cardModel
+    NSLog(@"cardModel = %@",cardModel);
+    
+    // 保存数据
+    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.sectionTitle];
+    [XYBankCardCache saveNewCard:cardModel forSection:section];
+    
+    // 退出页面
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -210,6 +311,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    [self.view endEditing:YES];
+    
     NSArray *infoSection = self.dataArray[indexPath.section];
     if (indexPath.row == infoSection.count) {
         
@@ -292,5 +395,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+#pragma mark -- scrollView Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    [self.view endEditing:YES];
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 
 @end

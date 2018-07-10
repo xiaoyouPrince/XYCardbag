@@ -12,7 +12,10 @@
 #import <UIKit/UIKit.h>
 
 @interface XYAddCardController : UIViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewBottomCons;
+
+/**
+ 要保存卡片的section。对应的那个大类
+ */
+@property(nonatomic , copy) NSString *sectionTitle;
 
 @end

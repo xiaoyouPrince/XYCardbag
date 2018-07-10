@@ -13,7 +13,8 @@
 #import "XYAddCardDetailController.h"
 
 @interface XYAddCardController ()
-
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewBottomCons;
 @end
 
 @implementation XYAddCardController
@@ -39,6 +40,7 @@
             NSLog(@"点击普通卡");
             /// 进入对应的列表页面
             XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+            listVC.sectionTitle = self.sectionTitle;
             [self.navigationController pushViewController:listVC animated:YES];
         }
             break;

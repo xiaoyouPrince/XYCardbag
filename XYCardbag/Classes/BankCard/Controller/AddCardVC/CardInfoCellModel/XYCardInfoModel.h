@@ -45,14 +45,14 @@ typedef enum : NSUInteger {
 @property(nonatomic , strong) NSData *frontIconData;
 @property(nonatomic , strong) NSData *rearIconData;
 
-// tag 类型的一些属性
+/// tag 类型的一些属性
 @property(nonatomic , assign) TagType tagType;
-// 自定义类型中的tagSting。tagString根据tagType决定【日期  电话  邮件  网址  其他】共5种
+/// 自定义类型中的tagSting。tagString根据tagType决定【日期  电话  邮件  网址  其他】共5种
 @property(nonatomic , copy , readonly) NSString *tagString;
 
-// 当前的标签的title
+/// 当前的标签的title --> 这个在用户添加自定义标签的时候可以自定义
 @property(nonatomic , copy) NSString *title;
-// 当前的标签的detail
+/// 当前的标签的detail --> egg: 卡号(title) : 123456(detail)
 @property(nonatomic , copy) NSString *detail;
 
 
