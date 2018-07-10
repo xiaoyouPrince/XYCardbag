@@ -250,6 +250,7 @@
     
     /// 进入对应的列表页面
     XYAddCardController *listVC = [XYAddCardController new];
+    listVC.sectionTitle = self.title;
     [self.navigationController pushViewController:listVC animated:YES];
 
 }

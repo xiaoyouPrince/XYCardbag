@@ -270,10 +270,18 @@
 {
     _model = model;
     
-    whiteImage = [UIImage imageNamed:model.frontIcon];
-    greenImage = [UIImage imageNamed:model.rearIcon];
-    self.cardImageView.image = whiteImage;
+    if (model.frontIcon.length) {
+        whiteImage = [UIImage imageNamed:model.frontIcon];
+    }else{
+        whiteImage = [UIImage imageWithData:model.frontIconData];
+    }
+    if (model.rearIcon.length) {
+        greenImage = [UIImage imageNamed:model.rearIcon];
+    }else{
+        greenImage = [UIImage imageWithData:model.rearIconData];
+    }
     
+    self.cardImageView.image = whiteImage;
     
 }
 

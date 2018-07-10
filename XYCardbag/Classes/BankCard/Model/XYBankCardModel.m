@@ -30,5 +30,11 @@ MJCodingImplementation;
     }
     return self;
 }
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"frontIcon = %@, rearIcon = %@ ,frontIconData = %@, rearIconData = %@ , name = %@ , cardNumber = %@ , desc = %@ , tags = %@",_frontIcon,_rearIcon,_frontIconData,_rearIconData,_name,_cardNumber,_desc,_tags];
+}
+
 MJCodingImplementation;
 @end

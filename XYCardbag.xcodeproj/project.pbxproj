@@ -32,6 +32,7 @@
 		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
 		B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */; };
 		B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */; };
+		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
 		B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */; };
 		B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */; };
 		B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF932010434C00B3D0D3 /* FMDatabase.m */; };
@@ -163,6 +164,8 @@
 		B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardModel.m; sourceTree = "<group>"; };
 		B431CFD220EE1FAA008CD732 /* XYBankCardCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardCache.h; sourceTree = "<group>"; };
 		B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardCache.m; sourceTree = "<group>"; };
+		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
+		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
 		B458EF8E2010434C00B3D0D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		B458EF902010434C00B3D0D3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
@@ -714,6 +717,8 @@
 				B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */,
 				B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */,
 				B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */,
+				B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */,
+				B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */,
 			);
 			path = CardInfoCell;
 			sourceTree = "<group>";
@@ -1000,6 +1005,7 @@
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
 				89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */,
+				B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */,
 				B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */,
 				B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */,
 				B4ABDE6420ED2BED00E74941 /* MASConstraintMaker.m in Sources */,
