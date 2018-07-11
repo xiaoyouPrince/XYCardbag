@@ -320,14 +320,66 @@ static UITextField *cardTFName;
     // 3.图片简单处理
     if (_takeImageForFront) {
         [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
-        self.model.frontIconData = UIImagePNGRepresentation(image);
+//        self.model.frontIconData = UIImagePNGRepresentation(image);
+        self.model.frontIconImage = [self scaleAndConfigImage:image];
     }
     if (_takeImageForRear) {
         [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
-        self.model.rearIconData = UIImagePNGRepresentation(image);
+//        self.model.rearIconData = UIImagePNGRepresentation(image);
+        self.model.rearIconImage = [self scaleAndConfigImage:image];
     }
     
 }
+
+
+
+// 处理一下直接拿到的相册图片，否则太大
+- (UIImage *)scaleAndConfigImage:(UIImage *)image{
+    
+    // 看一下image大小
+    DLog(@"image size = %@",NSStringFromCGSize(image.size));
+    
+    NSInteger psize = image.size.width * image.size.height * image.scale * image.scale;
+    DLog(@"image 像素大小 = %ld",(long)psize);
+    
+    // ----- 重画iamge并返回
+    
+#warning TODO -- 这里是根据卡片cell内部的边距来定的，日后可能会改。先立个flag
+    CGSize newSize = CGSizeMake(ScreenW - 40, 200);
+    
+    //首先根据image的size的长宽比和newSize进行设置新图片的大小（为了达到等比例缩放不变形的目的）
+    CGFloat wTmp;
+    CGFloat hTmp;
+    CGSize imgSize = image.size;
+    if (imgSize.width > imgSize.height) {
+        wTmp=newSize.width;
+        hTmp = imgSize.height * wTmp / imgSize.width;
+    } else {
+        hTmp=newSize.height;
+        wTmp = imgSize.width * hTmp / imgSize.height;
+    }
+    
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(CGSizeMake(wTmp, hTmp));
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [image drawInRect:CGRectMake(0,0,wTmp,hTmp)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    NSInteger nPsize = image.size.width * image.size.height * image.scale * image.scale;
+    DLog(@"新图片的像素大小 = %ld",(long)nPsize);
+    
+    // Return the new image.
+    return newImage;
+    
+}
+
 
 
 /**
@@ -344,9 +396,14 @@ static UITextField *cardTFName;
     // model 中切换
 //    NSData *frontIconData = UIImagePNGRepresentation(frontImage);
 //    NSData *rearIconData = UIImagePNGRepresentation(rearImage);
-    NSData *temp = self.model.frontIconData;
-    self.model.frontIconData = self.model.rearIconData;
-    self.model.rearIconData = temp;
+    
+//    NSData *temp = self.model.frontIconData;
+//    self.model.frontIconData = self.model.rearIconData;
+//    self.model.rearIconData = temp;
+    
+    UIImage *image = self.model.frontIconImage;
+    self.model.frontIconImage = self.model.rearIconImage;
+    self.model.rearIconImage = image;
 }
 
 

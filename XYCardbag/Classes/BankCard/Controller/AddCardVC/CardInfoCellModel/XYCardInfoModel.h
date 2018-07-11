@@ -42,8 +42,10 @@ typedef enum : NSUInteger {
 @interface XYCardInfoModel : NSObject
 
 // 第一个cell的正反面icon
-@property(nonatomic , strong) NSData *frontIconData;
-@property(nonatomic , strong) NSData *rearIconData;
+@property(nonatomic , strong) UIImage *frontIconImage;
+@property(nonatomic , strong) UIImage *rearIconImage;
+//@property(nonatomic , strong) NSData *frontIconData;
+//@property(nonatomic , strong) NSData *rearIconData;
 
 /// tag 类型的一些属性
 @property(nonatomic , assign) TagType tagType;

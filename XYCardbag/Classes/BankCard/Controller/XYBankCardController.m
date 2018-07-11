@@ -42,6 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 默认的
+    self.title = @"Bank card ";
+    
     self.view.backgroundColor = [UIColor blackColor];
     
     [self buildUI];

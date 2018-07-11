@@ -151,10 +151,14 @@ static XYNavigationController *selfNav;
     NSArray *sectionTwo = self.dataArray.lastObject;
     
     XYCardInfoModel *imageInfo = sectionOne.firstObject;
-    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconData,imageInfo.rearIconData);
+//    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconData,imageInfo.rearIconData);
+    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconImage,imageInfo.rearIconImage);
     
-    cardModel.frontIconData = imageInfo.frontIconData;
-    cardModel.rearIconData = imageInfo.rearIconData;
+//    cardModel.frontIconData = imageInfo.frontIconData;
+//    cardModel.rearIconData = imageInfo.rearIconData;
+    
+    cardModel.frontIconImage = imageInfo.frontIconImage;
+    cardModel.rearIconImage = imageInfo.rearIconImage;
     
     for (XYCardInfoModel *cardInfo in sectionTwo) {
         

@@ -26,8 +26,11 @@
 
 @property(nonatomic , copy) NSString *frontIcon;
 @property(nonatomic , copy) NSString *rearIcon;
-@property(nonatomic , strong) NSData *frontIconData;
-@property(nonatomic , strong) NSData *rearIconData;
+@property(nonatomic , strong) UIImage *frontIconImage;
+@property(nonatomic , strong) UIImage *rearIconImage;
+
+//@property(nonatomic , strong) NSData *frontIconData;
+//@property(nonatomic , strong) NSData *rearIconData;
 
 @property(nonatomic , copy) NSString *name;
 @property(nonatomic , copy) NSString *cardNumber;
