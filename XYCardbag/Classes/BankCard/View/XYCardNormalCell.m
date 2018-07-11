@@ -28,7 +28,7 @@
 
 @implementation XYCardNormalCell
 {
-    UIImage *whiteImage , *greenImage;
+    UIImage *frontImage , *rearImage;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -60,8 +60,8 @@
 
 - (void)setUpContent{
     
-    whiteImage = [UIImage imageWithColor:UIColor.whiteColor];
-    greenImage = [UIImage imageWithColor:UIColor.greenColor];
+    frontImage = [UIImage imageWithColor:UIColor.whiteColor];
+    rearImage = [UIImage imageWithColor:UIColor.greenColor];
     self.backgroundColor = [UIColor clearColor];
     
     // 卡片 + 四个功能键 + 左滑手势 + 右滑手势
@@ -88,7 +88,7 @@
         make.bottom.equalTo(self.contentView).offset(-k_card_top_bottom_margin);
     }];
     
-    cardImageView.image = whiteImage;
+    cardImageView.image = frontImage;
     
     // 4 个功能按钮
     UIView *funcView = [UIView new];
@@ -257,12 +257,19 @@
 }
 
 - (void)changeImg{
-    if (self.cardImageView.image == whiteImage) {
-        self.cardImageView.image = greenImage;
+    
+    // 内部图片的切换
+    if (self.cardImageView.image == frontImage) {
+        self.cardImageView.image = rearImage;
     }else
     {
-        self.cardImageView.image = whiteImage;
+        self.cardImageView.image = frontImage;
     }
+    
+    // 滑动图片，翻面之后保存对应的页面记录到model。记录用户状态
+    UIImage *image = self.model.frontIconImage;
+    self.model.frontIconImage = self.model.rearIconImage;
+    self.model.rearIconImage = image;
 }
 
 
@@ -271,19 +278,19 @@
     _model = model;
     
     if (model.frontIcon.length) {
-        whiteImage = [UIImage imageNamed:model.frontIcon];
+        frontImage = [UIImage imageNamed:model.frontIcon];
     }else{
-//        whiteImage = [UIImage imageWithData:model.frontIconData];
-        whiteImage = model.frontIconImage;
+//        frontImage = [UIImage imageWithData:model.frontIconData];
+        frontImage = model.frontIconImage;
     }
     if (model.rearIcon.length) {
-        greenImage = [UIImage imageNamed:model.rearIcon];
+        rearImage = [UIImage imageNamed:model.rearIcon];
     }else{
-//        greenImage = [UIImage imageWithData:model.rearIconData];
-        greenImage = model.rearIconImage;
+//        rearImage = [UIImage imageWithData:model.rearIconData];
+        rearImage = model.rearIconImage;
     }
     
-    self.cardImageView.image = whiteImage;
+    self.cardImageView.image = frontImage;
     
 }
 
