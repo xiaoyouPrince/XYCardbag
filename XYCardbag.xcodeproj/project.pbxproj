@@ -14,7 +14,6 @@
 		89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5EA01FE7C2B7002AE67C /* Main.storyboard */; };
 		89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EA31FE7C2B7002AE67C /* main.m */; };
 		89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EA51FE7C2B7002AE67C /* ViewController.m */; };
-		89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5EAD1FE7C2E9002AE67C /* Info.plist */; };
 		89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */; };
 		89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECE1FE7C85D002AE67C /* XYIdentitiesController.m */; };
 		89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED11FE7C870002AE67C /* XYBankCardController.m */; };
@@ -38,7 +37,6 @@
 		B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF932010434C00B3D0D3 /* FMDatabase.m */; };
 		B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF972010434C00B3D0D3 /* FMDatabasePool.m */; };
 		B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF982010434C00B3D0D3 /* FMResultSet.m */; };
-		B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B458EF992010434C00B3D0D3 /* Info.plist */; };
 		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
 		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
 		B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B458EFA52010864000B3D0D3 /* XYContactsDetailController.xib */; };
@@ -263,7 +261,7 @@
 		B4E4D6C120EF159000A2922D /* XYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAlertView.h; sourceTree = "<group>"; };
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
 		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
-		B4E4D6C620EF6D0800A2922D /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYKitMacro.h; path = ../../../../../Shebao/Shebao/Classes/Third/XYKit/Base/XYKitMacro.h; sourceTree = "<group>"; };
+		B4ED5947217430D8005C7929 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -584,9 +582,9 @@
 		89FB5EF01FE8EB19002AE67C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B4ED5947217430D8005C7929 /* XYKitMacro.h */,
 				89FB5EF11FE8EB19002AE67C /* XYCommon.h */,
 				89FB5EF21FE8EB19002AE67C /* XYCommon.m */,
-				B4E4D6C620EF6D0800A2922D /* XYKitMacro.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -870,7 +868,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = XY;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = xiaoyou;
 				TargetAttributes = {
 					89FAF2621FD1060B008C9655 = {
@@ -923,9 +921,7 @@
 			files = (
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
-				89FB5EAE1FE7C2E9002AE67C /* Info.plist in Resources */,
 				B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */,
-				B458EF9F2010434C00B3D0D3 /* Info.plist in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
 				B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */,
 				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
@@ -1089,15 +1085,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1138,15 +1142,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

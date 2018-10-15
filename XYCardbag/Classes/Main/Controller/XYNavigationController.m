@@ -19,7 +19,7 @@
 {
     UINavigationBar *navBar = nil;
 
-    if (iOS9) {
+    if (@available(iOS 9.0, *)) {
         navBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
     }else{
         navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];

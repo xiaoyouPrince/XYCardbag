@@ -27,11 +27,9 @@
     // 获取哪个类中UITabBarItem
     UITabBarItem *item = nil;
     
-    if (iOS9) {
+    if (@available(iOS 9.0, *)) {
         item = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self]];
-    }else
-    {
-        // 适配iOS 9 以下系统
+    } else {// 适配iOS 9 以下系统
         item = [UITabBarItem appearanceWhenContainedIn:self, nil];
     }
     
