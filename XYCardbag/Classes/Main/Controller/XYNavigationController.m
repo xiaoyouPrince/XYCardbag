@@ -27,30 +27,20 @@
     
     // title 的大小和颜色
     NSMutableDictionary *attrs = [NSMutableDictionary new];
-    attrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:20];
+    attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:22];
     [navBar setTitleTextAttributes:attrs];
     
-    // backgroundView
+    // backIndicator
     [navBar setBackIndicatorImage:[UIImage imageNamed:@"navigationButtonReturn"]];
     [navBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"navigationButtonReturn"]]; // 这两个需要同时设置
     
-    UIImage *image = [UIImage imageWithColor:[UIColor colorWithWhite:0.2 alpha:0.80]];
+    // backgroundView
+    UIImage *image = [UIImage imageWithColor:[UIColor colorWithWhite:0.2 alpha:0.8]];
     [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
-//    UIColor *tintColor = [UIColor colorWithWhite:0.2 alpha:0.40];
-//    navBar.barTintColor = tintColor;
-    
-//    navBar.tintColor  
-//    navBar.backgroundColor
-    
-    // 结论：navBar 设置背景使用图片！
-    /*
-     1.优先使用 setBackgroundImage 设置背景图片
-     2.没有图时，使用 navBar.barTintColor 但是这里由于系统处理，内部有多个背景View，层级为内部类，使用不方便，具体机制不清楚
-     3.navBar.tintColor 设置的是导航 left/right item 等颜色
-     4.navBar.backgroundColor 设置导航bar 的背景的颜色，这里是不包含 statusbar 的部分！
-     */
+    // tintColor
+    navBar.tintColor = [UIColor whiteColor];
     
 }
 
