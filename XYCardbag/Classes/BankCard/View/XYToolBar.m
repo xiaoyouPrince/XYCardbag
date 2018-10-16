@@ -18,10 +18,11 @@
 
 @implementation XYToolBar
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self == [super init]) {
-        
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.barTintColor = [UIColor colorWithWhite:0.2 alpha:0.4];
     }
     return self;
 }

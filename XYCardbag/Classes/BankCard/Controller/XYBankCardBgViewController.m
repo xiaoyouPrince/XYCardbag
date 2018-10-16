@@ -67,7 +67,7 @@
 
 - (void)buildUI{
     
-    static CGFloat toolBarH = 30;
+    CGFloat toolBarH = (iPhoneX) ? 88 : 44;
     
     UITableView *tableView = [[UITableView alloc] init];
     tableView.dataSource = self;

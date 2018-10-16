@@ -91,8 +91,8 @@
         [UIView animateWithDuration:0.3 animations:^{
             self.navigationController.navigationBar.transform = CGAffineTransformTranslate(self.navigationController.navigationBar.transform, slipeWidth, 0);
             self.frontView.transform = CGAffineTransformTranslate(self.frontView.transform, slipeWidth, 0);
-            self.backView.transform = CGAffineTransformTranslate(self.backView.transform, backSlip, 0);
-            self.backView.transform = CGAffineTransformScale(self.backView.transform, slipeWidth/(ScreenW - slipeWidth), ScreenH/(ScreenH - 2 * 100));
+            self.backView.transform = CGAffineTransformTranslate(self.backView.transform, -slipeWidth, 0);
+            //self.backView.transform = CGAffineTransformScale(self.backView.transform, slipeWidth/(ScreenW - slipeWidth), ScreenH/(ScreenH - 2 * 100));
         }];
     }
     
@@ -115,7 +115,8 @@
     bgVC.delegate = self;
     [self addChildViewController:bgVC];
     UIView *backView = bgVC.view;
-    backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
+    //backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
+    backView.frame = CGRectMake(slipeWidth, 0, slipeWidth, ScreenH);
     backView.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.5];
     [self.view addSubview:backView];
     self.backView = backView;
@@ -141,7 +142,7 @@
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
-    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"+ 添加新卡片" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_help" title:@"+ 添加新卡片" rightImage:@"tool_search" callbackHandler:^(UIBarButtonItem *item) {
 //        NSLog(@"item = %@",item);
         switch (item.tag) {
             case XYToolbarItemPositionLeft:
