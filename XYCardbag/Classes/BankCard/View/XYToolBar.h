@@ -30,7 +30,7 @@ typedef enum : NSUInteger {
 
 typedef void(^CallbackHandler)(UIBarButtonItem *item);
 
-@interface XYToolBar : UIToolbar
+@interface XYToolBar : UIView // UIToolbar <适配 iPhone X 以上机型，系统会自动调整 item 位置>
 
 /**
  快速创建项目中三个功能的toolbar

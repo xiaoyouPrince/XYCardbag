@@ -67,7 +67,7 @@
 
 - (void)buildUI{
     
-    CGFloat toolBarH = (iPhoneX) ? 88 : 44;
+    CGFloat toolBarH = (iPhoneX) ? 74 : 44;
     
     UITableView *tableView = [[UITableView alloc] init];
     tableView.dataSource = self;
@@ -80,7 +80,7 @@
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
-    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"设置" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_add" title:@"设置" rightImage:@"tool_config" callbackHandler:^(UIBarButtonItem *item) {
 //        NSLog(@"item = %@",item);
         
         UIColor *tintColor = item.tintColor;

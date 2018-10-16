@@ -41,6 +41,10 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
     
+    UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
+    self.view = [[UIImageView alloc] initWithImage:bgImage];
+    self.view.userInteractionEnabled = YES;
+    
     UILabel *nameLabel = [UILabel new];
     nameLabel.text = @"名称";
     [nameLabel sizeToFit];

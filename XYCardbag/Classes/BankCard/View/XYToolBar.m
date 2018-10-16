@@ -9,6 +9,38 @@
 //
 
 #import "XYToolBar.h"
+#import "Masonry.h"
+
+@interface XYToolBarButtoon : UIButton
+
+
+/**
+ 快速创建 XYToolBarButtoon
+
+ @param image image
+ @param title title
+ @param target target
+ @param action action
+ @return XYToolBarButtoon
+ */
+- (instancetype)initWithImage:(UIImage *)image title:(NSString *)title target:(id)target action:(SEL)action;
+
+@end
+
+@implementation XYToolBarButtoon
+
+- (instancetype)initWithImage:(UIImage *)image title:(NSString *)title target:(id)target action:(SEL)action
+{
+    if (self == [super init]) {
+        [self setTitle:title forState:UIControlStateNormal];
+        [self setImage:image forState:UIControlStateNormal];
+        [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+        [self sizeToFit];
+    }
+    return self;
+}
+
+@end
 
 @interface XYToolBar()
 
@@ -22,36 +54,63 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.barTintColor = [UIColor colorWithWhite:0.2 alpha:0.4];
+        self.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.85];
     }
     return self;
 }
 
-- (instancetype)initWithLeftImage:(NSString *)leftImage title:(NSString *)title rightImage:(NSString *)rightImage callbackHandler:(CallbackHandler)handler
-{
+
+- (instancetype)instanceWithLeftImage:(NSString *)leftImage title:(NSString *)title rightImage:(NSString *)rightImage callbackHandler:(CallbackHandler)handler{
+    
     if (self == [super init]) {
         
         UIImage *imageLeft = [[UIImage imageNamed:leftImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage *imageRight = [[UIImage imageNamed:rightImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
-        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:imageLeft style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
+        XYToolBarButtoon *leftItem = [[XYToolBarButtoon alloc] initWithImage:imageLeft title:nil target:self action:@selector(itemClick:)];
         leftItem.tag = XYToolbarItemPositionLeft;
         
-        UIBarButtonItem *flexLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        
-        UIBarButtonItem *midItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
+        XYToolBarButtoon *midItem = [[XYToolBarButtoon alloc] initWithImage:nil title:title target:self action:@selector(itemClick:)];
         midItem.tag = XYToolbarItemPositionMiddle;
         
-        UIBarButtonItem *flexRight = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:imageRight style:UIBarButtonItemStylePlain target:self action:@selector(itemClick:)];
+        XYToolBarButtoon *rightItem = [[XYToolBarButtoon alloc] initWithImage:imageRight title:nil target:self action:@selector(itemClick:)];
         rightItem.tag = XYToolbarItemPositiondRight;
         
-        self.items = @[leftItem,flexLeft,midItem,flexRight,rightItem];
+        [self addSubview:leftItem];
+        [self addSubview:midItem];
+        [self addSubview:rightItem];
+        
+        CGFloat itemTop = iPhoneX ? 10 : 5;
+        CGFloat itemMargin = 20;
+        
+        [leftItem mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).offset(itemTop);
+            make.left.equalTo(self).offset(itemMargin);
+        }];
+        
+        [midItem mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.centerY.equalTo(leftItem);
+        }];
+        
+        [rightItem mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).offset(itemTop);
+            make.right.equalTo(self).offset(-itemMargin);
+        }];
+        
         
         self.handler = handler;
+        
     }
     return self;
+}
+
+
+- (instancetype)initWithLeftImage:(NSString *)leftImage title:(NSString *)title rightImage:(NSString *)rightImage callbackHandler:(CallbackHandler)handler
+{
+    
+    return [self instanceWithLeftImage:leftImage title:title rightImage:rightImage callbackHandler:handler];
+    
 }
 
 - (void)itemClick:(UIBarButtonItem *)item{

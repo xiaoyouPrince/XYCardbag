@@ -129,7 +129,7 @@
     self.frontView = frontView;
     
     // tableview And toolbar
-    CGFloat toolBarH = (iPhoneX) ? 88 : 44;
+    CGFloat toolBarH = (iPhoneX) ? 74 : 44;
     
     UITableView *tableView = [[UITableView alloc] init];
     tableView.dataSource = self;
@@ -174,7 +174,7 @@
         make.top.equalTo(self.frontView).offset(0);
         make.left.equalTo(self.frontView);
         make.right.equalTo(self.frontView);
-        make.bottom.equalTo(self.frontView).offset(-(toolBarH));
+        make.bottom.equalTo(self.frontView).offset(0); // -(toolBarH)
     }];
     
     [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
