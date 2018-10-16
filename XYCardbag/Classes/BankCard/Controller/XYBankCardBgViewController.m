@@ -77,6 +77,8 @@
     self.tableView.contentInset = UIEdgeInsetsMake(-44, 0, 0, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tableView];
+    UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"设置" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
 //        NSLog(@"item = %@",item);

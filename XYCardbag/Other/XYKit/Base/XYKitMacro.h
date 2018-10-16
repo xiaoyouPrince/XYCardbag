@@ -43,7 +43,7 @@
 #define iPhone5 (ScreenH == 568)
 #define iPhone6 (ScreenH == 667)
 #define iPhone6P (ScreenH == 736)
-#define iPhoneX (ScreenH == 812)
+#define iPhoneX (ScreenH >= 812) // X、 Xs、 Xs Max、 XR
 
 // 适配iphone6 所以用的它的分辨率 -- 因为标注都是按这个来的
 // 公式：x = y * k；   ----> 坐标值 = 标尺 * 比率

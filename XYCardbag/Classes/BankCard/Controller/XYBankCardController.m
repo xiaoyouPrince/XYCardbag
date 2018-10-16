@@ -47,10 +47,12 @@
     
     self.view.backgroundColor = [UIColor blackColor];
     
+    [self setupNav];
+    
     [self buildUI];
     
-    UIBarButtonItem *leftFuncItem = [[UIBarButtonItem alloc] initWithTitle:@"功能" style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
-    self.navigationItem.leftBarButtonItem = leftFuncItem;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
 
 }
 
@@ -98,6 +100,13 @@
     
 }
 
+- (void)setupNav{
+    
+    // nav
+    UIBarButtonItem *leftFuncItem = [[UIBarButtonItem alloc] initWithTitle:@"功能" style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
+    self.navigationItem.leftBarButtonItem = leftFuncItem;
+}
+
 
 - (void)buildUI{
 
@@ -114,7 +123,7 @@
     // 前景View
     UIView *frontView = [UIView new];
     frontView.frame = self.view.bounds;
-    frontView.backgroundColor = [UIColor redColor];
+//    frontView.backgroundColor = [UIColor redColor];
     [self.view addSubview:frontView];
     self.frontView = frontView;
     
@@ -129,6 +138,8 @@
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.frontView addSubview:tableView];
+    UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"carIcon" title:@"+ 添加新卡片" rightImage:@"carIcon" callbackHandler:^(UIBarButtonItem *item) {
 //        NSLog(@"item = %@",item);
@@ -159,7 +170,7 @@
     self.toolBar = toolBar;
     
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.frontView).offset(kNavHeight);
+        make.top.equalTo(self.frontView).offset(0);
         make.left.equalTo(self.frontView);
         make.right.equalTo(self.frontView);
         make.bottom.equalTo(self.frontView).offset(-(toolBarH));
