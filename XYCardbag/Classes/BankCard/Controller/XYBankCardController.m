@@ -24,10 +24,27 @@
 @property(nonatomic,weak) UITableView *tableView;
 @property(nonatomic , strong) XYToolBar  *toolBar;
 @property(nonatomic , strong) NSMutableArray  *dataArray;
+@property(nonatomic , strong) UIButton *coverView;
 
 @end
 
 @implementation XYBankCardController
+
+- (UIButton *)coverView
+{
+    if (!_coverView) {
+        _coverView = [[UIButton alloc] initWithFrame:self.view.bounds];
+        _coverView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.1];
+        _coverView.layer.shadowOffset = CGSizeMake(-10, 0);
+        _coverView.layer.shadowOpacity = 1.0;
+        _coverView.layer.shadowColor = [[UIColor whiteColor] CGColor];
+        _coverView.layer.shadowRadius = 5;
+        _coverView.layer.borderWidth = 0;
+        
+        [_coverView addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _coverView;
+}
 
 - (NSMutableArray *)dataArray
 {
@@ -73,6 +90,8 @@
 
 - (void)leftItemClick{
     
+    if (!self.navigationItem.leftBarButtonItem.enabled) return; // 当左item不可用，即编辑卡片组，不可用
+    
     NSLog(@"左边被点击，弹出功能菜单");
     
     if (self.frontView.transform.tx) {
@@ -83,8 +102,8 @@
 //            self.backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
         }];
         
-        // 1. 添加蒙版，不再接受用户时间
-        self.frontView.userInteractionEnabled = YES;
+        // 1. 移除蒙版，接受用户事件
+        [self.coverView removeFromSuperview];
     }else
     {
         
@@ -99,8 +118,8 @@
         }];
         
         
-        // 1. 添加蒙版，不再接受用户时间
-        self.frontView.userInteractionEnabled = NO;
+        // 1. 添加蒙版，不再接受用户事件
+        [self.frontView addSubview:self.coverView];
     }
     
     
@@ -201,17 +220,18 @@
 //    NSLog(@"keyPath = %@",keyPath);
 //}
 
-#pragma BankCardBgVCDelegate
+
+
+#pragma mark - BankCardBgVCDelegate
+
 - (void)backgroundView:(UIView *)bgView isEditing:(BOOL)isEdit
 {
     // 根据背静的View是否是edit状态来调整frontView的可用状态
     if (isEdit) {
         self.navigationItem.leftBarButtonItem.enabled = NO;
-        self.frontView.userInteractionEnabled = NO;
     }else
     {
         self.navigationItem.leftBarButtonItem.enabled = YES;
-        self.frontView.userInteractionEnabled = YES;
     }
 }
 
