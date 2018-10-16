@@ -47,11 +47,13 @@
     
     UILabel *nameLabel = [UILabel new];
     nameLabel.text = @"名称";
+    nameLabel.textColor = [UIColor whiteColor];
     [nameLabel sizeToFit];
     [self.view addSubview:nameLabel];
     
     UITextField *nameTF = [UITextField new];
     nameTF.placeholder = @"输入分类名";
+    nameTF.placeholderColor = [UIColor grayColor];
     nameTF.borderStyle = UITextBorderStyleRoundedRect;
     [nameTF becomeFirstResponder];
     [self.view addSubview:nameTF];

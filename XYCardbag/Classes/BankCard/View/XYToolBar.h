@@ -28,7 +28,7 @@ typedef enum : NSUInteger {
     XYToolbarItemPositiondRight
 } XYToolbarItemPosition;
 
-typedef void(^CallbackHandler)(UIBarButtonItem *item);
+typedef void(^CallbackHandler)(UIButton *btn);
 
 @interface XYToolBar : UIView // UIToolbar <适配 iPhone X 以上机型，系统会自动调整 item 位置>
 

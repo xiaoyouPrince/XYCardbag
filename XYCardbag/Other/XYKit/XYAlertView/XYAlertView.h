@@ -16,4 +16,7 @@
 /// 两个选择的alert <OK/Cancel>
 + (void)showAlertTitle:(NSString *)title message:(NSString *)message Ok:(void (^)(void))OK cancel:(void (^)(void))cancel;
 
+/// 通知正在开发中
++ (void)showDeveloping;
+
 @end

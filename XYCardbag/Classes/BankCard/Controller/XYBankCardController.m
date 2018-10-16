@@ -82,6 +82,9 @@
             self.backView.transform = CGAffineTransformIdentity;
 //            self.backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
         }];
+        
+        // 1. 添加蒙版，不再接受用户时间
+        self.frontView.userInteractionEnabled = YES;
     }else
     {
         
@@ -94,6 +97,10 @@
             self.backView.transform = CGAffineTransformTranslate(self.backView.transform, -slipeWidth, 0);
             //self.backView.transform = CGAffineTransformScale(self.backView.transform, slipeWidth/(ScreenW - slipeWidth), ScreenH/(ScreenH - 2 * 100));
         }];
+        
+        
+        // 1. 添加蒙版，不再接受用户时间
+        self.frontView.userInteractionEnabled = NO;
     }
     
     
@@ -142,7 +149,7 @@
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
-    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_help" title:@"+ 添加新卡片" rightImage:@"tool_search" callbackHandler:^(UIBarButtonItem *item) {
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_help" title:@"+ 添加新卡片" rightImage:@"tool_search" callbackHandler:^(UIButton *item) {
 //        NSLog(@"item = %@",item);
         switch (item.tag) {
             case XYToolbarItemPositionLeft:

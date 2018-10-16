@@ -80,10 +80,8 @@
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
-    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_add" title:@"设置" rightImage:@"tool_config" callbackHandler:^(UIBarButtonItem *item) {
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_add" title:@"设置" rightImage:@"tool_config" callbackHandler:^(UIButton *item) {
 //        NSLog(@"item = %@",item);
-        
-        UIColor *tintColor = item.tintColor;
         
         if (item.tag == XYToolbarItemPositionLeft) {
             NSLog(@"左边item = 新添加");
@@ -92,50 +90,33 @@
         
         if (item.tag == XYToolbarItemPositiondRight) {
             NSLog(@"右边item = 设置");
+            [XYAlertView showDeveloping];
         }
         
-        if ([item.title isEqualToString:@"设置"]) {
+        if ([item.currentTitle isEqualToString:@"设置"]) {
             // 1.自己状态改变
-            item.tintColor = tintColor;
-            item.title = @"完成";
-            item.style = UIBarButtonItemStyleDone;
+            [item setTitle:@"完成" forState:UIControlStateNormal];
+            UIColor *color = XYColor(44, 183, 245);
+            [item setTitleColor:color forState:UIControlStateNormal];
+            
             // 2，tableView变成可编辑状态
             self.tableView.editing = YES;
-            // 3. 其他部分隐藏并且只有自己的View有用户效果
-            UIView *toolBarContentView = toolBar.subviews.lastObject.subviews.firstObject;
-            NSMutableArray <UIView *>*arrayM = [NSMutableArray array];
-            for (int i = 0; i < toolBarContentView.subviews.count; i ++) {
-                // 内部itemView
-                UIView *midItem = toolBarContentView.subviews[i];
-                if ([midItem isKindOfClass:NSClassFromString(@"_UIButtonBarButton")]) {
-                    [arrayM addObject:midItem];
-                }
-            }
-            arrayM.firstObject.hidden = YES;
-            arrayM.lastObject.hidden = YES;
             
-            
-            // 4. 通过delegate发消息传出去外界不可操作现在，只能等编辑完成才可以滑动回来。
+            // 3. 通过delegate发消息传出去外界不可操作现在，只能等编辑完成才可以滑动回来。
             if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
                 [self.delegate backgroundView:self.tableView isEditing:YES];
             }
-        }else if ([item.title isEqualToString:@"完成"]) {
+            
+        }else if ([item.currentTitle isEqualToString:@"完成"]) {
             
             // 1.自己状态改变
-            item.tintColor = tintColor;
-            item.title = @"设置";
-            item.style = UIBarButtonItemStylePlain;
+            [item setTitle:@"设置" forState:UIControlStateNormal];
+            [item setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             
             // 2，tableView变成可编辑状态
             self.tableView.editing = NO;
             
-            // 3. 其他部分隐藏并且只有自己的View有用户效果
-            UIView *toolBarContentView = toolBar.subviews.lastObject.subviews.firstObject;
-            for (int i = 0; i < toolBarContentView.subviews.count; i ++) {
-                [toolBarContentView.subviews[i] setHidden:NO];
-            }
-            
-            // 4.通过delegate发消息传出去外界可操作现在，已经编辑完成回归原来状态。
+            // 3.通过delegate发消息传出去外界可操作现在，已经编辑完成回归原来状态。
             if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
                 [self.delegate backgroundView:self.tableView isEditing:NO];
             }
@@ -148,7 +129,7 @@
         make.top.equalTo(self.view);
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
-        make.height.equalTo(self.view).offset(-(toolBarH));
+        make.height.equalTo(self.view).offset(0); // -(toolBarH)
     }];
     
     [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {

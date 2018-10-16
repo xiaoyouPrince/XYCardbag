@@ -70,4 +70,9 @@
     
 }
 
++ (void)showDeveloping
+{
+    [self showAlertTitle:nil message:@"努力开发中..." Ok:nil];
+}
+
 @end

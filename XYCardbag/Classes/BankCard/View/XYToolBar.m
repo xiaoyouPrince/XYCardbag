@@ -113,7 +113,7 @@
     
 }
 
-- (void)itemClick:(UIBarButtonItem *)item{
+- (void)itemClick:(XYToolBarButtoon *)item{
     if (self.handler) {
         self.handler(item);
     }
