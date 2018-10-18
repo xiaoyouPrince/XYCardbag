@@ -10,8 +10,12 @@
 
 #import <Foundation/Foundation.h>
 
+FOUNDATION_EXPORT NSString * const SectionNameAll;
+FOUNDATION_EXPORT NSString * const SectionNameFavroit;
+
 @interface XYBankCardSection : NSObject
 
+@property(nonatomic , assign) int64_t sectionID; // 卡片组的id
 @property(nonatomic , copy) NSString *title;
 @property(nonatomic , copy) NSString *icon;
 

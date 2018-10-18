@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Controller/AddCardVC/XYAddCardDetailController.m"
-            timestampString = "561287862.8198889"
+            timestampString = "561467943.92917"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "205"
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XYCardbag/Classes/BankCard/Controller/AddCardVC/XYAddCardDetailController.m"
-            timestampString = "561287870.053151"
+            filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
+            timestampString = "561523778.662482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "-rightItemClick:"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "+saveNewCardSection:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

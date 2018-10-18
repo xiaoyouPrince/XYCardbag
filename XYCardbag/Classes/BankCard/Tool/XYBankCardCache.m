@@ -62,11 +62,15 @@ static FMDatabaseQueue *_queue;
     
     [_queue inDatabase:^(FMDatabase *db) {
         // 1.获得需要存储的数据
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:section];  // 这里的意思是Status必须实现Coding协议
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:section];  // 须实现Coding协议
         // 2.存储数据
         BOOL isSuccess = [db executeUpdate:@"insert into t_section (name, icon,section) values(?, ? ,?)", section.title, section.icon ,data];
         if (isSuccess) {
             DLog(@"保存成功");
+            
+            // 保存 sectionID
+            int64_t sectionID = [db lastInsertRowId];
+            section.sectionID = sectionID;
         }
     }];
 }
@@ -97,6 +101,7 @@ static FMDatabaseQueue *_queue;
         BOOL isSuccess = [db executeUpdate:@"insert into t_card ( sid, name ,card) values ( (SELECT t_section.id FROM t_section WHERE t_section.name = ?), ?, ?)", section.title, card.name ,data];
         if (isSuccess) {
             DLog(@"保存成功");
+//            NSInteger cardID = [db];
         }
     }];
     
@@ -150,11 +155,11 @@ static FMDatabaseQueue *_queue;
     
     // 内部默认【全部】【我的最爱】两个分组
     XYBankCardSection *all = [XYBankCardSection new];
-    all.title = @"全部卡片";
+    all.title = SectionNameAll;
     all.icon = @"category_icon_all";
     
     XYBankCardSection *favorite = [XYBankCardSection new];
-    favorite.title = @"我最喜欢";
+    favorite.title = SectionNameFavroit;
     favorite.icon = @"category_icon_17";
     
     [arrayM addObject:all];
@@ -176,6 +181,10 @@ static FMDatabaseQueue *_queue;
             NSData *data = [rs dataForColumn:@"section"];
             XYBankCardSection *section = [NSKeyedUnarchiver unarchiveObjectWithData:data];
             [resultArrayM addObject:section];
+            
+            // 保存其对应的sectionID
+            int64_t sectionID = [rs intForColumn:@"id"];
+            section.sectionID = sectionID;
         }
     }];
     

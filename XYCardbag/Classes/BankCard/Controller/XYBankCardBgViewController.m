@@ -33,9 +33,7 @@
 - (NSMutableArray *)dataArray
 {
     if (!_dataArray) {
-        // _dataArray = [NSMutableArray array];
         _dataArray = [XYBankCardCache getAllCardSections];
-        
     }
     return _dataArray;
 }

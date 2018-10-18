@@ -10,6 +10,9 @@
 
 #import "XYBankCardModel.h"
 
+NSString * const SectionNameAll = @"所有卡片";
+NSString * const SectionNameFavroit = @"我的最爱";
+
 @implementation XYBankCardSection
 MJCodingImplementation;
 

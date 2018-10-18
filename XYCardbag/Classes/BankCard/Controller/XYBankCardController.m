@@ -49,8 +49,8 @@
 - (NSMutableArray *)dataArray
 {
     if (_dataArray == nil) {
-        XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
-        _dataArray = [XYBankCardCache getAllCardModelsForSection:section];
+//        XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
+//        _dataArray = [XYBankCardCache getAllCardModelsForSection:section];
     }
     return _dataArray;
 }
