@@ -277,19 +277,10 @@
 {
     _model = model;
     
-    if (model.frontIcon.length) {
-        frontImage = [UIImage imageNamed:model.frontIcon];
-    }else{
-//        frontImage = [UIImage imageWithData:model.frontIconData];
-        frontImage = model.frontIconImage;
-    }
-    if (model.rearIcon.length) {
-        rearImage = [UIImage imageNamed:model.rearIcon];
-    }else{
-//        rearImage = [UIImage imageWithData:model.rearIconData];
-        rearImage = model.rearIconImage;
-    }
-    
+    // 1. 前后图片
+    frontImage = model.frontIconImage;
+    rearImage = model.rearIconImage;
+
     self.cardImageView.image = frontImage;
     
 }

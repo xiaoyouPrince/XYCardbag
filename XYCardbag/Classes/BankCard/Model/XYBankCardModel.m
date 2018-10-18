@@ -36,7 +36,7 @@ MJCodingImplementation;
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"frontIcon = %@, rearIcon = %@ ,frontIconData = %@, rearIconData = %@ , name = %@ , cardNumber = %@ , desc = %@ , tags = %@",_frontIcon,_rearIcon,_frontIconImage,_rearIconImage,_name,_cardNumber,_desc,_tags];
+    return [NSString stringWithFormat:@"frontIcon = %@, rearIcon = %@ , name = %@ , cardNumber = %@ , desc = %@ , tags = %@",_frontIconImage,_rearIconImage,_name,_cardNumber,_desc,_tags];
 }
 
 MJCodingImplementation;

@@ -28,13 +28,10 @@ FOUNDATION_EXPORT NSString * const SectionNameFavroit;
 
 @interface XYBankCardModel : NSObject
 
-@property(nonatomic , copy) NSString *frontIcon;
-@property(nonatomic , copy) NSString *rearIcon;
+@property(nonatomic , copy) NSNumber *cardID; // 卡片id
+
 @property(nonatomic , strong) UIImage *frontIconImage;
 @property(nonatomic , strong) UIImage *rearIconImage;
-
-//@property(nonatomic , strong) NSData *frontIconData;
-//@property(nonatomic , strong) NSData *rearIconData;
 
 @property(nonatomic , copy) NSString *name;
 @property(nonatomic , copy) NSString *cardNumber;

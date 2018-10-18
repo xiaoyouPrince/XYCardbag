@@ -150,16 +150,14 @@ static XYNavigationController *selfNav;
     NSArray *sectionOne = self.dataArray.firstObject;
     NSArray *sectionTwo = self.dataArray.lastObject;
     
+    // 1.1 第一组卡片图片数据
     XYCardInfoModel *imageInfo = sectionOne.firstObject;
-//    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconData,imageInfo.rearIconData);
-    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconImage,imageInfo.rearIconImage);
-    
-//    cardModel.frontIconData = imageInfo.frontIconData;
-//    cardModel.rearIconData = imageInfo.rearIconData;
-    
     cardModel.frontIconImage = imageInfo.frontIconImage;
     cardModel.rearIconImage = imageInfo.rearIconImage;
     
+    NSLog(@"卡片前图是:%@,  后图是:%@",imageInfo.frontIconImage,imageInfo.rearIconImage);
+    
+    // 1.2 第二组，卡片的 name number desc 等属性信息
     for (XYCardInfoModel *cardInfo in sectionTwo) {
         
         switch (cardInfo.tagType) {
