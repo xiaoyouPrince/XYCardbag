@@ -95,7 +95,7 @@ static FMDatabaseQueue *_queue;
                 
                 // 保存 sectionID
                 int64_t sectionID = [db lastInsertRowId];
-                section.sectionID = sectionID;
+                section.sectionID = [NSNumber numberWithLongLong:sectionID];
             }
         }
     }];
@@ -143,10 +143,8 @@ static FMDatabaseQueue *_queue;
     
     [_queue inDatabase:^(FMDatabase *db) {
         
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:section];  // 这里的意思是Status必须实现Coding协议
-        
         // 2.存储数据
-        BOOL isSuccess = [db executeUpdate:@"delete from t_section where section = ?", data];
+        BOOL isSuccess = [db executeUpdate:@"delete from t_section where (id = ?)", section.sectionID];
         if (isSuccess) {
             DLog(@"移除成功");
         }
@@ -196,7 +194,7 @@ static FMDatabaseQueue *_queue;
             
             // 保存其对应的sectionID
             int64_t sectionID = [rs intForColumn:@"id"];
-            section.sectionID = sectionID;
+            section.sectionID = [NSNumber numberWithLongLong:sectionID];
         }
     }];
     

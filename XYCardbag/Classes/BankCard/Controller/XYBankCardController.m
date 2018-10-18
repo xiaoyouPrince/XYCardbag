@@ -30,7 +30,7 @@
 /**
  本页面所展示组的sectionID
  */
-@property(nonatomic , assign) int64_t sectionID;
+@property(nonatomic , copy) NSNumber * sectionID;
 
 
 @end
@@ -68,7 +68,7 @@
     
     // 默认的title 【所有卡片】
     self.title = SectionNameAll;
-    self.sectionID = 1;
+    self.sectionID = @(1);
     
     self.view.backgroundColor = [UIColor blackColor];
     

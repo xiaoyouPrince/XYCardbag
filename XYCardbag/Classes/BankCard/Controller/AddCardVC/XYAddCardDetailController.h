@@ -26,6 +26,6 @@ typedef enum {
 /**
  要保存卡片的sectionID。对应的那个大类
  */
-@property(nonatomic , assign) int64_t sectionID;
+@property(nonatomic , copy) NSNumber * sectionID;
 
 @end

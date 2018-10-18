@@ -15,14 +15,14 @@ FOUNDATION_EXPORT NSString * const SectionNameFavroit;
 
 @interface XYBankCardSection : NSObject
 
-@property(nonatomic , assign) int64_t sectionID; // 卡片组的id
+@property(nonatomic , copy) NSNumber *sectionID; // 卡片组的id
 @property(nonatomic , copy) NSString *title;
 @property(nonatomic , copy) NSString *icon;
 
 /**
  根据title 快速创建一个对象
  */
-+ (instancetype)instanceWithSectionID:(int64_t)sectionID;
++ (instancetype)instanceWithSectionID:(NSNumber *)sectionID;
 
 @end
 

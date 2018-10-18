@@ -16,7 +16,7 @@ NSString * const SectionNameFavroit = @"我的最爱";
 @implementation XYBankCardSection
 MJCodingImplementation;
 
-+ (instancetype)instanceWithSectionID:(int64_t)sectionID
++ (instancetype)instanceWithSectionID:(NSNumber *)sectionID
 {
     XYBankCardSection *section = [XYBankCardSection new];
     section.sectionID = sectionID;
