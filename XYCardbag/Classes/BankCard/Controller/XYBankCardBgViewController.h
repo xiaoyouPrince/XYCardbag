@@ -10,10 +10,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class XYBankCardSection;
 @protocol BankCardBgVCDelegate<NSObject>
 @optional
 - (void)backgroundView:(UIView *)bgView isEditing:(BOOL)isEdit;
-- (void)backgroundView:(UIView *)bgView didChooseSectionName:(NSString *)sectionName;
+- (void)backgroundView:(UIView *)bgView didChooseSection:(XYBankCardSection *)section;
 
 @end
 

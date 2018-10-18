@@ -40,7 +40,7 @@
             NSLog(@"点击普通卡");
             /// 进入对应的列表页面
             XYAddCardDetailController *listVC = [XYAddCardDetailController new];
-            listVC.sectionTitle = self.sectionTitle;
+            listVC.sectionID = self.sectionID;
             [self.navigationController pushViewController:listVC animated:YES];
         }
             break;

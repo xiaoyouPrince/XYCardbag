@@ -41,9 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     [self buildUI];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -192,6 +190,7 @@
 //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
     XYBankCardSection *section = self.dataArray[indexPath.row];
     cell.textLabel.text = section.title;
+    cell.textLabel.textColor = UIColor.whiteColor;
     cell.backgroundColor = UIColor.clearColor;//indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
     cell.imageView.image = [UIImage imageNamed:section.icon];
     
@@ -206,8 +205,8 @@
     // 返回主页并刷新最新数据
     // 可以用自己的delegate去做这件事
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:didChooseSectionName:)]) {
-        [self.delegate backgroundView:self.tableView didChooseSectionName:self.dataArray[indexPath.row].title];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:didChooseSection:)]) {
+        [self.delegate backgroundView:self.tableView didChooseSection:self.dataArray[indexPath.row]];
     }
     
 }
@@ -263,6 +262,31 @@
 }
 
 
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return -1;
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
+   
+//    NSDictionary *section = [self.dataArray objectAtIndex:sourceIndexPath.section];
+//    NSUInteger sectionCount = [[section valueForKey:@"content"] count];
+//    if (sourceIndexPath.section != proposedDestinationIndexPath.section) {
+//        NSUInteger rowInSourceSection =
+//        (sourceIndexPath.section > proposedDestinationIndexPath.section) ?
+//        0 : sectionCount - 1;
+//        return [NSIndexPath indexPathForRow:rowInSourceSection inSection:sourceIndexPath.section];
+//    } else if (proposedDestinationIndexPath.row >= sectionCount) {
+//        return [NSIndexPath indexPathForRow:sectionCount - 1 inSection:sourceIndexPath.section];
+//    }
+    
+    if (proposedDestinationIndexPath.row < 2) { // 默认[所有卡片][我的最爱]不可移动
+         return [NSIndexPath indexPathForRow:2 inSection:sourceIndexPath.section];
+    }
+    
+    // Allow the proposed destination.
+    return proposedDestinationIndexPath;
+}
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     

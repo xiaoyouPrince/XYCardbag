@@ -26,6 +26,13 @@
 @property(nonatomic , strong) NSMutableArray  *dataArray;
 @property(nonatomic , strong) UIButton *coverView;
 
+
+/**
+ 本页面所展示组的sectionID
+ */
+@property(nonatomic , assign) int64_t sectionID;
+
+
 @end
 
 @implementation XYBankCardController
@@ -49,8 +56,8 @@
 - (NSMutableArray *)dataArray
 {
     if (_dataArray == nil) {
-//        XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
-//        _dataArray = [XYBankCardCache getAllCardModelsForSection:section];
+        XYBankCardSection *section = [XYBankCardSection instanceWithSectionID:self.sectionID];
+        _dataArray = [XYBankCardCache getAllCardModelsForSection:section];
     }
     return _dataArray;
 }
@@ -59,8 +66,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 默认的
-    self.title = @"Bank card ";
+    // 默认的title 【所有卡片】
+    self.title = SectionNameAll;
+    self.sectionID = 1;
     
     self.view.backgroundColor = [UIColor blackColor];
     
@@ -235,32 +243,28 @@
     }
 }
 
-- (void)backgroundView:(UIView *)bgView didChooseSectionName:(NSString *)sectionName
+- (void)backgroundView:(UIView *)bgView didChooseSection:(XYBankCardSection *)section
 {
     // 1.回到主页面
     [self leftItemClick];
     
     // 2.修改主页面的UI数据<加载对应页面的卡信息>
-    self.title = sectionName;
+    self.title = section.title;
+    self.sectionID = section.sectionID;
     
-    [self reloadPagedatasWithSectionName:sectionName];
+    [self reloadPagedatasWithSection:section];
 }
 
 
 /**
- 根据sectionName刷新主页数据
+ 根据section刷新主页数据
  */
-- (void)reloadPagedatasWithSectionName:(NSString *)sectionName
+- (void)reloadPagedatasWithSection:(XYBankCardSection *)section
 {
-    if (sectionName == nil) {
-        sectionName = @"所有卡片";
-    }
-    
     // 刷新数据
     [self reloadPageDataAndRefresh];
     
     NSLog(@"%@",self.dataArray);
-
 }
 
 /**
@@ -292,7 +296,7 @@
     
     /// 进入对应的列表页面
     XYAddCardController *listVC = [XYAddCardController new];
-    listVC.sectionTitle = self.title;
+    listVC.sectionID = self.sectionID;
     [self.navigationController pushViewController:listVC animated:YES];
 
 }
@@ -311,7 +315,7 @@
 - (void)reloadPageDataAndRefresh{
     
     // 刷新数据和列表
-    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.title];
+    XYBankCardSection *section = [XYBankCardSection instanceWithSectionID:self.sectionID];
     self.dataArray = [XYBankCardCache getAllCardModelsForSection:section];
     [self.tableView reloadData];
 }

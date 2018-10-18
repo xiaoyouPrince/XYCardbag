@@ -26,7 +26,7 @@ static FMDatabaseQueue *_queue;
     // 1.创建队列
     _queue = [FMDatabaseQueue databaseQueueWithPath:path];
     
-    // 2.创表 section 和 card
+    // 2.创表 t_section 和 t_card
     [_queue inDatabase:^(FMDatabase *db) {
         [db executeUpdate:@"create table if not exists t_section ("
                                  "id integer primary key autoincrement,"
@@ -47,6 +47,20 @@ static FMDatabaseQueue *_queue;
                                  ");"
          ];
     }];
+    
+    // 3. 创建两个默认组 【全部】 & 【我的最爱】
+    XYBankCardSection *all = [XYBankCardSection new];
+    all.title = SectionNameAll;
+    all.icon = @"category_icon_all";
+    
+    XYBankCardSection *favorite = [XYBankCardSection new];
+    favorite.title = SectionNameFavroit;
+    favorite.icon = @"category_icon_17";
+    
+    [self saveNewCardSection:all];
+    [self saveNewCardSection:favorite];
+    
+    
 }
 
 
@@ -58,19 +72,31 @@ static FMDatabaseQueue *_queue;
  */
 + (void)saveNewCardSection:(XYBankCardSection *)section{
     
-    //NSString *sql = @"";
+    /// @warning 先验证同名卡片组然后进行存储
     
-    [_queue inDatabase:^(FMDatabase *db) {
+    __block BOOL hasRecord = NO;
+    [_queue inDatabase:^(FMDatabase *db) { // 0.1 先验证是否已经有同名的卡片组
+        
         // 1.获得需要存储的数据
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:section];  // 须实现Coding协议
+        // 创建数组
+        FMResultSet *rs = nil;
+        rs = [db executeQuery:@"SELECT t_section.name FROM t_section WHERE t_section.name = ?", section.title];
+        while (rs.next) {
+            hasRecord = YES;
+        }
+        
         // 2.存储数据
-        BOOL isSuccess = [db executeUpdate:@"insert into t_section (name, icon,section) values(?, ? ,?)", section.title, section.icon ,data];
-        if (isSuccess) {
-            DLog(@"保存成功");
+        if (!hasRecord) { // 如果不存在原有的section,再进行存储
+            BOOL isSuccess = [db executeUpdate:@"insert into t_section (name, icon,section) values(?, ? ,?)", section.title, section.icon ,data];
             
-            // 保存 sectionID
-            int64_t sectionID = [db lastInsertRowId];
-            section.sectionID = sectionID;
+            if (isSuccess) {
+                DLog(@"保存成功");
+                
+                // 保存 sectionID
+                int64_t sectionID = [db lastInsertRowId];
+                section.sectionID = sectionID;
+            }
         }
     }];
 }
@@ -152,20 +178,6 @@ static FMDatabaseQueue *_queue;
 + (NSMutableArray <XYBankCardSection *>*)getAllCardSections{
 
     NSMutableArray *arrayM = [NSMutableArray array];
-    
-    // 内部默认【全部】【我的最爱】两个分组
-    XYBankCardSection *all = [XYBankCardSection new];
-    all.title = SectionNameAll;
-    all.icon = @"category_icon_all";
-    
-    XYBankCardSection *favorite = [XYBankCardSection new];
-    favorite.title = SectionNameFavroit;
-    favorite.icon = @"category_icon_17";
-    
-    [arrayM addObject:all];
-    [arrayM addObject:favorite];
-    
-    
     
     // 1.定义resutlArray
     NSMutableArray *resultArrayM = @[].mutableCopy;

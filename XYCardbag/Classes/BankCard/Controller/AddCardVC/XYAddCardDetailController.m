@@ -198,7 +198,7 @@ static XYNavigationController *selfNav;
     NSLog(@"cardModel = %@",cardModel);
     
     // 保存数据
-    XYBankCardSection *section = [XYBankCardSection instanceWithTitle:self.sectionTitle];
+    XYBankCardSection *section = [XYBankCardSection instanceWithSectionID:self.sectionID];
     [XYBankCardCache saveNewCard:cardModel forSection:section];
     
     // 退出页面

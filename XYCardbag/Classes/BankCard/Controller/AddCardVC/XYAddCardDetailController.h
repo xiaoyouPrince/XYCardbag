@@ -24,8 +24,8 @@ typedef enum {
  */
 @property(nonatomic , assign) CardType cardType;
 /**
- 要保存卡片的section。对应的那个大类
+ 要保存卡片的sectionID。对应的那个大类
  */
-@property(nonatomic , copy) NSString *sectionTitle;
+@property(nonatomic , assign) int64_t sectionID;
 
 @end

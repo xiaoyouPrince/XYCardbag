@@ -22,7 +22,7 @@ FOUNDATION_EXPORT NSString * const SectionNameFavroit;
 /**
  根据title 快速创建一个对象
  */
-+ (instancetype)instanceWithTitle:(NSString *)title;
++ (instancetype)instanceWithSectionID:(int64_t)sectionID;
 
 @end
 
