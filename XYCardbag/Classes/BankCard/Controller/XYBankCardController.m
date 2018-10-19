@@ -36,6 +36,10 @@
 @end
 
 @implementation XYBankCardController
+{
+    UILabel *_tableHeaderView; // will change name in the future
+    UIView *_emptyView; // 没有卡片页面
+}
 
 - (UIButton *)coverView
 {
@@ -171,7 +175,7 @@
     tableView.backgroundColor = UIColor.clearColor;
     self.tableView = tableView;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.frontView addSubview:tableView];
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
@@ -272,6 +276,8 @@
  */
 - (void)gotoHelpPage{
     [XYAlertView showAlertTitle:@"亲爱的" message:@"有事打电话" Ok:nil];
+    
+    [self reloadPageDataAndRefresh];
 }
 
 /**
@@ -306,6 +312,21 @@
  */
 - (void)gotoSearchCard{
     
+    self.dataArray = @[@"d",@"ddd"].mutableCopy;
+
+
+    // 先刷新数据
+//    [self.tableView reloadData];
+    
+    if (!self.dataArray.count) { // 没有数据直接显示本组没有数据。
+        // 中间部分提示 【组名】中没有卡片
+        [self showEmptyView];
+    }else{
+        // 有数据移除emptyView
+        [_emptyView removeFromSuperview];
+        _emptyView = nil;
+    }
+    
 }
 
 
@@ -317,13 +338,81 @@
     // 刷新数据和列表
     XYBankCardSection *section = [XYBankCardSection instanceWithSectionID:self.sectionID];
     self.dataArray = [XYBankCardCache getAllCardModelsForSection:section];
+    
+    // 先刷新数据
     [self.tableView reloadData];
+    
+    if (!self.dataArray.count) { // 没有数据直接显示本组没有数据。
+        // 中间部分提示 【组名】中没有卡片
+        [self showEmptyView];
+    }else{
+        // 有数据移除emptyView
+        [_emptyView removeFromSuperview];
+        _emptyView = nil;
+    }
+    
+}
+
+- (void)showEmptyView{
+    
+    NSString *emptyStr = [NSString stringWithFormat:@"『%@』中没有卡片",self.title];
+    
+    
+    if (!_emptyView) {
+        _emptyView = [[UILabel alloc] initWithFrame:self.view.bounds];
+        
+        // 1. 图片
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_nocard"]];
+        
+        // 2. 文字
+        UILabel *label = [UILabel new];
+        label.text = emptyStr;
+        label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor colorWithWhite:1 alpha:0.5];
+        
+        [_emptyView addSubview:imageView];
+        [_emptyView addSubview:label];
+        
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self->_emptyView);
+        }];
+        
+        [label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self->_emptyView);
+            make.top.equalTo(imageView.mas_bottom).offset(0);
+        }];
+    }
+    
+    UILabel *label = _emptyView.subviews.lastObject;
+    label.text = emptyStr;
+    
+    [self.tableView.backgroundView addSubview:_emptyView];
 }
 
 
 
 
 #pragma mark - Table view data source
+
+- (UIView *)tableHeaderView{
+    
+    UIView *header = [UIView new];
+    
+    _tableHeaderView = [UILabel new];
+    _tableHeaderView.text = [NSString stringWithFormat:@"[%@]数量:%ld",self.title,self.dataArray.count];
+//    _tableHeaderView.textColor = [UIColor colorWithWhite:1 alpha:0.8];
+    _tableHeaderView.textColor = [UIColor greenColor];
+    _tableHeaderView.textAlignment = NSTextAlignmentCenter;
+    [_tableHeaderView sizeToFit];
+    
+    [header addSubview:_tableHeaderView];
+    [_tableHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@20);
+        make.center.equalTo(header);
+        make.bottom.equalTo(header).offset(0);
+    }];
+    return header;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -337,6 +426,16 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 230;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 60;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [self tableHeaderView];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -355,6 +454,8 @@
     
     XYBankCardModel *card = self.dataArray[indexPath.row];
     cell.model = card;
+    
+//    cell.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.2];
     
     return cell;
 }
