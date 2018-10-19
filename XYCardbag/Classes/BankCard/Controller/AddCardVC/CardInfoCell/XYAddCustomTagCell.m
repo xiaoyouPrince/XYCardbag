@@ -63,6 +63,8 @@ NSString *const DidChooseCustomTagNotification = @"DidChooseCustomTagNotificatio
     self.tagPicker.dataSource = self;
     NSArray *firstComponent = self.dataArray[0];
     [self.tagPicker selectRow:firstComponent.count - 1 inComponent:0 animated:YES]; // 默认选中最后一个【其他】
+    
+    _cellHeight = 154;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
