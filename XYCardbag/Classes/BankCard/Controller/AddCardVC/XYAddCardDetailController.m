@@ -103,8 +103,11 @@
     XYCardInfoModel *descInfo = [XYCardInfoModel new];
     descInfo.tagType = TagTypeBaseDesc;
     
+    XYCardInfoModel *addInfo = [XYCardInfoModel new];
+    addInfo.tagType = TagTypeAdd;
+    
     self.dataArray = [NSMutableArray array];
-    NSMutableArray *sectionTwo = [NSMutableArray arrayWithObjects:nameInfo,numberInfo,descInfo, nil];
+    NSMutableArray *sectionTwo = [NSMutableArray arrayWithObjects:nameInfo,numberInfo,descInfo,addInfo, nil];
     [self.dataArray addObjectsFromArray:@[@[imageInfo],sectionTwo]];
     
 }
@@ -212,16 +215,13 @@ static XYNavigationController *selfNav;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 1;
-    }
-    
+
     NSArray *infoSection = self.dataArray[section];
-    return infoSection.count + 1;
+    return infoSection.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -271,7 +271,7 @@ static XYNavigationController *selfNav;
         cardInfo = sectionArr[indexPath.row];
     }
     
-    if (indexPath.section == 0) {
+    if (cardInfo.tagType == TagTypeBaseImage) {
         XYCardInfoCell *cell = [XYCardInfoCell cellForCardImagesWithTableView:tableView];
         cell.model = cardInfo;
         return cell;
@@ -279,26 +279,25 @@ static XYNavigationController *selfNav;
     
     if (indexPath.section == 1) {
         
-        if (indexPath.row == 0) {   // name
+        if (cardInfo.tagType == TagTypeBaseName) {   // name
             XYCardInfoCell *cell = [XYCardInfoCell cellForCardNameWithTableView:tableView];
             cell.model = cardInfo;
             return cell;
         }
         
-        if (indexPath.row == 1) {   // number
+        if (cardInfo.tagType == TagTypeBaseNumber) {   // number
             XYCardInfoCell *cell = [XYCardInfoCell cellForCardNumberWithTableView:tableView];
             cell.model = cardInfo;
             return cell;
         }
         
-        if (indexPath.row == 2) {   // desc
+        if (cardInfo.tagType == TagTypeBaseDesc) {   // desc
             XYCardInfoCell *cell = [XYCardInfoCell cellForCardDescWithTableView:tableView];
             cell.model = cardInfo;
             return cell;
         }
         
-        NSArray *infoSection = self.dataArray[indexPath.section];
-        if (indexPath.row == infoSection.count) {  // 添加新类别的cell
+        if (cardInfo.tagType == TagTypeAdd) {   // add
             XYCardInfoCell *cell = [XYCardInfoCell cellForAddNewWithTableView:tableView];
             cell.model = cardInfo;
             return cell;
@@ -316,7 +315,7 @@ static XYNavigationController *selfNav;
     [self.view endEditing:YES];
     
     NSArray *infoSection = self.dataArray[indexPath.section];
-    if (indexPath.row == infoSection.count) {
+    if (indexPath.row == infoSection.count - 1) {
         
         // 最后一个cell点击进入，选择添加类别的页面,通过block回传添加的tag并放到自己打data中。 -- 当本页显示的时候再刷新
         /// 进入对应的列表页面
@@ -326,7 +325,7 @@ static XYNavigationController *selfNav;
             // 拿到添加的tag的modle . 添加到self.dataArray 中的第二组(最后一组)
 
             NSMutableArray *sectionTwo = self.dataArray[self.dataArray.count - 1];
-            [sectionTwo addObject:model];
+            [sectionTwo insertObject:model atIndex:sectionTwo.count - 1];
             
             [self.tableView reloadData];
             

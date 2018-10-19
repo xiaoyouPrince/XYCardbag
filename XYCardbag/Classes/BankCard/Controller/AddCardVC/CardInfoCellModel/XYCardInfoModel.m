@@ -38,6 +38,9 @@ MJCodingImplementation;
         case TagTypeCustom:
             return @"其他";
             break;
+        case TagTypeAdd:
+            return @"站位";
+            break;
             
         default:
             break;

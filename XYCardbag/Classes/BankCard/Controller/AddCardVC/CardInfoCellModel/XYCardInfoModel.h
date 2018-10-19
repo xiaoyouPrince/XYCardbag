@@ -34,9 +34,10 @@ typedef enum : NSUInteger {
     /// 额外几种标签类型
     TagTypeDate,            // 还款日期，有效日期
     TagTypePhoneNumber,     // 电话号码
-    TagTypeMail,            // 电话邮件
-    TagTypeNetAddress,      // 电话网址
-    TagTypeCustom           // 其他，自定义
+    TagTypeMail,            // 电子邮件
+    TagTypeNetAddress,      // 卡片网址
+    TagTypeCustom,          // 其他，自定义
+    TagTypeAdd              // 站位
 } TagType;
 
 @interface XYCardInfoModel : NSObject
