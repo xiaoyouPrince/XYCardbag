@@ -104,6 +104,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *cardNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTF;
 @property (weak, nonatomic) IBOutlet XYTextView *cardDescTV;
+@property (weak, nonatomic) IBOutlet UIImageView *rightArrowIV; // no more config
+@property (weak, nonatomic) IBOutlet UILabel *customTagTitle;
+@property (weak, nonatomic) IBOutlet UITextField *customTagDetailTF;
+
 
 @end
 
@@ -144,6 +148,12 @@ static UITextField *cardTFName;
     self.cardDescTV.placeholder = @"卡片备注及其他信息..";
     
     // addNew
+    
+    // custom right arrow
+    UIImage *image = self.rightArrowIV.image;
+    self.rightArrowIV.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    
     
 }
 
@@ -186,42 +196,48 @@ static UITextField *cardTFName;
             break;
         case TagTypeBaseName:
         {
-            
+            self.cardNameTF.text = model.detail;
         }
             break;
         case TagTypeBaseNumber:
         {
-            
+            self.cardNumberTF.text = model.detail;
         }
             break;
         case TagTypeBaseDesc:
         {
-            
+            self.cardDescTV.text = model.detail;
+            self.cardDescTV.placeholder = nil;
         }
             break;
         case TagTypeDate:
         {
-            
+            self.customTagTitle.text = model.title;
+            self.customTagDetailTF.text = model.detail;
         }
             break;
         case TagTypePhoneNumber:
         {
-            
+            self.customTagTitle.text = model.title;
+            self.customTagDetailTF.text = model.detail;
         }
             break;
         case TagTypeMail:
         {
-            
+            self.customTagTitle.text = model.title;
+            self.customTagDetailTF.text = model.detail;
         }
             break;
         case TagTypeNetAddress:
         {
-            
+            self.customTagTitle.text = model.title;
+            self.customTagDetailTF.text = model.detail;
         }
             break;
         case TagTypeCustom:
         {
-            
+            self.customTagTitle.text = model.title;
+            self.customTagDetailTF.text = model.detail;
         }
             break;
             
@@ -430,6 +446,16 @@ static UITextField *cardTFName;
 
 // ----------------------Tags 这里需要单独使用-------------------
 
+- (IBAction)gotoChageCustomTagTitle:(id)sender {
+    
+    [XYAlertView showDeveloping];
+}
+
+
+- (IBAction)gotoChooseDate:(id)sender {
+    [XYAlertView showDeveloping];
+}
+
 
 #pragma mark -- public -- 创建方法
 
@@ -475,7 +501,92 @@ static UITextField *cardTFName;
 }
 //
 ///// 创建传卡片自定义信息的cell - [需根据对应的model，根据具体自定义类型创建对应UI]
-//+ (instancetype)cellForCardInfoWithTableView:(UITableView *)tableView model:(XYCardInfoModel *)model;
++ (instancetype)cellForCardInfoWithTableView:(UITableView *)tableView model:(XYCardInfoModel *)model{
+    
+    XYCardInfoCell *cell = nil;
+    
+    // 根据model的tagType来返回正确类型的cell
+    switch (model.tagType) {
+        case TagTypeBaseImage:
+        {
+            cell = [self cellForCardImagesWithTableView:tableView];
+            cell.model = model;
+            return cell;
+        }
+            break;
+        case TagTypeBaseName:
+        {
+            cell = [self cellForCardNameWithTableView:tableView];
+            cell.model = model;
+            return cell;
+        }
+            break;
+        case TagTypeBaseNumber:
+        {
+            cell = [self cellForCardNumberWithTableView:tableView];
+            cell.model = model;
+            return cell;
+        }
+            break;
+        case TagTypeBaseDesc:
+        {
+            cell = [self cellForCardDescWithTableView:tableView];
+            cell.model = model;
+            return cell;
+        }
+            break;
+        case TagTypeDate:
+        {
+            cell = [self cellForCardDateWithTableView:tableView];
+            cell.model = model;
+            return cell;
+        }
+            break;
+        case TagTypePhoneNumber:
+        case TagTypeMail:
+        case TagTypeNetAddress:
+        case TagTypeCustom:
+        case TagTypeAdd:
+        {
+            cell = [self cellForCardCustomWithTableView:tableView];
+            cell.model = model;
+            return cell;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    cell = [self cellForCardDescWithTableView:tableView];
+    cell.model = model;
+    
+    return cell;
+}
+
+/** 快速创建一个日期类型的ccardInfoCell */
++ (instancetype)cellForCardDateWithTableView:(UITableView *)tableView{
+    
+    static NSString *cellID = @"cardDateCell";
+    XYCardInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil][6];
+    }
+    return cell;
+}
+
+/** 快速创建一个自定义的ccardInfoCell */
++ (instancetype)cellForCardCustomWithTableView:(UITableView *)tableView{
+    
+    static NSString *cellID = @"cardCustomCell";
+    XYCardInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil][5];
+    }
+    return cell;
+}
+
+
 
 /// 创建添加的更多卡片信息的cell
 + (instancetype)cellForAddNewWithTableView:(UITableView *)tableView

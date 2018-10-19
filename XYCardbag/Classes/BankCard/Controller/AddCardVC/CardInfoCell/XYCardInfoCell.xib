@@ -88,6 +88,7 @@
             <connections>
                 <outlet property="frontIcon_btn" destination="3FG-aj-Gsh" id="wID-GQ-93R"/>
                 <outlet property="rearIcon_btn" destination="zr9-TZ-msv" id="1od-jA-ULz"/>
+                <outlet property="rightArrowIV" destination="Az2-9X-uDb" id="mZg-8v-VCb"/>
             </connections>
             <point key="canvasLocation" x="-73" y="-158"/>
         </tableViewCell>
@@ -266,11 +267,166 @@
             <viewLayoutGuide key="safeArea" id="SA6-qp-e26"/>
             <point key="canvasLocation" x="-73" y="437"/>
         </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardCustomCell" id="wwD-8M-T6x" userLabel="Card Info Cell Custom" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wwD-8M-T6x" id="h39-hr-u99">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqC-CM-oPT">
+                        <rect key="frame" x="16" y="16.5" width="80.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-bT-REf" userLabel="lineView">
+                        <rect key="frame" x="116.5" y="5" width="0.5" height="39.5"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="vKa-Ht-dih"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入卡片信息..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSJ-wq-Vvz">
+                        <rect key="frame" x="127" y="16.5" width="177" height="17"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="nameTFhasEndEditing:" destination="wwD-8M-T6x" eventType="editingDidEnd" id="o8W-9W-TcC"/>
+                        </connections>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmB-GC-V6d">
+                        <rect key="frame" x="93.5" y="15" width="20" height="20"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-4S-eWB" userLabel="chageTitleBtn">
+                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="49.5"/>
+                        <connections>
+                            <action selector="gotoChageCustomTagTitle:" destination="wwD-8M-T6x" eventType="touchUpInside" id="boN-w8-AqK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="b3D-bT-REf" firstAttribute="top" secondItem="h39-hr-u99" secondAttribute="top" constant="5" id="7Yt-OF-qan"/>
+                    <constraint firstAttribute="bottom" secondItem="fAp-4S-eWB" secondAttribute="bottom" id="CMD-iU-gqQ"/>
+                    <constraint firstItem="xmB-GC-V6d" firstAttribute="leading" secondItem="b3D-bT-REf" secondAttribute="trailing" constant="-23.5" id="EBD-oE-PDt"/>
+                    <constraint firstItem="b3D-bT-REf" firstAttribute="centerX" secondItem="h39-hr-u99" secondAttribute="centerX" multiplier="0.73" id="NkW-MZ-YBz"/>
+                    <constraint firstItem="fAp-4S-eWB" firstAttribute="top" secondItem="h39-hr-u99" secondAttribute="top" id="OfI-bL-1gH"/>
+                    <constraint firstItem="xmB-GC-V6d" firstAttribute="centerY" secondItem="BqC-CM-oPT" secondAttribute="centerY" id="Wuz-20-N3O"/>
+                    <constraint firstItem="b3D-bT-REf" firstAttribute="leading" secondItem="xmB-GC-V6d" secondAttribute="trailing" constant="3" id="aPn-8Y-5gX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="OSJ-wq-Vvz" secondAttribute="trailing" id="cDk-4v-uXc"/>
+                    <constraint firstItem="fAp-4S-eWB" firstAttribute="leading" secondItem="h39-hr-u99" secondAttribute="leading" id="enR-5b-FJZ"/>
+                    <constraint firstItem="b3D-bT-REf" firstAttribute="leading" secondItem="fAp-4S-eWB" secondAttribute="trailing" id="fKx-Fa-krb"/>
+                    <constraint firstAttribute="bottom" secondItem="b3D-bT-REf" secondAttribute="bottom" constant="5" id="hOc-dy-h2c"/>
+                    <constraint firstItem="BqC-CM-oPT" firstAttribute="leading" secondItem="h39-hr-u99" secondAttribute="leadingMargin" id="jTY-K9-aKW"/>
+                    <constraint firstItem="OSJ-wq-Vvz" firstAttribute="centerY" secondItem="h39-hr-u99" secondAttribute="centerY" id="je7-Xe-uDG"/>
+                    <constraint firstItem="OSJ-wq-Vvz" firstAttribute="leading" secondItem="b3D-bT-REf" secondAttribute="trailing" constant="10" id="mN3-hU-SlW"/>
+                    <constraint firstItem="b3D-bT-REf" firstAttribute="leading" secondItem="BqC-CM-oPT" secondAttribute="trailing" constant="20" id="nyD-xY-fOn"/>
+                    <constraint firstItem="b3D-bT-REf" firstAttribute="centerY" secondItem="h39-hr-u99" secondAttribute="centerY" id="p8q-G2-tjq"/>
+                    <constraint firstItem="BqC-CM-oPT" firstAttribute="centerY" secondItem="h39-hr-u99" secondAttribute="centerY" id="zUj-HG-LON"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="7sd-qR-O5I"/>
+            <connections>
+                <outlet property="cardNameTF" destination="GLc-jY-pKd" id="VXD-Hv-pcs"/>
+                <outlet property="customTagDetailTF" destination="OSJ-wq-Vvz" id="2ch-IA-1VJ"/>
+                <outlet property="customTagTitle" destination="BqC-CM-oPT" id="rfx-jP-rMU"/>
+                <outlet property="rightArrowIV" destination="xmB-GC-V6d" id="HDI-AC-QNW"/>
+            </connections>
+            <point key="canvasLocation" x="609.60000000000002" y="-113.3433283358321"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardDateCell" id="lgN-3f-RRI" userLabel="Card Info Cell Date" customClass="XYCardInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lgN-3f-RRI" id="zUn-3T-IBq">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定日期名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAW-zX-vF7">
+                        <rect key="frame" x="16" y="16.5" width="80.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ2-VX-zUa" userLabel="lineView">
+                        <rect key="frame" x="116.5" y="5" width="0.5" height="39.5"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="Wkd-wg-euS"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="选择一个日期..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PoQ-ty-XuE">
+                        <rect key="frame" x="127" y="16.5" width="142" height="17"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="cardNumberTFhasEndEdting:" destination="lgN-3f-RRI" eventType="editingDidEnd" id="6OE-JX-LQZ"/>
+                        </connections>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-Sf-BdB" userLabel="dateIcon">
+                        <rect key="frame" x="270" y="10" width="30" height="30"/>
+                        <state key="normal" image="add_scan"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-iZ-YZ0" userLabel="changeName">
+                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="49.5"/>
+                        <connections>
+                            <action selector="gotoChageCustomTagTitle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ueh-sb-4mU"/>
+                            <action selector="gotoChageCustomTagTitle:" destination="lgN-3f-RRI" eventType="touchUpInside" id="hBf-D0-K4p"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2z-18-jjl" userLabel="chooseDate">
+                        <rect key="frame" x="117" y="0.0" width="203" height="49.5"/>
+                        <connections>
+                            <action selector="gotoChooseDate:" destination="lgN-3f-RRI" eventType="touchUpInside" id="85N-56-818"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Az2-9X-uDb">
+                        <rect key="frame" x="93.5" y="15" width="20" height="20"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xJ2-VX-zUa" firstAttribute="top" secondItem="zUn-3T-IBq" secondAttribute="top" constant="5" id="3wf-K9-BvT"/>
+                    <constraint firstAttribute="trailing" secondItem="M2z-18-jjl" secondAttribute="trailing" id="5G0-x4-bTH"/>
+                    <constraint firstItem="xJ2-VX-zUa" firstAttribute="leading" secondItem="Hyh-iZ-YZ0" secondAttribute="trailing" id="6jD-t5-1te"/>
+                    <constraint firstItem="PoQ-ty-XuE" firstAttribute="centerY" secondItem="zUn-3T-IBq" secondAttribute="centerY" id="7aq-25-JBg"/>
+                    <constraint firstAttribute="bottom" secondItem="Hyh-iZ-YZ0" secondAttribute="bottom" id="858-PB-N9z"/>
+                    <constraint firstItem="tTa-Sf-BdB" firstAttribute="centerY" secondItem="PoQ-ty-XuE" secondAttribute="centerY" id="Hi3-wD-8Y1"/>
+                    <constraint firstItem="Hyh-iZ-YZ0" firstAttribute="leading" secondItem="zUn-3T-IBq" secondAttribute="leading" id="Kkf-l1-6Ki"/>
+                    <constraint firstItem="xJ2-VX-zUa" firstAttribute="centerX" secondItem="zUn-3T-IBq" secondAttribute="centerX" multiplier="0.73" id="MsW-fJ-NCy"/>
+                    <constraint firstItem="xJ2-VX-zUa" firstAttribute="leading" secondItem="AAW-zX-vF7" secondAttribute="trailing" constant="20" id="PiZ-3o-Olc"/>
+                    <constraint firstItem="xJ2-VX-zUa" firstAttribute="leading" secondItem="Az2-9X-uDb" secondAttribute="trailing" constant="3" id="R8p-Jg-d4u"/>
+                    <constraint firstAttribute="bottom" secondItem="xJ2-VX-zUa" secondAttribute="bottom" constant="5" id="WLO-lx-rFK"/>
+                    <constraint firstItem="M2z-18-jjl" firstAttribute="top" secondItem="zUn-3T-IBq" secondAttribute="top" id="ZxH-Iq-IvS"/>
+                    <constraint firstItem="AAW-zX-vF7" firstAttribute="leading" secondItem="zUn-3T-IBq" secondAttribute="leadingMargin" id="eTG-4L-N29"/>
+                    <constraint firstItem="Hyh-iZ-YZ0" firstAttribute="top" secondItem="zUn-3T-IBq" secondAttribute="top" id="gy8-WP-3jc"/>
+                    <constraint firstItem="xJ2-VX-zUa" firstAttribute="centerY" secondItem="zUn-3T-IBq" secondAttribute="centerY" id="kCh-G2-uZl"/>
+                    <constraint firstAttribute="trailing" secondItem="tTa-Sf-BdB" secondAttribute="trailing" constant="20" id="nbU-7X-ZJA"/>
+                    <constraint firstItem="PoQ-ty-XuE" firstAttribute="leading" secondItem="xJ2-VX-zUa" secondAttribute="trailing" constant="10" id="ps6-x9-7PN"/>
+                    <constraint firstAttribute="bottom" secondItem="M2z-18-jjl" secondAttribute="bottom" id="uxO-Fx-LjD"/>
+                    <constraint firstItem="Az2-9X-uDb" firstAttribute="centerY" secondItem="AAW-zX-vF7" secondAttribute="centerY" id="vrV-yb-YcL"/>
+                    <constraint firstItem="AAW-zX-vF7" firstAttribute="centerY" secondItem="zUn-3T-IBq" secondAttribute="centerY" id="wQS-Ks-Oc2"/>
+                    <constraint firstItem="M2z-18-jjl" firstAttribute="leading" secondItem="xJ2-VX-zUa" secondAttribute="trailing" id="y16-ws-hX0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PoQ-ty-XuE" secondAttribute="trailing" constant="35" id="z7w-bg-d0m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="hZr-4w-tXZ"/>
+            <connections>
+                <outlet property="cardNumberTF" destination="DVe-HV-1aW" id="bM4-fI-qXM"/>
+                <outlet property="customTagDetailTF" destination="PoQ-ty-XuE" id="YZY-dL-2yT"/>
+                <outlet property="customTagTitle" destination="AAW-zX-vF7" id="YW1-pU-8rW"/>
+                <outlet property="rightArrowIV" destination="Az2-9X-uDb" id="MdF-MI-vBo"/>
+            </connections>
+            <point key="canvasLocation" x="609.60000000000002" y="13.493253373313344"/>
+        </tableViewCell>
     </objects>
     <resources>
         <image name="SwitchIcon" width="45" height="45"/>
         <image name="add_scan" width="30" height="30"/>
         <image name="cardPlacehold_front" width="73" height="50"/>
         <image name="cardPlacehold_rear" width="73" height="50"/>
+        <image name="right_arrow" width="20" height="20"/>
     </resources>
 </document>

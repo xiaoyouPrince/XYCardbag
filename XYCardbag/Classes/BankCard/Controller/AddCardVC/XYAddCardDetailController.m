@@ -305,8 +305,7 @@ static XYNavigationController *selfNav;
     }
     
     // 其余的都是用户可以自己添加的
-    XYCardInfoCell *cell = [XYCardInfoCell cellForCardImagesWithTableView:tableView];
-    cell.model = cardInfo;
+    XYCardInfoCell *cell = [XYCardInfoCell cellForCardInfoWithTableView:tableView model:cardInfo];
     return cell;
 }
 
