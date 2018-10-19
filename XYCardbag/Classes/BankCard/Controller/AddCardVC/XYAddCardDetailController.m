@@ -27,6 +27,7 @@
 #import "XYBankCardModel.h"
 #import "XYNavigationController.h"
 #import "XYBankCardCache.h"
+#import "Masonry.h"
 
 @interface XYAddCardDetailController ()
 
@@ -146,6 +147,10 @@ static XYNavigationController *selfNav;
 #warning TODO - 这里需要根据用户有没有填写完整数据，数据完整就保存，不完整提示用户未填项目
     
     
+    // 1. 验证必填信息
+    if (![self checkPramas]) { return;};
+    
+    
     // 0. 创建XYBankCardModel
     XYBankCardModel *cardModel = [XYBankCardModel new];
     
@@ -186,7 +191,7 @@ static XYNavigationController *selfNav;
             case TagTypeCustom:
             {
                 // 这几种就是属于自定义tag类型的了，直接放到 cardModel.tags 的数组中。解析的时候再用
-                [[NSMutableArray array] addObject:cardInfo];
+                [cardModel.tags addObject:cardInfo];
             }
                 break;
                 
@@ -206,6 +211,102 @@ static XYNavigationController *selfNav;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+
+- (BOOL)checkPramas{
+    
+    NSArray *sectionOne = self.dataArray.firstObject;
+    NSArray *sectionTwo = self.dataArray.lastObject;
+    
+    // 1.1 第一组卡片图片数据
+    XYCardInfoModel *imageInfo = sectionOne.firstObject;
+    if (!(imageInfo.frontIconImage || imageInfo.rearIconImage)) {
+        // 图片不全
+        [self showLossParamError:@"请至少添加一张图片!"];
+        return NO;
+    }
+    
+    // 2. name number desc
+    for (XYCardInfoModel *cardInfo in sectionTwo) {
+        switch (cardInfo.tagType) {
+            case TagTypeBaseName:
+            {
+                if(!cardInfo.detail){
+                    [self showLossParamError:@"请添加卡片名称!"];
+                    return NO;
+                }
+            }
+                break;
+            case TagTypeBaseNumber:
+            {
+                if(!cardInfo.detail){
+                    [self showLossParamError:@"请添加卡片号码!"];
+                    return NO;
+                }
+            }
+                break;
+            case TagTypeBaseDesc:
+            {
+                if(!cardInfo.detail){
+                    [self showLossParamError:@"请添加卡片描述!"];
+                    return NO;
+                }
+            }
+            default:
+                break;
+        }
+        
+    }
+    
+    return YES;
+}
+
+/**
+ 提示缺少信息的错误
+
+ @param errorContent 错误内容
+ */
+- (void)showLossParamError:(NSString *)errorContent{
+    
+    CGFloat Y = kNavHeight - kTopBarHeight;
+    CGRect frame = selfNav.navigationBar.bounds;
+    frame.origin.y -= (Y + kNavHeight);
+    frame.size.height = kNavHeight * 2;
+    
+    UIView *errorView = [[UIView alloc] initWithFrame:frame];
+    errorView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
+    
+    UIButton *errorBtn = [[UIButton alloc] init];
+    UIImage *errorImage = [UIImage imageNamed:@"tool_help"];
+    [errorBtn setImage:errorImage forState:UIControlStateNormal];
+    [errorBtn setTitle:errorContent forState:UIControlStateNormal];
+    
+    [errorView addSubview:errorBtn];
+    [selfNav.navigationBar insertSubview:errorView atIndex:0];
+    
+    [errorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(errorView);
+        make.right.equalTo(errorView);
+        make.bottom.equalTo(errorView);
+        
+        make.height.equalTo(@(kTopBarHeight));
+    }];
+    
+    
+    static CGFloat const animationDuration = 0.3;
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        errorView.transform = CGAffineTransformMakeTranslation(0, kTopBarHeight);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:animationDuration delay:animationDuration*2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            errorView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [errorView removeFromSuperview];
+        }];
+    }];
+    
+}
+    
+    
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

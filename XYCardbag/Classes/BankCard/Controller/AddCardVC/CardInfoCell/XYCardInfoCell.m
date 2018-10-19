@@ -207,7 +207,9 @@ static UITextField *cardTFName;
         case TagTypeBaseDesc:
         {
             self.cardDescTV.text = model.detail;
-            self.cardDescTV.placeholder = nil;
+            if (model.detail.length) {
+                self.cardDescTV.placeholder = nil;
+            }
         }
             break;
         case TagTypeDate:
