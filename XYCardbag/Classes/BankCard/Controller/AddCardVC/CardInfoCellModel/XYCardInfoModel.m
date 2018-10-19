@@ -47,5 +47,50 @@ MJCodingImplementation;
     }
 }
 
++ (instancetype)cardinfoWithTagString:(NSString *)str{
+    
+    XYCardInfoModel *instance = [XYCardInfoModel new];
+    if ([str isEqualToString:@"日期"]) {
+        instance.tagType = TagTypeDate;
+    }
+    if ([str isEqualToString:@"电话"]) {
+        instance.tagType = TagTypePhoneNumber;
+    }
+    if ([str isEqualToString:@"邮件"]) {
+        instance.tagType = TagTypeMail;
+    }
+    if ([str isEqualToString:@"网址"]) {
+        instance.tagType = TagTypeNetAddress;
+    }
+    if ([str isEqualToString:@"其他"]) {
+        instance.tagType = TagTypeCustom;
+    }else{
+        instance.tagType = TagTypeCustom; // 不符合的都设置为这个
+    }
+    
+    return instance;
+}
+
++ (TagType)tagTypeWithTagString:(NSString *)str{
+    
+    if ([str isEqualToString:@"日期"]) {
+        return TagTypeDate;
+    }
+    if ([str isEqualToString:@"电话"]) {
+        return TagTypePhoneNumber;
+    }
+    if ([str isEqualToString:@"邮件"]) {
+        return TagTypeMail;
+    }
+    if ([str isEqualToString:@"网址"]) {
+        return TagTypeNetAddress;
+    }
+    if ([str isEqualToString:@"其他"]) {
+        return TagTypeCustom;
+    }
+    
+    return TagTypeCustom;
+}
+
 
 @end

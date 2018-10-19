@@ -56,5 +56,13 @@ typedef enum : NSUInteger {
 /// 当前的标签的detail --> egg: 卡号(title) : 123456(detail)
 @property(nonatomic , copy) NSString *detail;
 
+/**
+ 根据自定义tag类型快创建 cardInfo x模型
+
+ @param str 用户选择的 tag 类型
+ @return 包含tagType的实例对象
+ */
++ (instancetype)cardinfoWithTagString:(NSString *)str;
++ (TagType)tagTypeWithTagString:(NSString *)str;
 
 @end

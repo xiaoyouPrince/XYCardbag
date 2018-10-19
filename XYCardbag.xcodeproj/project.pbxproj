@@ -48,6 +48,8 @@
 		B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B18A32011EA2800359427 /* XYNewContactPhoneCell.m */; };
 		B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B18A42011EA2800359427 /* XYNewContactPhoneCell.xib */; };
 		B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B18A82011EEE000359427 /* XYAddNewCell.m */; };
+		B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46103B82179798100C99D99 /* XYAddCustomTagCell.m */; };
+		B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */; };
 		B4614096201835D000BE5A24 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614083201835D000BE5A24 /* MJMember.m */; };
 		B4614097201835D000BE5A24 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614086201835D000BE5A24 /* NSObject+MJKeyValue.m */; };
 		B4614098201835D000BE5A24 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614087201835D000BE5A24 /* MJIvar.m */; };
@@ -194,6 +196,9 @@
 		B45B18A42011EA2800359427 /* XYNewContactPhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYNewContactPhoneCell.xib; sourceTree = "<group>"; };
 		B45B18A72011EEE000359427 /* XYAddNewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddNewCell.h; sourceTree = "<group>"; };
 		B45B18A82011EEE000359427 /* XYAddNewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddNewCell.m; sourceTree = "<group>"; };
+		B46103B72179798100C99D99 /* XYAddCustomTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCustomTagCell.h; sourceTree = "<group>"; };
+		B46103B82179798100C99D99 /* XYAddCustomTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCustomTagCell.m; sourceTree = "<group>"; };
+		B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCustomTagCell.xib; sourceTree = "<group>"; };
 		B4614083201835D000BE5A24 /* MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMember.m; sourceTree = "<group>"; };
 		B4614084201835D000BE5A24 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
 		B4614085201835D000BE5A24 /* MJMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMethod.h; sourceTree = "<group>"; };
@@ -717,6 +722,9 @@
 				B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */,
 				B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */,
 				B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */,
+				B46103B72179798100C99D99 /* XYAddCustomTagCell.h */,
+				B46103B82179798100C99D99 /* XYAddCustomTagCell.m */,
+				B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */,
 			);
 			path = CardInfoCell;
 			sourceTree = "<group>";
@@ -927,6 +935,7 @@
 				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
 				B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
+				B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */,
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
 				B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */,
@@ -988,6 +997,7 @@
 				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
 				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
+				B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */,
 				B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */,
 				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
 				B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */,

@@ -30,7 +30,7 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1sH-B8-Dzm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9HC-jp-wgn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1sH-B8-Dzm" secondAttribute="bottom" id="Cxn-Vu-dmy"/>
