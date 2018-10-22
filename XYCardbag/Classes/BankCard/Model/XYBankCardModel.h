@@ -29,6 +29,7 @@ FOUNDATION_EXPORT NSString * const SectionNameFavroit;
 @interface XYBankCardModel : NSObject
 
 @property(nonatomic , copy) NSNumber *cardID; // 卡片id
+@property(nonatomic , copy) NSNumber *isFavorite; // 设置喜欢
 
 @property(nonatomic , strong) UIImage *frontIconImage;
 @property(nonatomic , strong) UIImage *rearIconImage;

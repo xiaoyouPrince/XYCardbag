@@ -38,6 +38,7 @@ static FMDatabaseQueue *_queue;
         
         [db executeUpdate:@"create table if not exists t_card ("
                                  "id integer primary key autoincrement,"
+                                 "favorite integer,"
                                  "name text,"
                                  "frontImage blob,"
                                  "rearImage blob,"
@@ -64,9 +65,9 @@ static FMDatabaseQueue *_queue;
 }
 
 
-#pragma mark -- 查询卡的信息
+#pragma mark - 查询卡的信息
 
-#pragma mark -- 增
+#pragma mark - 增
 /**
  存储新的卡片分组
  */
@@ -106,25 +107,23 @@ static FMDatabaseQueue *_queue;
  */
 + (void)saveNewCard:(XYBankCardModel *)card forSection:(XYBankCardSection *)section{
     
+    // 1.获得需要存储的数据
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];  // 必须实现Coding协议
     
-//    // 1.获得需要存储的数据
-//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];  // 必须实现Coding协议
-//    NSString *insertSql = [NSString stringWithFormat:@"insert into t_card ( \"sid\", \"name\",card) values ( (SELECT t_section.id FROM t_section  WHERE t_section.name = \"%@\"), '%@',%@)",section.title,card.name,data];
-//
-//    [_queue inDatabase:^(FMDatabase *db) {
-//
-//        // 2.存储数据
-//        BOOL isSuccess = [db executeUpdate:insertSql];
-//        if (isSuccess) {
-//            DLog(@"保存成功");
-//        }
-//    }];
+    if ([section.sectionID isEqualToNumber:@(1)]) { /* 【所有卡片】和 普通卡片组一样无需处理 */ }
+    if ([section.sectionID isEqualToNumber:@(2)]) { /* 【我的最爱】 t_card.favorite is ture */
+        // 在这个分组中添加卡片默认 t_card.favorite is ture
+        card.isFavorite = @(YES);
+    }
+    
+    // 这里不可以这么写，参数data是二进制，导致insertSql为一个特别大的str，违背原本意义。它只是个sql语句即可，参数就是参数即可.因为data参数在z字符串中为  <62706c69 73743030> 格式，而 < > 括号为非法sql语句字符
+    // NSString *insertSql = [NSString stringWithFormat:@"insert into t_card ( sid, name , favorite, card) values ( %@, %@, %@ , %@)", section.sectionID, card.name ,card.isFavorite ,data];;
     
     [_queue inDatabase:^(FMDatabase *db) {
-        // 1.获得需要存储的数据
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];  // 必须实现Coding协议
+        
         // 2.存储数据
-        BOOL isSuccess = [db executeUpdate:@"insert into t_card ( sid, name ,card) values ( (SELECT t_section.id FROM t_section WHERE t_section.name = ?), ?, ?)", section.title, card.name ,data];
+        BOOL isSuccess = [db executeUpdate:@"insert into t_card ( sid, name , favorite, card) values ( ?, ?, ? , ?)", section.sectionID, card.name ,card.isFavorite, data];
+
         if (isSuccess) {
             DLog(@"保存成功");
 //            NSInteger cardID = [db];
@@ -134,7 +133,7 @@ static FMDatabaseQueue *_queue;
 }
 
 
-#pragma mark -- 删
+#pragma mark - 删
 
 /**
  删除某个卡片分组
@@ -159,7 +158,7 @@ static FMDatabaseQueue *_queue;
 }
 
 
-#pragma mark -- 改
+#pragma mark - 改
 
 /**
  更新某个卡分组中某个卡片的信息
@@ -168,7 +167,7 @@ static FMDatabaseQueue *_queue;
     
 }
 
-#pragma mark -- 查
+#pragma mark - 查
 
 /**
  查询所有卡片分组
@@ -214,7 +213,25 @@ static FMDatabaseQueue *_queue;
     NSMutableArray * resultArrayM = [NSMutableArray array];
     
     // 1.创建语句
-    NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.sid = (SELECT t_section.id FROM t_section WHERE t_section.name = \"%@\")",section.title];
+//    NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.sid = (SELECT t_section.id FROM t_section WHERE t_section.name = \"%@\")",section.title];
+    
+    
+    // 1.【所有卡片】分组
+    NSString *queryAll = [NSString stringWithFormat:@"SELECT * FROM t_card"];
+    
+    // 2.【我的最爱】分组
+    NSString *queryFavorite = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.favorite = %@",@(YES)];
+    
+    // 3.普通分组
+    NSString *queryNormal = [NSString stringWithFormat:@"SELECT * FROM t_card WHERE t_card.sid = %@",section.sectionID];
+    
+    NSString *querySql = queryNormal;
+    if ([section.sectionID isEqualToNumber:@(1)]) {
+        querySql = queryAll;
+    }
+    if ([section.sectionID isEqualToNumber:@(2)]) {
+        querySql = queryFavorite;
+    }
     
     // 2.使用数据库
     [_queue inDatabase:^(FMDatabase *db) {
