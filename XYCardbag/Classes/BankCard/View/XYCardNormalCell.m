@@ -11,12 +11,15 @@
 
 #import "XYCardNormalCell.h"
 #import "Masonry.h"
+#import "XYBankCardCache.h"
 
 #define k_card_left_right_margin 40     ///< 卡片左右边距 40
 #define k_card_top_bottom_margin 10     ///< 卡片上下边距 10
 #define k_card_transion_distance 30     ///< 卡片左右移动距离 30
 #define k_funcBtn_right_margin 15       ///< 功能键右边距 15
 #define k_funcBtn_width_height 40       ///< 功能键宽和高 15
+#define image_non_favorite [UIImage imageNamed:@"tool_non_favorite"]       ///< 不喜欢
+#define image_favorite [UIImage imageNamed:@"category_icon_17"]            ///< 喜欢
 
 @interface XYCardNormalCell()<CAAnimationDelegate>
 
@@ -110,7 +113,7 @@
             [btn setImage:[UIImage imageNamed:@"tool_edit"] forState:UIControlStateNormal];
         }
         if (i == 1) {
-            [btn setImage:[UIImage imageNamed:@"tool_non_favorite"] forState:UIControlStateNormal];
+            [btn setImage:image_non_favorite forState:UIControlStateNormal];
         }
         if (i == 2) {
             [btn setImage:[UIImage imageNamed:@"tool_del"] forState:UIControlStateNormal];
@@ -236,6 +239,7 @@
         case 1:
         {
             DLog(@"功能2");
+            [self favoriteThisCardOrNot];
         }
             break;
             
@@ -280,6 +284,15 @@
     // 1. 前后图片
     frontImage = model.frontIconImage;
     rearImage = model.rearIconImage;
+    
+    // 2. 是否喜欢
+    UIButton *favBtn = [self.funcView viewWithTag:1];
+    if (model.isFavorite.boolValue) {
+        [favBtn setImage:image_favorite forState:UIControlStateNormal];
+    }else
+    {
+        [favBtn setImage:image_non_favorite forState:UIControlStateNormal];
+    }
 
     self.cardImageView.image = frontImage;
     
@@ -306,6 +319,37 @@
 //    }
     
     
+    
+}
+
+
+#pragma - card functions (四大功能)
+
+/**
+ 设置喜欢此卡片与否
+ */
+- (void)favoriteThisCardOrNot{
+    
+    // 修改原来的喜欢状态，并保存修改，保存到数据库
+    
+    // 1. model
+    self.model.isFavorite = self.model.isFavorite.boolValue ? @(NO) : @(YES);
+    
+    
+    
+    // 3.db
+    [XYBankCardCache updateCardInfo:self.model forFavorite:self.model.isFavorite.boolValue];
+    
+    
+    // 2. UI刷新
+    [self setModel:self.model];
+//    UIButton *favBtn = [self.funcView viewWithTag:1];
+//    if (self.model.isFavorite.boolValue) {
+//        [favBtn setImage:image_favorite forState:UIControlStateNormal];
+//    }else
+//    {
+//        [favBtn setImage:image_non_favorite forState:UIControlStateNormal];
+//    }
     
 }
 

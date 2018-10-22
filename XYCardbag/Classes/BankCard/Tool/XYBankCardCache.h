@@ -16,7 +16,7 @@
 @interface XYBankCardCache : NSObject
 
 
-#pragma mark -- 增
+#pragma mark - 增
 /**
  存储新的卡片分组
  */
@@ -28,7 +28,7 @@
 + (void)saveNewCard:(XYBankCardModel *)card forSection:(XYBankCardSection *)section;
 
 
-#pragma mark -- 删
+#pragma mark - 删
 
 /**
  删除某个卡片分组
@@ -41,14 +41,23 @@
 + (void)deleteCard:(XYBankCardModel *)card forSection:(XYBankCardSection *)section;
 
 
-#pragma mark -- 改
+#pragma mark - 改
 
 /**
  更新某个卡分组中某个卡片的信息
  */
 + (void)updateCardInfo:(XYBankCardModel *)card forSection:(XYBankCardSection *)section;
 
-#pragma mark -- 查
+
+/**
+ 更新设置卡片是否为喜欢
+
+ @param card 被设置的卡片 # 内部状态设置以 favorite 为准
+ @param favorite favorite or not (YES / NO)
+ */
++ (void)updateCardInfo:(XYBankCardModel *)card forFavorite:(BOOL)favorite;
+
+#pragma mark - 查
 
 /**
  查询所有卡片分组

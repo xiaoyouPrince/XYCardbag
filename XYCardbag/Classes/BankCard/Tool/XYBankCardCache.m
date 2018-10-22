@@ -167,6 +167,29 @@ static FMDatabaseQueue *_queue;
     
 }
 
+/**
+ 设置卡片是否为喜欢
+
+ @param card 无论外界是够设置过 card.isFavorite = yes,仅以参数 favorite 为准来设置最终结果
+ */
++ (void)updateCardInfo:(XYBankCardModel *)card forFavorite:(BOOL)favorite
+{
+    card.isFavorite = favorite ? @(YES) : @(NO);
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];
+    
+    [_queue inDatabase:^(FMDatabase * _Nonnull db) {
+        
+        BOOL isSuccess = [db executeUpdate:@"update t_card set favorite = ?,"
+                          "card = ?"
+                          "where t_card.id = ?",card.isFavorite,data,card.cardID];
+        if (isSuccess) {
+            DLog(@"设置%@成功", favorite ? @"喜欢":@"取消喜欢");
+        }
+        
+    }];
+}
+
 #pragma mark - 查
 
 /**
@@ -247,6 +270,10 @@ static FMDatabaseQueue *_queue;
             if (card == nil) { // 早期版本存储的时候没有此数据，这里做一下加固，防止奔溃
                 
             }else{
+                
+                // 卡片id
+                int64_t cardID = [rs intForColumn:@"id"];
+                card.cardID = [NSNumber numberWithLongLong:cardID];
                 [resultArrayM addObject:card];
             }
         }
