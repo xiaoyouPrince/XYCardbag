@@ -83,6 +83,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
 
+    [self addNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -98,6 +99,18 @@
     [super didReceiveMemoryWarning];
 }
 
+/**
+ 添加通知
+ */
+- (void)addNotifications{
+    
+    [kNotificationCenter addObserver:self selector:@selector(reloadPageDataAndRefresh) name:BankCardDidChangedNotification object:nil];
+}
+
+- (void)dealloc
+{
+    [kNotificationCenter removeObserver:self];
+}
 
 
 - (void)leftItemClick{
@@ -169,7 +182,7 @@
     // tableview And toolbar
     CGFloat toolBarH = (iPhoneX) ? 74 : 44;
     
-    UITableView *tableView = [[UITableView alloc] init];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
     tableView.dataSource = self;
     tableView.delegate = self;
     tableView.backgroundColor = UIColor.clearColor;

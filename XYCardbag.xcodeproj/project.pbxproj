@@ -881,7 +881,7 @@
 				TargetAttributes = {
 					89FAF2621FD1060B008C9655 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = SLUU2646N5;
+						DevelopmentTeam = J9CJUEB6H8;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -1200,13 +1200,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SLUU2646N5;
+				DEVELOPMENT_TEAM = J9CJUEB6H8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/Classes/BankCard/View/XYCardbag-Bridging-Header.h";
@@ -1223,13 +1223,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SLUU2646N5;
+				DEVELOPMENT_TEAM = J9CJUEB6H8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.caipiao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/Classes/BankCard/View/XYCardbag-Bridging-Header.h";

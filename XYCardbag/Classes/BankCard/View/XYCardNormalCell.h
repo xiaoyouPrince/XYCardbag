@@ -8,6 +8,9 @@
 //  Copyright © 2018年 xiaoyouPrince. All rights reserved.
 //
 
+///< 卡片被操作过之后的通知
+FOUNDATION_EXPORT NSString * const BankCardDidChangedNotification;
+
 #import <UIKit/UIKit.h>
 #import "XYBankCardModel.h"
 

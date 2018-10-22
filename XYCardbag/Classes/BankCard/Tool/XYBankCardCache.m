@@ -114,6 +114,7 @@ static FMDatabaseQueue *_queue;
     if ([section.sectionID isEqualToNumber:@(2)]) { /* 【我的最爱】 t_card.favorite is ture */
         // 在这个分组中添加卡片默认 t_card.favorite is ture
         card.isFavorite = @(YES);
+        section.sectionID = @(1);   // 此组只做标记用，真实保存到所有卡片组
     }
     
     // 这里不可以这么写，参数data是二进制，导致insertSql为一个特别大的str，违背原本意义。它只是个sql语句即可，参数就是参数即可.因为data参数在z字符串中为  <62706c69 73743030> 格式，而 < > 括号为非法sql语句字符
@@ -126,7 +127,9 @@ static FMDatabaseQueue *_queue;
 
         if (isSuccess) {
             DLog(@"保存成功");
-//            NSInteger cardID = [db];
+            // 保存 cardID
+            int64_t cardID = [db lastInsertRowId];
+            card.cardID = [NSNumber numberWithLongLong:cardID];
         }
     }];
     
@@ -145,7 +148,7 @@ static FMDatabaseQueue *_queue;
         // 2.存储数据
         BOOL isSuccess = [db executeUpdate:@"delete from t_section where (id = ?)", section.sectionID];
         if (isSuccess) {
-            DLog(@"移除成功");
+            DLog(@"移除卡片组成功");
         }
     }];
 }
@@ -155,6 +158,14 @@ static FMDatabaseQueue *_queue;
  */
 + (void)deleteCard:(XYBankCardModel *)card forSection:(XYBankCardSection *)section{
     
+    [_queue inDatabase:^(FMDatabase *db) {
+        
+        // 2.存储数据
+        BOOL isSuccess = [db executeUpdate:@"delete from t_card where (id = ?)", card.cardID];
+        if (isSuccess) {
+            DLog(@"移除卡片成功");
+        }
+    }];
 }
 
 

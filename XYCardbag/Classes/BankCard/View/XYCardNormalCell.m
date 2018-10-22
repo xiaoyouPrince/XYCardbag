@@ -9,6 +9,8 @@
 //
 //  这是正常状态下的卡片Cell
 
+NSString * const BankCardDidChangedNotification = @"BankCardDidChangedNotification";
+
 #import "XYCardNormalCell.h"
 #import "Masonry.h"
 #import "XYBankCardCache.h"
@@ -232,32 +234,36 @@
     switch (btn.tag) {
         case 0:
         {
-            DLog(@"功能1");
+            DLog(@"编辑卡片");
         }
             break;
             
         case 1:
         {
-            DLog(@"功能2");
+            DLog(@"喜欢、取消喜欢卡片");
             [self favoriteThisCardOrNot];
         }
             break;
             
         case 2:
         {
-            DLog(@"功能3");
+            DLog(@"移除卡片");
+            [self deleteThisCard];
         }
             break;
             
         case 3:
         {
-            DLog(@"功能4");
+            DLog(@"移动卡片分组");
         }
             break;
             
         default:
             break;
     }
+    
+    // 刷新页面 required by 移除喜欢，移除卡片，移动分组，编辑卡片图
+    [kNotificationCenter postNotificationName:BankCardDidChangedNotification object:nil];
 }
 
 - (void)changeImg{
@@ -337,20 +343,32 @@
     
     
     
-    // 3.db
+    // 2.db
     [XYBankCardCache updateCardInfo:self.model forFavorite:self.model.isFavorite.boolValue];
     
     
-    // 2. UI刷新
-    [self setModel:self.model];
-//    UIButton *favBtn = [self.funcView viewWithTag:1];
-//    if (self.model.isFavorite.boolValue) {
-//        [favBtn setImage:image_favorite forState:UIControlStateNormal];
-//    }else
-//    {
-//        [favBtn setImage:image_non_favorite forState:UIControlStateNormal];
-//    }
+    // 3. UI刷新
+//    [self setModel:self.model];  // <无需太大范围重置Model，只更新喜欢图标即可>
+    UIButton *favBtn = [self.funcView viewWithTag:1];
+    if (self.model.isFavorite.boolValue) {
+        [favBtn setImage:image_favorite forState:UIControlStateNormal];
+    }else
+    {
+        [favBtn setImage:image_non_favorite forState:UIControlStateNormal];
+    }
     
+}
+
+/**
+ 移除当前卡片
+ */
+- (void)deleteThisCard{
+    
+    [XYAlertView showAlertTitle:@"提示" message:@"卡片移除，不可恢复，请再次确认" Ok:^{
+        
+        [XYBankCardCache deleteCard:self.model forSection:nil];
+        
+    } cancel:nil];
 }
 
 @end
