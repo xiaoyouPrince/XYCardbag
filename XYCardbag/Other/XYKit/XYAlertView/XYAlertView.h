@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define XYAlertShowDeveloper [XYAlertView showDeveloping]
+
 @interface XYAlertView : NSObject
 
 /// 只是一个通知类型的alert

@@ -16,6 +16,7 @@
 #import "XYBankCardCache.h"
 #import "XYCardNormalCell.h"
 #import "XYAddCardController.h"
+#import "XYBankCardDetailController.h"
 
 @interface XYBankCardController ()<BankCardBgVCDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -481,7 +482,12 @@
     // 返回主页并刷新最新数据
     // 可以用自己的delegate去做这件事
     
-    [XYAlertView showAlertTitle:@"提示" message:@"进入卡信息页面" Ok:nil];
+//    [XYAlertView showAlertTitle:@"提示" message:@"进入卡信息页面" Ok:nil];
+    
+    XYBankCardDetailController *detail = [XYBankCardDetailController new];
+    detail.bankCard = self.dataArray[indexPath.row];
+    UINavigationController *nav = [[NSClassFromString(@"XYNavigationController") alloc] initWithRootViewController:detail];
+    [self presentViewController:nav animated:YES completion:nil];
     
 }
 

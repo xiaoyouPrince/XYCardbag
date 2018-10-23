@@ -65,6 +65,7 @@
 		B4A14D9620F302EF0086CCBB /* XYCardInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9520F302EF0086CCBB /* XYCardInfoModel.m */; };
 		B4A14D9B20F35F6A0086CCBB /* XYAddNewCardTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9A20F35F6A0086CCBB /* XYAddNewCardTagController.m */; };
 		B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9C20F3601A0086CCBB /* XYAddNewCardTagController.xib */; };
+		B4A6CA46217DBE890069AD8E /* XYBankCardDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A6CA45217DBE890069AD8E /* XYBankCardDetailController.m */; };
 		B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */; };
 		B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE4920ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABDE5220ED2BED00E74941 /* ViewController+MASAdditions.m */; };
@@ -79,9 +80,11 @@
 		B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B1D5BC20F1F4B200321105 /* XYAddCardController.xib */; };
 		B4B1D5C120F2761000321105 /* XYAddCardDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B1D5BF20F2761000321105 /* XYAddCardDetailController.m */; };
 		B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */; };
+		B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAAD0C217EB90000F18754 /* XYQRCodeTool.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
+		B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +231,8 @@
 		B4A14D9920F35F6A0086CCBB /* XYAddNewCardTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddNewCardTagController.h; sourceTree = "<group>"; };
 		B4A14D9A20F35F6A0086CCBB /* XYAddNewCardTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddNewCardTagController.m; sourceTree = "<group>"; };
 		B4A14D9C20F3601A0086CCBB /* XYAddNewCardTagController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddNewCardTagController.xib; sourceTree = "<group>"; };
+		B4A6CA44217DBE890069AD8E /* XYBankCardDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardDetailController.h; sourceTree = "<group>"; };
+		B4A6CA45217DBE890069AD8E /* XYBankCardDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardDetailController.m; sourceTree = "<group>"; };
 		B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardBgViewController.h; sourceTree = "<group>"; };
 		B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardBgViewController.m; sourceTree = "<group>"; };
 		B4ABDE4820ED2BED00E74941 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -260,6 +265,8 @@
 		B4B1D5BF20F2761000321105 /* XYAddCardDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardDetailController.m; sourceTree = "<group>"; };
 		B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardNormalCell.h; sourceTree = "<group>"; };
 		B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardNormalCell.m; sourceTree = "<group>"; };
+		B4BAAD0B217EB90000F18754 /* XYQRCodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYQRCodeTool.h; sourceTree = "<group>"; };
+		B4BAAD0C217EB90000F18754 /* XYQRCodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYQRCodeTool.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
 		B4E4D6C020EF159000A2922D /* XYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAlertView.m; sourceTree = "<group>"; };
@@ -267,6 +274,8 @@
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
 		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
 		B4ED5947217430D8005C7929 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B4FF21F4217DEEA600EE7C12 /* XYQrCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYQrCodeView.h; sourceTree = "<group>"; };
+		B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYQrCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +428,8 @@
 				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
 				B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */,
 				B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */,
+				B4A6CA44217DBE890069AD8E /* XYBankCardDetailController.h */,
+				B4A6CA45217DBE890069AD8E /* XYBankCardDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +450,10 @@
 				B431CFCC20EDBD80008CD732 /* XYToolBar.m */,
 				B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */,
 				B4B85DED20EFC6FF002876DA /* XYCardNormalCell.m */,
+				B4FF21F4217DEEA600EE7C12 /* XYQrCodeView.h */,
+				B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */,
+				B4BAAD0B217EB90000F18754 /* XYQRCodeTool.h */,
+				B4BAAD0C217EB90000F18754 /* XYQRCodeTool.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -980,10 +995,12 @@
 				B45B18A02011D92900359427 /* XYNewContactInfoCell.m in Sources */,
 				B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */,
 				B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */,
+				B4A6CA46217DBE890069AD8E /* XYBankCardDetailController.m in Sources */,
 				B4614098201835D000BE5A24 /* MJIvar.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
 				B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */,
 				B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */,
+				B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */,
 				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
 				B461409D201835D000BE5A24 /* MJArgument.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
@@ -1004,6 +1021,7 @@
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
 				B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */,
+				B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */,
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,

@@ -28,7 +28,7 @@
     UIViewController *currentVc = [UIApplication sharedApplication].keyWindow.rootViewController;
     if ([currentVc isKindOfClass:[UINavigationController class]]) {
         UINavigationController *nav = (UINavigationController *)currentVc;
-        [nav.topViewController presentViewController:av animated:YES completion:nil];
+        [nav.visibleViewController presentViewController:av animated:YES completion:nil];
     }else{
        [currentVc presentViewController:av animated:YES completion:nil];
     }
@@ -63,7 +63,7 @@
     UIViewController *currentVc = [UIApplication sharedApplication].keyWindow.rootViewController;
     if ([currentVc isKindOfClass:[UINavigationController class]]) {
         UINavigationController *nav = (UINavigationController *)currentVc;
-        [nav.topViewController presentViewController:av animated:YES completion:nil];
+        [nav.visibleViewController presentViewController:av animated:YES completion:nil];
     }else{
         [currentVc presentViewController:av animated:YES completion:nil];
     }

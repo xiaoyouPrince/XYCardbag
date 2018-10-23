@@ -34,9 +34,13 @@ FOUNDATION_EXPORT NSString * const SectionNameFavroit;
 @property(nonatomic , strong) UIImage *frontIconImage;
 @property(nonatomic , strong) UIImage *rearIconImage;
 
+///< 卡片名
 @property(nonatomic , copy) NSString *name;
+///< 卡片号码
 @property(nonatomic , copy) NSString *cardNumber;
-@property(nonatomic , copy) NSString *desc; // 描述
-@property(nonatomic , strong) NSMutableArray  *tags; // 其他的标签
+/// 卡片描述
+@property(nonatomic , copy) NSString *desc;
+///< 其他的标签
+@property(nonatomic , strong) NSMutableArray  *tags;
 
 @end

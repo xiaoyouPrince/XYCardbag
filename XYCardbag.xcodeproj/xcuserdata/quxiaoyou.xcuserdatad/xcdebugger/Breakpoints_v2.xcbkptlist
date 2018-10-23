@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-            timestampString = "561887803.650336"
+            timestampString = "561899956.777961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
@@ -42,11 +42,11 @@
                   moduleName = "XYCardbag"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/quxiaoyou/Documents/GitHub/XYCardbag/XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-                  timestampString = "561884221.635825"
+                  timestampString = "561899367.257422"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
@@ -57,26 +57,26 @@
                   moduleName = "XYCardbag"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/quxiaoyou/Documents/GitHub/XYCardbag/XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-                  timestampString = "561884221.637302"
+                  timestampString = "561899367.259377"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.83"
+                  symbolName = "__destroy_helper_block_.85"
                   moduleName = "XYCardbag"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/quxiaoyou/Documents/GitHub/XYCardbag/XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-                  timestampString = "561884221.6388839"
+                  timestampString = "561899367.26131"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -242,70 +242,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-            timestampString = "561887803.651353"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "+getAllCardModelsForSection:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[XYBankCardCache getAllCardModelsForSection:]"
-                  moduleName = "XYCardbag"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/quxiaoyou/Documents/GitHub/XYCardbag/XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-                  timestampString = "561884221.675162"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "777">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__46+[XYBankCardCache getAllCardModelsForSection:]_block_invoke"
-                  moduleName = "XYCardbag"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/quxiaoyou/Documents/GitHub/XYCardbag/XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-                  timestampString = "561884221.6766371"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.134"
-                  moduleName = "XYCardbag"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/quxiaoyou/Documents/GitHub/XYCardbag/XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-                  timestampString = "561884221.678107"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-            timestampString = "561887803.651566"
+            timestampString = "561899956.7781579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -321,7 +258,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-            timestampString = "561887803.651751"
+            timestampString = "561899956.77821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "293"
@@ -337,7 +274,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-            timestampString = "561887803.651933"
+            timestampString = "561899956.778265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "188"
@@ -353,7 +290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/View/XYCardNormalCell.m"
-            timestampString = "561887803.652097"
+            timestampString = "561894242.016876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "297"
@@ -369,7 +306,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/View/XYCardNormalCell.m"
-            timestampString = "561887803.6522681"
+            timestampString = "561894242.0169671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "300"
@@ -385,11 +322,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Controller/XYBankCardController.m"
-            timestampString = "561887803.652438"
+            timestampString = "561899078.385412"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469"
+            startingLineNumber = "470"
+            endingLineNumber = "470"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -401,28 +338,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XYCardbag/Classes/BankCard/Tool/XYBankCardCache.m"
-            timestampString = "561887803.6529419"
+            timestampString = "561899956.778353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
             endingLineNumber = "198"
             landmarkName = "+updateCardInfo:forFavorite:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "XYCardbag/Classes/BankCard/Controller/XYBankCardController.m"
-            timestampString = "561887803.6530139"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "484"
-            endingLineNumber = "484"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
