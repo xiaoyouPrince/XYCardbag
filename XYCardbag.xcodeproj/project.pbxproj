@@ -411,8 +411,8 @@
 			children = (
 				B431CFD120EE1F88008CD732 /* Tool */,
 				B431CFC920EDB2CC008CD732 /* carIcon.png */,
-				89FB5EB81FE7C76C002AE67C /* Controller */,
 				89FB5EB91FE7C76C002AE67C /* Model */,
+				89FB5EB81FE7C76C002AE67C /* Controller */,
 				89FB5EBA1FE7C76C002AE67C /* View */,
 			);
 			path = BankCard;

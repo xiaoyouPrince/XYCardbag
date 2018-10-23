@@ -37,7 +37,7 @@ typedef enum : NSUInteger {
     TagTypeMail,            // 电子邮件
     TagTypeNetAddress,      // 卡片网址
     TagTypeCustom,          // 其他，自定义
-    TagTypeAdd              // 站位
+    TagTypeAdd              // 占位
 } TagType;
 
 @interface XYCardInfoModel : NSObject

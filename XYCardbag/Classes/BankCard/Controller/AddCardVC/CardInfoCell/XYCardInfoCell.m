@@ -454,6 +454,13 @@ static UITextField *cardTFName;
 }
 
 
+- (IBAction)cardCustomTFhasEndEdting:(UITextField *)sender {
+    
+    // self.model.title && detail
+    self.model.detail = sender.text;
+}
+
+
 - (IBAction)gotoChooseDate:(id)sender {
     [XYAlertView showDeveloping];
 }
@@ -560,10 +567,10 @@ static UITextField *cardTFName;
             break;
     }
     
-    cell = [self cellForCardDescWithTableView:tableView];
-    cell.model = model;
-    
-    return cell;
+//    cell = [self cellForCardDescWithTableView:tableView];
+//    cell.model = model;
+//    
+//    return cell;
 }
 
 /** 快速创建一个日期类型的ccardInfoCell */

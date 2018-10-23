@@ -92,5 +92,37 @@ MJCodingImplementation;
     return TagTypeCustom;
 }
 
+// 这里的代码有什么问题？ 没有释放observer?? 退出页面直接崩溃。。。不报错直接崩
+
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        [self addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+//    }
+//    return self;
+//}
+//
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+//{
+//    NSLog(@"old is %@",change[NSKeyValueChangeOldKey]);
+//    NSLog(@"old is %@",change[NSKeyValueChangeNewKey]);
+//}
+//
+//- (void)setTitle:(NSString *)title
+//{
+//    _title = title;
+//
+//    NSLog(@"title = %@",title);
+//}
+//
+//- (void)dealloc{
+//    [self removeObserver:self forKeyPath:@"title"];
+//}
+//
+//- (NSString *)description{
+//    return [NSString stringWithFormat:@"tag.type = %lu , tag.title = %@ , tag.detail = %@",(unsigned long)self.tagType , self.title,self.detail];
+//}
+
 
 @end

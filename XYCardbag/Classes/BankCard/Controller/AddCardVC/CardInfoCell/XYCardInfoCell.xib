@@ -293,7 +293,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
-                            <action selector="nameTFhasEndEditing:" destination="wwD-8M-T6x" eventType="editingDidEnd" id="o8W-9W-TcC"/>
+                            <action selector="cardCustomTFhasEndEdting:" destination="wwD-8M-T6x" eventType="editingDidEnd" id="oWp-yI-rS9"/>
                         </connections>
                     </textField>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmB-GC-V6d">
@@ -329,7 +329,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="7sd-qR-O5I"/>
             <connections>
-                <outlet property="cardNameTF" destination="GLc-jY-pKd" id="VXD-Hv-pcs"/>
                 <outlet property="customTagDetailTF" destination="OSJ-wq-Vvz" id="2ch-IA-1VJ"/>
                 <outlet property="customTagTitle" destination="BqC-CM-oPT" id="rfx-jP-rMU"/>
                 <outlet property="rightArrowIV" destination="xmB-GC-V6d" id="HDI-AC-QNW"/>
@@ -361,9 +360,6 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
-                        <connections>
-                            <action selector="cardNumberTFhasEndEdting:" destination="lgN-3f-RRI" eventType="editingDidEnd" id="6OE-JX-LQZ"/>
-                        </connections>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-Sf-BdB" userLabel="dateIcon">
                         <rect key="frame" x="270" y="10" width="30" height="30"/>
@@ -372,7 +368,6 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-iZ-YZ0" userLabel="changeName">
                         <rect key="frame" x="0.0" y="0.0" width="116.5" height="49.5"/>
                         <connections>
-                            <action selector="gotoChageCustomTagTitle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ueh-sb-4mU"/>
                             <action selector="gotoChageCustomTagTitle:" destination="lgN-3f-RRI" eventType="touchUpInside" id="hBf-D0-K4p"/>
                         </connections>
                     </button>

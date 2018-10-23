@@ -45,7 +45,8 @@
 
 - (void)leftItemClick:(UIBarButtonItem *)item{
     
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)rightItemClick:(UIBarButtonItem *)item{
@@ -79,11 +80,6 @@
     _descHeight = [self calculatorStringHeight:nil];
     [self.tableView reloadData];
     
-//    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, ScreenW * 0.6)];
-//    header.backgroundColor = UIColor.whiteColor;
-//    self.tableView.tableHeaderView = header;
-//
-    
     XYQrCodeView *qrCodeView = [XYQrCodeView qrCodeViewWithContent:self.bankCard.cardNumber];
     qrCodeView.frame = CGRectMake(0, 0, 0, ScreenW * 0.6);
     self.tableView.tableHeaderView = qrCodeView;
@@ -95,19 +91,19 @@
     
     _bankCard = bankCard;
     
-    // 页面分为两组
-    // section1 : cardInfo
+    // 页面分 为tableView.header + 两组
+    // header   : card.number && qrCode
+    // section1 : cardInfo => card.tags + card.desc
     // section2 : system functions
     
     self.dataArray = @[].mutableCopy;
     
-    // section1
+    // section1 => card.tags + card.desc
     NSMutableArray *sectionOne = [NSMutableArray array];
-//    [sectionOne addObject:bankCard.cardNumber];
-    [sectionOne addObject:bankCard.desc];
     for (XYCardInfoModel *tag in bankCard.tags) {
         [sectionOne addObject:tag];
     }
+    [sectionOne addObject:bankCard.desc];
 
     // section2
     NSMutableArray *sectionTwo = [NSMutableArray array];
@@ -139,7 +135,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0 && indexPath.row == 0) {
+    NSArray *sectionArr = self.dataArray[indexPath.section];
+    if (indexPath.section == 0 && indexPath.row == sectionArr.count-1) {
         return _descHeight;
     }
 
@@ -189,12 +186,30 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@",sectionArr[indexPath.row]];
     cell.textLabel.numberOfLines = 0;
     
-    if (indexPath.section == 0 && indexPath.row == 0) {
+    if (indexPath.section == 0 && indexPath.row == sectionArr.count-1 ) { // card.desc 显示为灰色
         cell.textLabel.textColor = [UIColor lightGrayColor];
         cell.textLabel.backgroundColor = [UIColor redColor];
     }else
     {
         cell.textLabel.textColor = [UIColor blackColor];
+        
+        if (indexPath.section == 0) { // 第一组的 tags 用其他样式的cell
+            static NSString *tagCellID = @"tagCellID";
+            UITableViewCell *tagCell = [tableView dequeueReusableCellWithIdentifier:tagCellID];
+            if (!tagCell) {
+                tagCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+            }
+            
+            XYCardInfoModel *tag = sectionArr[indexPath.row];
+            tagCell.textLabel.text = tag.title;
+            tagCell.detailTextLabel.text = tag.detail;
+            if (1) {
+                UIImage *remind = [UIImage imageNamed:@"wizard_normalcard"];
+                tagCell.accessoryView = [[UIImageView alloc] initWithImage:remind];
+            }
+            
+            return tagCell;
+        }
     }
     
     if (indexPath.section == self.dataArray.count-1) {
