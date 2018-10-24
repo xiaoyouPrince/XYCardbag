@@ -46,11 +46,11 @@
 
 - (void)setEdgePopGestureEnable:(BOOL)enable
 {
-    _edgePan.enabled = enable;
+    _canHandleGesture = enable;
 }
 
 
-static UIPanGestureRecognizer *_edgePan;
+static BOOL _canHandleGesture = YES;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,14 +61,13 @@ static UIPanGestureRecognizer *_edgePan;
     UIPanGestureRecognizer *edgePan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:) ];
     edgePan.delegate = self;
     [self.view addGestureRecognizer:edgePan];
-    _edgePan = edgePan;
     
 }
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    return self.childViewControllers.count > 1; // 有自控制器的时候恢复返回手势
+    return (self.childViewControllers.count > 1 && _canHandleGesture); // 有自控制器的时候恢复返回手势
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
