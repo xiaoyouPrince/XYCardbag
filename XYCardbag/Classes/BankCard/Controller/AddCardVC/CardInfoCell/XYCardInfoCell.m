@@ -12,6 +12,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
+#import "XYChangeTagTitleController.h"
 
 @protocol XYTextViewDelegate <UITextViewDelegate>
 // 这里直接使用父类协议的协议方法
@@ -450,7 +451,22 @@ static UITextField *cardTFName;
 
 - (IBAction)gotoChageCustomTagTitle:(id)sender {
     
-    [XYAlertView showDeveloping];
+//    [XYAlertView showDeveloping];
+    
+    XYChangeTagTitleController *changeVc = [XYChangeTagTitleController new];
+    changeVc.tag = self.model;
+    changeVc.changeTitleBlock = ^(BOOL success) {
+        if (success) { // 成功就刷新本cell上的title数据
+            self.customTagTitle.text = self.model.title;
+        }
+    };
+    
+    UIViewController *currentTopVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([currentTopVC isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *currentNav = (UINavigationController *)currentTopVC;
+        currentTopVC = currentNav.visibleViewController;
+    }
+    [currentTopVC.navigationController pushViewController:changeVc animated:YES];
 }
 
 

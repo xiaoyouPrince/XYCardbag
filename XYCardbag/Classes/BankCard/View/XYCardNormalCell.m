@@ -263,7 +263,7 @@ NSString * const BankCardDidChangedNotification = @"BankCardDidChangedNotificati
     }
     
     // 刷新页面 required by 移除喜欢，移除卡片，移动分组，编辑卡片图
-    [kNotificationCenter postNotificationName:BankCardDidChangedNotification object:nil];
+    // 由于每种需要刷新的时机不同.刷新通知放到对应的操作内 发送
 }
 
 - (void)changeImg{
@@ -357,6 +357,10 @@ NSString * const BankCardDidChangedNotification = @"BankCardDidChangedNotificati
         [favBtn setImage:image_non_favorite forState:UIControlStateNormal];
     }
     
+    
+    // 4. post notification to reload data
+    [kNotificationCenter postNotificationName:BankCardDidChangedNotification object:nil];
+    
 }
 
 /**
@@ -367,6 +371,8 @@ NSString * const BankCardDidChangedNotification = @"BankCardDidChangedNotificati
     [XYAlertView showAlertTitle:@"提示" message:@"卡片移除，不可恢复，请再次确认" Ok:^{
         
         [XYBankCardCache deleteCard:self.model forSection:nil];
+        
+        [kNotificationCenter postNotificationName:BankCardDidChangedNotification object:nil];
         
     } cancel:nil];
 }
