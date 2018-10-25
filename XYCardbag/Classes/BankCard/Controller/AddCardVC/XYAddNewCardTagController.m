@@ -36,7 +36,7 @@
                                   @"网址",
                                   @"CVV/CVC"];
         
-        NSArray *secondSection = @[@"choose custom tag"];
+        NSArray *secondSection = @[@"添加自定义标签"];
         
         _dataArray = @[].mutableCopy;
         
@@ -55,12 +55,85 @@
     
     self.title = @"标签";
     
+    [self addNotification];
+}
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+////    self.editing = NO;
+//
+//    [self endEidtingForView:self.view];
+//
+//
+//}
+//
+//- (void)endEidtingForView:(UIView *)view{
+//
+//    NSLog(@"times -----");
+//
+//    for (UIView *subView in view.subviews) {
+//        if (subView.subviews) {
+//            [self endEidtingForView:subView];
+//        }else{
+//            if ([subView respondsToSelector:@selector(resignFirstResponder)]) {
+//                [subView resignFirstResponder];
+//                NSLog(@"times ----resignFirstResponder-");
+//            }
+//        }
+//    }
+//}
+//
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//}
+
+- (void)addNotification
+{
+    [kNotificationCenter addObserver:self selector:@selector(keyBoardShow:) name:UIKeyboardWillShowNotification object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(keyBoardHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyBoardShow:(NSNotification *)noti{
     
+    self.tableView.transform = CGAffineTransformIdentity;
+    
+    NSLog(@"noti = %@",noti);
+    
+    NSNumber *duration = noti.userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    CGRect beginFrame = [noti.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    
+    [UIView animateWithDuration:duration.floatValue animations:^{
+        self.tableView.transform = CGAffineTransformTranslate(self.tableView.transform, 0, - beginFrame.size.height/2);
+    }];
+}
+
+- (void)keyBoardHide:(NSNotification *)noti{
+    
+    NSLog(@"noti = %@",noti);
+    
+    //NSNumber *duration = noti.userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    //CGRect beginFrame = [noti.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    
+    [UIView animateWithDuration:0 animations:^{
+        self.tableView.transform = CGAffineTransformIdentity;
+    }];
+}
+
+- (void)dealloc
+{
+    [kNotificationCenter removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self resignFirstResponder];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -151,6 +224,18 @@
     }
     
     return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == self.dataArray.count-1) {
+        return 20;
+    }else{
+        return 0;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 1;
 }
 
 
