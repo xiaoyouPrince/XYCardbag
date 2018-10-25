@@ -217,7 +217,7 @@ static UITextField *cardTFName;
         case TagTypeDate:
         {
             self.customTagTitle.text = model.title;
-            self.customTagDetailTF.text = model.detail;
+            self.customTagDetailTF.text = model.remind.remindDateStr;
         }
             break;
         case TagTypePhoneNumber:

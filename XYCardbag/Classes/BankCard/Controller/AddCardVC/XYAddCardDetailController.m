@@ -41,6 +41,7 @@
 
 @implementation XYAddCardDetailController
 
+
 - (UIView *)headerOne
 {
     if (_headerOne == nil) {
@@ -61,6 +62,40 @@
     }
     return _headerOne;
 }
+
+- (UIButton *)editBtn{
+    static UIButton * editBtn;
+    if (!editBtn) {
+        editBtn = [[UIButton alloc] init];
+        [editBtn setTitle:@"编辑" forState:UIControlStateNormal];
+        [editBtn setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+        [editBtn addTarget:self action:@selector(setTableViewEditing:) forControlEvents:UIControlEventTouchUpInside];
+        [editBtn sizeToFit];
+    }
+    
+    NSMutableArray *sectionTwo = self.dataArray.lastObject;
+    if (sectionTwo.count > 4) { // 四个基本数据，不可编辑
+        editBtn.hidden = NO;
+    }else{
+        editBtn.hidden = YES;
+        [editBtn setTitle:@"编辑" forState:UIControlStateNormal];
+        self.tableView.editing = NO;
+    }
+    
+    return editBtn;
+}
+
+- (void)setTableViewEditing:(UIButton *)sender{
+    
+    if ([sender.currentTitle isEqualToString:@"编辑"]) {
+        [sender setTitle:@"完成" forState:UIControlStateNormal];
+        self.tableView.editing = YES;
+    }else if([sender.currentTitle isEqualToString:@"完成"]) {
+        [sender setTitle:@"编辑" forState:UIControlStateNormal];
+        self.tableView.editing = NO;
+    }
+}
+
 - (UIView *)headerTwo
 {
     if (_headerTwo == nil) {
@@ -72,6 +107,10 @@
         [_headerTwo addSubview:label];
         label.frame = CGRectMake(0, 0, ScreenW, 30);
         label.xy_x += 20;
+        
+        UIButton *editBtn = [self editBtn];
+        editBtn.frame = CGRectMake(ScreenW - 20 - editBtn.xy_width, 0, editBtn.xy_width, editBtn.xy_height);
+        [_headerTwo addSubview:editBtn];
         
         UIView *line = [UIView new];
         line.backgroundColor = [UIColor lightGrayColor];
@@ -121,6 +160,9 @@ static XYNavigationController *selfNav;
     // 禁用返回手势
     selfNav = (XYNavigationController *)self.navigationController;
     [selfNav setEdgePopGestureEnable:NO];
+    
+    // 检查是够可以显示editBtn
+    [self editBtn];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -413,6 +455,7 @@ static XYNavigationController *selfNav;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.view endEditing:YES];
+    if (indexPath.section == 0) return;
     
     NSArray *infoSection = self.dataArray[indexPath.section];
     if (indexPath.row == infoSection.count - 1) {
@@ -437,31 +480,80 @@ static XYNavigationController *selfNav;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section != 0) {
+        NSArray *section = self.dataArray[indexPath.section];
+        if (indexPath.row > 2 && indexPath.row != section.count-1) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        NSMutableArray *sectionArr = self.dataArray[indexPath.section];
+        [sectionArr removeObjectAtIndex:indexPath.row];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        // 检查是够可以显示editBtn
+        [self editBtn];
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
-// Override to support rearranging the table view.
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    
+    if (proposedDestinationIndexPath.section != 0) { // 非第0组
+        NSArray *section = self.dataArray[proposedDestinationIndexPath.section];
+        if (proposedDestinationIndexPath.row > 2 && proposedDestinationIndexPath.row < section.count-1) {
+            return proposedDestinationIndexPath;
+        }else{
+            NSInteger sourceRow = sourceIndexPath.row;
+            NSMutableArray *sourceSection = [self.dataArray objectAtIndex:sourceIndexPath.section];
+            NSUInteger sectionCount = [sourceSection count];
+            
+            if (sourceRow < 3) {
+                sourceRow = 3;
+            }
+            if (sourceRow >= sectionCount - 1) {
+                sourceRow -= 1;
+            }
+            return [NSIndexPath indexPathForRow:sourceRow inSection:sourceIndexPath.section];
+        }
+    }else   // 可移动当前组
+    {
+        NSInteger sourceRow = sourceIndexPath.row;
+        NSMutableArray *sourceSection = [self.dataArray objectAtIndex:sourceIndexPath.section];
+        NSUInteger sectionCount = [sourceSection count];
+        
+        if (sourceRow < 3) {
+            sourceRow = 3;
+        }
+        if (sourceRow >= sectionCount - 1) {
+            sourceRow -= 2;
+        }
+        return [NSIndexPath indexPathForRow:sourceRow inSection:sourceIndexPath.section];
+    }
+    
+    return proposedDestinationIndexPath;
+}
+
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
-*/
 
 /*
 // Override to support conditional rearranging of the table view.
@@ -487,15 +579,6 @@ static XYNavigationController *selfNav;
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 #pragma mark -- scrollView Delegate
