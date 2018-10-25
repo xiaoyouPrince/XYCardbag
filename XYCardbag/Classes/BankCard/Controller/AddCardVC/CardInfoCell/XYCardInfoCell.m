@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
 #import "XYChangeTagTitleController.h"
+#import "XYChooseDateViewController.h"
 
 @protocol XYTextViewDelegate <UITextViewDelegate>
 // 这里直接使用父类协议的协议方法
@@ -461,12 +462,7 @@ static UITextField *cardTFName;
         }
     };
     
-    UIViewController *currentTopVC = [UIApplication sharedApplication].keyWindow.rootViewController;
-    if ([currentTopVC isKindOfClass:[UINavigationController class]]) {
-        UINavigationController *currentNav = (UINavigationController *)currentTopVC;
-        currentTopVC = currentNav.visibleViewController;
-    }
-    [currentTopVC.navigationController pushViewController:changeVc animated:YES];
+    [self pushNewViewController:changeVc];
 }
 
 
@@ -478,7 +474,29 @@ static UITextField *cardTFName;
 
 
 - (IBAction)gotoChooseDate:(id)sender {
-    [XYAlertView showDeveloping];
+    
+    XYChooseDateViewController *changeVc = [XYChooseDateViewController new];
+    changeVc.tag = self.model;
+
+    XYWeakSelf;
+    changeVc.chooseDateBlock = ^(XYRemind *remind) {
+        
+        DLog(@"remindDateStr = %@",remind.remindDateStr);
+        weakSelf.customTagDetailTF.text = remind.remindDateStr;
+    };
+    
+    [self pushNewViewController:changeVc];
+}
+
+
+- (void)pushNewViewController:(UIViewController *)vc{
+
+    UIViewController *currentTopVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([currentTopVC isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *currentNav = (UINavigationController *)currentTopVC;
+        currentTopVC = currentNav.visibleViewController;
+    }
+    [currentTopVC.navigationController pushViewController:vc animated:YES];
 }
 
 

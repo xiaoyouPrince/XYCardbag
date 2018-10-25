@@ -86,6 +86,14 @@
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
+		B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF1F421816864007205DA /* XYChooseDateViewController.m */; };
+		B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */; };
+		B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF1FE21816939007205DA /* XYChooseDateCell.m */; };
+		B4EFF20121816939007205DA /* XYChooseDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF1FF21816939007205DA /* XYChooseDateCell.xib */; };
+		B4EFF2052181A5CA007205DA /* XYChooseRemindDayController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF2032181A5CA007205DA /* XYChooseRemindDayController.m */; };
+		B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF2042181A5CA007205DA /* XYChooseRemindDayController.xib */; };
+		B4EFF20A2181A974007205DA /* XYChooseDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF2082181A974007205DA /* XYChooseDayCell.m */; };
+		B4EFF20B2181A974007205DA /* XYChooseDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF2092181A974007205DA /* XYChooseDayCell.xib */; };
 		B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */; };
 /* End PBXBuildFile section */
 
@@ -279,6 +287,18 @@
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
 		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
 		B4ED5947217430D8005C7929 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B4EFF1F321816864007205DA /* XYChooseDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChooseDateViewController.h; sourceTree = "<group>"; };
+		B4EFF1F421816864007205DA /* XYChooseDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChooseDateViewController.m; sourceTree = "<group>"; };
+		B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseDateViewController.xib; sourceTree = "<group>"; };
+		B4EFF1FD21816939007205DA /* XYChooseDateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChooseDateCell.h; sourceTree = "<group>"; };
+		B4EFF1FE21816939007205DA /* XYChooseDateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChooseDateCell.m; sourceTree = "<group>"; };
+		B4EFF1FF21816939007205DA /* XYChooseDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseDateCell.xib; sourceTree = "<group>"; };
+		B4EFF2022181A5CA007205DA /* XYChooseRemindDayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChooseRemindDayController.h; sourceTree = "<group>"; };
+		B4EFF2032181A5CA007205DA /* XYChooseRemindDayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChooseRemindDayController.m; sourceTree = "<group>"; };
+		B4EFF2042181A5CA007205DA /* XYChooseRemindDayController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseRemindDayController.xib; sourceTree = "<group>"; };
+		B4EFF2072181A974007205DA /* XYChooseDayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChooseDayCell.h; sourceTree = "<group>"; };
+		B4EFF2082181A974007205DA /* XYChooseDayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChooseDayCell.m; sourceTree = "<group>"; };
+		B4EFF2092181A974007205DA /* XYChooseDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseDayCell.xib; sourceTree = "<group>"; };
 		B4FF21F4217DEEA600EE7C12 /* XYQrCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYQrCodeView.h; sourceTree = "<group>"; };
 		B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYQrCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -745,6 +765,12 @@
 				B46103B72179798100C99D99 /* XYAddCustomTagCell.h */,
 				B46103B82179798100C99D99 /* XYAddCustomTagCell.m */,
 				B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */,
+				B4EFF1FD21816939007205DA /* XYChooseDateCell.h */,
+				B4EFF1FE21816939007205DA /* XYChooseDateCell.m */,
+				B4EFF1FF21816939007205DA /* XYChooseDateCell.xib */,
+				B4EFF2072181A974007205DA /* XYChooseDayCell.h */,
+				B4EFF2082181A974007205DA /* XYChooseDayCell.m */,
+				B4EFF2092181A974007205DA /* XYChooseDayCell.xib */,
 			);
 			path = CardInfoCell;
 			sourceTree = "<group>";
@@ -806,6 +832,12 @@
 				B4BAAD18217F3A8300F18754 /* XYChangeTagTitleController.h */,
 				B4BAAD19217F3A8300F18754 /* XYChangeTagTitleController.m */,
 				B4BAAD1A217F3A8300F18754 /* XYChangeTagTitleController.xib */,
+				B4EFF1F321816864007205DA /* XYChooseDateViewController.h */,
+				B4EFF1F421816864007205DA /* XYChooseDateViewController.m */,
+				B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */,
+				B4EFF2022181A5CA007205DA /* XYChooseRemindDayController.h */,
+				B4EFF2032181A5CA007205DA /* XYChooseRemindDayController.m */,
+				B4EFF2042181A5CA007205DA /* XYChooseRemindDayController.xib */,
 			);
 			path = AddCardVC;
 			sourceTree = "<group>";
@@ -953,16 +985,20 @@
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
 				B4B1D5BD20F1F4B200321105 /* XYAddCardController.xib in Resources */,
+				B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
 				B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */,
 				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
 				B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */,
 				B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */,
+				B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
 				B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */,
+				B4EFF20121816939007205DA /* XYChooseDateCell.xib in Resources */,
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
 				B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */,
+				B4EFF20B2181A974007205DA /* XYChooseDayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,6 +1024,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */,
+				B4EFF20A2181A974007205DA /* XYChooseDayCell.m in Sources */,
 				B4BAAD1B217F3A8300F18754 /* XYChangeTagTitleController.m in Sources */,
 				B4614096201835D000BE5A24 /* MJMember.m in Sources */,
 				B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */,
@@ -1022,6 +1059,7 @@
 				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
 				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,
 				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
+				B4EFF2052181A5CA007205DA /* XYChooseRemindDayController.m in Sources */,
 				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
 				B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */,
@@ -1034,7 +1072,9 @@
 				B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */,
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
+				B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */,
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,

@@ -40,6 +40,24 @@ typedef enum : NSUInteger {
     TagTypeAdd              // 占位
 } TagType;
 
+
+@interface XYRemind : NSObject
+
+/// 用户选中的时间
+@property(nonatomic , strong)     NSDate *remindDate;
+/// 用户选中的时间的string (yyyy-MM-dd)
+@property(nonatomic , copy , readonly)     NSString *remindDateStr;
+/// 是否设置了启用提醒
+@property(nonatomic , assign , getter=isRemind)   BOOL remind;
+/// 是否设置了启用每月提醒
+@property(nonatomic , assign , getter=isRemindEveryMonth)   BOOL remindEveryMonth;
+/// 用户选中提前几天提醒
+@property(nonatomic , copy)     NSString *remindBeforeDays;
+/// 用户选中提前日期的天数
+@property(nonatomic , assign , readonly)     NSInteger remindBeforeDaysInteger;
+
+@end
+
 @interface XYCardInfoModel : NSObject
 
 // 第一个cell的正反面icon
@@ -55,6 +73,8 @@ typedef enum : NSUInteger {
 @property(nonatomic , copy) NSString *title;
 /// 当前的标签的detail --> egg: 卡号(title) : 123456(detail)
 @property(nonatomic , copy) NSString *detail;
+/// 用户启用提醒设置
+@property(nonatomic , strong) XYRemind *remind;
 
 /**
  根据自定义tag类型快创建 cardInfo x模型

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="KGk-i7-Jjw" customClass="XYChooseDateCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TTD-Yp-ra2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                        <date key="date" timeIntervalSinceReferenceDate="562129252.57364702">
+                            <!--2018-10-25 03:00:52 +0000-->
+                        </date>
+                    </datePicker>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TTD-Yp-ra2" secondAttribute="trailing" id="K10-KW-tNp"/>
+                    <constraint firstItem="TTD-Yp-ra2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Mqm-R9-InR"/>
+                    <constraint firstItem="TTD-Yp-ra2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cex-l2-rP6"/>
+                    <constraint firstAttribute="bottom" secondItem="TTD-Yp-ra2" secondAttribute="bottom" id="zKO-p4-Oa0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="datePicker" destination="TTD-Yp-ra2" id="Nsr-oc-m0c"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="-142.1289355322339"/>
+        </tableViewCell>
+    </objects>
+</document>

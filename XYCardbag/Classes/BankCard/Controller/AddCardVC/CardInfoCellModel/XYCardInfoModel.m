@@ -10,6 +10,38 @@
 
 #import "XYCardInfoModel.h"
 
+@implementation XYRemind
+MJCodingImplementation;
+
+- (NSString *)remindDateStr
+{
+    NSDateFormatter *fmt = [NSDateFormatter new];
+    fmt.dateFormat = @"yyyy-MM-dd";
+    NSString *str = [fmt stringFromDate:_remindDate];
+    if (!str) {
+        str = [fmt stringFromDate:[NSDate date]];
+    }
+    return str;
+}
+
+- (NSInteger)remindBeforeDaysInteger
+{
+    if ([_remindBeforeDays isEqualToString:@"当天"]) {
+        return 0;
+    }
+    if ([_remindBeforeDays isEqualToString:@"1天前"]) {
+        return 1;
+    }
+    if ([_remindBeforeDays isEqualToString:@"7天前"]) {
+        return 7;
+    }
+    return 30;
+}
+
+@end
+
+
+
 @implementation XYCardInfoModel
 MJCodingImplementation;
 
