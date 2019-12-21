@@ -11,11 +11,4 @@
 @interface XYNavigationController : UINavigationController
 
 
-/**
- 设置页面左滑返回功能是否可用
-
- @param enable yes/no
- */
-- (void)setEdgePopGestureEnable:(BOOL)enable;
-
 @end

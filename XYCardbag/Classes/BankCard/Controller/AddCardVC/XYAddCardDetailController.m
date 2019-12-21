@@ -157,21 +157,14 @@ static XYNavigationController *selfNav;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    // 禁用返回手势
-    selfNav = (XYNavigationController *)self.navigationController;
-    [selfNav setEdgePopGestureEnable:NO];
     
+    // 设置不可以返回
+    self.xy_disablePopGesture = YES;
+
     // 检查是够可以显示editBtn
     [self editBtn];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    // 开启返回手势
-    [selfNav setEdgePopGestureEnable:YES];
-    
-    [super viewWillDisappear:animated];
-}
 
 - (void)leftItemClick:(UIBarButtonItem *)item{
     // 直接返回到rootVC即可

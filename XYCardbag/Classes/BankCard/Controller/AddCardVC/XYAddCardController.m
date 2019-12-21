@@ -27,8 +27,10 @@
     
     self.title = @"添加卡片";
     
+    self.xy_popGestureRatio = 0.5;
+    
     // 相差44 是因为，导航条高度是44。这种单ScrollView的VC在有导航条的时候会自动修改ScrollView的contentInset以自适应，使之正确展示内容
-    self.viewBottomCons.constant -= 43.5; // 这里自适应少减去1像素，在屏幕中contentSize就大于frame.size 了，可以正常滚动。
+    self.viewBottomCons.constant = 2000; // 这里自适应少减去1像素，在屏幕中contentSize就大于frame.size 了，可以正常滚动。
 }
 
 - (IBAction)cellTapBegin:(UITapGestureRecognizer *)sender {

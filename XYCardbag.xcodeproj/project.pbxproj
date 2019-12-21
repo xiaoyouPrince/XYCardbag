@@ -27,6 +27,7 @@
 		89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */; };
 		89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */; };
 		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
+		B42505EC23AE45470037FAAB /* UIViewController+XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42505EB23AE45470037FAAB /* UIViewController+XYNavigationController.m */; };
 		B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B431CFC920EDB2CC008CD732 /* carIcon.png */; };
 		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
 		B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */; };
@@ -170,6 +171,8 @@
 		89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
 		89FB5EFD1FE8EB19002AE67C /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
 		89FB5F031FE8EB64002AE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B42505EA23AE45470037FAAB /* UIViewController+XYNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XYNavigationController.h"; sourceTree = "<group>"; };
+		B42505EB23AE45470037FAAB /* UIViewController+XYNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYNavigationController.m"; sourceTree = "<group>"; };
 		B431CFC920EDB2CC008CD732 /* carIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon.png; sourceTree = "<group>"; };
 		B431CFCB20EDBD80008CD732 /* XYToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolBar.h; sourceTree = "<group>"; };
 		B431CFCC20EDBD80008CD732 /* XYToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYToolBar.m; sourceTree = "<group>"; };
@@ -600,6 +603,8 @@
 				89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */,
 				89FB5EEC1FE8CF9E002AE67C /* XYNavigationController.h */,
 				89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */,
+				B42505EA23AE45470037FAAB /* UIViewController+XYNavigationController.h */,
+				B42505EB23AE45470037FAAB /* UIViewController+XYNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -961,6 +966,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1066,6 +1072,7 @@
 				B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */,
 				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
 				B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */,
+				B42505EC23AE45470037FAAB /* UIViewController+XYNavigationController.m in Sources */,
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
 				B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */,

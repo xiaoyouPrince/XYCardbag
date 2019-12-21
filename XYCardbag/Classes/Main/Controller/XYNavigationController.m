@@ -17,13 +17,7 @@
 // 设置nav的字体颜色和大小等
 + (void)load
 {
-    UINavigationBar *navBar = nil;
-
-    if (@available(iOS 9.0, *)) {
-        navBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
-    }else{
-        navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
-    }
+    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
     
     // title 的大小和颜色
     NSMutableDictionary *attrs = [NSMutableDictionary new];
@@ -39,18 +33,10 @@
     UIImage *image = [UIImage imageWithColor:[UIColor colorWithWhite:0.2 alpha:0.8]];
     [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
-    // tintColor
-    navBar.tintColor = [UIColor whiteColor];
+    // barTintColor 与上冲突
+    // navBar.barTintColor = [UIColor colorWithWhite:0.2 alpha:0.8];[UIColor redColor];
     
 }
-
-- (void)setEdgePopGestureEnable:(BOOL)enable
-{
-    _canHandleGesture = enable;
-}
-
-
-static BOOL _canHandleGesture = YES;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -65,14 +51,30 @@ static BOOL _canHandleGesture = YES;
 }
 
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    return (self.childViewControllers.count > 1 && _canHandleGesture); // 有自控制器的时候恢复返回手势
+    static BOOL canHandleGesture = YES;
+    static CGFloat popGestureRatio = 0.1;
+        
+    // 查看返回设置,是否禁用侧滑返回手势
+    if ([self.childViewControllers.lastObject respondsToSelector:@selector(xy_disablePopGesture)]) {
+        canHandleGesture = ![self.childViewControllers.lastObject xy_disablePopGesture];
+    }
+    
+    // 处理自动返回比例
+    if ([self.childViewControllers.lastObject respondsToSelector:@selector(xy_popGestureRatio)]) {
+        CGFloat realRatio = [self.childViewControllers.lastObject xy_popGestureRatio];
+        popGestureRatio = MAX(realRatio, popGestureRatio);
+    }
+    
+    CGPoint point = [gestureRecognizer locationInView:gestureRecognizer.view];
+    
+    return canHandleGesture && (point.x <= popGestureRatio * gestureRecognizer.view.bounds.size.width);
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if (self.childViewControllers.count > 0) {
+    if (self.childViewControllers.count) {
         // 返回按钮
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"]  target:self action:@selector(back) title:@"返回"];
         viewController.hidesBottomBarWhenPushed = YES;

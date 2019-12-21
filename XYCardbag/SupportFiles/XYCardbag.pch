@@ -15,6 +15,7 @@
 #import "XYKit.h"
 #import "MJExtension.h"
 #import "XYAlertView.h"
+#import "UIViewController+XYNavigationController.h"
 
 
 #define ABC [UIColor redColor];
