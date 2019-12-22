@@ -10,8 +10,9 @@
 //  添加卡片
 
 #import <UIKit/UIKit.h>
+#import <XYInfomationBaseViewController.h>
 
-@interface XYAddCardController : UIViewController
+@interface XYAddCardController : XYInfomationBaseViewController
 
 /**
  要保存卡片的sectionID。对应的那个大类

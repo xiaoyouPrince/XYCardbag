@@ -152,8 +152,6 @@
     
 }
 
-static XYNavigationController *selfNav;
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -303,7 +301,7 @@ static XYNavigationController *selfNav;
 - (void)showLossParamError:(NSString *)errorContent{
     
     CGFloat Y = kNavHeight - kTopBarHeight;
-    CGRect frame = selfNav.navigationBar.bounds;
+    CGRect frame = self.navigationController.navigationBar.bounds;
     frame.origin.y -= (Y + kNavHeight);
     frame.size.height = kNavHeight * 2;
     
@@ -316,7 +314,7 @@ static XYNavigationController *selfNav;
     [errorBtn setTitle:errorContent forState:UIControlStateNormal];
     
     [errorView addSubview:errorBtn];
-    [selfNav.navigationBar insertSubview:errorView atIndex:0];
+    [self.navigationController.navigationBar insertSubview:errorView atIndex:0];
     
     [errorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(errorView);

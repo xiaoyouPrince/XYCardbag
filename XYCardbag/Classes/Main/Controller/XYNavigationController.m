@@ -53,8 +53,14 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    static BOOL canHandleGesture = YES;
-    static CGFloat popGestureRatio = 0.1;
+    // 如果只有一个childVC，禁用滑动手势[系统bug]
+    if (self.childViewControllers.count == 1) {
+        return NO;
+    }
+    
+    // 每个页面独立控制自己的侧滑返回和返回比例，所以是Auto变量
+    BOOL canHandleGesture = YES;
+    CGFloat popGestureRatio = 0.1;
         
     // 查看返回设置,是否禁用侧滑返回手势
     if ([self.childViewControllers.lastObject respondsToSelector:@selector(xy_disablePopGesture)]) {

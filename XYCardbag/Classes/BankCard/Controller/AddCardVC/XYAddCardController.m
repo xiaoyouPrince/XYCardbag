@@ -13,8 +13,6 @@
 #import "XYAddCardDetailController.h"
 
 @interface XYAddCardController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewBottomCons;
 @end
 
 @implementation XYAddCardController
@@ -26,40 +24,42 @@
     [super viewDidLoad];
     
     self.title = @"添加卡片";
-    
+    self.view.backgroundColor = HEXCOLOR(0xf0f0f0);
     self.xy_popGestureRatio = 0.5;
     
-    // 相差44 是因为，导航条高度是44。这种单ScrollView的VC在有导航条的时候会自动修改ScrollView的contentInset以自适应，使之正确展示内容
-    self.viewBottomCons.constant = 2000; // 这里自适应少减去1像素，在屏幕中contentSize就大于frame.size 了，可以正常滚动。
-}
-
-- (IBAction)cellTapBegin:(UITapGestureRecognizer *)sender {
+    // 卡片列表
+    XYInfomationItem *item1 = [XYInfomationItem modelWithImage:@"wizard_normalcard" Title:@"普通卡" titleKey:@"wizard_normalcard" type:XYInfoCellTypeChoose value:@" " placeholderValue:nil disableUserAction:YES];
+    XYInfomationItem *item2 = [XYInfomationItem modelWithImage:@"wizard_creditcard" Title:@"信用卡" titleKey:@"wizard_creditcard" type:XYInfoCellTypeChoose value:@" " placeholderValue:nil disableUserAction:YES];
+    XYInfomationItem *item3 = [XYInfomationItem modelWithImage:@"wizard_storecard" Title:@"购物卡" titleKey:@"wizard_storecard" type:XYInfoCellTypeChoose value:@" " placeholderValue:nil disableUserAction:YES];
     
-    UIView *cell = sender.view;
-    switch (cell.tag) {
-        case 0:
-        {
-            NSLog(@"点击普通卡");
+    XYInfomationSection *section = [XYInfomationSection sectionForOriginal];
+    section.dataArray = @[item1,item2,item3];
+    [self setHeaderView:section edgeInsets:UIEdgeInsetsMake(25, 0, 0, 0)];
+    
+    XYWeakSelf;
+    section.cellClickBlock = ^(NSInteger index, XYInfomationCell * _Nonnull cell) {
+        
+        if ([cell.model.title isEqualToString:@"普通卡"]) {
             /// 进入对应的列表页面
             XYAddCardDetailController *listVC = [XYAddCardDetailController new];
-            listVC.sectionID = self.sectionID;
-            [self.navigationController pushViewController:listVC animated:YES];
+            listVC.sectionID = weakSelf.sectionID;
+            [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
-            break;
-        case 1:
-        {
-            NSLog(@"点击信用卡💳");
+        
+        if ([cell.model.title isEqualToString:@"信用卡"]) {
+            /// 进入对应的列表页面
+            XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+            listVC.sectionID = weakSelf.sectionID;
+            [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
-            break;
-        case 2:
-        {
-            NSLog(@"点击会员卡");
+        
+        if ([cell.model.title isEqualToString:@"购物卡"]) {
+            /// 进入对应的列表页面
+            XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+            listVC.sectionID = weakSelf.sectionID;
+            [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
-            break;
-        default:
-            break;
-    }
+    };
 }
-
 
 @end
