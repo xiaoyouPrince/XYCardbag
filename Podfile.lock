@@ -1,0 +1,20 @@
+PODS:
+  - Masonry (1.1.0)
+  - XYInfomationSection (0.2.0):
+    - Masonry
+
+DEPENDENCIES:
+  - XYInfomationSection
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - XYInfomationSection
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  XYInfomationSection: e83bafa6b16626302283c65010972ae09740e032
+
+PODFILE CHECKSUM: 35a633089049e9d85609b8f7b81be227f266f39d
+
+COCOAPODS: 1.8.4

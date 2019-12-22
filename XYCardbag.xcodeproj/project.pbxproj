@@ -96,6 +96,7 @@
 		B4EFF20A2181A974007205DA /* XYChooseDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF2082181A974007205DA /* XYChooseDayCell.m */; };
 		B4EFF20B2181A974007205DA /* XYChooseDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF2092181A974007205DA /* XYChooseDayCell.xib */; };
 		B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */; };
+		E6FABC9E66B2679729BD7D27 /* Pods_XYCardbag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C1A94D8867CF7DE8A6E193 /* Pods_XYCardbag.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,19 +116,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		89FAF29B1FD14FCB008C9655 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		03C1A94D8867CF7DE8A6E193 /* Pods_XYCardbag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYCardbag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FAF2631FD1060C008C9655 /* XYCardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYCardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FAF27C1FD1060C008C9655 /* XYCardbagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYCardbagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FAF2801FD1060C008C9655 /* XYCardbagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardbagTests.m; sourceTree = "<group>"; };
@@ -135,7 +125,6 @@
 		89FAF2871FD1060C008C9655 /* XYCardbagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYCardbagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FAF28B1FD1060C008C9655 /* XYCardbagUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardbagUITests.m; sourceTree = "<group>"; };
 		89FAF28D1FD1060C008C9655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89FAF29D1FD14FCB008C9655 /* libnen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnen.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FB5E9B1FE7C2B7002AE67C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		89FB5E9F1FE7C2B7002AE67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -304,6 +293,8 @@
 		B4EFF2092181A974007205DA /* XYChooseDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseDayCell.xib; sourceTree = "<group>"; };
 		B4FF21F4217DEEA600EE7C12 /* XYQrCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYQrCodeView.h; sourceTree = "<group>"; };
 		B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYQrCodeView.m; sourceTree = "<group>"; };
+		C712A59F5A74BF15683A4DDA /* Pods-XYCardbag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYCardbag.debug.xcconfig"; path = "Target Support Files/Pods-XYCardbag/Pods-XYCardbag.debug.xcconfig"; sourceTree = "<group>"; };
+		FE889884D6280F4234D01E38 /* Pods-XYCardbag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYCardbag.release.xcconfig"; path = "Target Support Files/Pods-XYCardbag/Pods-XYCardbag.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6FABC9E66B2679729BD7D27 /* Pods_XYCardbag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,16 +320,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89FAF29A1FD14FCB008C9655 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08968D32AEA98765D8DC61D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C712A59F5A74BF15683A4DDA /* Pods-XYCardbag.debug.xcconfig */,
+				FE889884D6280F4234D01E38 /* Pods-XYCardbag.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7FCF45BBA703A61AF1CC16DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03C1A94D8867CF7DE8A6E193 /* Pods_XYCardbag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		89FAF25A1FD1060B008C9655 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +348,8 @@
 				89FAF27F1FD1060C008C9655 /* XYCardbagTests */,
 				89FAF28A1FD1060C008C9655 /* XYCardbagUITests */,
 				89FAF2641FD1060C008C9655 /* Products */,
+				08968D32AEA98765D8DC61D7 /* Pods */,
+				7FCF45BBA703A61AF1CC16DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,7 +359,6 @@
 				89FAF2631FD1060C008C9655 /* XYCardbag.app */,
 				89FAF27C1FD1060C008C9655 /* XYCardbagTests.xctest */,
 				89FAF2871FD1060C008C9655 /* XYCardbagUITests.xctest */,
-				89FAF29D1FD14FCB008C9655 /* libnen.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -863,9 +867,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89FAF2901FD1060C008C9655 /* Build configuration list for PBXNativeTarget "XYCardbag" */;
 			buildPhases = (
+				2264B7E6946BDE05BC2724F5 /* [CP] Check Pods Manifest.lock */,
 				89FAF25F1FD1060B008C9655 /* Sources */,
 				89FAF2601FD1060B008C9655 /* Frameworks */,
 				89FAF2611FD1060B008C9655 /* Resources */,
+				778C7B0AEB73C9F50D7DBCFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -912,23 +918,6 @@
 			productReference = 89FAF2871FD1060C008C9655 /* XYCardbagUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		89FAF29C1FD14FCB008C9655 /* nen */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89FAF2A31FD14FCB008C9655 /* Build configuration list for PBXNativeTarget "nen" */;
-			buildPhases = (
-				89FAF2991FD14FCB008C9655 /* Sources */,
-				89FAF29A1FD14FCB008C9655 /* Frameworks */,
-				89FAF29B1FD14FCB008C9655 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = nen;
-			productName = nen;
-			productReference = 89FAF29D1FD14FCB008C9655 /* libnen.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -955,10 +944,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 89FAF2621FD1060B008C9655;
 					};
-					89FAF29C1FD14FCB008C9655 = {
-						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 89FAF25E1FD1060B008C9655 /* Build configuration list for PBXProject "XYCardbag" */;
@@ -978,7 +963,6 @@
 				89FAF2621FD1060B008C9655 /* XYCardbag */,
 				89FAF27B1FD1060C008C9655 /* XYCardbagTests */,
 				89FAF2861FD1060C008C9655 /* XYCardbagUITests */,
-				89FAF29C1FD14FCB008C9655 /* nen */,
 			);
 		};
 /* End PBXProject section */
@@ -1023,6 +1007,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2264B7E6946BDE05BC2724F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XYCardbag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		778C7B0AEB73C9F50D7DBCFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XYCardbag/Pods-XYCardbag-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/XYInfomationSection/XYInfomationSection.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XYInfomationSection.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XYCardbag/Pods-XYCardbag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89FAF25F1FD1060B008C9655 /* Sources */ = {
@@ -1115,13 +1144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FAF28C1FD1060C008C9655 /* XYCardbagUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89FAF2991FD14FCB008C9655 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,6 +1292,7 @@
 		};
 		89FAF2911FD1060C008C9655 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C712A59F5A74BF15683A4DDA /* Pods-XYCardbag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1293,6 +1316,7 @@
 		};
 		89FAF2921FD1060C008C9655 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE889884D6280F4234D01E38 /* Pods-XYCardbag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1359,24 +1383,6 @@
 			};
 			name = Release;
 		};
-		89FAF2A41FD14FCB008C9655 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		89FAF2A51FD14FCB008C9655 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1412,15 +1418,6 @@
 			buildConfigurations = (
 				89FAF2971FD1060C008C9655 /* Debug */,
 				89FAF2981FD1060C008C9655 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		89FAF2A31FD14FCB008C9655 /* Build configuration list for PBXNativeTarget "nen" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				89FAF2A41FD14FCB008C9655 /* Debug */,
-				89FAF2A51FD14FCB008C9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

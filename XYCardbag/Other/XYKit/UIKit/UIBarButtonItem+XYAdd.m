@@ -41,9 +41,11 @@ UIButton *btn;
 + (UIBarButtonItem *)backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title{
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setTitle:title forState:UIControlStateNormal];
+    backButton.tintColor = UIColor.whiteColor;
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [backButton setImage:image forState:UIControlStateNormal];
     [backButton setImage:highImage forState:UIControlStateHighlighted];
-    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    // [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     [backButton sizeToFit];
     backButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
