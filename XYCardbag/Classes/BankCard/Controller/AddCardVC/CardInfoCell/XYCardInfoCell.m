@@ -9,7 +9,7 @@
 //
 
 #import "XYCardInfoCell.h"
-#import <AssetsLibrary/AssetsLibrary.h>
+#import <Photos/Photos.h>
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
 #import "XYChangeTagTitleController.h"
@@ -259,13 +259,13 @@ static UITextField *cardTFName;
 - (IBAction)takeCardImageAction:(UIButton *)sender {
     
     if (sender == self.frontIcon_btn) {
-        [sender setImage:[UIImage imageWithColor:UIColor.redColor] forState:UIControlStateNormal];
+//        [sender setImage:[UIImage imageWithColor:UIColor.redColor] forState:UIControlStateNormal];
         _takeImageForFront = YES;
         _takeImageForRear = NO;
     }
     
     if (sender == self.rearIcon_btn) {
-        [sender setImage:[UIImage imageWithColor:UIColor.greenColor] forState:UIControlStateNormal];
+//        [sender setImage:[UIImage imageWithColor:UIColor.greenColor] forState:UIControlStateNormal];
         _takeImageForFront = NO;
         _takeImageForRear = YES;
     }
@@ -273,40 +273,98 @@ static UITextField *cardTFName;
     // 弹出设置类型的选择框
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
-    UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
-    imgPicker.delegate = self;
-    imgPicker.allowsEditing = YES;
-    
     // rootVc 弹出
     UIViewController *rootVc = [UIApplication sharedApplication].keyWindow.rootViewController;
     
     UIAlertAction * xcAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-        if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied)
-        {
-            //            [MyMBProgHUD showInfo:@"请打开相册权限，否则无法选取照片!"];
+        // 申请使用权限
+        PHAuthorizationStatus authStatus = [PHPhotoLibrary authorizationStatus];
+        if (authStatus == PHAuthorizationStatusDenied) {
             [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:nil];
-            
             return;
         }
         
-        imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [rootVc presentViewController:imgPicker animated:YES completion:nil];
+        if (authStatus == PHAuthorizationStatusRestricted) {
+            [XYAlertView showAlertTitle:@"提示" message:@"您的设备原因，此功能无法使用!" Ok:nil];
+            return;
+        }
+        
+        if (authStatus == PHAuthorizationStatusNotDetermined) {
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                
+                // 主线程操作
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
+                    imgPicker.delegate = self;
+                    imgPicker.allowsEditing = YES;
+                    imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                    [rootVc presentViewController:imgPicker animated:YES completion:nil];
+                });
+                
+            }];
+            return;
+        }
+        
+        if (authStatus == PHAuthorizationStatusAuthorized) {
+            
+            UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
+            imgPicker.delegate = self;
+            imgPicker.allowsEditing = YES;
+            imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [rootVc presentViewController:imgPicker animated:YES completion:nil];
+            return;
+        }
         
     }];
     
     UIAlertAction * pzAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
+        // 申请使用权限
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-        if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied)
-        {
-            [XYAlertView showAlertTitle:@"提示" message:@"请打开相机权限，否则无法选取照片!" Ok:nil];
+        if (authStatus == AVAuthorizationStatusDenied) {
+            [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:nil];
             return;
         }
         
-        imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [rootVc presentViewController:imgPicker animated:YES completion:nil];
+        if (authStatus == AVAuthorizationStatusRestricted) {
+            [XYAlertView showAlertTitle:@"提示" message:@"您的设备原因，此功能无法使用!" Ok:nil];
+            return;
+        }
+        
+        if (authStatus == AVAuthorizationStatusNotDetermined) {
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                
+                if (granted) {
+                    // 主线程操作
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
+                        imgPicker.delegate = self;
+                        imgPicker.allowsEditing = YES;
+                        imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                        [rootVc presentViewController:imgPicker animated:YES completion:nil];
+                    });
+                }else
+                {
+                    
+                    // 主线程操作
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:nil];
+                    });
+                }
+            }];
+            return;
+        }
+        
+        if (authStatus == AVAuthorizationStatusAuthorized) {
+            
+            UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
+            imgPicker.delegate = self;
+            imgPicker.allowsEditing = YES;
+            imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            [rootVc presentViewController:imgPicker animated:YES completion:nil];
+            return;
+        }
         
     }];
     
