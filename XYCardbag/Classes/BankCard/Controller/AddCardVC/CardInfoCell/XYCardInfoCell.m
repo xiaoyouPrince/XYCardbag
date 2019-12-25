@@ -15,6 +15,7 @@
 #import "XYChangeTagTitleController.h"
 #import "XYChooseDateViewController.h"
 #import "XYAlbumViewController.h"
+#import "XYEditViewController.h"
 
 @protocol XYTextViewDelegate <UITextViewDelegate>
 // 这里直接使用父类协议的协议方法
@@ -100,7 +101,7 @@
 @end
 
 
-@interface XYCardInfoCell ()< XYTextViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface XYCardInfoCell ()< XYTextViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate,XYEidtViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *frontIcon_btn;
 @property (weak, nonatomic) IBOutlet UIButton *rearIcon_btn;
@@ -143,7 +144,7 @@ static UITextField *cardTFName;
 #warning TODO 用通知的方法肯定不行了，每个通知注册的名称都一样，只是每次传的object不同，导致最后传的object肯定有问题
     
     // name
-    [kNotificationCenter addObserver:self selector:@selector(imageEidtFinish:) name:@"imageEidtFinish" object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(imageEidtFinishNotification:) name:@"imageEidtFinish" object:nil];
     
     
     
@@ -283,7 +284,9 @@ static UITextField *cardTFName;
         // 申请使用权限
         PHAuthorizationStatus authStatus = [PHPhotoLibrary authorizationStatus];
         if (authStatus == PHAuthorizationStatusDenied) {
-            [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:nil];
+            [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:^{
+                [XYAlbumTool prowerSetView];
+            }];
             return;
         }
         
@@ -327,7 +330,9 @@ static UITextField *cardTFName;
         // 申请使用权限
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         if (authStatus == AVAuthorizationStatusDenied) {
-            [XYAlertView showAlertTitle:@"提示" message:@"请打开相机权限，否则无法选取照片!" Ok:nil];
+            [XYAlertView showAlertTitle:@"提示" message:@"请打开相机权限，否则无法选取照片!" Ok:^{
+                [XYAlbumTool prowerSetView];
+            }];
             return;
         }
         
@@ -410,99 +415,52 @@ static UITextField *cardTFName;
 
 /// 图片编辑完成之后的回调
 /// @param noty 通知
-- (void)imageEidtFinish:(NSNotification *)noty
+- (void)imageEidtFinishNotification:(NSNotification *)noty
 {
     UIImage *image = noty.object;
     
     if (_takeImageForFront) {
-            [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
-    //        self.model.frontIconData = UIImagePNGRepresentation(image);
-            self.model.frontIconImage = [self scaleAndConfigImage:image];
-        }
-        if (_takeImageForRear) {
-            [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
-    //        self.model.rearIconData = UIImagePNGRepresentation(image);
-            self.model.rearIconImage = [self scaleAndConfigImage:image];
-        }
+        [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
+        self.model.frontIconImage = image;
+    }
+    if (_takeImageForRear) {
+        [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
+        self.model.rearIconImage = image;
+    }
+}
+
+
+#pragma mark - XYEditViewControllerDelegate
+- (void)imageEidtFinish:(UIImage *)image
+{
+    if (_takeImageForFront) {
+        [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
+        self.model.frontIconImage = image;
+    }
+    if (_takeImageForRear) {
+        [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
+        self.model.rearIconImage = image;
+    }
 }
 
 
 #pragma mark - 图片选择控制器的代理
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    
-    NSLog(@"info = %@",info);
-    
-    
-#warning TODO - 这里拿到原图，直接进入对应的图片编辑页面，编辑完成回来设置到对应的
+    DLog(@"info = %@",info);
     
     // 1.销毁picker控制器
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    // 2.去的图片
+    // 原图
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    // 3.图片简单处理
-    if (_takeImageForFront) {
-        [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
-//        self.model.frontIconData = UIImagePNGRepresentation(image);
-        self.model.frontIconImage = [self scaleAndConfigImage:image];
-    }
-    if (_takeImageForRear) {
-        [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
-//        self.model.rearIconData = UIImagePNGRepresentation(image);
-        self.model.rearIconImage = [self scaleAndConfigImage:image];
-    }
-    
-}
-
-
-
-// 处理一下直接拿到的相册图片，否则太大
-- (UIImage *)scaleAndConfigImage:(UIImage *)image{
-    
-    // 看一下image大小
-    DLog(@"image size = %@",NSStringFromCGSize(image.size));
-    
-    NSInteger psize = image.size.width * image.size.height * image.scale * image.scale;
-    DLog(@"image 像素大小 = %ld",(long)psize);
-    
-    // ----- 重画iamge并返回
-    
-#warning TODO -- 这里是根据卡片cell内部的边距来定的，日后可能会改。先立个flag
-    CGSize newSize = CGSizeMake(ScreenW - 40, 200);
-    
-    //首先根据image的size的长宽比和newSize进行设置新图片的大小（为了达到等比例缩放不变形的目的）
-    CGFloat wTmp;
-    CGFloat hTmp;
-    CGSize imgSize = image.size;
-    if (imgSize.width > imgSize.height) {
-        wTmp=newSize.width;
-        hTmp = imgSize.height * wTmp / imgSize.width;
-    } else {
-        hTmp=newSize.height;
-        wTmp = imgSize.width * hTmp / imgSize.height;
-    }
-    
-    // Create a graphics image context
-    UIGraphicsBeginImageContext(CGSizeMake(wTmp, hTmp));
-    
-    // Tell the old image to draw in this new context, with the desired
-    // new size
-    [image drawInRect:CGRectMake(0,0,wTmp,hTmp)];
-    
-    // Get the new image from the context
-    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // End the context
-    UIGraphicsEndImageContext();
-    
-    NSInteger nPsize = image.size.width * image.size.height * image.scale * image.scale;
-    DLog(@"新图片的像素大小 = %ld",(long)nPsize);
-    
-    // Return the new image.
-    return newImage;
-    
+    // 进入编辑页面
+    XYEditViewController *editVC = [XYEditViewController new];
+    UIViewController *currentVC = [XYAlbumTool getCurrentVCForView:self];
+    editVC.delegate = self;
+    editVC.image = image;
+    [currentVC presentViewController:editVC animated:YES completion:nil];
 }
 
 
