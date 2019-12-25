@@ -49,6 +49,38 @@
 		B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B18A32011EA2800359427 /* XYNewContactPhoneCell.m */; };
 		B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B18A42011EA2800359427 /* XYNewContactPhoneCell.xib */; };
 		B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B18A82011EEE000359427 /* XYAddNewCell.m */; };
+		B45DB17123B2FB5800363A4E /* XYAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB17023B2FB5800363A4E /* XYAlbumViewController.m */; };
+		B45DB17423B3020900363A4E /* XYAlbumTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB17323B3020900363A4E /* XYAlbumTool.m */; };
+		B45DB17823B3056300363A4E /* XYAlbumGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB17623B3056300363A4E /* XYAlbumGroupViewController.m */; };
+		B45DB17923B3056300363A4E /* XYAlbumGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DB17723B3056300363A4E /* XYAlbumGroupViewController.xib */; };
+		B45DB18123B309F400363A4E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB17E23B309F400363A4E /* SVProgressHUD.m */; };
+		B45DB18223B309F400363A4E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB17F23B309F400363A4E /* SVIndefiniteAnimatedView.m */; };
+		B45DB18323B309F400363A4E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B45DB18023B309F400363A4E /* SVProgressHUD.bundle */; };
+		B45DB18723B30B8200363A4E /* XYAlbumContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB18523B30B8200363A4E /* XYAlbumContentViewController.m */; };
+		B45DB18823B30B8200363A4E /* XYAlbumContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DB18623B30B8200363A4E /* XYAlbumContentViewController.xib */; };
+		B45DB18D23B30E4100363A4E /* AlbumGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB18B23B30E4100363A4E /* AlbumGroupTableViewCell.m */; };
+		B45DB18E23B30E4100363A4E /* AlbumGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DB18C23B30E4100363A4E /* AlbumGroupTableViewCell.xib */; };
+		B45DB19123B334F000363A4E /* PHAssetCollection+info.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB19023B334F000363A4E /* PHAssetCollection+info.m */; };
+		B45DB19523B33C8100363A4E /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB19323B33C8100363A4E /* ImageCollectionViewCell.m */; };
+		B45DB19623B33C8100363A4E /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DB19423B33C8100363A4E /* ImageCollectionViewCell.xib */; };
+		B45DB19A23B3581C00363A4E /* XYEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB19823B3581C00363A4E /* XYEditViewController.m */; };
+		B45DB19B23B3581C00363A4E /* XYEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DB19923B3581C00363A4E /* XYEditViewController.xib */; };
+		B45DB1A923B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB19D23B35AA700363A4E /* sr_eidt_mirror_horizontal_icon@2x.png */; };
+		B45DB1AA23B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB19E23B35AA800363A4E /* sr_eidt_mirror_horizontal_icon@3x.png */; };
+		B45DB1AB23B35AA900363A4E /* sr_eidt_mirror_vertically_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB19F23B35AA800363A4E /* sr_eidt_mirror_vertically_icon@2x.png */; };
+		B45DB1AC23B35AA900363A4E /* sr_eidt_reset_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A023B35AA800363A4E /* sr_eidt_reset_icon@3x.png */; };
+		B45DB1AD23B35AA900363A4E /* sr_tailoring_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A123B35AA800363A4E /* sr_tailoring_icon@2x.png */; };
+		B45DB1AE23B35AA900363A4E /* SR_WhiteBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A223B35AA900363A4E /* SR_WhiteBack@2x.png */; };
+		B45DB1AF23B35AA900363A4E /* SR_WhiteBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A323B35AA900363A4E /* SR_WhiteBack@3x.png */; };
+		B45DB1B023B35AA900363A4E /* sr_eidt_rotate_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A423B35AA900363A4E /* sr_eidt_rotate_icon@2x.png */; };
+		B45DB1B123B35AA900363A4E /* sr_eidt_reset_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A523B35AA900363A4E /* sr_eidt_reset_icon@2x.png */; };
+		B45DB1B223B35AA900363A4E /* sr_tailoring_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A623B35AA900363A4E /* sr_tailoring_icon@3x.png */; };
+		B45DB1B323B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A723B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png */; };
+		B45DB1B423B35AA900363A4E /* sr_eidt_rotate_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DB1A823B35AA900363A4E /* sr_eidt_rotate_icon@3x.png */; };
+		B45DB1C023B3602000363A4E /* JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB1B823B3601F00363A4E /* JPImageresizerView.m */; };
+		B45DB1C123B3602000363A4E /* UIImage+JPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB1B923B3601F00363A4E /* UIImage+JPExtension.m */; };
+		B45DB1C223B3602000363A4E /* JPImageresizerFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB1BA23B3601F00363A4E /* JPImageresizerFrameView.m */; };
+		B45DB1C323B3602000363A4E /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB1BD23B3601F00363A4E /* JPImageresizerConfigure.m */; };
 		B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46103B82179798100C99D99 /* XYAddCustomTagCell.m */; };
 		B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */; };
 		B4614096201835D000BE5A24 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614083201835D000BE5A24 /* MJMember.m */; };
@@ -200,6 +232,54 @@
 		B45B18A42011EA2800359427 /* XYNewContactPhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYNewContactPhoneCell.xib; sourceTree = "<group>"; };
 		B45B18A72011EEE000359427 /* XYAddNewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddNewCell.h; sourceTree = "<group>"; };
 		B45B18A82011EEE000359427 /* XYAddNewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddNewCell.m; sourceTree = "<group>"; };
+		B45DB16F23B2FB5800363A4E /* XYAlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAlbumViewController.h; sourceTree = "<group>"; };
+		B45DB17023B2FB5800363A4E /* XYAlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAlbumViewController.m; sourceTree = "<group>"; };
+		B45DB17223B3020900363A4E /* XYAlbumTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAlbumTool.h; sourceTree = "<group>"; };
+		B45DB17323B3020900363A4E /* XYAlbumTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAlbumTool.m; sourceTree = "<group>"; };
+		B45DB17523B3056300363A4E /* XYAlbumGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAlbumGroupViewController.h; sourceTree = "<group>"; };
+		B45DB17623B3056300363A4E /* XYAlbumGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAlbumGroupViewController.m; sourceTree = "<group>"; };
+		B45DB17723B3056300363A4E /* XYAlbumGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAlbumGroupViewController.xib; sourceTree = "<group>"; };
+		B45DB17B23B309F400363A4E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		B45DB17C23B309F400363A4E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		B45DB17D23B309F400363A4E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		B45DB17E23B309F400363A4E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B45DB17F23B309F400363A4E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		B45DB18023B309F400363A4E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		B45DB18423B30B8200363A4E /* XYAlbumContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAlbumContentViewController.h; sourceTree = "<group>"; };
+		B45DB18523B30B8200363A4E /* XYAlbumContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAlbumContentViewController.m; sourceTree = "<group>"; };
+		B45DB18623B30B8200363A4E /* XYAlbumContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAlbumContentViewController.xib; sourceTree = "<group>"; };
+		B45DB18A23B30E4100363A4E /* AlbumGroupTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumGroupTableViewCell.h; sourceTree = "<group>"; };
+		B45DB18B23B30E4100363A4E /* AlbumGroupTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumGroupTableViewCell.m; sourceTree = "<group>"; };
+		B45DB18C23B30E4100363A4E /* AlbumGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumGroupTableViewCell.xib; sourceTree = "<group>"; };
+		B45DB18F23B334F000363A4E /* PHAssetCollection+info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+info.h"; sourceTree = "<group>"; };
+		B45DB19023B334F000363A4E /* PHAssetCollection+info.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+info.m"; sourceTree = "<group>"; };
+		B45DB19223B33C8100363A4E /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		B45DB19323B33C8100363A4E /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		B45DB19423B33C8100363A4E /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		B45DB19723B3581C00363A4E /* XYEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYEditViewController.h; sourceTree = "<group>"; };
+		B45DB19823B3581C00363A4E /* XYEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYEditViewController.m; sourceTree = "<group>"; };
+		B45DB19923B3581C00363A4E /* XYEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYEditViewController.xib; sourceTree = "<group>"; };
+		B45DB19D23B35AA700363A4E /* sr_eidt_mirror_horizontal_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_mirror_horizontal_icon@2x.png"; sourceTree = "<group>"; };
+		B45DB19E23B35AA800363A4E /* sr_eidt_mirror_horizontal_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_mirror_horizontal_icon@3x.png"; sourceTree = "<group>"; };
+		B45DB19F23B35AA800363A4E /* sr_eidt_mirror_vertically_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_mirror_vertically_icon@2x.png"; sourceTree = "<group>"; };
+		B45DB1A023B35AA800363A4E /* sr_eidt_reset_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_reset_icon@3x.png"; sourceTree = "<group>"; };
+		B45DB1A123B35AA800363A4E /* sr_tailoring_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_tailoring_icon@2x.png"; sourceTree = "<group>"; };
+		B45DB1A223B35AA900363A4E /* SR_WhiteBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SR_WhiteBack@2x.png"; sourceTree = "<group>"; };
+		B45DB1A323B35AA900363A4E /* SR_WhiteBack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SR_WhiteBack@3x.png"; sourceTree = "<group>"; };
+		B45DB1A423B35AA900363A4E /* sr_eidt_rotate_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_rotate_icon@2x.png"; sourceTree = "<group>"; };
+		B45DB1A523B35AA900363A4E /* sr_eidt_reset_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_reset_icon@2x.png"; sourceTree = "<group>"; };
+		B45DB1A623B35AA900363A4E /* sr_tailoring_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_tailoring_icon@3x.png"; sourceTree = "<group>"; };
+		B45DB1A723B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_mirror_vertically_icon@3x.png"; sourceTree = "<group>"; };
+		B45DB1A823B35AA900363A4E /* sr_eidt_rotate_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_eidt_rotate_icon@3x.png"; sourceTree = "<group>"; };
+		B45DB1B723B3601F00363A4E /* JPImageresizerConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerConfigure.h; sourceTree = "<group>"; };
+		B45DB1B823B3601F00363A4E /* JPImageresizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerView.m; sourceTree = "<group>"; };
+		B45DB1B923B3601F00363A4E /* UIImage+JPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JPExtension.m"; sourceTree = "<group>"; };
+		B45DB1BA23B3601F00363A4E /* JPImageresizerFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerFrameView.m; sourceTree = "<group>"; };
+		B45DB1BB23B3601F00363A4E /* JPImageresizerTypedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerTypedef.h; sourceTree = "<group>"; };
+		B45DB1BC23B3601F00363A4E /* JPImageresizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerView.h; sourceTree = "<group>"; };
+		B45DB1BD23B3601F00363A4E /* JPImageresizerConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerConfigure.m; sourceTree = "<group>"; };
+		B45DB1BE23B3601F00363A4E /* JPImageresizerFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerFrameView.h; sourceTree = "<group>"; };
+		B45DB1BF23B3601F00363A4E /* UIImage+JPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPExtension.h"; sourceTree = "<group>"; };
 		B46103B72179798100C99D99 /* XYAddCustomTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCustomTagCell.h; sourceTree = "<group>"; };
 		B46103B82179798100C99D99 /* XYAddCustomTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCustomTagCell.m; sourceTree = "<group>"; };
 		B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCustomTagCell.xib; sourceTree = "<group>"; };
@@ -403,6 +483,7 @@
 		89FB5E991FE7C2B7002AE67C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B45DB16E23B2FB3B00363A4E /* XYAlbum */,
 				B458EF8C2010434C00B3D0D3 /* Venders */,
 				89FB5EEF1FE8EB19002AE67C /* XYKit */,
 			);
@@ -667,6 +748,7 @@
 		B458EF8C2010434C00B3D0D3 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				B45DB17A23B309F400363A4E /* SVProgressHUD */,
 				B4ABDE4720ED2BED00E74941 /* Masonry */,
 				B4614082201835D000BE5A24 /* MJExtension */,
 				B458EF8D2010434C00B3D0D3 /* fmdb */,
@@ -732,6 +814,100 @@
 				B45B18A82011EEE000359427 /* XYAddNewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B45DB16E23B2FB3B00363A4E /* XYAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				B45DB1B523B3601F00363A4E /* JPImageresizerView */,
+				B45DB19C23B35A1700363A4E /* files */,
+				B45DB18923B30C6400363A4E /* Views */,
+				B45DB17223B3020900363A4E /* XYAlbumTool.h */,
+				B45DB17323B3020900363A4E /* XYAlbumTool.m */,
+				B45DB18F23B334F000363A4E /* PHAssetCollection+info.h */,
+				B45DB19023B334F000363A4E /* PHAssetCollection+info.m */,
+				B45DB16F23B2FB5800363A4E /* XYAlbumViewController.h */,
+				B45DB17023B2FB5800363A4E /* XYAlbumViewController.m */,
+				B45DB17523B3056300363A4E /* XYAlbumGroupViewController.h */,
+				B45DB17623B3056300363A4E /* XYAlbumGroupViewController.m */,
+				B45DB17723B3056300363A4E /* XYAlbumGroupViewController.xib */,
+				B45DB18423B30B8200363A4E /* XYAlbumContentViewController.h */,
+				B45DB18523B30B8200363A4E /* XYAlbumContentViewController.m */,
+				B45DB18623B30B8200363A4E /* XYAlbumContentViewController.xib */,
+				B45DB19723B3581C00363A4E /* XYEditViewController.h */,
+				B45DB19823B3581C00363A4E /* XYEditViewController.m */,
+				B45DB19923B3581C00363A4E /* XYEditViewController.xib */,
+			);
+			path = XYAlbum;
+			sourceTree = "<group>";
+		};
+		B45DB17A23B309F400363A4E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B45DB17B23B309F400363A4E /* SVIndefiniteAnimatedView.h */,
+				B45DB17C23B309F400363A4E /* SVProgressHUD.h */,
+				B45DB17D23B309F400363A4E /* SVProgressHUD-Prefix.pch */,
+				B45DB17E23B309F400363A4E /* SVProgressHUD.m */,
+				B45DB17F23B309F400363A4E /* SVIndefiniteAnimatedView.m */,
+				B45DB18023B309F400363A4E /* SVProgressHUD.bundle */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		B45DB18923B30C6400363A4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B45DB18A23B30E4100363A4E /* AlbumGroupTableViewCell.h */,
+				B45DB18B23B30E4100363A4E /* AlbumGroupTableViewCell.m */,
+				B45DB18C23B30E4100363A4E /* AlbumGroupTableViewCell.xib */,
+				B45DB19223B33C8100363A4E /* ImageCollectionViewCell.h */,
+				B45DB19323B33C8100363A4E /* ImageCollectionViewCell.m */,
+				B45DB19423B33C8100363A4E /* ImageCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B45DB19C23B35A1700363A4E /* files */ = {
+			isa = PBXGroup;
+			children = (
+				B45DB19D23B35AA700363A4E /* sr_eidt_mirror_horizontal_icon@2x.png */,
+				B45DB19E23B35AA800363A4E /* sr_eidt_mirror_horizontal_icon@3x.png */,
+				B45DB19F23B35AA800363A4E /* sr_eidt_mirror_vertically_icon@2x.png */,
+				B45DB1A723B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png */,
+				B45DB1A523B35AA900363A4E /* sr_eidt_reset_icon@2x.png */,
+				B45DB1A023B35AA800363A4E /* sr_eidt_reset_icon@3x.png */,
+				B45DB1A423B35AA900363A4E /* sr_eidt_rotate_icon@2x.png */,
+				B45DB1A823B35AA900363A4E /* sr_eidt_rotate_icon@3x.png */,
+				B45DB1A123B35AA800363A4E /* sr_tailoring_icon@2x.png */,
+				B45DB1A623B35AA900363A4E /* sr_tailoring_icon@3x.png */,
+				B45DB1A223B35AA900363A4E /* SR_WhiteBack@2x.png */,
+				B45DB1A323B35AA900363A4E /* SR_WhiteBack@3x.png */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
+		B45DB1B523B3601F00363A4E /* JPImageresizerView */ = {
+			isa = PBXGroup;
+			children = (
+				B45DB1B623B3601F00363A4E /* Classes */,
+			);
+			path = JPImageresizerView;
+			sourceTree = "<group>";
+		};
+		B45DB1B623B3601F00363A4E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B45DB1B723B3601F00363A4E /* JPImageresizerConfigure.h */,
+				B45DB1B823B3601F00363A4E /* JPImageresizerView.m */,
+				B45DB1B923B3601F00363A4E /* UIImage+JPExtension.m */,
+				B45DB1BA23B3601F00363A4E /* JPImageresizerFrameView.m */,
+				B45DB1BB23B3601F00363A4E /* JPImageresizerTypedef.h */,
+				B45DB1BC23B3601F00363A4E /* JPImageresizerView.h */,
+				B45DB1BD23B3601F00363A4E /* JPImageresizerConfigure.m */,
+				B45DB1BE23B3601F00363A4E /* JPImageresizerFrameView.h */,
+				B45DB1BF23B3601F00363A4E /* UIImage+JPExtension.h */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B4614082201835D000BE5A24 /* MJExtension */ = {
@@ -968,21 +1144,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45DB1AA23B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@3x.png in Resources */,
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
+				B45DB18323B309F400363A4E /* SVProgressHUD.bundle in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
+				B45DB1B323B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png in Resources */,
 				B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
 				B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */,
 				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
+				B45DB1A923B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@2x.png in Resources */,
+				B45DB1AC23B35AA900363A4E /* sr_eidt_reset_icon@3x.png in Resources */,
 				B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */,
+				B45DB1B223B35AA900363A4E /* sr_tailoring_icon@3x.png in Resources */,
+				B45DB17923B3056300363A4E /* XYAlbumGroupViewController.xib in Resources */,
+				B45DB1B423B35AA900363A4E /* sr_eidt_rotate_icon@3x.png in Resources */,
 				B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */,
+				B45DB1AF23B35AA900363A4E /* SR_WhiteBack@3x.png in Resources */,
+				B45DB19623B33C8100363A4E /* ImageCollectionViewCell.xib in Resources */,
+				B45DB18823B30B8200363A4E /* XYAlbumContentViewController.xib in Resources */,
 				B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
+				B45DB18E23B30E4100363A4E /* AlbumGroupTableViewCell.xib in Resources */,
+				B45DB1B023B35AA900363A4E /* sr_eidt_rotate_icon@2x.png in Resources */,
+				B45DB1AE23B35AA900363A4E /* SR_WhiteBack@2x.png in Resources */,
 				B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */,
 				B4EFF20121816939007205DA /* XYChooseDateCell.xib in Resources */,
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
+				B45DB1B123B35AA900363A4E /* sr_eidt_reset_icon@2x.png in Resources */,
+				B45DB19B23B3581C00363A4E /* XYEditViewController.xib in Resources */,
 				B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */,
+				B45DB1AB23B35AA900363A4E /* sr_eidt_mirror_vertically_icon@2x.png in Resources */,
+				B45DB1AD23B35AA900363A4E /* sr_tailoring_icon@2x.png in Resources */,
 				B4EFF20B2181A974007205DA /* XYChooseDayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1053,6 +1247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45DB17423B3020900363A4E /* XYAlbumTool.m in Sources */,
 				B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */,
 				B4EFF20A2181A974007205DA /* XYChooseDayCell.m in Sources */,
 				B4BAAD1B217F3A8300F18754 /* XYChangeTagTitleController.m in Sources */,
@@ -1061,6 +1256,7 @@
 				B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */,
 				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
 				B4ABDE6320ED2BED00E74941 /* MASCompositeConstraint.m in Sources */,
+				B45DB1C123B3602000363A4E /* UIImage+JPExtension.m in Sources */,
 				B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */,
 				B461409C201835D000BE5A24 /* MJMethod.m in Sources */,
 				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
@@ -1070,11 +1266,14 @@
 				89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */,
 				B4ABDE6720ED2BED00E74941 /* View+MASAdditions.m in Sources */,
 				B45B18A02011D92900359427 /* XYNewContactInfoCell.m in Sources */,
+				B45DB17123B2FB5800363A4E /* XYAlbumViewController.m in Sources */,
 				B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */,
 				B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */,
 				B4A6CA46217DBE890069AD8E /* XYBankCardDetailController.m in Sources */,
 				B4614098201835D000BE5A24 /* MJIvar.m in Sources */,
+				B45DB19A23B3581C00363A4E /* XYEditViewController.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
+				B45DB17823B3056300363A4E /* XYAlbumGroupViewController.m in Sources */,
 				B4ABDE6920ED2BED00E74941 /* MASViewConstraint.m in Sources */,
 				B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */,
 				B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */,
@@ -1089,21 +1288,28 @@
 				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
 				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,
 				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
+				B45DB18D23B30E4100363A4E /* AlbumGroupTableViewCell.m in Sources */,
 				B4EFF2052181A5CA007205DA /* XYChooseRemindDayController.m in Sources */,
+				B45DB1C323B3602000363A4E /* JPImageresizerConfigure.m in Sources */,
 				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
+				B45DB18723B30B8200363A4E /* XYAlbumContentViewController.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
 				B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */,
 				B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */,
 				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
 				B4ABDE6A20ED2BED00E74941 /* MASViewAttribute.m in Sources */,
+				B45DB19123B334F000363A4E /* PHAssetCollection+info.m in Sources */,
 				B42505EC23AE45470037FAAB /* UIViewController+XYNavigationController.m in Sources */,
+				B45DB1C223B3602000363A4E /* JPImageresizerFrameView.m in Sources */,
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
 				B4ABDE6220ED2BED00E74941 /* ViewController+MASAdditions.m in Sources */,
+				B45DB18223B309F400363A4E /* SVIndefiniteAnimatedView.m in Sources */,
 				B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */,
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4ABDE6120ED2BED00E74941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */,
+				B45DB1C023B3602000363A4E /* JPImageresizerView.m in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
 				B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */,
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
@@ -1113,12 +1319,14 @@
 				B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */,
 				B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */,
 				B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */,
+				B45DB18123B309F400363A4E /* SVProgressHUD.m in Sources */,
 				B4ABDE6420ED2BED00E74941 /* MASConstraintMaker.m in Sources */,
 				B4ABDE6520ED2BED00E74941 /* MASLayoutConstraint.m in Sources */,
 				B4614099201835D000BE5A24 /* MJType.m in Sources */,
 				B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */,
 				B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
+				B45DB19523B33C8100363A4E /* ImageCollectionViewCell.m in Sources */,
 				B4614097201835D000BE5A24 /* NSObject+MJKeyValue.m in Sources */,
 				B4A14D9B20F35F6A0086CCBB /* XYAddNewCardTagController.m in Sources */,
 				B461409A201835D000BE5A24 /* MJTypeEncoding.m in Sources */,

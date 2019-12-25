@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>当前功能需要使用您的相机，否则无法完成拍照，请同意</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>当前功能需要使用您的麦克风</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>当期操作需要使用相册，请授权相册使用权限</string>
 	<key>UILaunchStoryboardName</key>

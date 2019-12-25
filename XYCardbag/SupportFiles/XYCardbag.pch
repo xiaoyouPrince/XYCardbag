@@ -16,6 +16,7 @@
 #import "MJExtension.h"
 #import "XYAlertView.h"
 #import "UIViewController+XYNavigationController.h"
+#import "SVProgressHUD.h"
 
 
 #define ABC [UIColor redColor];

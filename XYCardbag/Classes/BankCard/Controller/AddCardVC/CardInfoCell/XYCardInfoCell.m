@@ -14,6 +14,7 @@
 #import "Masonry.h"
 #import "XYChangeTagTitleController.h"
 #import "XYChooseDateViewController.h"
+#import "XYAlbumViewController.h"
 
 @protocol XYTextViewDelegate <UITextViewDelegate>
 // 这里直接使用父类协议的协议方法
@@ -142,7 +143,8 @@ static UITextField *cardTFName;
 #warning TODO 用通知的方法肯定不行了，每个通知注册的名称都一样，只是每次传的object不同，导致最后传的object肯定有问题
     
     // name
-//    [kNotificationCenter addObserver:self selector:@selector(getNotification:) name:UITextFieldTextDidChangeNotification object:self.cardNameTF];
+    [kNotificationCenter addObserver:self selector:@selector(imageEidtFinish:) name:@"imageEidtFinish" object:nil];
+    
     
     
     // desc
@@ -295,11 +297,12 @@ static UITextField *cardTFName;
                 
                 // 主线程操作
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
-                    imgPicker.delegate = self;
-                    imgPicker.allowsEditing = YES;
-                    imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                    [rootVc presentViewController:imgPicker animated:YES completion:nil];
+                    [self showAlbum];
+//                    UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
+//                    imgPicker.delegate = self;
+//                    imgPicker.allowsEditing = NO;
+//                    imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//                    [rootVc presentViewController:imgPicker animated:YES completion:nil];
                 });
                 
             }];
@@ -308,11 +311,12 @@ static UITextField *cardTFName;
         
         if (authStatus == PHAuthorizationStatusAuthorized) {
             
-            UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
-            imgPicker.delegate = self;
-            imgPicker.allowsEditing = YES;
-            imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-            [rootVc presentViewController:imgPicker animated:YES completion:nil];
+            [self showAlbum];
+//            UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
+//            imgPicker.delegate = self;
+//            imgPicker.allowsEditing = NO;
+//            imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//            [rootVc presentViewController:imgPicker animated:YES completion:nil];
             return;
         }
         
@@ -323,7 +327,7 @@ static UITextField *cardTFName;
         // 申请使用权限
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         if (authStatus == AVAuthorizationStatusDenied) {
-            [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:nil];
+            [XYAlertView showAlertTitle:@"提示" message:@"请打开相机权限，否则无法选取照片!" Ok:nil];
             return;
         }
         
@@ -360,8 +364,14 @@ static UITextField *cardTFName;
             
             UIImagePickerController *imgPicker = [[UIImagePickerController alloc]init];
             imgPicker.delegate = self;
-            imgPicker.allowsEditing = YES;
+            imgPicker.allowsEditing = NO;
             imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//            imgPicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:
+//            UIImagePickerControllerSourceTypeCamera];
+//            imgPicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
+            UIView *view = [UIStepper new];
+            view.frame = CGRectMake(100, 200, 0, 0);
+            imgPicker.cameraOverlayView = view;
             [rootVc presentViewController:imgPicker animated:YES completion:nil];
             return;
         }
@@ -386,9 +396,46 @@ static UITextField *cardTFName;
 //    NSLog(@"当前图片 %@",[sender imageForState:UIControlStateNormal]);
 }
 
+
+/// 展示图库
+- (void)showAlbum{
+    
+    XYAlbumViewController *album = [[XYAlbumViewController alloc] initWithAlbum];
+    UIViewController *currentVC = [XYAlbumTool getCurrentVCForView:self];
+    [currentVC presentViewController:album animated:YES completion:nil];
+    
+}
+
+
+
+/// 图片编辑完成之后的回调
+/// @param noty 通知
+- (void)imageEidtFinish:(NSNotification *)noty
+{
+    UIImage *image = noty.object;
+    
+    if (_takeImageForFront) {
+            [self.frontIcon_btn setImage:image forState:UIControlStateNormal];
+    //        self.model.frontIconData = UIImagePNGRepresentation(image);
+            self.model.frontIconImage = [self scaleAndConfigImage:image];
+        }
+        if (_takeImageForRear) {
+            [self.rearIcon_btn setImage:image forState:UIControlStateNormal];
+    //        self.model.rearIconData = UIImagePNGRepresentation(image);
+            self.model.rearIconImage = [self scaleAndConfigImage:image];
+        }
+}
+
+
 #pragma mark - 图片选择控制器的代理
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    
+    NSLog(@"info = %@",info);
+    
+    
+#warning TODO - 这里拿到原图，直接进入对应的图片编辑页面，编辑完成回来设置到对应的
+    
     // 1.销毁picker控制器
     [picker dismissViewControllerAnimated:YES completion:nil];
     
