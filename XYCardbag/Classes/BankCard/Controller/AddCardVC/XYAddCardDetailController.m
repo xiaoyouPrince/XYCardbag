@@ -148,8 +148,26 @@
     
     self.dataArray = [NSMutableArray array];
     NSMutableArray *sectionTwo = [NSMutableArray arrayWithObjects:nameInfo,numberInfo,descInfo,addInfo, nil];
-    [self.dataArray addObjectsFromArray:@[@[imageInfo],sectionTwo]];
     
+    if (self.cardType == CardTypeCredit) {
+        XYCardInfoModel *useDateInfo = [XYCardInfoModel new];
+        useDateInfo.tagType = TagTypeDate;
+        useDateInfo.title = @"有效日期";
+        
+        XYCardInfoModel *backDateInfo = [XYCardInfoModel new];
+        backDateInfo.tagType = TagTypeDate;
+        backDateInfo.title = @"还款日期";
+        
+        XYCardInfoModel *cvvInfo = [XYCardInfoModel new];
+        cvvInfo.tagType = TagTypeCustom;
+        cvvInfo.title = @"CVV/CVC";
+        
+        [sectionTwo insertObject:useDateInfo atIndex:sectionTwo.count-1];
+        [sectionTwo insertObject:backDateInfo atIndex:sectionTwo.count-1];
+        [sectionTwo insertObject:cvvInfo atIndex:sectionTwo.count-1];
+    }
+    
+    [self.dataArray addObjectsFromArray:@[@[imageInfo],sectionTwo]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

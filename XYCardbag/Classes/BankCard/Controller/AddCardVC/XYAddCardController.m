@@ -50,6 +50,7 @@
             /// 进入对应的列表页面
             XYAddCardDetailController *listVC = [XYAddCardDetailController new];
             listVC.sectionID = weakSelf.sectionID;
+            listVC.cardType = CardTypeCredit;
             [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
         
@@ -57,6 +58,7 @@
             /// 进入对应的列表页面
             XYAddCardDetailController *listVC = [XYAddCardDetailController new];
             listVC.sectionID = weakSelf.sectionID;
+            listVC.cardType = CardTypeVip;
             [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
     };
