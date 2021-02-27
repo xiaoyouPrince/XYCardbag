@@ -502,6 +502,15 @@ static UITextField *cardTFName;
     self.model.rearIconImage = image;
 }
 
+/**
+ 需要一些小技巧
+ */
+- (IBAction)needTips:(UIButton *)sender {
+    
+//    [XYAlertView showAlertTitle:@"TODO" message:@"进入一个 github 网页" Ok:nil];
+    [XYAlertView showAlertTitle:@"TODO" message:@"进入一个 github 网页" Ok:nil cancel:nil];
+}
+
 
 // ----------------------NAME-------------------
 

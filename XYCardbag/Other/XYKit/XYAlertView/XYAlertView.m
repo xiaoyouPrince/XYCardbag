@@ -50,7 +50,7 @@
                                                          
                                                      }];
     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消"
-                                                           style:UIAlertActionStyleDefault
+                                                           style:UIAlertActionStyleCancel
                                                          handler:^(UIAlertAction * _Nonnull action) {
                                                              // cancel
                                                              if (cancel) {
