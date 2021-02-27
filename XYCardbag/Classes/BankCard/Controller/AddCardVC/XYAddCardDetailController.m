@@ -300,12 +300,7 @@
  */
 - (void)showLossParamError:(NSString *)errorContent{
     
-    CGFloat Y = kNavHeight - kTopBarHeight;
-    CGRect frame = self.navigationController.navigationBar.bounds;
-    frame.origin.y -= (Y + kNavHeight);
-    frame.size.height = kNavHeight * 2;
-    
-    UIView *errorView = [[UIView alloc] initWithFrame:frame];
+    UIView *errorView = [[UIView alloc] initWithFrame:CGRectMake(0, -kTopBarHeight, ScreenW, kTopBarHeight)];
     errorView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
     
     UIButton *errorBtn = [[UIButton alloc] init];
@@ -314,26 +309,31 @@
     [errorBtn setTitle:errorContent forState:UIControlStateNormal];
     
     [errorView addSubview:errorBtn];
-    [self.navigationController.navigationBar insertSubview:errorView atIndex:0];
-    
     [errorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(errorView);
         make.right.equalTo(errorView);
         make.bottom.equalTo(errorView);
-        
         make.height.equalTo(@(kTopBarHeight));
     }];
     
+    // 中间层，iOS 导航栏层级变化，不能直接加载到 navBar 上
+    UIView *visionView = [UIView new];
+    visionView.frame = CGRectMake(0, 0, self.navigationController.navigationBar.bounds.size.width, 44);
+    [self.view addSubview:visionView];
+    [visionView addSubview:errorView];
+    visionView.clipsToBounds = YES;
+    visionView.backgroundColor = UIColor.clearColor;
     
+    // 动画
     static CGFloat const animationDuration = 0.3;
-    
     [UIView animateWithDuration:animationDuration animations:^{
-        errorView.transform = CGAffineTransformMakeTranslation(0, kTopBarHeight);
+        errorView.transform = CGAffineTransformMakeTranslation(0,kTopBarHeight);
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:animationDuration delay:animationDuration*2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [UIView animateWithDuration:animationDuration delay:animationDuration*5 options:UIViewAnimationOptionCurveEaseIn animations:^{
             errorView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             [errorView removeFromSuperview];
+            [visionView removeFromSuperview];
         }];
     }];
     
