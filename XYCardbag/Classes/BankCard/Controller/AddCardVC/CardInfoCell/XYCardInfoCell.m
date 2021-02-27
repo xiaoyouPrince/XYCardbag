@@ -383,13 +383,26 @@ static UITextField *cardTFName;
         
     }];
     
-    UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
-        
-    }];
+    UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action){}];
     
     [alert addAction:xcAction];
     [alert addAction:pzAction];
     [alert addAction:cancelAction];
+    
+    if ([sender imageForState:UIControlStateNormal]) { // 如果已经有图
+        UIAlertAction * editAction = [UIAlertAction actionWithTitle:@"编辑当前图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+            // 原图
+            UIImage *image = [sender imageForState:UIControlStateNormal];
+            
+            // 进入编辑页面
+            XYEditViewController *editVC = [XYEditViewController new];
+            UIViewController *currentVC = [XYAlbumTool getCurrentVCForView:self];
+            editVC.delegate = self;
+            editVC.image = image;
+            [currentVC presentViewController:editVC animated:YES completion:nil];
+        }];
+        [alert addAction:editAction];
+    }
     
     [rootVc presentViewController:alert animated:YES completion:nil];
 
