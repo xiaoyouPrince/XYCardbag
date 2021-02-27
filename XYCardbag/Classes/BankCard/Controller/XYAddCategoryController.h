@@ -11,5 +11,6 @@
 #import <UIKit/UIKit.h>
 
 @interface XYAddCategoryController : UIViewController
-
+/** 添加分类完成后回调 */
+@property (nonatomic, copy)         void(^didSaveNewCategoryBlock)(void);
 @end

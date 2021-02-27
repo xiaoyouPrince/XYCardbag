@@ -131,7 +131,7 @@
         if (self.nameTF.isFirstResponder) {
             [self.nameTF resignFirstResponder];
         }else{
-         [self.nameTF becomeFirstResponder];
+            [self.nameTF becomeFirstResponder];
         }
         return;
     }
@@ -147,7 +147,9 @@
     
     //2. 退出
     [self dismissViewControllerAnimated:YES completion:^{
-        
+        if (self.didSaveNewCategoryBlock) {
+            self.didSaveNewCategoryBlock();
+        }
     }];
 }
 

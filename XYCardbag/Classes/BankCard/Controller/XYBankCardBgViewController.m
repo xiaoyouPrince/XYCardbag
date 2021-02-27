@@ -157,6 +157,11 @@
     // 弹出一个添加新卡组的页面
     /// 进入对应的列表页面
     XYAddCategoryController *listVC = [XYAddCategoryController new];
+    listVC.didSaveNewCategoryBlock = ^{
+        // 更新数据源，从开始
+        self.dataArray = nil;
+        [self.tableView reloadData];
+    };
     XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
     [self presentViewController:nav animated:YES completion:nil];
 }
