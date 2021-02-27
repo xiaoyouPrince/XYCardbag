@@ -125,17 +125,12 @@
             self.navigationController.navigationBar.transform = CGAffineTransformIdentity;
             self.frontView.transform = CGAffineTransformIdentity;
             self.backView.transform = CGAffineTransformIdentity;
-//            self.backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
         }];
         
         // 1. 移除蒙版，接受用户事件
         [self.coverView removeFromSuperview];
     }else
     {
-        
-        CGFloat backOffset = slipeWidth - ScreenW/2;  // 背景移动缩放过程中偏移量
-        CGFloat backSlip = -(slipeWidth - backOffset);  // 真实的背景移动距离
-        
         [UIView animateWithDuration:0.3 animations:^{
             self.navigationController.navigationBar.transform = CGAffineTransformTranslate(self.navigationController.navigationBar.transform, slipeWidth, 0);
             self.frontView.transform = CGAffineTransformTranslate(self.frontView.transform, slipeWidth, 0);
@@ -143,13 +138,9 @@
             //self.backView.transform = CGAffineTransformScale(self.backView.transform, slipeWidth/(ScreenW - slipeWidth), ScreenH/(ScreenH - 2 * 100));
         }];
         
-        
         // 1. 添加蒙版，不再接受用户事件
         [self.frontView addSubview:self.coverView];
     }
-    
-    
-    
 }
 
 - (void)setupNav{
@@ -167,7 +158,6 @@
     bgVC.delegate = self;
     [self addChildViewController:bgVC];
     UIView *backView = bgVC.view;
-    //backView.frame = CGRectMake(slipeWidth, 100, ScreenW - slipeWidth, ScreenH - 2 * 100);
     backView.frame = CGRectMake(slipeWidth, 0, slipeWidth, ScreenH);
     backView.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.5];
     [self.view addSubview:backView];
