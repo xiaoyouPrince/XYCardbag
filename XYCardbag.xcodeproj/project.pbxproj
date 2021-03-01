@@ -33,6 +33,9 @@
 		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
 		B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */; };
 		B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */; };
+		B43DA35725ECAC350002C7E1 /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA35625ECAC350002C7E1 /* DataTool.m */; };
+		B43DA35D25ECACD60002C7E1 /* XYSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA35C25ECACD50002C7E1 /* XYSwitch.m */; };
+		B43DA36425ECBD900002C7E1 /* WechatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA36325ECBD900002C7E1 /* WechatTipCell.m */; };
 		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
 		B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */; };
 		B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */; };
@@ -107,6 +110,7 @@
 		B4BAAD1B217F3A8300F18754 /* XYChangeTagTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAAD19217F3A8300F18754 /* XYChangeTagTitleController.m */; };
 		B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BAAD1A217F3A8300F18754 /* XYChangeTagTitleController.xib */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
+		B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */; };
 		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
 		B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF1F421816864007205DA /* XYChooseDateViewController.m */; };
@@ -190,6 +194,12 @@
 		B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardModel.m; sourceTree = "<group>"; };
 		B431CFD220EE1FAA008CD732 /* XYBankCardCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardCache.h; sourceTree = "<group>"; };
 		B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardCache.m; sourceTree = "<group>"; };
+		B43DA35525ECAC350002C7E1 /* DataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
+		B43DA35625ECAC350002C7E1 /* DataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
+		B43DA35B25ECACD50002C7E1 /* XYSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSwitch.h; sourceTree = "<group>"; };
+		B43DA35C25ECACD50002C7E1 /* XYSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSwitch.m; sourceTree = "<group>"; };
+		B43DA36225ECBD900002C7E1 /* WechatTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatTipCell.h; sourceTree = "<group>"; };
+		B43DA36325ECBD900002C7E1 /* WechatTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatTipCell.m; sourceTree = "<group>"; };
 		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
 		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
 		B458EF8E2010434C00B3D0D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -317,6 +327,8 @@
 		B4BAAD1A217F3A8300F18754 /* XYChangeTagTitleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChangeTagTitleController.xib; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
+		B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingViewController.h; sourceTree = "<group>"; };
+		B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingViewController.m; sourceTree = "<group>"; };
 		B4E4D6C020EF159000A2922D /* XYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAlertView.m; sourceTree = "<group>"; };
 		B4E4D6C120EF159000A2922D /* XYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAlertView.h; sourceTree = "<group>"; };
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
@@ -496,6 +508,7 @@
 		89FB5EB81FE7C76C002AE67C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4DF24B225EC96A000F275C1 /* Setting */,
 				B4B1D5BB20F1F48100321105 /* AddCardVC */,
 				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
 				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
@@ -521,6 +534,8 @@
 		89FB5EBA1FE7C76C002AE67C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B43DA36225ECBD900002C7E1 /* WechatTipCell.h */,
+				B43DA36325ECBD900002C7E1 /* WechatTipCell.m */,
 				B431CFCB20EDBD80008CD732 /* XYToolBar.h */,
 				B431CFCC20EDBD80008CD732 /* XYToolBar.m */,
 				B4B85DEC20EFC6FF002876DA /* XYCardNormalCell.h */,
@@ -529,6 +544,8 @@
 				B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */,
 				B4BAAD0B217EB90000F18754 /* XYQRCodeTool.h */,
 				B4BAAD0C217EB90000F18754 /* XYQRCodeTool.m */,
+				B43DA35B25ECACD50002C7E1 /* XYSwitch.h */,
+				B43DA35C25ECACD50002C7E1 /* XYSwitch.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,6 +723,8 @@
 			children = (
 				B431CFD220EE1FAA008CD732 /* XYBankCardCache.h */,
 				B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */,
+				B43DA35525ECAC350002C7E1 /* DataTool.h */,
+				B43DA35625ECAC350002C7E1 /* DataTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -953,6 +972,15 @@
 				B4EFF2042181A5CA007205DA /* XYChooseRemindDayController.xib */,
 			);
 			path = AddCardVC;
+			sourceTree = "<group>";
+		};
+		B4DF24B225EC96A000F275C1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */,
+				B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		B4E4D6BF20EF159000A2922D /* XYAlertView */ = {
@@ -1206,6 +1234,7 @@
 				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
 				B461409D201835D000BE5A24 /* MJArgument.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
+				B43DA35D25ECACD60002C7E1 /* XYSwitch.m in Sources */,
 				B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */,
 				B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */,
 				B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */,
@@ -1224,6 +1253,8 @@
 				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
 				B45DB19123B334F000363A4E /* PHAssetCollection+info.m in Sources */,
 				B42505EC23AE45470037FAAB /* UIViewController+XYNavigationController.m in Sources */,
+				B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */,
+				B43DA36425ECBD900002C7E1 /* WechatTipCell.m in Sources */,
 				B45DB1C223B3602000363A4E /* JPImageresizerFrameView.m in Sources */,
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
@@ -1237,6 +1268,7 @@
 				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
+				B43DA35725ECAC350002C7E1 /* DataTool.m in Sources */,
 				89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */,
 				B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */,
 				B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */,

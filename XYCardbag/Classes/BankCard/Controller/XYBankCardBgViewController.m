@@ -19,6 +19,7 @@
 #import "XYBankCardCache.h"
 #import "XYNavigationController.h"
 #import "XYAddCategoryController.h"
+#import "XYSettingViewController.h"
 
 @interface XYBankCardBgViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -82,11 +83,18 @@
         if (item.tag == XYToolbarItemPositionLeft) {
             NSLog(@"左边item = 新添加");
             [self addNewCardSection];
+            return;
         }
         
         if (item.tag == XYToolbarItemPositiondRight) {
             NSLog(@"右边item = 设置");
-            [XYAlertView showDeveloping];
+            
+            XYSettingViewController *listVC = [XYSettingViewController new];
+            XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
+            nav.modalPresentationStyle = UIModalPresentationCustom;
+            [self presentViewController:nav animated:YES completion:nil];
+            
+            return;
         }
         
         if ([item.currentTitle isEqualToString:@"设置"]) {
