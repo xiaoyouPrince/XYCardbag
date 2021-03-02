@@ -477,6 +477,7 @@
     XYBankCardDetailController *detail = [XYBankCardDetailController new];
     detail.bankCard = self.dataArray[indexPath.row];
     UINavigationController *nav = [[NSClassFromString(@"XYNavigationController") alloc] initWithRootViewController:detail];
+    nav.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:nav animated:YES completion:nil];
     
 }

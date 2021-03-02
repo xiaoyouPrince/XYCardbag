@@ -226,8 +226,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XYAlertShowDeveloper;
-    
+    [XYAlertView showAlertOnVC:self title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];
 }
 
 
