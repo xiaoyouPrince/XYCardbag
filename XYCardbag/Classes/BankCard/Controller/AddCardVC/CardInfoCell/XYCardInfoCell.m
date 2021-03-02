@@ -284,14 +284,14 @@ static UITextField *cardTFName;
         // 申请使用权限
         PHAuthorizationStatus authStatus = [PHPhotoLibrary authorizationStatus];
         if (authStatus == PHAuthorizationStatusDenied) {
-            [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:^{
+            [XYAlertView showAlertOnVC:nil title:@"提示" message:@"请打开相册权限，否则无法选取照片!" okTitle:@"好的" Ok:^{
                 [XYAlbumTool prowerSetView];
             }];
             return;
         }
         
         if (authStatus == PHAuthorizationStatusRestricted) {
-            [XYAlertView showAlertTitle:@"提示" message:@"您的设备原因，此功能无法使用!" Ok:nil];
+            [XYAlertView showAlertOnVC:nil title:@"提示" message:@"您的设备原因，此功能无法使用!" okTitle:@"好的" Ok:nil];
             return;
         }
         
@@ -330,14 +330,16 @@ static UITextField *cardTFName;
         // 申请使用权限
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         if (authStatus == AVAuthorizationStatusDenied) {
-            [XYAlertView showAlertTitle:@"提示" message:@"请打开相机权限，否则无法选取照片!" Ok:^{
+            [XYAlertView showAlertOnVC:nil title:@"提示" message:@"请打开相机权限，否则无法选取照片!" okTitle:@"好的" Ok:^{
                 [XYAlbumTool prowerSetView];
             }];
+            
             return;
         }
         
         if (authStatus == AVAuthorizationStatusRestricted) {
-            [XYAlertView showAlertTitle:@"提示" message:@"您的设备原因，此功能无法使用!" Ok:nil];
+            
+            [XYAlertView showAlertOnVC:nil title:@"提示" message:@"您的设备原因，此功能无法使用!" okTitle:@"好的" Ok:nil];
             return;
         }
         
@@ -355,10 +357,9 @@ static UITextField *cardTFName;
                     });
                 }else
                 {
-                    
                     // 主线程操作
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [XYAlertView showAlertTitle:@"提示" message:@"请打开相册权限，否则无法选取照片!" Ok:nil];
+                        [XYAlertView showAlertOnVC:nil title:@"提示" message:@"请打开相册权限，否则无法选取照片!" okTitle:@"好的" Ok:nil];
                     });
                 }
             }];
@@ -506,9 +507,8 @@ static UITextField *cardTFName;
  需要一些小技巧
  */
 - (IBAction)needTips:(UIButton *)sender {
-    
-//    [XYAlertView showAlertTitle:@"TODO" message:@"进入一个 github 网页" Ok:nil];
-    [XYAlertView showAlertTitle:@"TODO" message:@"进入一个 github 网页" Ok:nil cancel:nil];
+
+    [XYAlertView showAlertOnVC:nil title:@"TODO" message:@"进入一个 github 网页" okTitle:@"好的" Ok:nil];
 }
 
 

@@ -318,7 +318,7 @@
  */
 - (void)showLossParamError:(NSString *)errorContent{
     
-    UIView *errorView = [[UIView alloc] initWithFrame:CGRectMake(0, -kTopBarHeight, ScreenW, kTopBarHeight)];
+    UIView *errorView = [[UIView alloc] initWithFrame:CGRectMake(0, -kNavBarHeight, ScreenW, kNavBarHeight)];
     errorView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
     
     UIButton *errorBtn = [[UIButton alloc] init];
@@ -331,7 +331,7 @@
         make.left.equalTo(errorView);
         make.right.equalTo(errorView);
         make.bottom.equalTo(errorView);
-        make.height.equalTo(@(kTopBarHeight));
+        make.height.equalTo(@(kNavBarHeight));
     }];
     
     // 中间层，iOS 导航栏层级变化，不能直接加载到 navBar 上
@@ -345,7 +345,7 @@
     // 动画
     static CGFloat const animationDuration = 0.3;
     [UIView animateWithDuration:animationDuration animations:^{
-        errorView.transform = CGAffineTransformMakeTranslation(0,kTopBarHeight);
+        errorView.transform = CGAffineTransformMakeTranslation(0,kNavBarHeight);
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:animationDuration delay:animationDuration*5 options:UIViewAnimationOptionCurveEaseIn animations:^{
             errorView.transform = CGAffineTransformIdentity;

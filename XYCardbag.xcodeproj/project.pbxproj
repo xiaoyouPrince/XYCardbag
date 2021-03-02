@@ -20,28 +20,16 @@
 		89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ED41FE7C87A002AE67C /* XYContactsListController.m */; };
 		89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */; };
 		89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EE11FE7C908002AE67C /* XYTabBar.m */; };
-		89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */; };
-		89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF21FE8EB19002AE67C /* XYCommon.m */; };
-		89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */; };
 		89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */; };
-		89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */; };
-		89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */; };
 		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
 		A22538105C049D234CD5E8D4 /* libPods-XYCardbag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC55F51D1BD12756C437BF2 /* libPods-XYCardbag.a */; };
-		B42505EC23AE45470037FAAB /* UIViewController+XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42505EB23AE45470037FAAB /* UIViewController+XYNavigationController.m */; };
 		B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B431CFC920EDB2CC008CD732 /* carIcon.png */; };
 		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
 		B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */; };
 		B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */; };
 		B43DA35725ECAC350002C7E1 /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA35625ECAC350002C7E1 /* DataTool.m */; };
-		B43DA35D25ECACD60002C7E1 /* XYSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA35C25ECACD50002C7E1 /* XYSwitch.m */; };
 		B43DA36425ECBD900002C7E1 /* WechatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA36325ECBD900002C7E1 /* WechatTipCell.m */; };
 		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
-		B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */; };
-		B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */; };
-		B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF932010434C00B3D0D3 /* FMDatabase.m */; };
-		B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF972010434C00B3D0D3 /* FMDatabasePool.m */; };
-		B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EF982010434C00B3D0D3 /* FMResultSet.m */; };
 		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
 		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
 		B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B458EFA52010864000B3D0D3 /* XYContactsDetailController.xib */; };
@@ -87,15 +75,6 @@
 		B45DB1C323B3602000363A4E /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB1BD23B3601F00363A4E /* JPImageresizerConfigure.m */; };
 		B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46103B82179798100C99D99 /* XYAddCustomTagCell.m */; };
 		B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */; };
-		B4614096201835D000BE5A24 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614083201835D000BE5A24 /* MJMember.m */; };
-		B4614097201835D000BE5A24 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614086201835D000BE5A24 /* NSObject+MJKeyValue.m */; };
-		B4614098201835D000BE5A24 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614087201835D000BE5A24 /* MJIvar.m */; };
-		B4614099201835D000BE5A24 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614089201835D000BE5A24 /* MJType.m */; };
-		B461409A201835D000BE5A24 /* MJTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B461408A201835D000BE5A24 /* MJTypeEncoding.m */; };
-		B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B461408B201835D000BE5A24 /* NSObject+MJCoding.m */; };
-		B461409C201835D000BE5A24 /* MJMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B461408E201835D000BE5A24 /* MJMethod.m */; };
-		B461409D201835D000BE5A24 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = B461408F201835D000BE5A24 /* MJArgument.m */; };
-		B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4614095201835D000BE5A24 /* NSObject+MJMember.m */; };
 		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
 		B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */; };
 		B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */; };
@@ -111,7 +90,6 @@
 		B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BAAD1A217F3A8300F18754 /* XYChangeTagTitleController.xib */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */; };
-		B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C020EF159000A2922D /* XYAlertView.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
 		B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF1F421816864007205DA /* XYChooseDateViewController.m */; };
 		B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */; };
@@ -171,22 +149,9 @@
 		89FB5EE01FE7C908002AE67C /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
 		89FB5EE11FE7C908002AE67C /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
 		89FB5EEB1FE8BAF1002AE67C /* XYCardbag.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardbag.pch; sourceTree = "<group>"; };
-		89FB5EEC1FE8CF9E002AE67C /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
-		89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
-		89FB5EF11FE8EB19002AE67C /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
-		89FB5EF21FE8EB19002AE67C /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
-		89FB5EF51FE8EB19002AE67C /* UIBarButtonItem+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYAdd.h"; sourceTree = "<group>"; };
-		89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYAdd.m"; sourceTree = "<group>"; };
 		89FB5EF71FE8EB19002AE67C /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
 		89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
-		89FB5EF91FE8EB19002AE67C /* UITextField+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XYAdd.h"; sourceTree = "<group>"; };
-		89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XYAdd.m"; sourceTree = "<group>"; };
-		89FB5EFB1FE8EB19002AE67C /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
-		89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
-		89FB5EFD1FE8EB19002AE67C /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
 		89FB5F031FE8EB64002AE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B42505EA23AE45470037FAAB /* UIViewController+XYNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XYNavigationController.h"; sourceTree = "<group>"; };
-		B42505EB23AE45470037FAAB /* UIViewController+XYNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYNavigationController.m"; sourceTree = "<group>"; };
 		B431CFC920EDB2CC008CD732 /* carIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon.png; sourceTree = "<group>"; };
 		B431CFCB20EDBD80008CD732 /* XYToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolBar.h; sourceTree = "<group>"; };
 		B431CFCC20EDBD80008CD732 /* XYToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYToolBar.m; sourceTree = "<group>"; };
@@ -196,24 +161,10 @@
 		B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBankCardCache.m; sourceTree = "<group>"; };
 		B43DA35525ECAC350002C7E1 /* DataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
 		B43DA35625ECAC350002C7E1 /* DataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
-		B43DA35B25ECACD50002C7E1 /* XYSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSwitch.h; sourceTree = "<group>"; };
-		B43DA35C25ECACD50002C7E1 /* XYSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSwitch.m; sourceTree = "<group>"; };
 		B43DA36225ECBD900002C7E1 /* WechatTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatTipCell.h; sourceTree = "<group>"; };
 		B43DA36325ECBD900002C7E1 /* WechatTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatTipCell.m; sourceTree = "<group>"; };
 		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
 		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
-		B458EF8E2010434C00B3D0D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		B458EF902010434C00B3D0D3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		B458EF912010434C00B3D0D3 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		B458EF932010434C00B3D0D3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		B458EF942010434C00B3D0D3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		B458EF952010434C00B3D0D3 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		B458EF962010434C00B3D0D3 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		B458EF972010434C00B3D0D3 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		B458EF982010434C00B3D0D3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		B458EF992010434C00B3D0D3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDBTool.h; sourceTree = "<group>"; };
 		B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContactsDBTool.m; sourceTree = "<group>"; };
 		B458EFA32010864000B3D0D3 /* XYContactsDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDetailController.h; sourceTree = "<group>"; };
@@ -283,25 +234,6 @@
 		B46103B72179798100C99D99 /* XYAddCustomTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCustomTagCell.h; sourceTree = "<group>"; };
 		B46103B82179798100C99D99 /* XYAddCustomTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCustomTagCell.m; sourceTree = "<group>"; };
 		B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCustomTagCell.xib; sourceTree = "<group>"; };
-		B4614083201835D000BE5A24 /* MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMember.m; sourceTree = "<group>"; };
-		B4614084201835D000BE5A24 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
-		B4614085201835D000BE5A24 /* MJMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMethod.h; sourceTree = "<group>"; };
-		B4614086201835D000BE5A24 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		B4614087201835D000BE5A24 /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
-		B4614088201835D000BE5A24 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
-		B4614089201835D000BE5A24 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
-		B461408A201835D000BE5A24 /* MJTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTypeEncoding.m; sourceTree = "<group>"; };
-		B461408B201835D000BE5A24 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
-		B461408C201835D000BE5A24 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
-		B461408D201835D000BE5A24 /* MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMember.h; sourceTree = "<group>"; };
-		B461408E201835D000BE5A24 /* MJMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMethod.m; sourceTree = "<group>"; };
-		B461408F201835D000BE5A24 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
-		B4614090201835D000BE5A24 /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
-		B4614091201835D000BE5A24 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
-		B4614092201835D000BE5A24 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		B4614093201835D000BE5A24 /* MJTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTypeEncoding.h; sourceTree = "<group>"; };
-		B4614094201835D000BE5A24 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
-		B4614095201835D000BE5A24 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
 		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
 		B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoCell.h; sourceTree = "<group>"; };
@@ -329,11 +261,8 @@
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
 		B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingViewController.h; sourceTree = "<group>"; };
 		B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingViewController.m; sourceTree = "<group>"; };
-		B4E4D6C020EF159000A2922D /* XYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAlertView.m; sourceTree = "<group>"; };
-		B4E4D6C120EF159000A2922D /* XYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAlertView.h; sourceTree = "<group>"; };
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
 		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
-		B4ED5947217430D8005C7929 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
 		B4EFF1F321816864007205DA /* XYChooseDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChooseDateViewController.h; sourceTree = "<group>"; };
 		B4EFF1F421816864007205DA /* XYChooseDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChooseDateViewController.m; sourceTree = "<group>"; };
 		B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseDateViewController.xib; sourceTree = "<group>"; };
@@ -544,8 +473,6 @@
 				B4FF21F5217DEEA600EE7C12 /* XYQrCodeView.m */,
 				B4BAAD0B217EB90000F18754 /* XYQRCodeTool.h */,
 				B4BAAD0C217EB90000F18754 /* XYQRCodeTool.m */,
-				B43DA35B25ECACD50002C7E1 /* XYSwitch.h */,
-				B43DA35C25ECACD50002C7E1 /* XYSwitch.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -665,10 +592,6 @@
 			children = (
 				89FB5EDC1FE7C8E6002AE67C /* XYTabBarController.h */,
 				89FB5EDD1FE7C8E6002AE67C /* XYTabBarController.m */,
-				89FB5EEC1FE8CF9E002AE67C /* XYNavigationController.h */,
-				89FB5EED1FE8CF9E002AE67C /* XYNavigationController.m */,
-				B42505EA23AE45470037FAAB /* UIViewController+XYNavigationController.h */,
-				B42505EB23AE45470037FAAB /* UIViewController+XYNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -685,10 +608,8 @@
 		89FB5EEF1FE8EB19002AE67C /* XYKit */ = {
 			isa = PBXGroup;
 			children = (
-				B4E4D6BF20EF159000A2922D /* XYAlertView */,
 				89FB5EF01FE8EB19002AE67C /* Base */,
 				89FB5EF41FE8EB19002AE67C /* UIKit */,
-				89FB5EFD1FE8EB19002AE67C /* XYKit.h */,
 			);
 			path = XYKit;
 			sourceTree = "<group>";
@@ -696,9 +617,6 @@
 		89FB5EF01FE8EB19002AE67C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B4ED5947217430D8005C7929 /* XYKitMacro.h */,
-				89FB5EF11FE8EB19002AE67C /* XYCommon.h */,
-				89FB5EF21FE8EB19002AE67C /* XYCommon.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -706,14 +624,8 @@
 		89FB5EF41FE8EB19002AE67C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				89FB5EF51FE8EB19002AE67C /* UIBarButtonItem+XYAdd.h */,
-				89FB5EF61FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m */,
 				89FB5EF71FE8EB19002AE67C /* UIImage+XYAdd.h */,
 				89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */,
-				89FB5EF91FE8EB19002AE67C /* UITextField+XYAdd.h */,
-				89FB5EFA1FE8EB19002AE67C /* UITextField+XYAdd.m */,
-				89FB5EFB1FE8EB19002AE67C /* UIView+XYAdd.h */,
-				89FB5EFC1FE8EB19002AE67C /* UIView+XYAdd.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -733,29 +645,8 @@
 			isa = PBXGroup;
 			children = (
 				B45DB17A23B309F400363A4E /* SVProgressHUD */,
-				B4614082201835D000BE5A24 /* MJExtension */,
-				B458EF8D2010434C00B3D0D3 /* fmdb */,
 			);
 			path = Venders;
-			sourceTree = "<group>";
-		};
-		B458EF8D2010434C00B3D0D3 /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				B458EF8E2010434C00B3D0D3 /* FMDatabase.h */,
-				B458EF8F2010434C00B3D0D3 /* FMDatabaseQueue.m */,
-				B458EF902010434C00B3D0D3 /* FMResultSet.h */,
-				B458EF912010434C00B3D0D3 /* FMDatabasePool.h */,
-				B458EF922010434C00B3D0D3 /* FMDatabaseAdditions.m */,
-				B458EF932010434C00B3D0D3 /* FMDatabase.m */,
-				B458EF942010434C00B3D0D3 /* FMDatabaseQueue.h */,
-				B458EF952010434C00B3D0D3 /* FMDB.h */,
-				B458EF962010434C00B3D0D3 /* FMDatabaseAdditions.h */,
-				B458EF972010434C00B3D0D3 /* FMDatabasePool.m */,
-				B458EF982010434C00B3D0D3 /* FMResultSet.m */,
-				B458EF992010434C00B3D0D3 /* Info.plist */,
-			);
-			path = fmdb;
 			sourceTree = "<group>";
 		};
 		B45B18962011D04B00359427 /* NewContact */ = {
@@ -893,32 +784,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B4614082201835D000BE5A24 /* MJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				B4614083201835D000BE5A24 /* MJMember.m */,
-				B4614084201835D000BE5A24 /* MJArgument.h */,
-				B4614085201835D000BE5A24 /* MJMethod.h */,
-				B4614086201835D000BE5A24 /* NSObject+MJKeyValue.m */,
-				B4614087201835D000BE5A24 /* MJIvar.m */,
-				B4614088201835D000BE5A24 /* NSObject+MJMember.h */,
-				B4614089201835D000BE5A24 /* MJType.m */,
-				B461408A201835D000BE5A24 /* MJTypeEncoding.m */,
-				B461408B201835D000BE5A24 /* NSObject+MJCoding.m */,
-				B461408C201835D000BE5A24 /* MJExtension.h */,
-				B461408D201835D000BE5A24 /* MJMember.h */,
-				B461408E201835D000BE5A24 /* MJMethod.m */,
-				B461408F201835D000BE5A24 /* MJArgument.m */,
-				B4614090201835D000BE5A24 /* MJIvar.h */,
-				B4614091201835D000BE5A24 /* NSObject+MJKeyValue.h */,
-				B4614092201835D000BE5A24 /* NSObject+MJCoding.h */,
-				B4614093201835D000BE5A24 /* MJTypeEncoding.h */,
-				B4614094201835D000BE5A24 /* MJType.h */,
-				B4614095201835D000BE5A24 /* NSObject+MJMember.m */,
-			);
-			path = MJExtension;
-			sourceTree = "<group>";
-		};
 		B4A14D8D20F2FD7B0086CCBB /* CardInfoCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -981,15 +846,6 @@
 				B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		B4E4D6BF20EF159000A2922D /* XYAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				B4E4D6C020EF159000A2922D /* XYAlertView.m */,
-				B4E4D6C120EF159000A2922D /* XYAlertView.h */,
-			);
-			path = XYAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1188,10 +1044,56 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-XYCardbag/Pods-XYCardbag-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/XYInfomationSection/XYInfomationSection.bundle",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XBUGTool/XBUGConfigView.xib",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XBUGTool/xConfig.plist",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYActionRecord/EventRecord.plist",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYActionRecord/PageRecord.plist",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/gjjNew_changeCamera@2x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/idCardGuoHui@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photoClose@2x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photograph@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photograph_Select@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photo_flash_allLight.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photo_flash_auto.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photo_flash_off.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYControllers/XYTakePhotoController/cameraIcon/photo_flash_on.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYKit/UIKit/ColorConfig.plist",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYPopover/XYPopoverViewController.xib",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYCheckBox/CheckBox.bundle/icon_box_choose@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYCheckBox/CheckBox.bundle/icon_box_unchoose@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYChooseOrderTimeView/XYChooseOrderTimeView.xib",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYStarView/icon_star@2x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYStarView/icon_star@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYStarView/icon_star_bg@2x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYStarView/icon_star_bg@3x.png",
+				"${PODS_ROOT}/../../myApp/myApp/XYTools/XYViews/XYCheckBox/CheckBox.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XYInfomationSection.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XBUGConfigView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/xConfig.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EventRecord.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PageRecord.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gjjNew_changeCamera@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idCardGuoHui@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photoClose@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photograph@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photograph_Select@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_flash_allLight.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_flash_auto.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_flash_off.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_flash_on.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ColorConfig.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XYPopoverViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_box_choose@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_box_unchoose@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XYChooseOrderTimeView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_star@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_star@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_star_bg@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_star_bg@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CheckBox.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1206,53 +1108,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45DB17423B3020900363A4E /* XYAlbumTool.m in Sources */,
-				B461409B201835D000BE5A24 /* NSObject+MJCoding.m in Sources */,
 				B4EFF20A2181A974007205DA /* XYChooseDayCell.m in Sources */,
 				B4BAAD1B217F3A8300F18754 /* XYChangeTagTitleController.m in Sources */,
-				B4614096201835D000BE5A24 /* MJMember.m in Sources */,
 				B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */,
 				B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */,
 				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
 				B45DB1C123B3602000363A4E /* UIImage+JPExtension.m in Sources */,
-				B4E4D6C220EF159000A2922D /* XYAlertView.m in Sources */,
-				B461409C201835D000BE5A24 /* MJMethod.m in Sources */,
-				89FB5EEE1FE8CF9E002AE67C /* XYNavigationController.m in Sources */,
 				B4B1D5C120F2761000321105 /* XYAddCardDetailController.m in Sources */,
 				89FB5EDF1FE7C8E6002AE67C /* XYTabBarController.m in Sources */,
 				89FB5ECF1FE7C85D002AE67C /* XYIdentitiesController.m in Sources */,
 				B45B18A02011D92900359427 /* XYNewContactInfoCell.m in Sources */,
 				B45DB17123B2FB5800363A4E /* XYAlbumViewController.m in Sources */,
-				B458EF9C2010434C00B3D0D3 /* FMDatabase.m in Sources */,
-				B458EF9D2010434C00B3D0D3 /* FMDatabasePool.m in Sources */,
 				B4A6CA46217DBE890069AD8E /* XYBankCardDetailController.m in Sources */,
-				B4614098201835D000BE5A24 /* MJIvar.m in Sources */,
 				B45DB19A23B3581C00363A4E /* XYEditViewController.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
 				B45DB17823B3056300363A4E /* XYAlbumGroupViewController.m in Sources */,
 				B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */,
 				B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */,
-				89FB5F011FE8EB19002AE67C /* UITextField+XYAdd.m in Sources */,
-				B461409D201835D000BE5A24 /* MJArgument.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
-				B43DA35D25ECACD60002C7E1 /* XYSwitch.m in Sources */,
-				B458EF9E2010434C00B3D0D3 /* FMResultSet.m in Sources */,
 				B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */,
 				B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */,
 				B4A14D9620F302EF0086CCBB /* XYCardInfoModel.m in Sources */,
 				B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */,
 				89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */,
-				89FB5EFF1FE8EB19002AE67C /* UIBarButtonItem+XYAdd.m in Sources */,
 				B45DB18D23B30E4100363A4E /* AlbumGroupTableViewCell.m in Sources */,
 				B4EFF2052181A5CA007205DA /* XYChooseRemindDayController.m in Sources */,
 				B45DB1C323B3602000363A4E /* JPImageresizerConfigure.m in Sources */,
-				89FB5F021FE8EB19002AE67C /* UIView+XYAdd.m in Sources */,
 				B45DB18723B30B8200363A4E /* XYAlbumContentViewController.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
 				B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */,
 				B4ABDE4620ED1B1C00E74941 /* XYBankCardBgViewController.m in Sources */,
 				B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */,
 				B45DB19123B334F000363A4E /* PHAssetCollection+info.m in Sources */,
-				B42505EC23AE45470037FAAB /* UIViewController+XYNavigationController.m in Sources */,
 				B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */,
 				B43DA36425ECBD900002C7E1 /* WechatTipCell.m in Sources */,
 				B45DB1C223B3602000363A4E /* JPImageresizerFrameView.m in Sources */,
@@ -1265,24 +1152,17 @@
 				B45DB1C023B3602000363A4E /* JPImageresizerView.m in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
 				B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */,
-				89FB5EFE1FE8EB19002AE67C /* XYCommon.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
 				89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */,
 				B43DA35725ECAC350002C7E1 /* DataTool.m in Sources */,
 				89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */,
 				B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */,
-				B458EF9B2010434C00B3D0D3 /* FMDatabaseAdditions.m in Sources */,
 				B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */,
 				B45DB18123B309F400363A4E /* SVProgressHUD.m in Sources */,
-				B4614099201835D000BE5A24 /* MJType.m in Sources */,
-				B461409E201835D000BE5A24 /* NSObject+MJMember.m in Sources */,
 				B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
 				B45DB19523B33C8100363A4E /* ImageCollectionViewCell.m in Sources */,
-				B4614097201835D000BE5A24 /* NSObject+MJKeyValue.m in Sources */,
 				B4A14D9B20F35F6A0086CCBB /* XYAddNewCardTagController.m in Sources */,
-				B461409A201835D000BE5A24 /* MJTypeEncoding.m in Sources */,
-				B458EF9A2010434C00B3D0D3 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

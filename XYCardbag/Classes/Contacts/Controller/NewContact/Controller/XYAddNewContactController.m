@@ -106,7 +106,7 @@
 
 - (UIBarButtonItem *)leftItem{
     
-    UIBarButtonItem *item = [UIBarButtonItem backItemWithimage:nil highImage:nil target:self action:@selector(cancelAndDissmiss) title:@"cancel"];
+    UIBarButtonItem *item = [UIBarButtonItem xy_itemWithTarget:self action:@selector(cancelAndDissmiss) title:@"cancel"];
     return item;
 }
 

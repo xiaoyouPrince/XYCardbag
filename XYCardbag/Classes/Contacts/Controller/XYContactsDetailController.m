@@ -20,7 +20,7 @@
     
     self.title = self.conName;
     self.clearsSelectionOnViewWillAppear = NO;
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem backItemWithimage:nil highImage:nil target:self action:@selector(changeViewToEidt) title:@"Edit"];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(changeViewToEidt) title:@"Edit"];
     
     
     if (self.isAddNew) {

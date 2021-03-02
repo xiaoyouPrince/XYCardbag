@@ -279,7 +279,7 @@
  ToolBar 左侧按钮点击进入help
  */
 - (void)gotoHelpPage{
-    [XYAlertView showAlertTitle:@"亲爱的" message:@"有事打电话" Ok:nil];
+    [XYAlertView showAlertOnVC:self title:@"提示" message:@"进入帮助页面，github 网页？" okTitle:@"好的" Ok:nil];
     
     [self reloadPageDataAndRefresh];
 }

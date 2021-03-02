@@ -367,14 +367,12 @@ NSString * const BankCardDidChangedNotification = @"BankCardDidChangedNotificati
  移除当前卡片
  */
 - (void)deleteThisCard{
-    
-    [XYAlertView showAlertTitle:@"提示" message:@"卡片移除，不可恢复，请再次确认" Ok:^{
         
-        [XYBankCardCache deleteCard:self.model forSection:nil];
-        
-        [kNotificationCenter postNotificationName:BankCardDidChangedNotification object:nil];
-        
-    } cancel:nil];
+    [XYAlertView showAlertOnVC:nil title:@"提示" message:@"卡片移除，不可恢复，请再次确认" okTitle:@"确定" okAction:^{
+            
+            [XYBankCardCache deleteCard:self.model forSection:nil];
+            [kNotificationCenter postNotificationName:BankCardDidChangedNotification object:nil];
+    } cancelTitle:@"取消" cancelAction:nil];
 }
 
 @end

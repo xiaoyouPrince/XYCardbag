@@ -67,8 +67,7 @@ static NSString *cellID = @"CellID";
 
 
 - (UIBarButtonItem *)addItem{
-    
-    UIBarButtonItem *item = [UIBarButtonItem backItemWithimage:nil highImage:nil target:self action:@selector(addContact) title:@"Add"];
+    UIBarButtonItem *item = [UIBarButtonItem xy_itemWithTarget:self action:@selector(addContact) title:@"Add"];
     return item;
 }
 

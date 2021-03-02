@@ -8,7 +8,6 @@
 
 #import "XYSettingViewController.h"
 #import "DataTool.h"
-#import "UIBarButtonItem+XYAdd.h"
 
 @interface XYSettingViewController ()
 

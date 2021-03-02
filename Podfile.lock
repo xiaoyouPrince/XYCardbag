@@ -1,20 +1,56 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
+  - MJExtension (3.2.4)
   - XYInfomationSection (1.0.3):
     - Masonry
+  - XYKit (0.1.0):
+    - AFNetworking
+    - FMDB
+    - Masonry
+    - MJExtension
 
 DEPENDENCIES:
   - XYInfomationSection
+  - XYKit (from `/Users/quxiaoyou/Documents/GitHub/myApp`)
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - FMDB
     - Masonry
+    - MJExtension
     - XYInfomationSection
 
-SPEC CHECKSUMS:
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  XYInfomationSection: 78adfd5a3e6b2939c5532f1500a90d52af24a668
+EXTERNAL SOURCES:
+  XYKit:
+    :path: "/Users/quxiaoyou/Documents/GitHub/myApp"
 
-PODFILE CHECKSUM: 4ae0a0e5f58b67b7c77410f16739e245d47d77d8
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+  XYInfomationSection: 78adfd5a3e6b2939c5532f1500a90d52af24a668
+  XYKit: ed0b610604a1cbfc0edce6efa677b5034416c89b
+
+PODFILE CHECKSUM: 0feca297d43af7a06f9cc1779688712eeba223e0
 
 COCOAPODS: 1.10.1

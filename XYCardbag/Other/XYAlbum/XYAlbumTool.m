@@ -22,17 +22,17 @@
         if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
             [application openURL:setUrl options:@{} completionHandler:^(BOOL success) {
                 if (!success) {
-                    [XYAlertView showAlertTitle:@"提示" message:@"无法跳转到设置，请自行前往。" Ok:nil];
+                    [XYAlertView showAlertOnVC:nil title:@"提示" message:@"无法跳转到设置，请自行前往。" okTitle:@"好的" Ok:nil];
                 }
             }];
         }else{
-            [XYAlertView showAlertTitle:@"提示" message:@"无法跳转到设置，请自行前往。" Ok:nil];
+            [XYAlertView showAlertOnVC:nil title:@"提示" message:@"无法跳转到设置，请自行前往。" okTitle:@"好的" Ok:nil];
         }
     }else{
         if ([application canOpenURL:setUrl]) {
             [application openURL:setUrl];
         }else{
-            [XYAlertView showAlertTitle:@"提示" message:@"无法跳转到设置，请自行前往。" Ok:nil];
+            [XYAlertView showAlertOnVC:nil title:@"提示" message:@"无法跳转到设置，请自行前往。" okTitle:@"好的" Ok:nil];
         }
     }
 }
