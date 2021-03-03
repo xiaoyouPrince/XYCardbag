@@ -18,7 +18,6 @@
 #import "UIViewController+XYNavigationController.h"
 #import "SVProgressHUD.h"
 
-
-#define ABC [UIColor redColor];
+#import "XYSettingKeys.h"
 
 #endif /* XYCardbag_pch */

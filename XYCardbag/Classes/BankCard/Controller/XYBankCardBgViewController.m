@@ -87,7 +87,7 @@
         }
         
         if (item.tag == XYToolbarItemPositiondRight) {
-            NSLog(@"右边item = 设置");
+            NSLog(@"右边item = 进入设置页面");
             
             XYSettingViewController *listVC = [XYSettingViewController new];
             XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];

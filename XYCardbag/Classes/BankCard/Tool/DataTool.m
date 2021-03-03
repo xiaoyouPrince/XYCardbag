@@ -8,6 +8,7 @@
 
 #import "DataTool.h"
 #import "XYSwitch.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @implementation DataTool
 
@@ -35,7 +36,7 @@
         @{
             @"imageName": @"",
             @"title": @"密码",
-            @"titleKey": @"CommonViewController",
+            @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -118,6 +119,168 @@
     ];
     
     return @[section1,section2];
+}
+
+
++ (NSArray *)settingPasswordData
+{
+    NSArray *section1 = @[
+        @{
+            @"title": @"密码重置服务",
+            @"titleColor": UIColor.grayColor,
+            @"titleFont": [UIFont systemFontOfSize:14],
+            @"type": @3,
+            @"customCellClass": @"WechatTipCell",
+        },
+        @{
+            @"imageName": @"",
+            @"title": @"启用密码重置服务",
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+        },
+        @{
+            @"title": @"如果你忘记了密码，可以通过此服务来找回密码",
+            @"titleColor": UIColor.grayColor,
+            @"titleFont": [UIFont systemFontOfSize:14],
+            @"type": @3,
+            @"customCellClass": @"WechatTipCell",
+        }
+    ];
+    
+    XYSwitch *swith1 = [XYSwitch new];
+    swith1.settingKey = SettingKey_TouchID;
+    swith1.valueChangedHandler = ^(BOOL isOn) {
+        [kNotificationCenter postNotificationName:SettingKey_TouchID object:nil];
+    };
+    swith1.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith1.settingKey];
+    NSArray *section2 = @[
+        @{
+            @"title": @"Touch ID",
+            @"titleColor": UIColor.grayColor,
+            @"titleFont": [UIFont systemFontOfSize:14],
+            @"type": @3,
+            @"customCellClass": @"WechatTipCell",
+        },
+        @{
+            @"imageName": @"",
+            @"title": @"通过指纹解锁应用",
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+            @"accessoryView": swith1
+        },
+    ];
+    
+    XYSwitch *swith2 = [XYSwitch new];
+    swith2.settingKey = SettingKey_EnablePassword;
+    swith2.valueChangedHandler = ^(BOOL isOn) {
+        [kNotificationCenter postNotificationName:SettingKey_EnablePassword object:nil];
+    };
+    swith2.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith2.settingKey];
+    NSArray *section3 = @[
+        @{
+            @"title": @"访问密码",
+            @"titleColor": UIColor.grayColor,
+            @"titleFont": [UIFont systemFontOfSize:14],
+            @"type": @3,
+            @"customCellClass": @"WechatTipCell",
+        },
+        @{
+            @"imageName": @"",
+            @"title": @"启用密码",
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+            @"accessoryView": swith2
+        },
+        @{
+            @"imageName": @"",
+            @"title": @"设置访问密码",
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+        },
+        @{
+            @"title": @"如果您想使用新的手势密码锁，请先移除现有密码，然后再重新设置密码",
+            @"titleColor": UIColor.grayColor,
+            @"titleFont": [UIFont systemFontOfSize:14],
+            @"type": @3,
+            @"customCellClass": @"WechatTipCell",
+        }
+    ];
+    
+    NSArray *section4 = @[
+        @{
+            @"imageName": @"",
+            @"title": @"需要密码",
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+        }
+    ];
+    
+    XYSwitch *swith3 = [XYSwitch new];
+    swith3.settingKey = @"音效";
+    swith3.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith3.settingKey];
+    NSArray *section5 = @[
+        @{
+            @"imageName": @"",
+            @"title": @"抹掉数据",
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+            @"accessoryView": swith3
+        },
+        @{
+            @"title": @"若连续10次输入错误密码，系统将抹掉所有卡片数据",
+            @"titleColor": UIColor.grayColor,
+            @"titleFont": [UIFont systemFontOfSize:14],
+            @"type": @3,
+            @"customCellClass": @"WechatTipCell",
+        }
+    ];
+    
+    BOOL enablePwd = [kUserDefaults boolForKey:SettingKey_EnablePassword];
+    if (enablePwd) {
+        return @[section1, section2, section3, section4, section5];
+    }else
+    {
+        NSArray *section6 = @[
+            @{
+                @"title": @"访问密码",
+                @"titleColor": UIColor.grayColor,
+                @"titleFont": [UIFont systemFontOfSize:14],
+                @"type": @3,
+                @"customCellClass": @"WechatTipCell",
+            },
+            @{
+                @"imageName": @"",
+                @"title": @"启用密码",
+                @"titleKey": @"XYPasswordSettingController",
+                @"value": @"",
+                @"type": @1,
+                @"valueCode": @"",
+                @"cellHeight": @50,
+                @"accessoryView": swith2
+            }
+        ];
+        
+        return @[section1, section6];
+    }
+    
 }
 
 @end

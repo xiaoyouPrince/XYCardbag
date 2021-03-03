@@ -12,7 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DataTool : NSObject
 
+/// 设置页面数据
 + (NSArray *)settingData;
+
+/// 密码设置页面数据
++ (NSArray *)settingPasswordData;
+
+
 
 @end
 

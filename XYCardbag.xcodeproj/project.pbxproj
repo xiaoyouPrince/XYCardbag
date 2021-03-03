@@ -29,6 +29,8 @@
 		B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */; };
 		B43DA35725ECAC350002C7E1 /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA35625ECAC350002C7E1 /* DataTool.m */; };
 		B43DA36425ECBD900002C7E1 /* WechatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA36325ECBD900002C7E1 /* WechatTipCell.m */; };
+		B43DA53025EE79020002C7E1 /* XYPasswordSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */; };
+		B43DA53D25EEAC000002C7E1 /* XYSettingKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */; };
 		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
 		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
 		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
@@ -163,6 +165,10 @@
 		B43DA35625ECAC350002C7E1 /* DataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
 		B43DA36225ECBD900002C7E1 /* WechatTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatTipCell.h; sourceTree = "<group>"; };
 		B43DA36325ECBD900002C7E1 /* WechatTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatTipCell.m; sourceTree = "<group>"; };
+		B43DA52E25EE79020002C7E1 /* XYPasswordSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPasswordSettingController.h; sourceTree = "<group>"; };
+		B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPasswordSettingController.m; sourceTree = "<group>"; };
+		B43DA53B25EEAC000002C7E1 /* XYSettingKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingKeys.h; sourceTree = "<group>"; };
+		B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingKeys.m; sourceTree = "<group>"; };
 		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
 		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
 		B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDBTool.h; sourceTree = "<group>"; };
@@ -844,6 +850,10 @@
 			children = (
 				B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */,
 				B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */,
+				B43DA52E25EE79020002C7E1 /* XYPasswordSettingController.h */,
+				B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */,
+				B43DA53B25EEAC000002C7E1 /* XYSettingKeys.h */,
+				B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1126,6 +1136,7 @@
 				B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */,
 				B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */,
 				89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */,
+				B43DA53D25EEAC000002C7E1 /* XYSettingKeys.m in Sources */,
 				B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */,
 				B45B18A52011EA2800359427 /* XYNewContactPhoneCell.m in Sources */,
 				B4A14D9620F302EF0086CCBB /* XYCardInfoModel.m in Sources */,
@@ -1134,6 +1145,7 @@
 				B45DB18D23B30E4100363A4E /* AlbumGroupTableViewCell.m in Sources */,
 				B4EFF2052181A5CA007205DA /* XYChooseRemindDayController.m in Sources */,
 				B45DB1C323B3602000363A4E /* JPImageresizerConfigure.m in Sources */,
+				B43DA53025EE79020002C7E1 /* XYPasswordSettingController.m in Sources */,
 				B45DB18723B30B8200363A4E /* XYAlbumContentViewController.m in Sources */,
 				89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */,
 				B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */,

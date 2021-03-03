@@ -17,6 +17,7 @@
 #import "XYCardNormalCell.h"
 #import "XYAddCardController.h"
 #import "XYBankCardDetailController.h"
+#import "XYSettingViewController.h"
 
 @interface XYBankCardController ()<BankCardBgVCDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -279,9 +280,14 @@
  ToolBar 左侧按钮点击进入help
  */
 - (void)gotoHelpPage{
-    [XYAlertView showAlertOnVC:self title:@"提示" message:@"进入帮助页面，github 网页？" okTitle:@"好的" Ok:nil];
+//    [XYAlertView showAlertOnVC:self title:@"提示" message:@"进入帮助页面，github 网页？" okTitle:@"好的" Ok:nil];
+//    [self reloadPageDataAndRefresh];
     
-    [self reloadPageDataAndRefresh];
+    XYSettingViewController *listVC = [XYSettingViewController new];
+    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
+    nav.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:nav animated:YES completion:nil];
+
 }
 
 /**
