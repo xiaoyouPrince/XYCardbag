@@ -150,6 +150,14 @@
         }
     ];
     
+    
+    NSString *touchIDorFaceID;
+    if (XYAuthenticationTool.authType == XYAuthTypeTouchID) {
+        touchIDorFaceID = @"Touch ID";
+    }else if(XYAuthenticationTool.authType == XYAuthTypeFaceID){
+        touchIDorFaceID = @"Face ID";
+    }
+    
     XYSwitch *swith1 = [XYSwitch new];
     swith1.settingKey = SettingKey_TouchID;
     swith1.valueChangedHandler = ^(BOOL isOn) {
@@ -158,7 +166,7 @@
     swith1.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith1.settingKey];
     NSArray *section2 = @[
         @{
-            @"title": @"Touch ID",
+            @"title": touchIDorFaceID,
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -166,7 +174,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"通过指纹解锁应用",
+            @"title": [NSString stringWithFormat:@"通过 %@ 解锁应用",touchIDorFaceID],
             @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,

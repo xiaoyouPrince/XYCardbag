@@ -23,7 +23,6 @@
 		89FB5F001FE8EB19002AE67C /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */; };
 		89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5F031FE8EB64002AE67C /* Assets.xcassets */; };
 		A22538105C049D234CD5E8D4 /* libPods-XYCardbag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC55F51D1BD12756C437BF2 /* libPods-XYCardbag.a */; };
-		B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B431CFC920EDB2CC008CD732 /* carIcon.png */; };
 		B431CFCD20EDBD80008CD732 /* XYToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCC20EDBD80008CD732 /* XYToolBar.m */; };
 		B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFCF20EE1E34008CD732 /* XYBankCardModel.m */; };
 		B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */; };
@@ -154,7 +153,6 @@
 		89FB5EF71FE8EB19002AE67C /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
 		89FB5EF81FE8EB19002AE67C /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
 		89FB5F031FE8EB64002AE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B431CFC920EDB2CC008CD732 /* carIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon.png; sourceTree = "<group>"; };
 		B431CFCB20EDBD80008CD732 /* XYToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolBar.h; sourceTree = "<group>"; };
 		B431CFCC20EDBD80008CD732 /* XYToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYToolBar.m; sourceTree = "<group>"; };
 		B431CFCE20EE1E34008CD732 /* XYBankCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBankCardModel.h; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 			isa = PBXGroup;
 			children = (
 				B431CFD120EE1F88008CD732 /* Tool */,
-				B431CFC920EDB2CC008CD732 /* carIcon.png */,
 				89FB5EB91FE7C76C002AE67C /* Model */,
 				89FB5EB81FE7C76C002AE67C /* Controller */,
 				89FB5EBA1FE7C76C002AE67C /* View */,
@@ -978,7 +975,6 @@
 				B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
 				B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */,
-				B431CFCA20EDB2CC008CD732 /* carIcon.png in Resources */,
 				B45DB1A923B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@2x.png in Resources */,
 				B45DB1AC23B35AA900363A4E /* sr_eidt_reset_icon@3x.png in Resources */,
 				B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */,

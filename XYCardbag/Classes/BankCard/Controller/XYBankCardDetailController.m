@@ -50,8 +50,6 @@
 }
 
 - (void)rightItemClick:(UIBarButtonItem *)item{
-    
-//    XYAlertShowDeveloper;
     XYAlertShowMessage(@"\n正在开发中...");
 }
 
