@@ -135,7 +135,6 @@
         @{
             @"imageName": @"",
             @"title": @"启用密码重置服务",
-            @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -175,7 +174,6 @@
         @{
             @"imageName": @"",
             @"title": [NSString stringWithFormat:@"通过 %@ 解锁应用",touchIDorFaceID],
-            @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -201,7 +199,6 @@
         @{
             @"imageName": @"",
             @"title": @"启用密码",
-            @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -230,7 +227,7 @@
         @{
             @"imageName": @"",
             @"title": @"需要密码",
-            @"titleKey": @"XYPasswordSettingController",
+            @"titleKey": @"XYSettingNeedPwdTimeController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -245,7 +242,6 @@
         @{
             @"imageName": @"",
             @"title": @"抹掉数据",
-            @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",

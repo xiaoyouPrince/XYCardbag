@@ -76,6 +76,7 @@
 		B45DB1C323B3602000363A4E /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DB1BD23B3601F00363A4E /* JPImageresizerConfigure.m */; };
 		B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46103B82179798100C99D99 /* XYAddCustomTagCell.m */; };
 		B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */; };
+		B46C465925EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */; };
 		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
 		B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */; };
 		B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */; };
@@ -238,6 +239,8 @@
 		B46103B72179798100C99D99 /* XYAddCustomTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCustomTagCell.h; sourceTree = "<group>"; };
 		B46103B82179798100C99D99 /* XYAddCustomTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCustomTagCell.m; sourceTree = "<group>"; };
 		B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCustomTagCell.xib; sourceTree = "<group>"; };
+		B46C465725EF964100E9F7C9 /* XYSettingNeedPwdTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingNeedPwdTimeController.h; sourceTree = "<group>"; };
+		B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingNeedPwdTimeController.m; sourceTree = "<group>"; };
 		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
 		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
 		B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoCell.h; sourceTree = "<group>"; };
@@ -851,6 +854,8 @@
 				B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */,
 				B43DA53B25EEAC000002C7E1 /* XYSettingKeys.h */,
 				B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */,
+				B46C465725EF964100E9F7C9 /* XYSettingNeedPwdTimeController.h */,
+				B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1126,6 +1131,7 @@
 				B45B18A02011D92900359427 /* XYNewContactInfoCell.m in Sources */,
 				B45DB17123B2FB5800363A4E /* XYAlbumViewController.m in Sources */,
 				B4A6CA46217DBE890069AD8E /* XYBankCardDetailController.m in Sources */,
+				B46C465925EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m in Sources */,
 				B45DB19A23B3581C00363A4E /* XYEditViewController.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
 				B45DB17823B3056300363A4E /* XYAlbumGroupViewController.m in Sources */,
