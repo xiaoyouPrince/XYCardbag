@@ -82,15 +82,14 @@
         NSInteger needPwdTime = [kUserDefaults integerForKey:SettingKey_NeedPwdTimeInterval];
         NSDate *lastLeaveDate = [kUserDefaults objectForKey:SettingKey_LastLeaveAppDate];
         NSDate *currenDate = [NSDate date];
-        if ([currenDate laterDate:[lastLeaveDate dateByAddingTimeInterval:needPwdTime]]) { // 当前比预设时间晚了，展示密码
+        if ([currenDate compare:[lastLeaveDate dateByAddingTimeInterval:needPwdTime]] == NSOrderedDescending) { // 当前比预设时间晚了，展示密码
+            
+            // 未开 faceID/touchID 展示白板
+            [self showClockView];
             
             BOOL touchID = [kUserDefaults boolForKey:SettingKey_TouchID];
             if (touchID) {
                 [self showFaceIDorTouchID];
-            }else
-            {
-                // 未开 faceID/touchID 展示白板
-                [self showClockView];
             }
         }
     }
