@@ -77,6 +77,7 @@
 		B46103BA2179798100C99D99 /* XYAddCustomTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B46103B82179798100C99D99 /* XYAddCustomTagCell.m */; };
 		B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */; };
 		B46C465925EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */; };
+		B46C466025EFA74E00E9F7C9 /* XYClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46C465F25EFA74E00E9F7C9 /* XYClockView.m */; };
 		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
 		B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */; };
 		B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */; };
@@ -241,6 +242,8 @@
 		B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYAddCustomTagCell.xib; sourceTree = "<group>"; };
 		B46C465725EF964100E9F7C9 /* XYSettingNeedPwdTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingNeedPwdTimeController.h; sourceTree = "<group>"; };
 		B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingNeedPwdTimeController.m; sourceTree = "<group>"; };
+		B46C465E25EFA74E00E9F7C9 /* XYClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYClockView.h; sourceTree = "<group>"; };
+		B46C465F25EFA74E00E9F7C9 /* XYClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYClockView.m; sourceTree = "<group>"; };
 		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
 		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
 		B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoCell.h; sourceTree = "<group>"; };
@@ -443,6 +446,7 @@
 		89FB5EB81FE7C76C002AE67C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B46C465D25EFA72900E9F7C9 /* ClockView */,
 				B4DF24B225EC96A000F275C1 /* Setting */,
 				B4B1D5BB20F1F48100321105 /* AddCardVC */,
 				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
@@ -790,6 +794,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		B46C465D25EFA72900E9F7C9 /* ClockView */ = {
+			isa = PBXGroup;
+			children = (
+				B46C465E25EFA74E00E9F7C9 /* XYClockView.h */,
+				B46C465F25EFA74E00E9F7C9 /* XYClockView.m */,
+			);
+			path = ClockView;
+			sourceTree = "<group>";
+		};
 		B4A14D8D20F2FD7B0086CCBB /* CardInfoCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1147,7 @@
 				B46C465925EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m in Sources */,
 				B45DB19A23B3581C00363A4E /* XYEditViewController.m in Sources */,
 				89FB5ED21FE7C870002AE67C /* XYBankCardController.m in Sources */,
+				B46C466025EFA74E00E9F7C9 /* XYClockView.m in Sources */,
 				B45DB17823B3056300363A4E /* XYAlbumGroupViewController.m in Sources */,
 				B431CFD420EE1FAA008CD732 /* XYBankCardCache.m in Sources */,
 				B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */,

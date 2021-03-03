@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XYTabBarController.h"
+#import "XYClockView.h"
 
 @interface AppDelegate ()
 
@@ -27,14 +28,7 @@
     if (pwdEnable) {
         
         if ([kUserDefaults integerForKey:SettingKey_NeedPwdTimeInterval] == 0) { //如果是立即，直接披上新遮挡View
-            UIView *coverView = [UIView new];
-            coverView.backgroundColor = UIColor.whiteColor;
-            coverView.frame = self.window.bounds;
-            
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewClick:)];
-            [coverView addGestureRecognizer:tap];
-            
-            [self.window addSubview:coverView];
+            [self showClockView];
         }
         
         // 记录一下当前离开的时间、再次进入需要检验是否有展示密码
@@ -42,8 +36,40 @@
     }
 }
 
+- (void)showClockView{
+    if (![self.window.subviews containsObject:[XYClockView sharedInstance]]) {
+        XYClockView *coverView = [XYClockView sharedInstance];
+        coverView.backgroundColor = UIColor.whiteColor;
+        coverView.frame = self.window.bounds;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewClick:)];
+        [coverView addGestureRecognizer:tap];
+        
+        [self.window addSubview:coverView];
+    }
+}
+
 - (void)coverViewClick:(UITapGestureRecognizer *)tap{
     NSLog(@"点击");
+    [self showFaceIDorTouchID];
+}
+
+- (void)showFaceIDorTouchID{
+    
+    [XYAuthenticationTool startAuthWithTip:@"解锁卡片助手" reply:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"登录成功");
+            NSLog(@"error = %@",error);
+            
+            XYClockView *coverView = [XYClockView sharedInstance];
+            [coverView removeFromSuperview];
+            
+        }else
+        {
+            NSLog(@"登录失败");
+            NSLog(@"error = %@",error);
+        }
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -60,27 +86,11 @@
             
             BOOL touchID = [kUserDefaults boolForKey:SettingKey_TouchID];
             if (touchID) {
-                [XYAuthenticationTool startAuthWithTip:@"登录一下下" reply:^(BOOL success, NSError * _Nonnull error) {
-                    if (success) {
-                        NSLog(@"登录成功");
-                        NSLog(@"error = %@",error);
-                    }else
-                    {
-                        NSLog(@"登录失败");
-                        NSLog(@"error = %@",error);
-                    }
-                }];
+                [self showFaceIDorTouchID];
             }else
             {
                 // 未开 faceID/touchID 展示白板
-                UIView *coverView = [UIView new];
-                coverView.backgroundColor = UIColor.whiteColor;
-                coverView.frame = self.window.bounds;
-                
-                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewClick:)];
-                [coverView addGestureRecognizer:tap];
-                
-                [self.window addSubview:coverView];
+                [self showClockView];
             }
         }
     }
