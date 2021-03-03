@@ -13,3 +13,4 @@ UIKIT_EXTERN NSString  * const SettingKey_EnablePassword;
 UIKIT_EXTERN NSString  * const SettingKey_DeleteAllDataWhen10TimesError;
 
 UIKIT_EXTERN NSString  * const SettingKey_NeedPwdTimeInterval;
+UIKIT_EXTERN NSString  * const SettingKey_LastLeaveAppDate;

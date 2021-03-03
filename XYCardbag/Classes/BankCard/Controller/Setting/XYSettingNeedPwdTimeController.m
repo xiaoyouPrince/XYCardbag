@@ -39,6 +39,8 @@
         // 设置选中项目
         NSInteger needPwdTime = [item.code integerValue];
         [kUserDefaults setInteger:needPwdTime forKey:SettingKey_NeedPwdTimeInterval];
+        // 通知刷新
+        [kNotificationCenter postNotificationName:SettingKey_NeedPwdTimeInterval object:nil];
     }];
     cb.backgroundColor = UIColor.whiteColor;
     

@@ -14,4 +14,4 @@ NSString  * const SettingKey_DeleteAllDataWhen10TimesError = @"SettingKey_Delete
 
 
 NSString  * const SettingKey_NeedPwdTimeInterval = @"SettingKey_NeedPwdTimeInterval";
-
+NSString  * const SettingKey_LastLeaveAppDate = @"SettingKey_LastLeaveAppDate";

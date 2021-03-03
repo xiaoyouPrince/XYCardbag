@@ -13,7 +13,9 @@
 
 @end
 
-@implementation XYPasswordSettingController
+@implementation XYPasswordSettingController{
+    BOOL shouldFlushDataWhenViewWillAppear;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +28,22 @@
     
     [kNotificationCenter addObserver:self selector:@selector(setupContent) name:SettingKey_TouchID object:nil];
     [kNotificationCenter addObserver:self selector:@selector(setupContent) name:SettingKey_EnablePassword object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(setupNeedPwdTimeInterval) name:SettingKey_NeedPwdTimeInterval object:nil];
     
+}
+
+- (void)setupNeedPwdTimeInterval{
+    shouldFlushDataWhenViewWillAppear = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (shouldFlushDataWhenViewWillAppear) {
+        [self setupContent];
+        shouldFlushDataWhenViewWillAppear = NO;
+    }
 }
 
 - (void)doneClick:(UIBarButtonItem *)sender{

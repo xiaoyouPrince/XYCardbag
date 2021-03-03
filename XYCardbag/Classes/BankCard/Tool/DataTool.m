@@ -223,12 +223,26 @@
         }
     ];
     
+    
+    NSInteger timeInterval = [kUserDefaults integerForKey:SettingKey_NeedPwdTimeInterval];
+    NSString *timeStr = @"";
+    if (timeInterval == 0) {
+        timeStr = @"立即";
+    }else if (timeInterval == 60) {
+        timeStr = @"1分钟后";
+    }else if (timeInterval == 180) {
+        timeStr = @"3分钟后";
+    }else if (timeInterval == 300) {
+        timeStr = @"5分钟后";
+    }else{
+        timeStr = @"10分钟后";
+    }
     NSArray *section4 = @[
         @{
             @"imageName": @"",
             @"title": @"需要密码",
             @"titleKey": @"XYSettingNeedPwdTimeController",
-            @"value": @"",
+            @"value": timeStr,
             @"type": @1,
             @"valueCode": @"",
             @"cellHeight": @50,
