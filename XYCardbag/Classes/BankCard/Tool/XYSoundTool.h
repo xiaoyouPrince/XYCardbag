@@ -8,12 +8,16 @@
 
 //  一个播放音效的工具
 /*
- 主要有五个音效
+ 主要有8个音效
  卡片左滑 <- swipe
  卡片右滑 <- flip
  卡片长按 <- long_press
  拷贝卡片信息 <- copy
  点击各个cell <- tap
+ 
+ 卡片置顶 <- bring_top
+ 卡片删除 <- delete
+ 阶段完成 <- auto_stage_done
  */
 
 
@@ -26,7 +30,10 @@ typedef NS_ENUM(NSUInteger, SoundType) {
     SoundTypeSwipeRight,
     SoundTypeLongPress,
     SoundTypeCopy,
-    SoundTypeTap
+    SoundTypeTap,
+    SoundTypeBringTop,
+    SoundTypeDelete,
+    SoundTypeStageDone
 };
 
 @interface XYSoundTool : NSObject

@@ -36,6 +36,9 @@
 		B445563325F1247E00577241 /* swipe.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445562E25F1247E00577241 /* swipe.caf */; };
 		B445563425F1247E00577241 /* tap.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445562F25F1247E00577241 /* tap.caf */; };
 		B445563525F1247E00577241 /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445563025F1247E00577241 /* flip.caf */; };
+		B445563C25F12F3E00577241 /* delete.aif in Resources */ = {isa = PBXBuildFile; fileRef = B445563925F12F3D00577241 /* delete.aif */; };
+		B445563D25F12F3E00577241 /* auto_stage_done.aif in Resources */ = {isa = PBXBuildFile; fileRef = B445563A25F12F3E00577241 /* auto_stage_done.aif */; };
+		B445563E25F12F3E00577241 /* bring_top.aif in Resources */ = {isa = PBXBuildFile; fileRef = B445563B25F12F3E00577241 /* bring_top.aif */; };
 		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
 		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
 		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
@@ -182,6 +185,9 @@
 		B445562E25F1247E00577241 /* swipe.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipe.caf; sourceTree = "<group>"; };
 		B445562F25F1247E00577241 /* tap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.caf; sourceTree = "<group>"; };
 		B445563025F1247E00577241 /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
+		B445563925F12F3D00577241 /* delete.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = delete.aif; sourceTree = "<group>"; };
+		B445563A25F12F3E00577241 /* auto_stage_done.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = auto_stage_done.aif; sourceTree = "<group>"; };
+		B445563B25F12F3E00577241 /* bring_top.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = bring_top.aif; sourceTree = "<group>"; };
 		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
 		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
 		B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDBTool.h; sourceTree = "<group>"; };
@@ -422,6 +428,9 @@
 		89FB5E9A1FE7C2B7002AE67C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B445563A25F12F3E00577241 /* auto_stage_done.aif */,
+				B445563B25F12F3E00577241 /* bring_top.aif */,
+				B445563925F12F3D00577241 /* delete.aif */,
 				B445562D25F1247E00577241 /* copy.caf */,
 				B445563025F1247E00577241 /* flip.caf */,
 				B445562C25F1247E00577241 /* long_press.caf */,
@@ -1010,6 +1019,7 @@
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
 				B445563425F1247E00577241 /* tap.caf in Resources */,
 				B45DB18323B309F400363A4E /* SVProgressHUD.bundle in Resources */,
+				B445563E25F12F3E00577241 /* bring_top.aif in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
 				B45DB1B323B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png in Resources */,
 				B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */,
@@ -1019,6 +1029,7 @@
 				B45DB1A923B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@2x.png in Resources */,
 				B45DB1AC23B35AA900363A4E /* sr_eidt_reset_icon@3x.png in Resources */,
 				B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */,
+				B445563C25F12F3E00577241 /* delete.aif in Resources */,
 				B45DB1B223B35AA900363A4E /* sr_tailoring_icon@3x.png in Resources */,
 				B45DB17923B3056300363A4E /* XYAlbumGroupViewController.xib in Resources */,
 				B445563225F1247E00577241 /* copy.caf in Resources */,
@@ -1038,6 +1049,7 @@
 				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
 				B45DB1B123B35AA900363A4E /* sr_eidt_reset_icon@2x.png in Resources */,
+				B445563D25F12F3E00577241 /* auto_stage_done.aif in Resources */,
 				B45DB19B23B3581C00363A4E /* XYEditViewController.xib in Resources */,
 				B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */,
 				B45DB1AB23B35AA900363A4E /* sr_eidt_mirror_vertically_icon@2x.png in Resources */,
