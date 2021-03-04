@@ -18,6 +18,7 @@
 #import "XYAddCardController.h"
 #import "XYBankCardDetailController.h"
 #import "XYSettingViewController.h"
+#import "XYSoundTool.h"
 
 @interface XYBankCardController ()<BankCardBgVCDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -479,6 +480,8 @@
     // 可以用自己的delegate去做这件事
     
 //    [XYAlertView showAlertTitle:@"提示" message:@"进入卡信息页面" Ok:nil];
+    
+    [XYSoundTool playSoundForType:SoundTypeTap];
     
     XYBankCardDetailController *detail = [XYBankCardDetailController new];
     detail.bankCard = self.dataArray[indexPath.row];

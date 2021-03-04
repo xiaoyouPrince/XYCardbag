@@ -15,7 +15,9 @@
 
 + (void)playSoundForType:(SoundType)type{
     
-    
+    // 检查配置
+    if (![kUserDefaults boolForKey:SettingKey_EnableSound]) return;
+    BOOL alert = [kUserDefaults boolForKey:SettingKey_EnableSoundWithAlert];
     
     NSString *soundName = nil;
     switch (type) {
@@ -40,13 +42,13 @@
     
     // 播放声音
     if (soundName) {
-        playSoundWithName(soundName);
+        playSoundWithName(soundName,alert);
     }
     
 }
 
 
-void playSoundWithName(NSString *soundName){
+void playSoundWithName(NSString *soundName, BOOL alert){
     
     NSString *audioFile=[[NSBundle mainBundle] pathForResource:soundName ofType:@"caf"];
     NSURL *fileUrl=[NSURL fileURLWithPath:audioFile];
@@ -60,8 +62,11 @@ void playSoundWithName(NSString *soundName){
     //如果需要在播放完之后执行某些操作，可以调用如下方法注册一个播放完成回调函数
     AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
     //2.播放音频
-    AudioServicesPlaySystemSound(soundID);//播放音效
-//    AudioServicesPlayAlertSound(soundID);//播放音效并震动
+    if (alert) {
+        AudioServicesPlayAlertSound(soundID);//播放音效并震动
+    }else{
+        AudioServicesPlaySystemSound(soundID);//播放音效
+    }
 }
 
 /**

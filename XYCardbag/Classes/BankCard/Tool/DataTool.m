@@ -22,8 +22,12 @@
      */
     
     XYSwitch *swith1 = [XYSwitch new];
-    swith1.settingKey = @"音效";
+    swith1.settingKey = SettingKey_EnableSound;
     swith1.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith1.settingKey];
+    
+    XYSwitch *swith2 = [XYSwitch new];
+    swith2.settingKey = SettingKey_EnableSoundWithAlert;
+    swith2.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith2.settingKey];
     
     NSArray *section1 = @[
         @{
@@ -53,13 +57,23 @@
         },
         @{
             @"imageName": @"",
-            @"title": swith1.settingKey,
+            @"title": @"音效",
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
             @"cellHeight": @50,
             @"accessoryView": swith1
+        },
+        @{
+            @"imageName": @"",
+            @"title": @"音效伴随震动",
+            @"titleKey": @"CommonViewController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+            @"accessoryView": swith2
         },
         @{
             @"imageName": @"",
