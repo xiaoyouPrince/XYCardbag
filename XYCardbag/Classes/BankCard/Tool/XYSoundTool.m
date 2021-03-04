@@ -36,6 +36,15 @@
         case SoundTypeTap:
             soundName = @"tap";
             break;
+        case SoundTypeBringTop:
+            soundName = @"bring_top";
+            break;
+        case SoundTypeDelete:
+            soundName = @"delete";
+            break;
+        case SoundTypeStageDone:
+            soundName = @"auto_stage_done";
+            break;
         default:
             break;
     }
@@ -51,6 +60,9 @@
 void playSoundWithName(NSString *soundName, BOOL alert){
     
     NSString *audioFile=[[NSBundle mainBundle] pathForResource:soundName ofType:@"caf"];
+    if (!audioFile) {
+        audioFile = [[NSBundle mainBundle] pathForResource:soundName ofType:@"aif"];
+    }
     NSURL *fileUrl=[NSURL fileURLWithPath:audioFile];
     //1.获得系统声音ID
     SystemSoundID soundID=0;
