@@ -30,6 +30,12 @@
 		B43DA36425ECBD900002C7E1 /* WechatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA36325ECBD900002C7E1 /* WechatTipCell.m */; };
 		B43DA53025EE79020002C7E1 /* XYPasswordSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */; };
 		B43DA53D25EEAC000002C7E1 /* XYSettingKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */; };
+		B445562825F1223F00577241 /* XYSoundTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B445562725F1223F00577241 /* XYSoundTool.m */; };
+		B445563125F1247E00577241 /* long_press.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445562C25F1247E00577241 /* long_press.caf */; };
+		B445563225F1247E00577241 /* copy.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445562D25F1247E00577241 /* copy.caf */; };
+		B445563325F1247E00577241 /* swipe.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445562E25F1247E00577241 /* swipe.caf */; };
+		B445563425F1247E00577241 /* tap.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445562F25F1247E00577241 /* tap.caf */; };
+		B445563525F1247E00577241 /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = B445563025F1247E00577241 /* flip.caf */; };
 		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
 		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
 		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
@@ -169,6 +175,13 @@
 		B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPasswordSettingController.m; sourceTree = "<group>"; };
 		B43DA53B25EEAC000002C7E1 /* XYSettingKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingKeys.h; sourceTree = "<group>"; };
 		B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingKeys.m; sourceTree = "<group>"; };
+		B445562625F1223F00577241 /* XYSoundTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSoundTool.h; sourceTree = "<group>"; };
+		B445562725F1223F00577241 /* XYSoundTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSoundTool.m; sourceTree = "<group>"; };
+		B445562C25F1247E00577241 /* long_press.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = long_press.caf; sourceTree = "<group>"; };
+		B445562D25F1247E00577241 /* copy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = copy.caf; sourceTree = "<group>"; };
+		B445562E25F1247E00577241 /* swipe.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipe.caf; sourceTree = "<group>"; };
+		B445562F25F1247E00577241 /* tap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.caf; sourceTree = "<group>"; };
+		B445563025F1247E00577241 /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
 		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
 		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
 		B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDBTool.h; sourceTree = "<group>"; };
@@ -409,6 +422,11 @@
 		89FB5E9A1FE7C2B7002AE67C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B445562D25F1247E00577241 /* copy.caf */,
+				B445563025F1247E00577241 /* flip.caf */,
+				B445562C25F1247E00577241 /* long_press.caf */,
+				B445562E25F1247E00577241 /* swipe.caf */,
+				B445562F25F1247E00577241 /* tap.caf */,
 				89FB5E9B1FE7C2B7002AE67C /* AppDelegate.h */,
 				89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */,
 				89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */,
@@ -647,6 +665,8 @@
 				B431CFD320EE1FAA008CD732 /* XYBankCardCache.m */,
 				B43DA35525ECAC350002C7E1 /* DataTool.h */,
 				B43DA35625ECAC350002C7E1 /* DataTool.m */,
+				B445562625F1223F00577241 /* XYSoundTool.h */,
+				B445562725F1223F00577241 /* XYSoundTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -861,12 +881,12 @@
 		B4DF24B225EC96A000F275C1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				B43DA53B25EEAC000002C7E1 /* XYSettingKeys.h */,
+				B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */,
 				B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */,
 				B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */,
 				B43DA52E25EE79020002C7E1 /* XYPasswordSettingController.h */,
 				B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */,
-				B43DA53B25EEAC000002C7E1 /* XYSettingKeys.h */,
-				B43DA53C25EEAC000002C7E1 /* XYSettingKeys.m */,
 				B46C465725EF964100E9F7C9 /* XYSettingNeedPwdTimeController.h */,
 				B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */,
 			);
@@ -986,23 +1006,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45DB1AA23B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@3x.png in Resources */,
+				B445563325F1247E00577241 /* swipe.caf in Resources */,
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
+				B445563425F1247E00577241 /* tap.caf in Resources */,
 				B45DB18323B309F400363A4E /* SVProgressHUD.bundle in Resources */,
 				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
 				B45DB1B323B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png in Resources */,
 				B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
+				B445563525F1247E00577241 /* flip.caf in Resources */,
 				B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */,
 				B45DB1A923B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@2x.png in Resources */,
 				B45DB1AC23B35AA900363A4E /* sr_eidt_reset_icon@3x.png in Resources */,
 				B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */,
 				B45DB1B223B35AA900363A4E /* sr_tailoring_icon@3x.png in Resources */,
 				B45DB17923B3056300363A4E /* XYAlbumGroupViewController.xib in Resources */,
+				B445563225F1247E00577241 /* copy.caf in Resources */,
 				B45DB1B423B35AA900363A4E /* sr_eidt_rotate_icon@3x.png in Resources */,
 				B4A14D9D20F3601A0086CCBB /* XYAddNewCardTagController.xib in Resources */,
 				B45DB1AF23B35AA900363A4E /* SR_WhiteBack@3x.png in Resources */,
 				B45DB19623B33C8100363A4E /* ImageCollectionViewCell.xib in Resources */,
 				B45DB18823B30B8200363A4E /* XYAlbumContentViewController.xib in Resources */,
+				B445563125F1247E00577241 /* long_press.caf in Resources */,
 				B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
 				B45DB18E23B30E4100363A4E /* AlbumGroupTableViewCell.xib in Resources */,
@@ -1187,6 +1212,7 @@
 				B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */,
 				B45B18A92011EEE000359427 /* XYAddNewCell.m in Sources */,
 				B45DB18123B309F400363A4E /* SVProgressHUD.m in Sources */,
+				B445562825F1223F00577241 /* XYSoundTool.m in Sources */,
 				B4B85DEE20EFC6FF002876DA /* XYCardNormalCell.m in Sources */,
 				89FB5EE21FE7C908002AE67C /* XYTabBar.m in Sources */,
 				B45DB19523B33C8100363A4E /* ImageCollectionViewCell.m in Sources */,

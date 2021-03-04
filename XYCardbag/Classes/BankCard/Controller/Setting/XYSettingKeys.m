@@ -12,6 +12,8 @@ NSString  * const SettingKey_TouchID = @"SettingKey_TouchID";
 NSString  * const SettingKey_EnablePassword = @"SettingKey_EnablePassword";
 NSString  * const SettingKey_DeleteAllDataWhen10TimesError = @"SettingKey_DeleteAllDataWhen10TimesError";
 
-
 NSString  * const SettingKey_NeedPwdTimeInterval = @"SettingKey_NeedPwdTimeInterval";
 NSString  * const SettingKey_LastLeaveAppDate = @"SettingKey_LastLeaveAppDate";
+
+NSString  * const SettingKey_EnableSound = @"SettingKey_EnableSound";
+NSString  * const SettingKey_EnableSoundWithAlert = @"SettingKey_EnableSoundWithAlert";
