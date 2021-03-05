@@ -57,7 +57,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"音效",
+            @"title": @"操作卡片音效",
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,

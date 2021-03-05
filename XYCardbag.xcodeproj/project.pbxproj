@@ -10,8 +10,6 @@
 		89FAF2811FD1060C008C9655 /* XYCardbagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF2801FD1060C008C9655 /* XYCardbagTests.m */; };
 		89FAF28C1FD1060C008C9655 /* XYCardbagUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FAF28B1FD1060C008C9655 /* XYCardbagUITests.m */; };
 		89FB5EA61FE7C2B7002AE67C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */; };
-		89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */; };
-		89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB5EA01FE7C2B7002AE67C /* Main.storyboard */; };
 		89FB5EAB1FE7C2B7002AE67C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EA31FE7C2B7002AE67C /* main.m */; };
 		89FB5EAC1FE7C2B7002AE67C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5EA51FE7C2B7002AE67C /* ViewController.m */; };
 		89FB5ECC1FE7C840002AE67C /* XYNetAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FB5ECB1FE7C840002AE67C /* XYNetAccountController.m */; };
@@ -100,6 +98,11 @@
 		B4BAAD0D217EB90000F18754 /* XYQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAAD0C217EB90000F18754 /* XYQRCodeTool.m */; };
 		B4BAAD1B217F3A8300F18754 /* XYChangeTagTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAAD19217F3A8300F18754 /* XYChangeTagTitleController.m */; };
 		B4BAAD1C217F3A8300F18754 /* XYChangeTagTitleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BAAD1A217F3A8300F18754 /* XYChangeTagTitleController.xib */; };
+		B4BD53DD25F213C100A96178 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BD53DF25F213C100A96178 /* Localizable.strings */; };
+		B4BD53F925F21A7100A96178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4BD53F725F21A7100A96178 /* Main.storyboard */; };
+		B4BD53FA25F21A7100A96178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4BD53F825F21A7100A96178 /* LaunchScreen.storyboard */; };
+		B4BD540325F21D0C00A96178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BD540125F21D0C00A96178 /* InfoPlist.strings */; };
+		B4BD541525F235F900A96178 /* XYSettingLanguagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BD541425F235F900A96178 /* XYSettingLanguagesController.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
@@ -142,8 +145,6 @@
 		89FAF28D1FD1060C008C9655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FB5E9B1FE7C2B7002AE67C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		89FB5E9F1FE7C2B7002AE67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89FB5EA11FE7C2B7002AE67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89FB5EA31FE7C2B7002AE67C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89FB5EA41FE7C2B7002AE67C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		89FB5EA51FE7C2B7002AE67C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -286,6 +287,14 @@
 		B4BAAD18217F3A8300F18754 /* XYChangeTagTitleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChangeTagTitleController.h; sourceTree = "<group>"; };
 		B4BAAD19217F3A8300F18754 /* XYChangeTagTitleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChangeTagTitleController.m; sourceTree = "<group>"; };
 		B4BAAD1A217F3A8300F18754 /* XYChangeTagTitleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChangeTagTitleController.xib; sourceTree = "<group>"; };
+		B4BD53E325F213CC00A96178 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B4BD53E425F213CD00A96178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B4BD53F725F21A7100A96178 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B4BD53F825F21A7100A96178 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4BD540225F21D0C00A96178 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B4BD540825F21D4800A96178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B4BD541325F235F900A96178 /* XYSettingLanguagesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingLanguagesController.h; sourceTree = "<group>"; };
+		B4BD541425F235F900A96178 /* XYSettingLanguagesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingLanguagesController.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
 		B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingViewController.h; sourceTree = "<group>"; };
@@ -428,20 +437,15 @@
 		89FB5E9A1FE7C2B7002AE67C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B445563A25F12F3E00577241 /* auto_stage_done.aif */,
-				B445563B25F12F3E00577241 /* bring_top.aif */,
-				B445563925F12F3D00577241 /* delete.aif */,
-				B445562D25F1247E00577241 /* copy.caf */,
-				B445563025F1247E00577241 /* flip.caf */,
-				B445562C25F1247E00577241 /* long_press.caf */,
-				B445562E25F1247E00577241 /* swipe.caf */,
-				B445562F25F1247E00577241 /* tap.caf */,
+				B4BD53B325F1F03D00A96178 /* sounds */,
 				89FB5E9B1FE7C2B7002AE67C /* AppDelegate.h */,
 				89FB5E9C1FE7C2B7002AE67C /* AppDelegate.m */,
-				89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */,
-				89FB5EA01FE7C2B7002AE67C /* Main.storyboard */,
 				89FB5F031FE8EB64002AE67C /* Assets.xcassets */,
+				B4BD53F825F21A7100A96178 /* LaunchScreen.storyboard */,
+				B4BD53F725F21A7100A96178 /* Main.storyboard */,
 				89FB5EA31FE7C2B7002AE67C /* main.m */,
+				B4BD53DF25F213C100A96178 /* Localizable.strings */,
+				B4BD540125F21D0C00A96178 /* InfoPlist.strings */,
 				89FB5EA41FE7C2B7002AE67C /* ViewController.h */,
 				89FB5EA51FE7C2B7002AE67C /* ViewController.m */,
 				89FB5EEB1FE8BAF1002AE67C /* XYCardbag.pch */,
@@ -473,17 +477,10 @@
 		89FB5EB81FE7C76C002AE67C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4BD540F25F234FB00A96178 /* CardHomePage */,
 				B46C465D25EFA72900E9F7C9 /* ClockView */,
 				B4DF24B225EC96A000F275C1 /* Setting */,
 				B4B1D5BB20F1F48100321105 /* AddCardVC */,
-				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
-				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
-				B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */,
-				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
-				B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */,
-				B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */,
-				B4A6CA44217DBE890069AD8E /* XYBankCardDetailController.h */,
-				B4A6CA45217DBE890069AD8E /* XYBankCardDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -887,6 +884,36 @@
 			path = AddCardVC;
 			sourceTree = "<group>";
 		};
+		B4BD53B325F1F03D00A96178 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B445563A25F12F3E00577241 /* auto_stage_done.aif */,
+				B445563B25F12F3E00577241 /* bring_top.aif */,
+				B445563925F12F3D00577241 /* delete.aif */,
+				B445562D25F1247E00577241 /* copy.caf */,
+				B445563025F1247E00577241 /* flip.caf */,
+				B445562C25F1247E00577241 /* long_press.caf */,
+				B445562E25F1247E00577241 /* swipe.caf */,
+				B445562F25F1247E00577241 /* tap.caf */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		B4BD540F25F234FB00A96178 /* CardHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				89FB5ED01FE7C870002AE67C /* XYBankCardController.h */,
+				89FB5ED11FE7C870002AE67C /* XYBankCardController.m */,
+				B4ABDE4420ED1B1B00E74941 /* XYBankCardBgViewController.h */,
+				B4ABDE4520ED1B1B00E74941 /* XYBankCardBgViewController.m */,
+				B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */,
+				B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */,
+				B4A6CA44217DBE890069AD8E /* XYBankCardDetailController.h */,
+				B4A6CA45217DBE890069AD8E /* XYBankCardDetailController.m */,
+			);
+			path = CardHomePage;
+			sourceTree = "<group>";
+		};
 		B4DF24B225EC96A000F275C1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,6 +925,8 @@
 				B43DA52F25EE79020002C7E1 /* XYPasswordSettingController.m */,
 				B46C465725EF964100E9F7C9 /* XYSettingNeedPwdTimeController.h */,
 				B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */,
+				B4BD541325F235F900A96178 /* XYSettingLanguagesController.h */,
+				B4BD541425F235F900A96178 /* XYSettingLanguagesController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -995,7 +1024,7 @@
 			knownRegions = (
 				English,
 				en,
-				Base,
+				"zh-Hans",
 			);
 			mainGroup = 89FAF25A1FD1060B008C9655;
 			productRefGroup = 89FAF2641FD1060C008C9655 /* Products */;
@@ -1016,11 +1045,11 @@
 			files = (
 				B45DB1AA23B35AA900363A4E /* sr_eidt_mirror_horizontal_icon@3x.png in Resources */,
 				B445563325F1247E00577241 /* swipe.caf in Resources */,
+				B4BD53F925F21A7100A96178 /* Main.storyboard in Resources */,
 				B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */,
 				B445563425F1247E00577241 /* tap.caf in Resources */,
 				B45DB18323B309F400363A4E /* SVProgressHUD.bundle in Resources */,
 				B445563E25F12F3E00577241 /* bring_top.aif in Resources */,
-				89FB5EA91FE7C2B7002AE67C /* Main.storyboard in Resources */,
 				B45DB1B323B35AA900363A4E /* sr_eidt_mirror_vertically_icon@3x.png in Resources */,
 				B4EFF2062181A5CA007205DA /* XYChooseRemindDayController.xib in Resources */,
 				B45B18A12011D92900359427 /* XYNewContactInfoCell.xib in Resources */,
@@ -1038,6 +1067,7 @@
 				B45DB1AF23B35AA900363A4E /* SR_WhiteBack@3x.png in Resources */,
 				B45DB19623B33C8100363A4E /* ImageCollectionViewCell.xib in Resources */,
 				B45DB18823B30B8200363A4E /* XYAlbumContentViewController.xib in Resources */,
+				B4BD540325F21D0C00A96178 /* InfoPlist.strings in Resources */,
 				B445563125F1247E00577241 /* long_press.caf in Resources */,
 				B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */,
 				89FB5F041FE8EB64002AE67C /* Assets.xcassets in Resources */,
@@ -1046,13 +1076,14 @@
 				B45DB1AE23B35AA900363A4E /* SR_WhiteBack@2x.png in Resources */,
 				B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */,
 				B4EFF20121816939007205DA /* XYChooseDateCell.xib in Resources */,
-				89FB5EA81FE7C2B7002AE67C /* LaunchScreen.storyboard in Resources */,
+				B4BD53DD25F213C100A96178 /* Localizable.strings in Resources */,
 				B45B18A62011EA2800359427 /* XYNewContactPhoneCell.xib in Resources */,
 				B45DB1B123B35AA900363A4E /* sr_eidt_reset_icon@2x.png in Resources */,
 				B445563D25F12F3E00577241 /* auto_stage_done.aif in Resources */,
 				B45DB19B23B3581C00363A4E /* XYEditViewController.xib in Resources */,
 				B458EFAC2010876300B3D0D3 /* XYContactDetailCell.xib in Resources */,
 				B45DB1AB23B35AA900363A4E /* sr_eidt_mirror_vertically_icon@2x.png in Resources */,
+				B4BD53FA25F21A7100A96178 /* LaunchScreen.storyboard in Resources */,
 				B45DB1AD23B35AA900363A4E /* sr_tailoring_icon@2x.png in Resources */,
 				B4EFF20B2181A974007205DA /* XYChooseDayCell.xib in Resources */,
 			);
@@ -1171,6 +1202,7 @@
 				B45DB17423B3020900363A4E /* XYAlbumTool.m in Sources */,
 				B4EFF20A2181A974007205DA /* XYChooseDayCell.m in Sources */,
 				B4BAAD1B217F3A8300F18754 /* XYChangeTagTitleController.m in Sources */,
+				B4BD541525F235F900A96178 /* XYSettingLanguagesController.m in Sources */,
 				B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */,
 				B431CFD020EE1E34008CD732 /* XYBankCardModel.m in Sources */,
 				B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */,
@@ -1264,20 +1296,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		89FB5E9E1FE7C2B7002AE67C /* LaunchScreen.storyboard */ = {
+		B4BD53DF25F213C100A96178 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				89FB5E9F1FE7C2B7002AE67C /* Base */,
+				B4BD53E325F213CC00A96178 /* zh-Hans */,
+				B4BD53E425F213CD00A96178 /* en */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		89FB5EA01FE7C2B7002AE67C /* Main.storyboard */ = {
+		B4BD540125F21D0C00A96178 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				89FB5EA11FE7C2B7002AE67C /* Base */,
+				B4BD540225F21D0C00A96178 /* zh-Hans */,
+				B4BD540825F21D4800A96178 /* en */,
 			);
-			name = Main.storyboard;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
