@@ -103,6 +103,7 @@
 		B4BD53FA25F21A7100A96178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4BD53F825F21A7100A96178 /* LaunchScreen.storyboard */; };
 		B4BD540325F21D0C00A96178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BD540125F21D0C00A96178 /* InfoPlist.strings */; };
 		B4BD541525F235F900A96178 /* XYSettingLanguagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BD541425F235F900A96178 /* XYSettingLanguagesController.m */; };
+		B4BD541B25F249A700A96178 /* XYLocalizedTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BD541A25F249A700A96178 /* XYLocalizedTool.m */; };
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
@@ -295,6 +296,8 @@
 		B4BD540825F21D4800A96178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BD541325F235F900A96178 /* XYSettingLanguagesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingLanguagesController.h; sourceTree = "<group>"; };
 		B4BD541425F235F900A96178 /* XYSettingLanguagesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingLanguagesController.m; sourceTree = "<group>"; };
+		B4BD541925F249A700A96178 /* XYLocalizedTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLocalizedTool.h; sourceTree = "<group>"; };
+		B4BD541A25F249A700A96178 /* XYLocalizedTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLocalizedTool.m; sourceTree = "<group>"; };
 		B4C7C67720EE80E00078BEEB /* XYAddCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCategoryController.h; sourceTree = "<group>"; };
 		B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCategoryController.m; sourceTree = "<group>"; };
 		B4DF24B325EC96F800F275C1 /* XYSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSettingViewController.h; sourceTree = "<group>"; };
@@ -673,6 +676,8 @@
 				B43DA35625ECAC350002C7E1 /* DataTool.m */,
 				B445562625F1223F00577241 /* XYSoundTool.h */,
 				B445562725F1223F00577241 /* XYSoundTool.m */,
+				B4BD541925F249A700A96178 /* XYLocalizedTool.h */,
+				B4BD541A25F249A700A96178 /* XYLocalizedTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1247,6 +1252,7 @@
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */,
 				B45DB1C023B3602000363A4E /* JPImageresizerView.m in Sources */,
+				B4BD541B25F249A700A96178 /* XYLocalizedTool.m in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
 				B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,

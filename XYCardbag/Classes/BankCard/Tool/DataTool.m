@@ -78,7 +78,7 @@
         @{
             @"imageName": @"",
             @"title": @"语言",
-            @"titleKey": @"CommonViewController",
+            @"titleKey": @"XYSettingLanguagesController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",

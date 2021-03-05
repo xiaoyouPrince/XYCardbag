@@ -24,3 +24,8 @@ UIKIT_EXTERN NSString  * const SettingKey_LastLeaveAppDate;
 UIKIT_EXTERN NSString  * const SettingKey_EnableSound;
 // 音效和震动
 UIKIT_EXTERN NSString  * const SettingKey_EnableSoundWithAlert;
+
+// 系统本身的语言
+UIKIT_EXTERN NSString  * const SettingKey_LanguageSystem;
+// 用户设置的语言
+UIKIT_EXTERN NSString  * const SettingKey_LanguageSetByUser;

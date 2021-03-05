@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "XYTabBarController.h"
+#import "XYSettingViewController.h"
 #import "XYClockView.h"
 
 @interface AppDelegate ()
@@ -18,8 +18,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 监听
+    [kNotificationCenter addObserver:self selector:@selector(settingForLanguages) name:SettingKey_LanguageSetByUser object:nil];
 
     return YES;
+}
+
+- (void)settingForLanguages{
+    
+#warning todo - 这里相当于直接不要 原来的 rootViewController 了，但是内存如何清除
+    
+    NSObject *oldRootVC = self.window.rootViewController;
+    
+    XYNavigationController *newRootVC = [[UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle] instantiateInitialViewController];
+    self.window.rootViewController = newRootVC;
+    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:[XYSettingViewController new]];
+    nav.modalPresentationStyle = UIModalPresentationCustom;
+    [newRootVC.childViewControllers.firstObject presentViewController:nav animated:NO completion:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            free((__bridge void *)(oldRootVC));
+        });
+    });
+        
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application{
