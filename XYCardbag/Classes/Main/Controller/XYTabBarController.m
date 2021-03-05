@@ -29,8 +29,6 @@
     
     if (@available(iOS 9.0, *)) {
         item = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self]];
-    } else {// 适配iOS 9 以下系统
-        item = [UITabBarItem appearanceWhenContainedIn:self, nil];
     }
     
     // 设置按钮选中标题的颜色:富文本:描述一个文字颜色,字体,阴影,空心,图文混排
