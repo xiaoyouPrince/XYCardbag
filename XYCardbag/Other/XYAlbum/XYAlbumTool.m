@@ -47,7 +47,7 @@
     while (responder) {
         if ([responder isKindOfClass:UIViewController.class]) {
             result = (UIViewController *)responder;
-            break;
+            return result;
         }
         responder = responder.nextResponder;
     }

@@ -220,7 +220,6 @@
 //    }
     
     if (indexPath.row == 0) {
-        XYNewContactInfoCell *infocell = [tableView cellForRowAtIndexPath:indexPath];
         return 140;
     }
     

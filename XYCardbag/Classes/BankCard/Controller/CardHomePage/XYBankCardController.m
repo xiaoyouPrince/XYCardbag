@@ -113,6 +113,8 @@
 - (void)dealloc
 {
     [kNotificationCenter removeObserver:self];
+    
+    XYFunc
 }
 
 

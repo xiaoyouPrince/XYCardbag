@@ -54,9 +54,14 @@
     
     // 2.保存bitmap到图片
     CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
+    UIImage *resultImage = [UIImage imageWithCGImage:scaledImage];
+    // 释放 CG 对象 cs、bitmapRef、bitmapImage、scaledImage
+    CGColorSpaceRelease(cs);
     CGContextRelease(bitmapRef);
     CGImageRelease(bitmapImage);
-    return [UIImage imageWithCGImage:scaledImage];
+    CGImageRelease(scaledImage);
+    
+    return resultImage;
 }
 
 

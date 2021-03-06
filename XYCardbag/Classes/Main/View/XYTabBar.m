@@ -13,10 +13,9 @@
 // 自定义tabbar
 - (instancetype)init
 {
-    if (self == [super init]) {
-        // 可以添加自定义控件
-        // 这里就不用添加了
-    }
+    self = [super init];
+    // 可以添加自定义控件
+    // 这里就不用添加了
     return self;
 }
 

@@ -164,7 +164,7 @@
     ];
     
     
-    NSString *touchIDorFaceID;
+    NSString *touchIDorFaceID = @"假设目标设备都是支持的(不含iTouch)";
     if (XYAuthenticationTool.authType == XYAuthTypeTouchID) {
         touchIDorFaceID = @"Touch ID";
     }else if(XYAuthenticationTool.authType == XYAuthTypeFaceID){

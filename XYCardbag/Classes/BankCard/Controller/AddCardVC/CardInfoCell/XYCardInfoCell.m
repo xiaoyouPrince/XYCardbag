@@ -60,9 +60,8 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
-    if (self == [super initWithFrame:frame]) {
-        [self setupContent];
-    }
+    self = [super initWithFrame:frame];
+    [self setupContent];
     return self;
 }
 

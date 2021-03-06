@@ -31,12 +31,11 @@
 
 - (instancetype)initWithImage:(UIImage *)image title:(NSString *)title target:(id)target action:(SEL)action
 {
-    if (self == [super init]) {
-        [self setTitle:title forState:UIControlStateNormal];
-        [self setImage:image forState:UIControlStateNormal];
-        [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-        [self sizeToFit];
-    }
+    self = [super init];
+    [self setTitle:title forState:UIControlStateNormal];
+    [self setImage:image forState:UIControlStateNormal];
+    [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [self sizeToFit];
     return self;
 }
 
@@ -108,7 +107,7 @@
 
 - (instancetype)initWithLeftImage:(NSString *)leftImage title:(NSString *)title rightImage:(NSString *)rightImage callbackHandler:(CallbackHandler)handler
 {
-    
+    self = [super init];
     return [self instanceWithLeftImage:leftImage title:title rightImage:rightImage callbackHandler:handler];
     
 }

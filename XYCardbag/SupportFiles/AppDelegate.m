@@ -27,10 +27,7 @@
 
 - (void)settingForLanguages{
     
-#warning todo - 这里相当于直接不要 原来的 rootViewController 了，但是内存如何清除
-    
-    NSObject *oldRootVC = self.window.rootViewController;
-    
+    XYNavigationController *oldRootVC = (XYNavigationController *)self.window.rootViewController;
     XYNavigationController *newRootVC = [[UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle] instantiateInitialViewController];
     self.window.rootViewController = newRootVC;
     XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:[XYSettingViewController new]];
@@ -38,7 +35,9 @@
     [newRootVC.childViewControllers.firstObject presentViewController:nav animated:NO completion:nil];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [oldRootVC popToRootViewControllerAnimated:NO];
+            oldRootVC.viewControllers = @[];
 //            free((__bridge void *)(oldRootVC));
         });
     });

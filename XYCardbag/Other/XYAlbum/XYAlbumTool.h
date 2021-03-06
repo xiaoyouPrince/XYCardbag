@@ -28,7 +28,7 @@ TODO:获取相册
 /**
  TODO:x获取当前view最近的VC
  */
-+ (UIViewController *)getCurrentVCForView:(UIView *)view;
++ (nullable UIViewController *)getCurrentVCForView:(UIView *)view;
 
 /**
 TODO:x请求PHAsset下面的图片

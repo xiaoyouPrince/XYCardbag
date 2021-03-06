@@ -151,7 +151,7 @@ static NSString *cellID = @"CellID";
     
     // 移动数据源
     NSString *from = [self.dataArray objectAtIndex:fromIndexPath.row];
-    NSString *to = [self.dataArray objectAtIndex:toIndexPath.row];
+    //NSString *to = [self.dataArray objectAtIndex:toIndexPath.row];
     
     if (fromIndexPath.row < toIndexPath.row) { //从上到下
         [self.dataArray insertObject:from atIndex:toIndexPath.row + 1]; // 需要 + 1
