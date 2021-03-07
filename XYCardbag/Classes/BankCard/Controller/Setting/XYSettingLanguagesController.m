@@ -6,10 +6,11 @@
 //  Copyright © 2021 xiaoyou. All rights reserved.
 //
 
-// 三种语言 : 跟随系统 / English / 简体中文
+// 两种种语言 :  English / 简体中文
 /*
-    逻辑: 用户第一次进入App默认是跟随系统的。
-    后续:
+逻辑:
+    仿微信只展示支持的语言，用户选择什么就是什么
+    用户选完保存用户选择，发全局通知让 AppDelegate 重新设置 RootVC
  */
 
 
@@ -26,17 +27,10 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = kGlobalBgColor;
-    
-    // 只有首次备份一下系统语言
-    if (![kUserDefaults objectForKey:SettingKey_LanguageSystem]) {
-        NSArray *langs = [NSLocale preferredLanguages];
-        [kUserDefaults setObject:langs forKey:SettingKey_LanguageSystem];
-    }
-    
-    XYCheckBoxItem *item0 = [XYCheckBoxItem modelWithTitle:@"跟随系统" code:@"0" select:NO];
+
     XYCheckBoxItem *item1 = [XYCheckBoxItem modelWithTitle:@"English" code:@"en" select:NO];
     XYCheckBoxItem *item2 = [XYCheckBoxItem modelWithTitle:@"简体中文" code:@"zh-Hans" select:NO];
-    NSArray *dataArray = @[item0, item1, item2];
+    NSArray *dataArray = @[item1, item2];
     
     for (XYCheckBoxItem *item in dataArray) {
         if ([item.code isEqualToString:[kUserDefaults stringForKey:SettingKey_LanguageSetByUser]]) {
@@ -45,15 +39,8 @@
     }
     
     XYCheckBox *cb = [XYCheckBox checkBoxWithHeaderView:nil dataArray:dataArray isMutex:YES allowCancelSelected:NO itemSelectedHandler:^(XYCheckBoxItem * _Nonnull item) {
-//        // 设置选中项目
-//        if ([item.code isEqualToString:@"0"]) { // 跟随系统
-//            [[NSUserDefaults standardUserDefaults] setObject:[kUserDefaults objectForKey:SettingKey_LanguageSystem] forKey:@"AppleLanguages"];
-//        }else{ // 自定
-//            [[NSUserDefaults standardUserDefaults] setObject:@[item.code] forKey:@"AppleLanguages"];
-//        }
-        
-//        [kUserDefaults setObject:item.code forKey:SettingKey_LanguageSetByUser];
-        
+
+        // 设置语言
         [[XYLocalizedTool sharedInstance] setLanguage:item.code];
         
         // 通知刷新
