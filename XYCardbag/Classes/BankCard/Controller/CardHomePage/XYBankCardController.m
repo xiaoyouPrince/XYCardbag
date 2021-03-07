@@ -148,7 +148,7 @@
 - (void)setupNav{
     
     // nav
-    NSString *leftTitle = NSLocalizedString(@"menu", nil);
+    NSString *leftTitle = XYLocalizedString(@"功能");
     UIBarButtonItem *leftFuncItem = [[UIBarButtonItem alloc] initWithTitle:leftTitle style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
     self.navigationItem.leftBarButtonItem = leftFuncItem;
 }
