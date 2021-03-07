@@ -25,5 +25,7 @@ UIKIT_EXTERN NSString  * const SettingKey_EnableSound;
 // 音效和震动
 UIKIT_EXTERN NSString  * const SettingKey_EnableSoundWithAlert;
 
+// 用户设置的语言名称
+UIKIT_EXTERN NSString  * const SettingKey_LanguageNameSetByUser;
 // 用户设置的语言
 UIKIT_EXTERN NSString  * const SettingKey_LanguageSetByUser;

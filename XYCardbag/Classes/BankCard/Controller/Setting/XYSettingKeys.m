@@ -18,4 +18,5 @@ NSString  * const SettingKey_LastLeaveAppDate = @"SettingKey_LastLeaveAppDate";
 NSString  * const SettingKey_EnableSound = @"SettingKey_EnableSound";
 NSString  * const SettingKey_EnableSoundWithAlert = @"SettingKey_EnableSoundWithAlert";
 
+NSString  * const SettingKey_LanguageNameSetByUser = @"appLanguageName";
 NSString  * const SettingKey_LanguageSetByUser = @"appLanguage";
