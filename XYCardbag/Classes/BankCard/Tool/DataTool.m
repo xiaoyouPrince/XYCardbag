@@ -31,7 +31,7 @@
     
     NSArray *section1 = @[
         @{
-            @"title": @"设置",
+            @"title": NSLocalizedString(@"设置",nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -39,7 +39,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"密码",
+            @"title": NSLocalizedString(@"密码",nil),
             @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
@@ -57,7 +57,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"操作卡片音效",
+            @"title": NSLocalizedString(@"操作卡片音效",nil),
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,
@@ -67,7 +67,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"音效伴随震动",
+            @"title": NSLocalizedString(@"音效伴随震动",nil),
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,
@@ -77,9 +77,9 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"语言",
+            @"title": NSLocalizedString(@"语言",nil),
             @"titleKey": @"XYSettingLanguagesController",
-            @"value": @"",
+            @"value": [kUserDefaults objectForKey:SettingKey_LanguageNameSetByUser] ?: @"",
             @"type": @1,
             @"valueCode": @"",
             @"cellHeight": @50,
@@ -88,7 +88,7 @@
     
     NSArray *section2 = @[
         @{
-            @"title": @"支持与反馈",
+            @"title": NSLocalizedString(@"支持与反馈",nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -96,7 +96,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"分享",
+            @"title": NSLocalizedString(@"分享",nil),
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,
@@ -105,7 +105,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"去 App Store 打分",
+            @"title": NSLocalizedString(@"去 App Store 打分",nil),
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,
@@ -114,7 +114,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"请我喝杯咖啡",
+            @"title": NSLocalizedString(@"请我喝杯咖啡",nil),
             @"titleKey": @"CommonViewController",
             @"value": @"",
             @"type": @1,
@@ -123,9 +123,9 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"反馈",
+            @"title": NSLocalizedString(@"反馈",nil),
             @"titleKey": @"CommonViewController",
-            @"value": @"邮箱?",
+            @"value": @"xiaoyouPrince@gmail.com",
             @"type": @1,
             @"valueCode": @"",
             @"cellHeight": @50,
@@ -140,7 +140,7 @@
 {
     NSArray *section1 = @[
         @{
-            @"title": @"密码重置服务",
+            @"title": NSLocalizedString(@"密码重置服务",nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -148,14 +148,14 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"启用密码重置服务",
+            @"title": NSLocalizedString(@"启用密码重置服务",nil),
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
             @"cellHeight": @50,
         },
         @{
-            @"title": @"如果你忘记了密码，可以通过此服务来找回密码",
+            @"title": NSLocalizedString(@"如果你忘记了密码，可以通过此服务来找回密码",nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -165,10 +165,13 @@
     
     
     NSString *touchIDorFaceID = @"假设目标设备都是支持的(不含iTouch)";
+    NSString *touchIDorFaceIDTitle = @"";
     if (XYAuthenticationTool.authType == XYAuthTypeTouchID) {
         touchIDorFaceID = @"Touch ID";
+        touchIDorFaceIDTitle = NSLocalizedString(@"通过 Touch ID 来解锁应用", nil);
     }else if(XYAuthenticationTool.authType == XYAuthTypeFaceID){
         touchIDorFaceID = @"Face ID";
+        touchIDorFaceIDTitle = NSLocalizedString(@"通过 Face ID 来解锁应用", nil);
     }
     
     XYSwitch *swith1 = [XYSwitch new];
@@ -187,7 +190,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": [NSString stringWithFormat:@"通过 %@ 解锁应用",touchIDorFaceID],
+            @"title": touchIDorFaceIDTitle,
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -204,7 +207,7 @@
     swith2.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith2.settingKey];
     NSArray *section3 = @[
         @{
-            @"title": @"访问密码",
+            @"title": NSLocalizedString(@"访问密码", nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -212,7 +215,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"启用密码",
+            @"title": NSLocalizedString(@"启用密码", nil),
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -221,7 +224,7 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"设置访问密码",
+            @"title": NSLocalizedString(@"设置访问密码", nil),
             @"titleKey": @"XYPasswordSettingController",
             @"value": @"",
             @"type": @1,
@@ -229,7 +232,7 @@
             @"cellHeight": @50,
         },
         @{
-            @"title": @"如果您想使用新的手势密码锁，请先移除现有密码，然后再重新设置密码",
+            @"title": NSLocalizedString(@"如果您想使用新的手势密码锁，请先移除现有密码，然后再重新设置密码", nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -241,20 +244,20 @@
     NSInteger timeInterval = [kUserDefaults integerForKey:SettingKey_NeedPwdTimeInterval];
     NSString *timeStr = @"";
     if (timeInterval == 0) {
-        timeStr = @"立即";
+        timeStr = NSLocalizedString(@"立即",nil);
     }else if (timeInterval == 60) {
-        timeStr = @"1分钟后";
+        timeStr = NSLocalizedString(@"1分钟后",nil);
     }else if (timeInterval == 180) {
-        timeStr = @"3分钟后";
+        timeStr = NSLocalizedString(@"3分钟后",nil);
     }else if (timeInterval == 300) {
-        timeStr = @"5分钟后";
+        timeStr = NSLocalizedString(@"5分钟后",nil);
     }else{
-        timeStr = @"10分钟后";
+        timeStr = NSLocalizedString(@"10分钟后",nil);
     }
     NSArray *section4 = @[
         @{
             @"imageName": @"",
-            @"title": @"需要密码",
+            @"title": NSLocalizedString(@"需要密码",nil),
             @"titleKey": @"XYSettingNeedPwdTimeController",
             @"value": timeStr,
             @"type": @1,
@@ -264,12 +267,12 @@
     ];
     
     XYSwitch *swith3 = [XYSwitch new];
-    swith3.settingKey = @"音效";
+    swith3.settingKey = NSLocalizedString(@"音效",nil);
     swith3.on = [[NSUserDefaults standardUserDefaults] boolForKey:swith3.settingKey];
     NSArray *section5 = @[
         @{
             @"imageName": @"",
-            @"title": @"抹掉数据",
+            @"title": NSLocalizedString(@"抹掉数据",nil),
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
@@ -277,7 +280,7 @@
             @"accessoryView": swith3
         },
         @{
-            @"title": @"若连续10次输入错误密码，系统将抹掉所有卡片数据",
+            @"title": NSLocalizedString(@"若连续10次输入错误密码，系统将抹掉所有卡片数据",nil),
             @"titleColor": UIColor.grayColor,
             @"titleFont": [UIFont systemFontOfSize:14],
             @"type": @3,
@@ -292,7 +295,7 @@
     {
         NSArray *section6 = @[
             @{
-                @"title": @"访问密码",
+                @"title": NSLocalizedString(@"访问密码",nil),
                 @"titleColor": UIColor.grayColor,
                 @"titleFont": [UIFont systemFontOfSize:14],
                 @"type": @3,
@@ -300,7 +303,7 @@
             },
             @{
                 @"imageName": @"",
-                @"title": @"启用密码",
+                @"title": NSLocalizedString(@"启用密码",nil),
                 @"titleKey": @"XYPasswordSettingController",
                 @"value": @"",
                 @"type": @1,

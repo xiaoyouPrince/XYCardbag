@@ -6,4 +6,88 @@
   Copyright © 2021 xiaoyou. All rights reserved.
 */
 
-menu = "功能";
+/* No comment provided by engineer. */
+"10分钟后" = "10分钟后";
+
+/* No comment provided by engineer. */
+"1分钟后" = "1分钟后";
+
+/* No comment provided by engineer. */
+"3分钟后" = "3分钟后";
+
+/* No comment provided by engineer. */
+"5分钟后" = "5分钟后";
+
+/* No comment provided by engineer. */
+"分享" = "分享";
+
+/* No comment provided by engineer. */
+"去 App Store 打分" = "去 App Store 打分";
+
+/* No comment provided by engineer. */
+"反馈" = "反馈";
+
+/* No comment provided by engineer. */
+"启用密码" = "启用密码";
+
+/* No comment provided by engineer. */
+"启用密码重置服务" = "启用密码重置服务";
+
+/* No comment provided by engineer. */
+"如果你忘记了密码，可以通过此服务来找回密码" = "如果你忘记了密码，可以通过此服务来找回密码";
+
+/* No comment provided by engineer. */
+"如果您想使用新的手势密码锁，请先移除现有密码，然后再重新设置密码" = "如果您想使用新的手势密码锁，请先移除现有密码，然后再重新设置密码";
+
+/* No comment provided by engineer. */
+"密码" = "密码";
+
+/* No comment provided by engineer. */
+"密码重置服务" = "密码重置服务";
+
+/* No comment provided by engineer. */
+"抹掉数据" = "抹掉数据";
+
+/* No comment provided by engineer. */
+"操作卡片音效" = "操作卡片音效";
+
+/* No comment provided by engineer. */
+"支持与反馈" = "支持与反馈";
+
+/* No comment provided by engineer. */
+"立即" = "立即";
+
+/* No comment provided by engineer. */
+"若连续10次输入错误密码，系统将抹掉所有卡片数据" = "若连续10次输入错误密码，系统将抹掉所有卡片数据";
+
+/* No comment provided by engineer. */
+"设置" = "设置";
+
+/* No comment provided by engineer. */
+"设置访问密码" = "设置访问密码";
+
+/* No comment provided by engineer. */
+"访问密码" = "访问密码";
+
+/* No comment provided by engineer. */
+"语言" = "语言";
+
+/* No comment provided by engineer. */
+"请我喝杯咖啡" = "请我喝杯咖啡";
+
+/* No comment provided by engineer. */
+"通过 Face ID 来解锁应用" = "通过 Face ID 来解锁应用";
+
+/* No comment provided by engineer. */
+"通过 Touch ID 来解锁应用" = "通过 Touch ID 来解锁应用";
+
+/* No comment provided by engineer. */
+"需要密码" = "需要密码";
+
+/* No comment provided by engineer. */
+"音效" = "音效";
+
+/* No comment provided by engineer. */
+"音效伴随震动" = "音效伴随震动";
+
+

@@ -42,6 +42,7 @@
 
         // 设置语言
         [[XYLocalizedTool sharedInstance] setLanguage:item.code];
+        [kUserDefaults setObject:item.title forKey:SettingKey_LanguageNameSetByUser];
         
         // 通知刷新
         [kNotificationCenter postNotificationName:SettingKey_LanguageSetByUser object:nil];

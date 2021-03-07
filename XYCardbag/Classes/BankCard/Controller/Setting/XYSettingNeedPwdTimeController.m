@@ -22,11 +22,11 @@
     
     self.view.backgroundColor = kGlobalBgColor;
     
-    XYCheckBoxItem *item0 = [XYCheckBoxItem modelWithTitle:@"立即" code:@"0" select:NO];
-    XYCheckBoxItem *item1 = [XYCheckBoxItem modelWithTitle:@"1分钟后" code:@"60" select:NO];
-    XYCheckBoxItem *item2 = [XYCheckBoxItem modelWithTitle:@"3分钟后" code:@"180" select:NO];
-    XYCheckBoxItem *item3 = [XYCheckBoxItem modelWithTitle:@"5分钟后" code:@"300" select:NO];
-    XYCheckBoxItem *item4 = [XYCheckBoxItem modelWithTitle:@"10分钟后" code:@"600" select:NO];
+    XYCheckBoxItem *item0 = [XYCheckBoxItem modelWithTitle:XYLocalizedString(@"立即") code:@"0" select:NO];
+    XYCheckBoxItem *item1 = [XYCheckBoxItem modelWithTitle:XYLocalizedString(@"1分钟后") code:@"60" select:NO];
+    XYCheckBoxItem *item2 = [XYCheckBoxItem modelWithTitle:XYLocalizedString(@"3分钟后") code:@"180" select:NO];
+    XYCheckBoxItem *item3 = [XYCheckBoxItem modelWithTitle:XYLocalizedString(@"5分钟后") code:@"300" select:NO];
+    XYCheckBoxItem *item4 = [XYCheckBoxItem modelWithTitle:XYLocalizedString(@"10分钟后") code:@"600" select:NO];
     NSArray *dataArray = @[item0, item1, item2, item3, item4];
     
     for (XYCheckBoxItem *item in dataArray) {

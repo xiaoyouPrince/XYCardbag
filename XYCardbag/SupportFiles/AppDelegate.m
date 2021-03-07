@@ -21,6 +21,9 @@
     
     // 监听
     [kNotificationCenter addObserver:self selector:@selector(settingForLanguages) name:SettingKey_LanguageSetByUser object:nil];
+    
+    // 多语言
+    [[XYLocalizedTool sharedInstance] setLanguage:[[XYLocalizedTool sharedInstance] currentLanguage]];
 
     return YES;
 }

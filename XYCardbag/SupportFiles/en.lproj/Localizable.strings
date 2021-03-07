@@ -6,4 +6,89 @@
   Copyright © 2021 xiaoyou. All rights reserved.
 */
 
-menu = "menu";
+/* No comment provided by engineer. */
+"10分钟后" = "in 10 mins";
+
+/* No comment provided by engineer. */
+"1分钟后" = "in 1 min";
+
+/* No comment provided by engineer. */
+"3分钟后" = "in 3 mins";
+
+/* No comment provided by engineer. */
+"5分钟后" = "in 5 mins";
+
+/* No comment provided by engineer. */
+"分享" = "Share";
+
+/* No comment provided by engineer. */
+"去 App Store 打分" = "Star on App Store ";
+
+/* No comment provided by engineer. */
+"反馈" = "Fadeback";
+
+/* No comment provided by engineer. */
+"启用密码" = "Use the password";
+
+/* No comment provided by engineer. */
+"启用密码重置服务" = "Open Password reset service";
+
+/* No comment provided by engineer. */
+"如果你忘记了密码，可以通过此服务来找回密码" = "if you have forget your password, click here to find it back";
+
+/* No comment provided by engineer. */
+"如果您想使用新的手势密码锁，请先移除现有密码，然后再重新设置密码" = "if you want to use a new guesture pwd, you must remove the current one, and set a new one";
+
+/* No comment provided by engineer. */
+"密码" = "Password";
+
+/* No comment provided by engineer. */
+"密码重置服务" = "Password reset service";
+
+/* No comment provided by engineer. */
+"抹掉数据" = "Delete all records";
+
+/* No comment provided by engineer. */
+"操作卡片音效" = "Sound on maniplaint card";
+
+/* No comment provided by engineer. */
+"支持与反馈" = "Support and fadeback";
+
+/* No comment provided by engineer. */
+"立即" = "Right now";
+
+/* No comment provided by engineer. */
+"若连续10次输入错误密码，系统将抹掉所有卡片数据" = "if you input wrong pwd 10 times contines, the system will delete all records";
+
+/* No comment provided by engineer. */
+"设置" = "Setting";
+
+/* No comment provided by engineer. */
+"设置访问密码" = "Set the password ";
+
+/* No comment provided by engineer. */
+"访问密码" = "Passord";
+
+/* No comment provided by engineer. */
+"语言" = "Languages";
+
+/* No comment provided by engineer. */
+"请我喝杯咖啡" = "Buy me a cup of coffee";
+
+/* No comment provided by engineer. */
+"通过 Face ID 来解锁应用" = "Unlock with Face ID ";
+
+/* No comment provided by engineer. */
+"通过 Touch ID 来解锁应用" = "Unlock with Touch ID ";
+
+/* No comment provided by engineer. */
+"需要密码" = "Need password";
+
+/* No comment provided by engineer. */
+"音效" = "Sound";
+
+/* No comment provided by engineer. */
+"音效伴随震动" = "Sound with the alert";
+
+
+

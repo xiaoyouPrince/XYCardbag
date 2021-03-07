@@ -38,7 +38,9 @@
     
     __weak typeof(XYSettingViewController) *weakSelf = self;
     [self setContentWithData:[DataTool settingData] itemConfig:^(XYInfomationItem * _Nonnull item) {
-        item.titleWidthRate = 0.6;
+        if (item.title != NSLocalizedString(@"反馈", nil)) {
+            item.titleWidthRate = 0.6;
+        }
         item.titleFont = [UIFont boldSystemFontOfSize:16];
     } sectionConfig:^(XYInfomationSection * _Nonnull section) {
         section.layer.cornerRadius = 0;

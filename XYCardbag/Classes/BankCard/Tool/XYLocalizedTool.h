@@ -37,4 +37,6 @@ static NSString * const AppLanguage = @"appLanguage";
 + (void)setLanguage:(NSString *)language;
 @end
 
+// 一个全局方法设置本地化
+#define XYLocalizedString(str) NSLocalizedString(str,nil)
 NS_ASSUME_NONNULL_END

@@ -1446,6 +1446,11 @@
 				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LOCALIZED_STRING_MACRO_NAMES = (
+					NSLocalizedString,
+					CFCopyLocalizedString,
+					XYLocalizedString,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1471,6 +1476,11 @@
 				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LOCALIZED_STRING_MACRO_NAMES = (
+					NSLocalizedString,
+					CFCopyLocalizedString,
+					XYLocalizedString,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
