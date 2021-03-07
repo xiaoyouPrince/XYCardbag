@@ -113,8 +113,6 @@
 - (void)dealloc
 {
     [kNotificationCenter removeObserver:self];
-    
-    XYFunc
 }
 
 
@@ -189,24 +187,24 @@
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
+    XYWeakSelf
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_help" title:@"+ 添加新卡片" rightImage:@"tool_search" callbackHandler:^(UIButton *item) {
-//        NSLog(@"item = %@",item);
         switch (item.tag) {
             case XYToolbarItemPositionLeft:
                 {
-                    [self gotoHelpPage];
+                    [weakSelf gotoHelpPage];
                 }
                 break;
                 
             case XYToolbarItemPositionMiddle:
             {
-                [self gotoAddNewCardPage];
+                [weakSelf gotoAddNewCardPage];
             }
                 break;
                 
             case XYToolbarItemPositiondRight:
             {
-                [self gotoSearchCard];
+                [weakSelf gotoSearchCard];
             }
                 break;
                 

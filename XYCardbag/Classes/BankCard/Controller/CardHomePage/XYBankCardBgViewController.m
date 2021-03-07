@@ -77,12 +77,13 @@
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
+    XYWeakSelf
     __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_add" title:@"设置" rightImage:@"tool_config" callbackHandler:^(UIButton *item) {
 //        NSLog(@"item = %@",item);
         
         if (item.tag == XYToolbarItemPositionLeft) {
             NSLog(@"左边item = 新添加");
-            [self addNewCardSection];
+            [weakSelf addNewCardSection];
             return;
         }
         
@@ -92,7 +93,7 @@
             XYSettingViewController *listVC = [XYSettingViewController new];
             XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
             nav.modalPresentationStyle = UIModalPresentationCustom;
-            [self presentViewController:nav animated:YES completion:nil];
+            [weakSelf presentViewController:nav animated:YES completion:nil];
             
             return;
         }
@@ -104,11 +105,11 @@
             [item setTitleColor:color forState:UIControlStateNormal];
             
             // 2，tableView变成可编辑状态
-            self.tableView.editing = YES;
+            weakSelf.tableView.editing = YES;
             
             // 3. 通过delegate发消息传出去外界不可操作现在，只能等编辑完成才可以滑动回来。
-            if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
-                [self.delegate backgroundView:self.tableView isEditing:YES];
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
+                [weakSelf.delegate backgroundView:weakSelf.tableView isEditing:YES];
             }
             
         }else if ([item.currentTitle isEqualToString:@"完成"]) {
@@ -118,11 +119,11 @@
             [item setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             
             // 2，tableView变成可编辑状态
-            self.tableView.editing = NO;
+            weakSelf.tableView.editing = NO;
             
             // 3.通过delegate发消息传出去外界可操作现在，已经编辑完成回归原来状态。
-            if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
-                [self.delegate backgroundView:self.tableView isEditing:NO];
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(backgroundView:isEditing:)]) {
+                [weakSelf.delegate backgroundView:weakSelf.tableView isEditing:NO];
             }
         }
     }];
