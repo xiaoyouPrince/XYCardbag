@@ -79,7 +79,7 @@
             @"imageName": @"",
             @"title": NSLocalizedString(@"语言",nil),
             @"titleKey": @"XYSettingLanguagesController",
-            @"value": [kUserDefaults objectForKey:SettingKey_LanguageNameSetByUser] ?: @"",
+            @"value": [kUserDefaults objectForKey:SettingKey_LanguageNameSetByUser] ?: @"iOS",
             @"type": @1,
             @"valueCode": @"",
             @"cellHeight": @50,

@@ -21,8 +21,8 @@
     self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
     [self setupContent];
     
-    self.navigationItem.title = @"设置";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(doneClick:)];
+    self.navigationItem.title = NSLocalizedString(@"设置", nil);
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"完成", nil) style:UIBarButtonItemStyleDone target:self action:@selector(doneClick:)];
     
 }
 

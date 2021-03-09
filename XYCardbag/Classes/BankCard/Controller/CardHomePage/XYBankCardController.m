@@ -74,7 +74,7 @@
     [super viewDidLoad];
     
     // 默认的title 【所有卡片】
-    self.title = SectionNameAll;
+    self.title = NSLocalizedString(SectionNameAll, nil);
     self.sectionID = @(1);
     
     self.view.backgroundColor = [UIColor blackColor];
@@ -148,7 +148,7 @@
 - (void)setupNav{
     
     // nav
-    NSString *leftTitle = XYLocalizedString(@"功能");
+    NSString *leftTitle = NSLocalizedString(@"功能", nil);
     UIBarButtonItem *leftFuncItem = [[UIBarButtonItem alloc] initWithTitle:leftTitle style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
     self.navigationItem.leftBarButtonItem = leftFuncItem;
 }
@@ -188,7 +188,8 @@
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
     XYWeakSelf
-    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_help" title:@"+ 添加新卡片" rightImage:@"tool_search" callbackHandler:^(UIButton *item) {
+    NSString *barTitle = NSLocalizedString(@"+ 添加新卡片", nil);
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_help" title:barTitle rightImage:@"tool_search" callbackHandler:^(UIButton *item) {
         switch (item.tag) {
             case XYToolbarItemPositionLeft:
                 {
@@ -411,7 +412,8 @@
     UIView *header = [UIView new];
     
     _tableHeaderView = [UILabel new];
-    _tableHeaderView.text = [NSString stringWithFormat:@"[%@]数量:%ld",self.title,self.dataArray.count];
+    NSString *countString = NSLocalizedString(@"数量", nil);
+    _tableHeaderView.text = [NSString stringWithFormat:@"[%@]%@:%ld",self.title,countString,self.dataArray.count];
 //    _tableHeaderView.textColor = [UIColor colorWithWhite:1 alpha:0.8];
     _tableHeaderView.textColor = [UIColor greenColor];
     _tableHeaderView.textAlignment = NSTextAlignmentCenter;

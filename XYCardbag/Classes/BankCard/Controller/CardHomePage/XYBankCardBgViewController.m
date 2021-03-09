@@ -78,7 +78,9 @@
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
     
     XYWeakSelf
-    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_add" title:@"设置" rightImage:@"tool_config" callbackHandler:^(UIButton *item) {
+    NSString *editString = NSLocalizedString(@"编辑", nil);
+    NSString *doneString = NSLocalizedString(@"完成", nil);
+    __block XYToolBar *toolBar = [[XYToolBar alloc] initWithLeftImage:@"tool_add" title:editString rightImage:@"tool_config" callbackHandler:^(UIButton *item) {
 //        NSLog(@"item = %@",item);
         
         if (item.tag == XYToolbarItemPositionLeft) {
@@ -98,9 +100,9 @@
             return;
         }
         
-        if ([item.currentTitle isEqualToString:@"设置"]) {
+        if ([item.currentTitle isEqualToString:NSLocalizedString(editString, nil)]) {
             // 1.自己状态改变
-            [item setTitle:@"完成" forState:UIControlStateNormal];
+            [item setTitle:doneString forState:UIControlStateNormal];
             UIColor *color = XYColor(44, 183, 245);
             [item setTitleColor:color forState:UIControlStateNormal];
             
@@ -112,10 +114,10 @@
                 [weakSelf.delegate backgroundView:weakSelf.tableView isEditing:YES];
             }
             
-        }else if ([item.currentTitle isEqualToString:@"完成"]) {
+        }else if ([item.currentTitle isEqualToString:doneString]) {
             
             // 1.自己状态改变
-            [item setTitle:@"设置" forState:UIControlStateNormal];
+            [item setTitle:editString forState:UIControlStateNormal];
             [item setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             
             // 2，tableView变成可编辑状态
@@ -203,7 +205,7 @@
     }
 //    cell.textLabel.text = [NSString stringWithFormat:@"第 %zd 个 cell",indexPath.row];
     XYBankCardSection *section = self.dataArray[indexPath.row];
-    cell.textLabel.text = section.title;
+    cell.textLabel.text = NSLocalizedString(section.title, nil);
     cell.textLabel.textColor = UIColor.whiteColor;
     cell.backgroundColor = UIColor.clearColor;//indexPath.row % 2 ? [UIColor purpleColor]: [UIColor greenColor];
     cell.imageView.image = [UIImage imageNamed:section.icon];

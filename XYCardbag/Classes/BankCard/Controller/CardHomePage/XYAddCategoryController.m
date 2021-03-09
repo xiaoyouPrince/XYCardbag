@@ -37,22 +37,22 @@
 - (void)buildUI{
     // 创建UI页面
     self.view.backgroundColor = UIColor.groupTableViewBackgroundColor;
-    self.title = @"添加分组";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
+    self.title = NSLocalizedString(@"添加分组", nil);
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"取消", nil) style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"保存", nil) style:UIBarButtonItemStyleDone target:self action:@selector(save)];
     
     UIImage *bgImage = [UIImage imageNamed:@"blur_bg"];
     self.view = [[UIImageView alloc] initWithImage:bgImage];
     self.view.userInteractionEnabled = YES;
     
     UILabel *nameLabel = [UILabel new];
-    nameLabel.text = @"名称";
+    nameLabel.text = NSLocalizedString(@"名称", nil);
     nameLabel.textColor = [UIColor whiteColor];
     [nameLabel sizeToFit];
     [self.view addSubview:nameLabel];
     
     UITextField *nameTF = [UITextField new];
-    nameTF.placeholder = @"输入分类名";
+    nameTF.placeholder = NSLocalizedString(@"输入分类名", nil);
     nameTF.placeholderColor = [UIColor grayColor];
     nameTF.borderStyle = UITextBorderStyleRoundedRect;
     [nameTF becomeFirstResponder];
