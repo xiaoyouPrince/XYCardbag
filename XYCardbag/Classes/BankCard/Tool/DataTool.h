@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 密码设置页面数据
 + (NSArray *)settingPasswordData;
 
-
+/// 选择银行VC
++ (NSArray *)chooseBankData;
 
 @end
 

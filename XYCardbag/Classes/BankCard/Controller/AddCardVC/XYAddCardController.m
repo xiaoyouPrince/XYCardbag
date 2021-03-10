@@ -10,6 +10,7 @@
 //  添加新卡页面
 
 #import "XYAddCardController.h"
+#import "XYChooseBankViewController.h"
 #import "XYAddCardDetailController.h"
 
 @interface XYAddCardController ()
@@ -46,21 +47,23 @@
             [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
         
-        if ([cell.model.title isEqualToString:@"信用卡"]) {
-            /// 进入对应的列表页面
-            XYAddCardDetailController *listVC = [XYAddCardDetailController new];
-            listVC.sectionID = weakSelf.sectionID;
-            listVC.cardType = CardTypeCredit;
-            [weakSelf.navigationController pushViewController:listVC animated:YES];
-        }
-        
         if ([cell.model.title isEqualToString:@"银行卡"]) {
+        
             /// 进入对应的列表页面
-            XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+            XYChooseBankViewController *listVC = [XYChooseBankViewController new];
             listVC.sectionID = weakSelf.sectionID;
             listVC.cardType = CardTypeVip;
             [weakSelf.navigationController pushViewController:listVC animated:YES];
         }
+        
+        if ([cell.model.title isEqualToString:@"信用卡"]) {
+            /// 进入对应的列表页面
+//            XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+//            listVC.sectionID = weakSelf.sectionID;
+//            listVC.cardType = CardTypeCredit;
+//            [weakSelf.navigationController pushViewController:listVC animated:YES];
+        }
+        
     };
 }
 

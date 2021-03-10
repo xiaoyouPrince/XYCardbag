@@ -318,4 +318,28 @@
     
 }
 
++ (NSArray *)chooseBankData{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"banks" ofType:@"json"];
+    NSData *jsonData = [NSData dataWithContentsOfFile:path];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingFragmentsAllowed error:NULL];
+    
+    NSMutableArray *banksM = @[].mutableCopy;
+    for (NSDictionary *bankDict in dict[@"banks"]) {
+        NSDictionary *dict = @{
+            @"imageName": bankDict[@"icon"],
+            @"title": NSLocalizedString(bankDict[@"name"],nil),
+            @"titleKey": @"XYPasswordSettingController",
+            @"value": @"",
+            @"type": @1,
+            @"valueCode": @"",
+            @"cellHeight": @50,
+            @"obj": bankDict[@"colors"] ?: @[]
+        };
+        [banksM addObject:dict];
+    }
+    
+    return @[banksM];
+}
+
 @end

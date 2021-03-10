@@ -10,11 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-    CardTypeNormal = 1<<0, // default
-    CardTypeCredit = 1<<1,
-    CardTypeVip = 1<<2
-} CardType;
 
 @interface XYAddCardDetailController : UITableViewController
 
