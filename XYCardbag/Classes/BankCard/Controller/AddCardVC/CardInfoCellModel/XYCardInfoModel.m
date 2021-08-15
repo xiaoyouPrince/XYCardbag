@@ -45,6 +45,10 @@ MJCodingImplementation;
 @implementation XYCardInfoModel
 MJCodingImplementation;
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    XYFunc;
+}
+
 - (NSString *)tagString
 {
     // 基于 tagType 来定义的，自定义的标签中的类型string
