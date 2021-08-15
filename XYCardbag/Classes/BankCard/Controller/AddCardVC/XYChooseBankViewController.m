@@ -30,33 +30,24 @@
         
 //        UIImage *image = [UIImage imageNamed:cell.model.imageName];
         
-        NSArray *colors = (NSArray *)cell.model.obj;
-        if (colors.count == 2) {
-            
-            NSMutableArray *colorsM = @[].mutableCopy;
-            for (NSString *colorStr in colors) {
-                NSArray *component = [colorStr componentsSeparatedByString:@","];
-                CGFloat r = [component[0] integerValue];
-                CGFloat g = [component[1] integerValue];
-                CGFloat b = [component[2] integerValue];
-                UIColor *c = XYColor(r, g, b);
-                [colorsM addObject:c];
-            }
-            [cell xy_setGradientColors:colorsM];
-        }else{
-            cell.backgroundColor = [UIColor.greenColor colorWithAlphaComponent:0.5];
-        }
+//        NSArray *colors = (NSArray *)cell.model.obj;
+//        NSMutableArray *colorsM = @[].mutableCopy;
+//        for (NSString *colorStr in colors) {
+//            NSArray *component = [colorStr componentsSeparatedByString:@","];
+//            CGFloat r = [component[0] integerValue];
+//            CGFloat g = [component[1] integerValue];
+//            CGFloat b = [component[2] integerValue];
+//            UIColor *c = XYColor(r, g, b);
+//            [colorsM addObject:c];
+//        }
+//        [cell xy_setGradientColors:colorsM];
         
         
         
-        
-        
-        
-//
-//        XYAddCardDetailController *listVC = [XYAddCardDetailController new];
-//        listVC.sectionID = weakSelf.sectionID;
-//        listVC.cardType = weakSelf.cardType;
-//        [weakSelf.navigationController pushViewController:listVC animated:YES];
+        XYAddCardDetailController *listVC = [XYAddCardDetailController new];
+        listVC.sectionID = weakSelf.sectionID;
+        listVC.cardType = weakSelf.cardType;
+        [weakSelf.navigationController pushViewController:listVC animated:YES];
     }];
 }
 
