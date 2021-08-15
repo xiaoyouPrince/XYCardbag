@@ -187,7 +187,7 @@
     
     if (indexPath.section == 0 && indexPath.row == sectionArr.count-1 ) { // card.desc 显示为灰色
         cell.textLabel.textColor = [UIColor lightGrayColor];
-        cell.textLabel.backgroundColor = [UIColor redColor];
+        //cell.textLabel.backgroundColor = [UIColor redColor];
     }else
     {
         cell.textLabel.textColor = [UIColor blackColor];
@@ -202,10 +202,10 @@
             XYCardInfoModel *tag = sectionArr[indexPath.row];
             tagCell.textLabel.text = tag.title;
             tagCell.detailTextLabel.text = tag.detail;
-            if (1) {
-                UIImage *remind = [UIImage imageNamed:@"wizard_normalcard"];
-                tagCell.accessoryView = [[UIImageView alloc] initWithImage:remind];
-            }
+//            if (1) {
+//                UIImage *remind = [UIImage imageNamed:@"wizard_normalcard"];
+//                tagCell.accessoryView = [[UIImageView alloc] initWithImage:remind];
+//            }
             
             return tagCell;
         }
@@ -225,7 +225,56 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [XYAlertView showAlertOnVC:self title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *currentCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (currentCell.accessoryType != UITableViewCellAccessoryDisclosureIndicator) {
+        // 第一组
+        UIPasteboard *pb = [UIPasteboard generalPasteboard];
+        
+        if (currentCell.detailTextLabel.text == nil) {
+            pb.string = [NSString stringWithFormat:@"%@:%@",@"卡片简介",currentCell.textLabel.text];
+        }else{
+            pb.string = [NSString stringWithFormat:@"%@:%@",currentCell.textLabel.text,currentCell.detailTextLabel.text];
+        }
+        
+        [SVProgressHUD showSuccessWithStatus:@"已拷贝到剪贴板"];
+        
+    }else{
+        
+        if ([currentCell.textLabel.text isEqualToString:@"拷贝所有"]) {
+            XYBankCardModel *bankCard = self.bankCard;
+            
+            NSString *name = [NSString stringWithFormat:@"卡片名称：%@",bankCard.name];
+            NSString *number = [NSString stringWithFormat:@"卡片号码：%@",bankCard.cardNumber];
+            
+            NSMutableArray *tags = [NSMutableArray array];
+            for (XYCardInfoModel *tag in bankCard.tags) {
+                NSString *tagStr = [NSString stringWithFormat:@"%@:%@",tag.title,tag.detail];
+                [tags addObject:tagStr];
+            }
+            
+            NSString *desc = [NSString stringWithFormat:@"卡片简介：%@",bankCard.desc];
+            
+            NSArray *array = @[name, number, tags, desc];
+            
+            NSString *string = [array mj_JSONString];
+            UIPasteboard *pb = [UIPasteboard generalPasteboard];
+            pb.string = string;
+            
+            [SVProgressHUD showSuccessWithStatus:@"已拷贝到剪贴板"];
+        }
+        
+        if ([currentCell.textLabel.text isEqualToString:@"卡片图片"]) {
+            // 进入图片浏览页面
+            [XYAlertView showAlertOnVC:self title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];
+        }
+        
+        if ([currentCell.textLabel.text isEqualToString:@"Passwork"]) {
+            [XYAlertView showAlertOnVC:self title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];
+        }
+    }
 }
 
 
