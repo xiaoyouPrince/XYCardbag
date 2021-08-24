@@ -11,6 +11,7 @@
 #import "XYCardInfoModel.h"
 #import "XYBankCardModel.h"
 #import "XYQrCodeView.h"
+#import "XYImageBrowserViewController.h"
 
 @interface XYBankCardDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic , strong)     NSMutableArray *dataArray;
@@ -268,7 +269,18 @@
         
         if ([currentCell.textLabel.text isEqualToString:@"卡片图片"]) {
             // 进入图片浏览页面
-            [XYAlertView showAlertOnVC:self title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];
+            
+            XYImageBrowserViewController *imgB = [XYImageBrowserViewController new];
+            XYBankCardModel *bankCard = self.bankCard;
+            NSMutableArray *images = @[].mutableCopy;
+            if (bankCard.frontIconImage) {
+                [images addObject:bankCard.frontIconImage];
+            }
+            if (bankCard.rearIconImage) {
+                [images addObject:bankCard.rearIconImage];
+            }
+            imgB.images = images;
+            [self.navigationController pushViewController:imgB animated:YES];
         }
         
         if ([currentCell.textLabel.text isEqualToString:@"Passwork"]) {

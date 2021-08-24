@@ -282,6 +282,7 @@
 		B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C7C67820EE80E00078BEEB /* XYAddCategoryController.m */; };
 		B4DF24B525EC96F800F275C1 /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */; };
 		B4E4D6C520EF175500A2922D /* XYAddCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E4D6C420EF175500A2922D /* XYAddCardController.m */; };
+		B4EC40C926CAB80600A35D74 /* XYImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EC40C726CAB80600A35D74 /* XYImageBrowserViewController.m */; };
 		B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF1F421816864007205DA /* XYChooseDateViewController.m */; };
 		B4EFF1F721816864007205DA /* XYChooseDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */; };
 		B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EFF1FE21816939007205DA /* XYChooseDateCell.m */; };
@@ -654,6 +655,8 @@
 		B4DF24B425EC96F800F275C1 /* XYSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingViewController.m; sourceTree = "<group>"; };
 		B4E4D6C320EF175500A2922D /* XYAddCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAddCardController.h; sourceTree = "<group>"; };
 		B4E4D6C420EF175500A2922D /* XYAddCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAddCardController.m; sourceTree = "<group>"; };
+		B4EC40C626CAB80600A35D74 /* XYImageBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYImageBrowserViewController.h; sourceTree = "<group>"; };
+		B4EC40C726CAB80600A35D74 /* XYImageBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYImageBrowserViewController.m; sourceTree = "<group>"; };
 		B4EFF1F321816864007205DA /* XYChooseDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChooseDateViewController.h; sourceTree = "<group>"; };
 		B4EFF1F421816864007205DA /* XYChooseDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChooseDateViewController.m; sourceTree = "<group>"; };
 		B4EFF1F521816864007205DA /* XYChooseDateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYChooseDateViewController.xib; sourceTree = "<group>"; };
@@ -780,6 +783,7 @@
 		89FB5E991FE7C2B7002AE67C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B4EC40C526CAB78700A35D74 /* XYImageBrowser */,
 				B45DB16E23B2FB3B00363A4E /* XYAlbum */,
 				B458EF8C2010434C00B3D0D3 /* Venders */,
 			);
@@ -1453,6 +1457,15 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		B4EC40C526CAB78700A35D74 /* XYImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B4EC40C626CAB80600A35D74 /* XYImageBrowserViewController.h */,
+				B4EC40C726CAB80600A35D74 /* XYImageBrowserViewController.m */,
+			);
+			path = XYImageBrowser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1944,6 +1957,7 @@
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */,
 				B45DB1C023B3602000363A4E /* JPImageresizerView.m in Sources */,
+				B4EC40C926CAB80600A35D74 /* XYImageBrowserViewController.m in Sources */,
 				B4BD541B25F249A700A96178 /* XYLocalizedTool.m in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
 				B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */,
