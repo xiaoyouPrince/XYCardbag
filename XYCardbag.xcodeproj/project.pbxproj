@@ -37,6 +37,7 @@
 		B445563D25F12F3E00577241 /* auto_stage_done.aif in Resources */ = {isa = PBXBuildFile; fileRef = B445563A25F12F3E00577241 /* auto_stage_done.aif */; };
 		B445563E25F12F3E00577241 /* bring_top.aif in Resources */ = {isa = PBXBuildFile; fileRef = B445563B25F12F3E00577241 /* bring_top.aif */; };
 		B44CD74B20F4819C00022322 /* XYCardInfoNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */; };
+		B44CD88226E519DE0087F46A /* XYICloudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CD88126E519DE0087F46A /* XYICloudViewController.m */; };
 		B458EFA2201043C400B3D0D3 /* XYContactsDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */; };
 		B458EFA62010864000B3D0D3 /* XYContactsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B458EFA42010864000B3D0D3 /* XYContactsDetailController.m */; };
 		B458EFA72010864000B3D0D3 /* XYContactsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B458EFA52010864000B3D0D3 /* XYContactsDetailController.xib */; };
@@ -366,6 +367,8 @@
 		B445563B25F12F3E00577241 /* bring_top.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = bring_top.aif; sourceTree = "<group>"; };
 		B44CD74920F4819C00022322 /* XYCardInfoNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoNameCell.h; sourceTree = "<group>"; };
 		B44CD74A20F4819C00022322 /* XYCardInfoNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCardInfoNameCell.m; sourceTree = "<group>"; };
+		B44CD88026E519DE0087F46A /* XYICloudViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYICloudViewController.h; sourceTree = "<group>"; };
+		B44CD88126E519DE0087F46A /* XYICloudViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYICloudViewController.m; sourceTree = "<group>"; };
 		B458EFA0201043C400B3D0D3 /* XYContactsDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDBTool.h; sourceTree = "<group>"; };
 		B458EFA1201043C400B3D0D3 /* XYContactsDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContactsDBTool.m; sourceTree = "<group>"; };
 		B458EFA32010864000B3D0D3 /* XYContactsDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContactsDetailController.h; sourceTree = "<group>"; };
@@ -1453,6 +1456,8 @@
 				B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */,
 				B4BD541325F235F900A96178 /* XYSettingLanguagesController.h */,
 				B4BD541425F235F900A96178 /* XYSettingLanguagesController.m */,
+				B44CD88026E519DE0087F46A /* XYICloudViewController.h */,
+				B44CD88126E519DE0087F46A /* XYICloudViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1953,6 +1958,7 @@
 				B45B189C2011D04B00359427 /* XYAddNewContactController.m in Sources */,
 				B458EFAB2010876300B3D0D3 /* XYContactDetailCell.m in Sources */,
 				B45DB18223B309F400363A4E /* SVIndefiniteAnimatedView.m in Sources */,
+				B44CD88226E519DE0087F46A /* XYICloudViewController.m in Sources */,
 				B4FF21F6217DEEA600EE7C12 /* XYQrCodeView.m in Sources */,
 				B4C7C67920EE80E00078BEEB /* XYAddCategoryController.m in Sources */,
 				B4EFF20021816939007205DA /* XYChooseDateCell.m in Sources */,

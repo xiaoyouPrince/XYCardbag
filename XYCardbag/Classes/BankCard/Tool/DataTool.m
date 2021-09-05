@@ -49,7 +49,7 @@
         @{
             @"imageName": @"",
             @"title": @"iCloud",
-            @"titleKey": @"CommonViewController",
+            @"titleKey": @"XYICloudViewController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",
