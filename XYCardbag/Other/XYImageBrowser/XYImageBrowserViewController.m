@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.blackColor;
     
     self.title = [NSString stringWithFormat:@"%d/%lu",1,(unsigned long)self.images.count];
     
@@ -34,9 +35,13 @@
         [self.view addSubview:scrollView];
         scrollView.delegate = self;
         [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+//            make.edges.equalTo(self.view);
+            make.left.top.bottom.equalTo(self.view);
+            make.right.equalTo(self.view.mas_right);
         }];
-            
+           
+//        scrollView.frame = CGRectMake(0, 0, ScreenW, ScreenH);
+        scrollView.backgroundColor = UIColor.blackColor;
         
         UIView *contentView = [UIView new];
         [scrollView addSubview:contentView];
@@ -44,13 +49,23 @@
             make.edges.equalTo(scrollView);
             make.height.equalTo(@(ScreenH-kNavHeight-kTabSafeHeight));
         }];
+        contentView.frame = scrollView.bounds;
         
         UIView *lastView = nil;
+        NSUInteger index = 0;
         for (UIImage *img in self.images) {
             UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
             [contentView addSubview:imageView];
+//            [scrollView addSubview:imageView];
             
+            CGFloat margin = index > 0;// ? 20 : 0;
+            CGFloat imgW = ScreenW;
             CGFloat imgH = img.size.height / img.size.width * ScreenW ;
+            CGFloat imgX = imgW * index + margin;
+            CGFloat imgY = (ScreenH - imgH)/2;
+            
+//            imageView.frame = CGRectMake(imgX, imgY, imgW, imgH);
+            
             
             [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (lastView) {
@@ -64,11 +79,14 @@
             }];
             
             lastView = imageView;
+            index += 1;
         }
         
+//        scrollView.contentSize = CGSizeMake(CGRectGetMaxX(lastView.frame), 0);
         scrollView.pagingEnabled = YES;
+        
     }
-    
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
