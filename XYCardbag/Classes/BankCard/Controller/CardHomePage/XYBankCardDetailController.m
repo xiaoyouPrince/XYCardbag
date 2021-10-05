@@ -52,6 +52,7 @@
 
 - (void)rightItemClick:(UIBarButtonItem *)item{
     XYAlertShowMessage(@"\n正在开发中...");
+    
 }
 
 - (void)buildUI{

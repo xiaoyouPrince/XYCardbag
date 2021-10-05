@@ -20,6 +20,12 @@
     
     self.view.backgroundColor = UIColor.groupTableViewBackgroundColor;
     
+    UILabel *label = [UILabel new];
+    label.numberOfLines = 0;
+    label.text = @"说明: \n"
+    "iCloud 功能用于同步 App 内数据到 Apple iCloud 账户中，"
+    "iCloud 账户数据可在多台登录的苹果设备中共享。\n";
+    [self setHeaderView:label edgeInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
     
 }
 

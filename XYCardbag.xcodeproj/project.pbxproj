@@ -2156,7 +2156,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LOCALIZED_STRING_MACRO_NAMES = (
 					NSLocalizedString,
@@ -2168,7 +2168,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/Classes/BankCard/View/XYCardbag-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders/Masonry";
 			};
 			name = Debug;
@@ -2186,7 +2186,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYCardbag/SupportFiles/XYCardbag.pch";
 				INFOPLIST_FILE = XYCardbag/SupportFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LOCALIZED_STRING_MACRO_NAMES = (
 					NSLocalizedString,
@@ -2197,7 +2197,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/Classes/BankCard/View/XYCardbag-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders/Masonry";
 			};
 			name = Release;
