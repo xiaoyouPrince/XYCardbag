@@ -5,7 +5,7 @@ target 'XYCardbag' do
   
   use_modular_headers!
   
-  pod 'XYKit', :path => '/Users/quxiaoyou/Documents/GitHub/myApp'
+  pod 'XYKit', :path => '/Users/quxiaoyou/Desktop/myApp'
   
   pod "XYInfomationSection"  
 

@@ -18,7 +18,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
-  - MJExtension (3.2.4)
+  - MJExtension (3.4.1)
   - XYInfomationSection (1.0.3):
     - Masonry
   - XYKit (0.1.0):
@@ -29,7 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - XYInfomationSection
-  - XYKit (from `/Users/quxiaoyou/Documents/GitHub/myApp`)
+  - XYKit (from `/Users/quxiaoyou/Desktop/myApp`)
 
 SPEC REPOS:
   trunk:
@@ -41,16 +41,16 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   XYKit:
-    :path: "/Users/quxiaoyou/Documents/GitHub/myApp"
+    :path: "/Users/quxiaoyou/Desktop/myApp"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   XYInfomationSection: 78adfd5a3e6b2939c5532f1500a90d52af24a668
   XYKit: ed0b610604a1cbfc0edce6efa677b5034416c89b
 
-PODFILE CHECKSUM: 0feca297d43af7a06f9cc1779688712eeba223e0
+PODFILE CHECKSUM: 5508034bc333c38e4ea2e2c046dd2f513f46e202
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

@@ -43,11 +43,13 @@
 //        scrollView.frame = CGRectMake(0, 0, ScreenW, ScreenH);
         scrollView.backgroundColor = UIColor.blackColor;
         
+        NSUInteger tabbarHeight = iPhoneX ? 83 : 49;
+        
         UIView *contentView = [UIView new];
         [scrollView addSubview:contentView];
         [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(scrollView);
-            make.height.equalTo(@(ScreenH-kNavHeight-kTabSafeHeight));
+            make.height.equalTo(@(ScreenH-kNavHeight-tabbarHeight));
         }];
         contentView.frame = scrollView.bounds;
         

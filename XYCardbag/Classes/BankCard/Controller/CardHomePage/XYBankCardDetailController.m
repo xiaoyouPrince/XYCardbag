@@ -12,6 +12,7 @@
 #import "XYBankCardModel.h"
 #import "XYQrCodeView.h"
 #import "XYImageBrowserViewController.h"
+#import "XYAddCardDetailController.h"
 
 @interface XYBankCardDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic , strong)     NSMutableArray *dataArray;
@@ -51,7 +52,11 @@
 }
 
 - (void)rightItemClick:(UIBarButtonItem *)item{
-    XYAlertShowMessage(@"\n正在开发中...");
+//    XYAlertShowMessage(@"\n正在开发中...");
+    
+    //
+    XYAddCardDetailController *detail = [XYAddCardDetailController new];
+    [self.navigationController pushViewController:detail animated:YES];
     
 }
 
@@ -110,7 +115,7 @@
     NSMutableArray *sectionTwo = [NSMutableArray array];
     [sectionTwo addObject:@"拷贝所有"];
     [sectionTwo addObject:@"卡片图片"];
-    [sectionTwo addObject:@"Passwork"];
+//    [sectionTwo addObject:@"Passwork"];
     
     [self.dataArray addObject:sectionOne];
     [self.dataArray addObject:sectionTwo];
