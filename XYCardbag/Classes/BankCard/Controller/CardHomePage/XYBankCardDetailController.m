@@ -41,8 +41,8 @@
     UIBarButtonItem *leftFuncItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick:)];
     self.navigationItem.leftBarButtonItem = leftFuncItem;
     
-    UIBarButtonItem *rightFuncItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
-    self.navigationItem.rightBarButtonItem = rightFuncItem;
+//    UIBarButtonItem *rightFuncItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
+//    self.navigationItem.rightBarButtonItem = rightFuncItem;
 }
 
 - (void)leftItemClick:(UIBarButtonItem *)item{
