@@ -44,3 +44,7 @@ typedef void(^CallbackHandler)(UIButton *btn);
 - (instancetype)initWithLeftImage:(NSString *)leftImage title:(NSString *)title rightImage:(NSString *)rightImage callbackHandler:(CallbackHandler)handler;
 
 @end
+
+@interface XYToolBar (rmImage)
+- (void)rmImageBtns;
+@end

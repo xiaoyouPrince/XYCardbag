@@ -120,3 +120,17 @@
 
 
 @end
+
+@implementation XYToolBar (rmImage)
+- (void)rmImageBtns{
+    for (UIView *subView in self.subviews) {
+        if (subView.tag == XYToolbarItemPositionLeft) {
+            subView.hidden = YES;
+        }
+        
+        if (subView.tag == XYToolbarItemPositiondRight) {
+            subView.hidden = YES;
+        }
+    }
+}
+@end

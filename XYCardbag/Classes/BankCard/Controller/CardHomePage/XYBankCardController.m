@@ -213,6 +213,7 @@
                 break;
         }
     }];
+    [toolBar rmImageBtns];
     [self.frontView addSubview:toolBar];
     self.toolBar = toolBar;
     
@@ -286,10 +287,12 @@
 //    [XYAlertView showAlertOnVC:self title:@"提示" message:@"进入帮助页面，github 网页？" okTitle:@"好的" Ok:nil];
 //    [self reloadPageDataAndRefresh];
     
-    XYSettingViewController *listVC = [XYSettingViewController new];
-    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
-    nav.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:nav animated:YES completion:nil];
+//    XYSettingViewController *listVC = [XYSettingViewController new];
+//    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:listVC];
+//    nav.modalPresentationStyle = UIModalPresentationCustom;
+//    [self presentViewController:nav animated:YES completion:nil];
+    
+    
 
 }
 
