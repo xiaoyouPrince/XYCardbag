@@ -17,6 +17,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - LookinServer (1.0.4)
   - Masonry (1.1.0)
   - MJExtension (3.4.1)
   - XYInfomationSection (1.0.3):
@@ -28,6 +29,7 @@ PODS:
     - MJExtension
 
 DEPENDENCIES:
+  - LookinServer
   - XYInfomationSection
   - XYKit (from `/Users/quxiaoyou/Desktop/myApp`)
 
@@ -35,6 +37,7 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - FMDB
+    - LookinServer
     - Masonry
     - MJExtension
     - XYInfomationSection
@@ -46,11 +49,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  LookinServer: 743c1681771d0a8dcc38825325a080c3186404a5
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   XYInfomationSection: 78adfd5a3e6b2939c5532f1500a90d52af24a668
   XYKit: ed0b610604a1cbfc0edce6efa677b5034416c89b
 
-PODFILE CHECKSUM: 5508034bc333c38e4ea2e2c046dd2f513f46e202
+PODFILE CHECKSUM: fa9315fbb8bf499d106f6d32595d0ca05fe1b774
 
 COCOAPODS: 1.11.2

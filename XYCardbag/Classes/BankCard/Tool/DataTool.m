@@ -97,7 +97,7 @@
         @{
             @"imageName": @"",
             @"title": NSLocalizedString(@"分享",nil),
-            @"titleKey": @"CommonViewController",
+            @"titleKey": @"XYCardbag.XYShareViewController",
             @"value": @"",
             @"type": @1,
             @"valueCode": @"",

@@ -24,6 +24,8 @@
 
 #import "MJExtension.h"
 #import "SVProgressHUD.h"
+#import "XYCardbag-Bridging-Header.h"
+#import "XYCardbag-Swift.h"
 
 typedef enum {
     CardTypeNormal = 1<<0, // default

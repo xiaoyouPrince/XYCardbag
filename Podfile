@@ -9,4 +9,5 @@ target 'XYCardbag' do
   
   pod "XYInfomationSection"  
 
+  pod 'LookinServer', :configurations => ['Debug']
 end

@@ -261,6 +261,7 @@
 		B46103BB2179798100C99D99 /* XYAddCustomTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46103B92179798100C99D99 /* XYAddCustomTagCell.xib */; };
 		B46C465925EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */; };
 		B46C466025EFA74E00E9F7C9 /* XYClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46C465F25EFA74E00E9F7C9 /* XYClockView.m */; };
+		B48490B9279FBB830006F493 /* XYShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48490B8279FBB830006F493 /* XYShareViewController.swift */; };
 		B4990F0B200EEAFA009F3BB0 /* XYContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4990F0A200EEAFA009F3BB0 /* XYContacts.m */; };
 		B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A14D9020F3027A0086CCBB /* XYCardInfoCell.m */; };
 		B4A14D9320F3027A0086CCBB /* XYCardInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A14D9120F3027A0086CCBB /* XYCardInfoCell.xib */; };
@@ -619,6 +620,8 @@
 		B46C465825EF964100E9F7C9 /* XYSettingNeedPwdTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSettingNeedPwdTimeController.m; sourceTree = "<group>"; };
 		B46C465E25EFA74E00E9F7C9 /* XYClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYClockView.h; sourceTree = "<group>"; };
 		B46C465F25EFA74E00E9F7C9 /* XYClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYClockView.m; sourceTree = "<group>"; };
+		B48490B8279FBB830006F493 /* XYShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYShareViewController.swift; sourceTree = "<group>"; };
+		B48490BA279FD62D0006F493 /* XYCardbag-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XYCardbag-Bridging-Header.h"; sourceTree = "<group>"; };
 		B4990F09200EEAFA009F3BB0 /* XYContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYContacts.h; sourceTree = "<group>"; };
 		B4990F0A200EEAFA009F3BB0 /* XYContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYContacts.m; sourceTree = "<group>"; };
 		B4A14D8F20F3027A0086CCBB /* XYCardInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCardInfoCell.h; sourceTree = "<group>"; };
@@ -786,6 +789,7 @@
 		89FB5E991FE7C2B7002AE67C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B48490B7279FBB510006F493 /* XYShareTool */,
 				B4EC40C526CAB78700A35D74 /* XYImageBrowser */,
 				B45DB16E23B2FB3B00363A4E /* XYAlbum */,
 				B458EF8C2010434C00B3D0D3 /* Venders */,
@@ -810,6 +814,7 @@
 				89FB5EA51FE7C2B7002AE67C /* ViewController.m */,
 				89FB5EEB1FE8BAF1002AE67C /* XYCardbag.pch */,
 				89FB5EAD1FE7C2E9002AE67C /* Info.plist */,
+				B48490BA279FD62D0006F493 /* XYCardbag-Bridging-Header.h */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -1354,6 +1359,14 @@
 				B46C465F25EFA74E00E9F7C9 /* XYClockView.m */,
 			);
 			path = ClockView;
+			sourceTree = "<group>";
+		};
+		B48490B7279FBB510006F493 /* XYShareTool */ = {
+			isa = PBXGroup;
+			children = (
+				B48490B8279FBB830006F493 /* XYShareViewController.swift */,
+			);
+			path = XYShareTool;
 			sourceTree = "<group>";
 		};
 		B4A14D8D20F2FD7B0086CCBB /* CardInfoCell */ = {
@@ -1965,6 +1978,7 @@
 				B45DB1C023B3602000363A4E /* JPImageresizerView.m in Sources */,
 				B4EC40C926CAB80600A35D74 /* XYImageBrowserViewController.m in Sources */,
 				B4BD541B25F249A700A96178 /* XYLocalizedTool.m in Sources */,
+				B48490B9279FBB830006F493 /* XYShareViewController.swift in Sources */,
 				B4A14D9220F3027A0086CCBB /* XYCardInfoCell.m in Sources */,
 				B4EFF1F621816864007205DA /* XYChooseDateViewController.m in Sources */,
 				89FB5ED51FE7C87A002AE67C /* XYContactsListController.m in Sources */,
@@ -2167,7 +2181,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/Classes/BankCard/View/XYCardbag-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/SupportFiles/XYCardbag-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders/Masonry";
@@ -2198,7 +2212,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoyou.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/Classes/BankCard/View/XYCardbag-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "XYCardbag/SupportFiles/XYCardbag-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "/Users/quxiaoyou/Desktop/XYCardbag简单/XYCardbag/Other/Venders/Masonry";
 			};
@@ -2207,6 +2221,7 @@
 		89FAF2941FD1060C008C9655 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = XYCardbagTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2219,6 +2234,7 @@
 		89FAF2951FD1060C008C9655 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = XYCardbagTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2231,6 +2247,7 @@
 		89FAF2971FD1060C008C9655 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = XYCardbagUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyou.XYCardbagUITests;
@@ -2242,6 +2259,7 @@
 		89FAF2981FD1060C008C9655 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = XYCardbagUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyou.XYCardbagUITests;

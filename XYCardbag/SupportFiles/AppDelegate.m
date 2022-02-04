@@ -24,9 +24,6 @@
     
     // 多语言
     [[XYLocalizedTool sharedInstance] setLanguage:[[XYLocalizedTool sharedInstance] currentLanguage]];
-    
-    
-    
 
     return YES;
 }
